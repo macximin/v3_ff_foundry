@@ -1,0 +1,18 @@
+.env
+.env.*
+!.env.example
+
+# 채굴 캠페인 임시 원문 컷 — 절대 커밋 금지, 캠페인 종료 시 삭제 (_seooh50_mining_brief.md)
+_temp_mining/
+
+# 글도비 파이프라인 raw 흡수물 — project DB / 런타임 telemetry / 합본. 추적 금지(위치+판정만).
+_globi_pipeline/
+*.db
+*.db-*
+
+# Obsidian은 ff_foundry를 로컬 vault로 열 수 있다. 개인 UI/플러그인 설정은 추적하지 않는다.
+.obsidian/
+
+# Python test bytecode is local runtime output.
+__pycache__/
+*.py[cod]

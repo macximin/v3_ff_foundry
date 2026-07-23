@@ -1,0 +1,5 @@
+# 텍스트 파일 LF 고정 — autocrlf=true 환경의 CRLF churn 방지
+*.md   text eol=lf
+*.txt  text eol=lf
+*.json text eol=lf
+*.log  text eol=lf
