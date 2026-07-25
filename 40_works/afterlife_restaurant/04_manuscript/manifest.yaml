@@ -1,0 +1,10 @@
+schema_version: firefly_manuscript_manifest_v1
+work_slug: afterlife_restaurant
+authority_rule: exact_owner_approved_revision_is_history_truth
+published_field_semantics: episode_publication_fact_only_never_revision_identity
+revision_set_sha256: 4aa9de3ba689973cd86ba45377387024ca6d09ed2ac4e52eb6e22aa7a3483ea6
+revision_set_recipe: "sha256(concat manifest-entry order as: <sha256><two spaces><foundry-relative-path><newline>)"
+entries:
+  - { episode: ep001, repo_snapshot: ep001_manuscript.md, sha256: 2b8d1bca981c1c7b0731c918e581b36ce7d4d1dc169bec4571311eab72eb241a, authority: owner_approved, approved_at: "2026-07-25T10:51:32+09:00", owner_decision: owner-adopt-all-20260725-afterlife-restaurant-v1-rc3.2, published: false, producer: web_gpt_pro }
+  - { episode: ep002, repo_snapshot: ep002_manuscript.md, sha256: 6baec3ac49cc771f6e9be445347bfda6faa5dea0de9281d6e1dbf33b8aebb94c, authority: owner_approved, approved_at: "2026-07-25T10:51:32+09:00", owner_decision: owner-adopt-all-20260725-afterlife-restaurant-v1-rc3.2, published: false, producer: web_gpt_pro }
+  - { episode: ep003, repo_snapshot: ep003_manuscript.md, sha256: 65ab2508218b7dfb1b462f2daa37d96712e307d9cc4ce554575675eca320d6ad, authority: owner_approved, approved_at: "2026-07-25T10:51:32+09:00", owner_decision: owner-adopt-all-20260725-afterlife-restaurant-v1-rc3.2, published: false, producer: web_gpt_pro }

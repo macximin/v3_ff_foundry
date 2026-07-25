@@ -1,0 +1,153 @@
+schema_version: firefly_narrative_state_v1
+work_slug: afterlife_restaurant
+projection_of:
+  state_through: ep003
+  manuscript_manifest: ../04_manuscript/manifest.yaml
+  repo_revision_set_sha256: 4aa9de3ba689973cd86ba45377387024ca6d09ed2ac4e52eb6e22aa7a3483ea6
+rebuildable: true
+facts:
+  story_time:
+    living_world_clock_frozen_at: "18:31"
+    afterlife_and_living_time_same_rate: false
+  return_contract:
+    earned_days: 1
+    required_days: 1095
+    remaining_days: 1094
+    per_completed_guest_days: 1
+    completion_condition: "삼도식당을 찾아온 망자가 마지막 한 끼를 끝내고 스스로 문을 나선다."
+    return_condition: "1,095일을 모두 벌면 18:31에 멈춘 수술실로 돌아가 명부에 3년을 더한다."
+  guest_entry_rule: "생전에 끝내지 못한 미련이 한 끼에 묶였고 그 식사를 마쳐야 다음 길로 건널 수 있는 망자만 삼도식당 문을 본다."
+  restaurant:
+    name: 삼도식당
+    tables: 4
+    chairs_total: 7
+    chairs_intact: 3
+characters:
+  kang_doyun:
+    name: 강도윤
+    age: 34
+    status: "사망 예정 상태로 삼도식당 생환 계약 수행 중"
+    vocation: "세계급 셰프이자 식당주"
+    viewpoint: "1인칭 주시점"
+    daughter: 강소율
+    debt_krw: 370000000
+    international_awards: 7
+    current_position: 삼도식당
+  kang_soyul:
+    name: 강소율
+    age: 11
+    status: "산 자의 세계에서 아버지의 프렌치토스트 약속을 기다림"
+    current_position: living_world
+  seo_hajin:
+    name: 서하진
+    role: 저승사자
+    status: "강도윤에게 생환 계약을 제시하고 집행"
+    current_position: undisclosed
+  princess:
+    name: null
+    name_status: undisclosed_through_ep003
+    identity: "염라대왕의 유일한 혈육"
+    apparent_age: "열 살가량"
+    current_role:
+      - 삼도식당 종업원
+      - 재료 안내
+      - 계산
+      - 줄 관리
+      - 운반
+    current_position: 삼도식당
+  kim_munseong:
+    name: 김문성
+    former_role: 선원
+    status: departed_after_farewell
+    meal: 귀항탕
+  one_eyed_elder:
+    name: null
+    name_status: undisclosed_through_ep003
+    role:
+      - 황천장 상인
+      - 박명조 날개와 회혼매 공급자
+    current_position: 황천장
+  tongueless_guest:
+    name: null
+    name_status: undisclosed_through_ep003
+    status: waiting_at_samdo_restaurant
+    expressed_desire: "그래도 맛을 느끼고 싶다."
+assets:
+  cash:
+    unit: black_coin
+    current: 18
+    history:
+      - { episode: ep002, event: first_guest_payment, delta: 6, balance: 6 }
+      - { episode: ep003, event: waste_ingredient_purchase, delta: -1, balance: 5 }
+      - { episode: ep003, event: market_sales_share, delta: 30, balance: 35 }
+      - { episode: ep003, event: ingredient_purchase, delta: -17, balance: 18 }
+  return_time:
+    unit: day
+    current: 1
+    target: 1095
+  inventory:
+    - { item: 귀곡염, quantity: 1, unit: sack }
+    - { item: 업화고추, quantity: 15, unit: each }
+    - { item: 초혼근, quantity: 6, unit: root }
+    - { item: 삼도보리, quantity: 1, unit: sack }
+    - { item: 묘향유, quantity: 1, unit: bottle }
+    - { item: 육족어, quantity: 3, unit: each }
+    - { item: 한빙과, quantity: 8, unit: each }
+    - { item: 귀곡조개, quantity: 1, unit: net }
+  supply_contract:
+    supplier: one_eyed_elder
+    delivery:
+      bakmyeongjo_wings: 30
+      burst_hoehonmae: 12
+    price_black_coin: 10
+    payment_due: "다음 상자가 채워질 때"
+  market_sale:
+    product: "박명조 날개와 회혼매 구이"
+    sold_units: 25
+    unit_price_black_coin: 2
+    gross_black_coin: 50
+    kang_doyun_share_black_coin: 30
+    one_eyed_elder_share_black_coin: 20
+  recipes:
+    gwihangtang:
+      status: completed
+      recipient: 김문성
+    bakmyeongjo_wing:
+      status: market_validated
+      canonical_name: null
+positions:
+  - { entity: kang_doyun, location: 삼도식당 }
+  - { entity: princess, location: 삼도식당 }
+  - { entity: tongueless_guest, location: 삼도식당 }
+  - { entity: one_eyed_elder, location: 황천장 }
+  - { entity: kang_soyul, location: living_world }
+open_reader_debts:
+  - { id: coin_rule, debt: "김문성이 남긴 6닢이 모든 손님의 고정 식대인지 개인별 노잣돈인지 승인 원고에는 아직 증명되지 않았다." }
+  - { id: princess_identity, debt: "공주의 이름, 궁을 나온 이유, 신분 노출 위험과 식당에 남으려는 자기 욕망." }
+  - { id: hajin_selection, debt: "서하진이 강도윤을 선택한 이유와 계약 위반 비용." }
+  - { id: living_restaurant_decline, debt: "세계급 경력과 달리 도윤의 식당 예약이 끊긴 구체 원인." }
+  - { id: failure_cost, debt: "도윤의 오판이 성공한 같은 장면 안에서 환급되지 않는 실제 비용." }
+open_foreshadow:
+  - { id: tongueless_guest, seeded_in: ep003, promise: "혀가 없는 손님에게 맛을 전달할 다른 감각과 식사를 찾는다." }
+  - { id: next_supply_box, seeded_in: ep003, promise: "날개 30개와 터진 회혼매 12알의 다음 납품 및 10닢 결제." }
+  - { id: return_1094_days, seeded_in: ep002, promise: "남은 1,094일을 손님 배웅으로 번다." }
+genre_state:
+  modern_fantasy:
+    last_csu_receipts:
+      - { episode: ep001, receipt: "생환 계약 자격과 첫 손님 주문" }
+      - { episode: ep002, receipt: "김문성 완식·퇴장, 귀환 1일, 검은 엽전 6닢" }
+      - { episode: ep003, receipt: "18닢, 8종 재고, 정기 공급계약, 시장 신용" }
+    appraisal_history:
+      - { episode: ep001, evaluator: 서하진, signal: contract_offer }
+      - { episode: ep002, evaluator: 김문성, signal: empty_bowl_and_departure }
+      - { episode: ep003, evaluator: market_buyers, signal: twenty_five_paid_purchases }
+    external_pov_history:
+      - { episode: ep001, count: 0 }
+      - { episode: ep002, count: 0 }
+      - { episode: ep003, count: 0 }
+    current_status_floor:
+      approved_through: ep003
+      cash_black_coin: 18
+      return_days: 1
+      supply_contracts: 1
+last_rebuilt_at: "2026-07-25T10:51:32+09:00"
