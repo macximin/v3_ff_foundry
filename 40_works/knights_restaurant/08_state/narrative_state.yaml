@@ -3,7 +3,7 @@ work_slug: knights_restaurant
 projection_of:
   state_through: ep003
   manuscript_manifest: ../04_manuscript/manifest.yaml
-  repo_revision_set_sha256: 68e646deef2eeae2d1075f7fc61e62f6372068d33fdae688491bd48f55d42975
+  repo_revision_set_sha256: 12fe64579c23c6f78a567515c50a1634dfbbad5f4550d0060870557b6e96a596
 rebuildable: true
 facts:
   story_time:
@@ -201,5 +201,4 @@ genre_state:
       restricted_advance_gold: 200
       land_owner: true
       supply_contracts: 1
-last_rebuilt_at: "2026-07-25T17:53:33+09:00"
-
+last_rebuilt_at: "2026-07-26T15:01:22+09:00"

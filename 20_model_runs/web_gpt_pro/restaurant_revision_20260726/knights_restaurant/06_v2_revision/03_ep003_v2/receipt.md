@@ -1,0 +1,23 @@
+# ep003 v2 receipt
+
+- status: `completed`
+- producer: `Web GPT Pro`
+- chat URL: `https://chatgpt.com/c/6a658888-ef90-83ee-b03e-da15213c1981`
+- source: `03_ep003_revision/ep003_revision.md`
+- source SHA-256: `7ca124387d1edb3d1d1e83e0647b18eb77a00b0ff4e427495b25c456245d19f2`
+- attachment chip: `ep003_revision(1).md`
+- output: `06_v2_revision/03_ep003_v2/ep003_v2.md`
+- output SHA-256: `b307ab921805bc5b1859d1ff007d846d1914f88d154ca19c238784392f27eb40`
+- output size: `33,801 bytes`
+- output lines: `1,129`
+- contract segment comparison:
+  - source coordinates: lines `875–1199`, `10,233 bytes`
+  - v2 coordinates: lines `837–1025`, `6,757 bytes`
+  - byte reduction: `34.0%`
+- target contract compression 30–40%: `met`
+- whole-episode byte reduction: `13.3%`
+- worker-eight justification added: line `673`
+- imperial guest ending preserved: line `1,129`
+- duplicate prompt sent: `no`
+- interrupted response: `no`
+- next gate: BR0/BR1 opened only after this save and hash verification

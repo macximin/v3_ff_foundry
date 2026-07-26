@@ -9,10 +9,10 @@ start_episode: ep001
 end_episode: ep003
 episode_count: 3
 episode_cap: 5
-manifest_revision_set_sha256: 68e646deef2eeae2d1075f7fc61e62f6372068d33fdae688491bd48f55d42975
+manifest_revision_set_sha256: 12fe64579c23c6f78a567515c50a1634dfbbad5f4550d0060870557b6e96a596
 state_through: ep003
 verdict: pass
-reviewed_at: "2026-07-25"
+reviewed_at: "2026-07-26"
 ```
 
 ## 실제 결산
@@ -50,4 +50,3 @@ reviewed_at: "2026-07-25"
 ## 다음 작업
 
 `B002`의 ep004 Episode Bet을 작성·감리한다. B002는 ep004 시작, ep006 예상 종결, ep008 하드 종결이다.
-
