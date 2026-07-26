@@ -9,6 +9,18 @@
 3. 상태 스냅샷(Narrative State)은 승인 원고와 적용된 충돌 판정 메모의 해시에서 재생성 가능한 투영이다.
 4. Story Plan(작품 척추·A-Rail·B-Rail·Rolling Corridor)은 미래 전략이며 고칠 수 있다. A는 장기 도착점, B는 최대 5화 Arc, Corridor는 현재 작업창이다.
 
+## 현재 owner retcon hard stop
+
+- `owner-afterlife-threshold-engine-retcon-20260726`이 기존 딸·1,095일 적립 중심 전제를 대체한다.
+- 기존 승인 원고 ep001~003과 manifest는 승인 당시의 read-only history로만 보존한다.
+- 기존 Frozen Pitch, Story Plan, 화별 약속, Narrative State를 새 원고 dispatch 입력으로 사용하지 않는다.
+- 새 Frozen Pitch와 Story Plan이 owner 승인되고 새 ep001~003이 BR0/BR1과 owner 승인을 통과하기 전에는 원고 생산이나 Storyyard 투영으로 진행하지 않는다.
+
+## 현재 내부 캐논 기준
+
+- `06_canon_note/canon_note_002_opening_v3_baseline.md`가 retcon 뒤 오프닝 연속성의 입력 정본이다.
+- v3 후보는 캐논·계획 재정렬의 근거이며, 정식 `04_manuscript` 승격이나 Storyyard 투영 권한은 아니다.
+
 ## 단계별 입력
 
 | 작업 | 필수 입력 | 기본 제외 |

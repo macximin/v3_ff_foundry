@@ -9,4 +9,6 @@ Anchored Story Loop의 작품별 캐노니컬 폴더다.
 - BR0/BR1 및 승인 receipt: [`05_review/`](05_review)
 - 승인 원고 투영 상태: [`08_state/narrative_state.yaml`](08_state/narrative_state.yaml)
 
-생산 기본 레인은 Web GPT Pro, 감리 기본 레인은 Codex Desktop `gpt-5.6-terra`다. `2026-07-25` owner의 `ADOPT ALL` 결정으로 기획과 `v1-rc3.2` 1~3화를 승인했다. A-Rail은 A01~A08 장기 도착점, B-Rail은 엔딩까지의 Arc 경로이며 현재 생산 단위는 `B002` 안의 ep004 Episode Bet이다. 모든 B는 최대 5화이며, B 종결마다 A-Rail을 재확인하고 남은 B-Rail을 승인 원고의 실제 상태에서 reflow한다. 아직 공개 발행된 원고는 없다.
+생산 기본 레인은 Web GPT Pro, 감리 기본 레인은 Codex Desktop `gpt-5.6-terra`다. `2026-07-25` owner 승인으로 남은 `v1-rc3.2` 1~3화는 승인 당시의 read-only history다.
+
+`2026-07-26` owner retcon 뒤의 오프닝 내부 정본은 [`06_canon_note/canon_note_002_opening_v3_baseline.md`](06_canon_note/canon_note_002_opening_v3_baseline.md)다. v3 후보를 기준으로 Pitch·Story Plan·State를 재정렬했지만, 과거 승인 원고와 manifest는 history로 보존한다. v3는 문체 압축·독립 감리·별도 owner 승인 전까지 Storyyard나 공개 원고로 나가지 않는다.

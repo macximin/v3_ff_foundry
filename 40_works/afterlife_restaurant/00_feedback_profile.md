@@ -10,13 +10,13 @@ genre_profiles:
 genre_profile_options:
   modern_fantasy:
     regression_onboarding: null
-active_stage: episode_bet
+active_stage: story
 owner_final_authority: true
 ```
 
 전역 `modern_fantasy` 프로필에서는 다음 계약만 현재 작품에 직접 적용한다.
 
-- 매 화 주인공의 판단·선택·실행이 손님의 행동, 귀환 시간, 현금, 재고, 계약, 관계 변화 가운데 하나 이상의 구체 receipt로 남는다.
+- 매 화 주인공의 판단·선택·실행이 손님의 행동, 문턱 반응 또는 실패 책임, 현금, 재고, 예약, 관계 변화 가운데 하나 이상의 구체 receipt로 남는다.
 - 전문가성은 경력 목록이나 장부의 정답이 아니라 `판의 위험 → 남들이 막히는 이유 → 도윤의 다른 선택 → 가시 결과 → 삭제 반사실`로 판독된다.
 - 고평가는 칭찬보다 완식·퇴장·구매·가격·분배·계약·역할 변화로 보인다.
 - 강도윤 1인칭을 기본축으로 두며 일반 회차 독립 타인 POV는 `0~1`, 현재 1~3화와 가까운 corridor 기본값은 `0`이다.
@@ -45,12 +45,20 @@ signals:
     action: black_ledger_records_results_only
   - id: AFR-FB-005
     stage: manuscript
-    signal: adult_male_and_child_relationship_is_non_romantic
-    action: father_daughter_guardian_apprentice_business_partner_only
+    signal: do_not_reintroduce_removed_family_engine
+    action: no_daughter_or_replacement_family_as_return_motive
   - id: AFR-FB-006
     stage: review
     signal: failure_cost_must_survive_the_scene
     action: no_same_scene_full_refund_with_better_hint_or_bonus
+  - id: AFR-FB-007
+    stage: story
+    signal: threshold_is_not_progress_meter
+    action: no_accumulated_days_points_or_guaranteed_return_from_guest_departure
+  - id: AFR-FB-008
+    stage: episode_bet
+    signal: operational_scale_preserves_guest_specificity
+    action: separate_tasting_paid_guest_priority_guest_reservation_and_inventory_ledgers
 harvest_log:
   - date: 2026-07-25
     source: owner
