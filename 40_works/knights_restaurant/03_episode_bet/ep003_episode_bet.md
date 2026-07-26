@@ -2,7 +2,7 @@
 
 상태: committed
 
-정확한 `v1-rc4` ep003 승인 원고에서 역복원해 history 계약으로 잠근 retrospective Episode Bet이다. owner 승인 시각은 `2026-07-25T17:53:33+09:00`이다.
+정확한 `v2` ep003 승인 원고에서 역복원해 history 계약으로 잠근 retrospective Episode Bet이다. owner 승인 시각은 `2026-07-26T15:01:22+09:00`이다.
 
 ## 한 줄 베팅
 

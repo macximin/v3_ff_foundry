@@ -1,13 +1,13 @@
-# 기사식당 ep001~003 owner adoption receipt
+# 기사식당 ep001~003 current owner adoption receipt
 
 ```yaml
-decision_id: owner-adopt-all-20260725-knights-restaurant-v1-rc4
-decision: ADOPT_ALL
-decided_at: "2026-07-25T17:53:33+09:00"
+decision_id: owner-adopt-all-20260726-knights-restaurant-v2
+decision: ADOPT_REPLACEMENT
+decided_at: "2026-07-26T15:01:22+09:00"
 owner_scope:
   frozen_pitch: approved
   story_plan: approved
-  exact_manuscript_revision: v1-rc4
+  exact_manuscript_revision: "ep001_v2 + ep002_retained + ep003_v2"
   episodes:
     - ep001
     - ep002
@@ -15,9 +15,8 @@ owner_scope:
 publication: false
 storyyard_sync: false
 manuscript_producer: web_gpt_pro
-independent_br0_reviewer: google_gemini_pro
-plan_compiler_and_br1_reviewer: codex_desktop
-source_root: 20_model_runs/web_gpt_pro/restaurant_candidates_20260724/기사식당/v1-rc4
+reviewer: codex_desktop
+source_root: 20_model_runs/web_gpt_pro/restaurant_revision_20260726/knights_restaurant
 canon_note_required: false
 ```
 
@@ -25,11 +24,11 @@ canon_note_required: false
 
 | episode | source SHA-256 | canonical snapshot | authority |
 |---|---|---|---|
-| ep001 | `39abb22f6fa301781b87a5acbd719d953bd5725a9e63027075913b41e6b29a5f` | `../04_manuscript/ep001_manuscript.md` | `owner_approved` |
+| ep001 | `667f7c1f671e17035df8061b5138ca8835e19f5deb3a1286eeaa6c72b66ba1c3` | `../04_manuscript/ep001_manuscript.md` | `owner_approved` |
 | ep002 | `adeb995cc16ce7dbe2fe71e78c7a220681daf8428f46e0bfe90553781614f23d` | `../04_manuscript/ep002_manuscript.md` | `owner_approved` |
-| ep003 | `a4bc888a51b1597fc0a443fd5d06ae68c1a619cad7ccf6184e7d005206eef198` | `../04_manuscript/ep003_manuscript.md` | `owner_approved` |
+| ep003 | `b307ab921805bc5b1859d1ff007d846d1914f88d154ca19c238784392f27eb40` | `../04_manuscript/ep003_manuscript.md` | `owner_approved` |
 
-- 승인 revision-set SHA-256: `68e646deef2eeae2d1075f7fc61e62f6372068d33fdae688491bd48f55d42975`
+- 승인 revision-set SHA-256: `12fe64579c23c6f78a567515c50a1634dfbbad5f4550d0060870557b6e96a596`
 - 해시 recipe와 entry order의 정본: `../04_manuscript/manifest.yaml`
 - 승인 원고 사실의 재생성 가능 투영: `../08_state/narrative_state.yaml`
 
@@ -37,10 +36,10 @@ canon_note_required: false
 
 | review | SHA-256 | verdict |
 |---|---|---|
-| `ep001-003_br0.md` | `1336ae7f6aec415780bf30e5095ed93ca23bb35985aec8004915a23c56b215a9` | PASS — 치명 산술·계약 오류 없음 |
-| `ep001-003_br1.md` | `f3a390ef550e72828a6f9f6503cbd3d09263859995aa6fa86efc2a119e945b3c` | PASS — OWNER ADOPT DECISION RECORDED |
+| `07_v2_codex_review/br0_blind_readback.md` | `0d55ee1afa340c5092453971ff16537481ca7a2e52c5241b57fb1c4669ebabe5` | PASS — 상업성·연속성·산술 재검 통과 |
+| `07_v2_codex_review/br1_plan_aware_review.md` | `95e9bfd58e8a1322ebfbea79565e6b1b9c2035f88f851bbd0f8b53d3be51c9b7` | PASS — Story Plan과 상태 투영 대조 통과 |
 
-원고 생산자와 독립 BR0 감리자는 분리됐다. Story Plan compiler와 BR1 reviewer가 같은 Codex 계열이므로 최종 권위 행위는 owner가 직접 수행했고 이 receipt가 그 결정을 기록한다. BR0 원문의 `P0 (수정 없이 즉시...)` 표기는 심각도 용어 오사용이며 BR1에서 `blocking_defect: none`으로 정규화했다.
+원고 생산자는 Web GPT Pro, 감리자는 Codex Desktop으로 분리됐다. 2화의 본문 SHA는 기존 승인본을 유지했지만, 세 화를 하나의 현행 revision set으로 승인한 owner 결정에 함께 귀속한다.
 
 ## 승격 범위
 
@@ -52,6 +51,6 @@ canon_note_required: false
 
 ## 최종 판정
 
-`PASS — FROZEN PITCH AND EXACT v1-rc4 ep001~003 ADOPTED`
+`PASS — FROZEN PITCH, STORY PLAN, AND EXACT ep001 v2 + ep002 retained + ep003 v2 ADOPTED`
 
-공개 발행, Storyyard 동기화, 커밋·푸시는 이 결정에 포함되지 않는다.
+공개 발행, Storyyard 동기화, 커밋·푸시는 별도 권위 행위다.
