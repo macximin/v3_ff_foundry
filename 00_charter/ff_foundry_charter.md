@@ -22,7 +22,7 @@ model_run_truth: ff_foundry/20_model_runs
 promoted_material_truth: ff_foundry/30_materials
 work_surface_truth: ff_foundry/40_works
 approved_history_truth: exact_owner_approved_manuscript_revision
-story_strategy_truth: living_spine_and_anchor_rail
+story_strategy_truth: living_spine_a_rail_b_rail_and_rolling_corridor
 assembly_recipe_role: pre_pitch_build_evidence_without_story_authority
 narrative_state_role: rebuildable_projection_from_manuscript_hashes
 canon_note_role: manuscript_conflict_resolution_or_owner_retcon_only
@@ -35,13 +35,13 @@ owner_final_authority: human_owner
 
 ## Model Lanes
 
-**2026-07-11 owner 결정 — 생산 풀/감리/운반 분리.** 이 절이 이전의 모든 레인 정책 서술("Web Gemini 단독 기본 생산"과 "동격 writer" 포함, workflow_adoption의 Model Lane Policy 포함)을 대체한다. 모델 성능은 계속 바뀌므로 특정 회사 모델 하나에 생산 권위를 영구 고정하지 않는다. 병목은 여전히 "사람답게 쓰는가 / 장면을 용감하게 채우는가"이며, 산출물별로 더 잘 나온 후보를 채택한다.
+**2026-07-24 owner 결정 — Web GPT Pro 생산 / Codex 5.6 Terra 감리 기본값.** 이 절이 이전의 동급 생산 풀 및 특정 WebGPT 비고정 정책을 대체한다. 기본값은 영구적인 이야기 권위가 아니라 운영 라우팅이며, 최종 권위는 계속 owner 승인에만 생긴다.
 
-- **생산 풀 (creative prose): Web Gemini Pro / GPT·Codex.** 둘 다 Pitch Candidate·Story Plan·화별 약속·원고 후보의 동급 생산자가 될 수 있다. Web Gemini는 repo를 읽지 못하므로 **dispatch 패킷(파일첨부)**으로 받고, GPT·Codex는 repo-native stage packet을 직접 읽되 사용한 규칙 SSOT·레퍼런스와 producer identity를 receipt에 남긴다. 한 산출물에서 복수 후보를 만들 수 있으나 평균내지 않고 더 강한 후보 또는 강한 블록을 고른다.
-- **감리: 해당 산출물을 생산하지 않은 인간 / Gemini / Claude Code / Codex.** dispatch 패킷 조립, Episode Bet 설계 보조, manuscript BR0/BR1 review, craft_doctrine 수확, 재발 탐지를 맡을 수 있다. 감리 원칙: **죽이는 감리가 아니라 고르는 감리** — 생산자의 과잉은 결함이 아니라 원료다. 생산자 self-review는 범위 점검일 뿐 최종 pass가 아니다.
-- **관리·운반: Codex (기본) 또는 Claude.** 파일첨부 운반, 캡처, receipt(20_model_runs), repo 구조를 맡는다. 관리자가 같은 산출물의 생산자로 올라갈 수는 있지만, 그때는 producer identity를 명시하고 최종 감리를 다른 레인 또는 owner에게 넘긴다. 운영 주체 자체는 자유다.
-- **WebGPT:** 사용 가능할 때 GPT 생산 풀의 외부 표면으로 취급한다. 특정 WebGPT만을 고정 기본값으로 삼지 않는다.
-- **화별 약속 조립 = Claude / Web Gemini / GPT·Codex.** howlib 조회를 바닥으로 깔되 근거 있는 비틀기·빈 셀 발명은 환영한다. 생산자가 화별 약속도 조립했다면 해당 화의 감리는 다른 레인이 맡는다.
+- **기본 생산자 (creative prose): Web GPT Pro.** Pitch Candidate·Story Plan·화별 약속·원고 후보를 Web GPT Pro에 우선 발주한다. 컴파일된 dispatch와 필요한 파일을 첨부하고, 실제 전달한 패킷·응답·producer identity를 receipt에 남긴다. 한 산출물에서 복수 후보를 만들 수 있으나 평균내지 않고 더 강한 후보 또는 강한 블록을 고른다.
+- **기본 감리자: Codex Desktop `gpt-5.6-terra`.** Web GPT Pro가 생산한 산출물의 BR0 blind readback과 BR1 plan-aware compare를 담당한다. BR0가 봉인되기 전 BR1 재료를 읽지 않으며, 판정은 `pass | revise | restart`만 쓴다. 감리 원칙은 **죽이는 감리가 아니라 고르는 감리**다.
+- **관리·운반: Codex.** 파일첨부 패킷 조립, 응답 캡처, receipt와 SHA-256, `20_model_runs` 및 repo 상태를 관리한다. 감리와 관리가 같은 Codex 실행 주체여도 되지만, BR0/BR1은 Web GPT Pro 생산 원문을 수정하지 않고 판정 산출물로 분리한다.
+- **대체 생산 레인:** Web GPT Pro가 접근 불가이거나 owner 품질 기준을 충족하지 못한 경우에만 owner가 Web Gemini Pro / GPT·Codex / Claude를 지정한다. GPT·Codex가 직접 생산한 산출물은 Codex가 최종 감리할 수 없고, 인간 / Gemini / Claude 등 다른 레인으로 넘긴다.
+- **화별 약속 조립:** 기본 생산자 또는 Codex 관리 레인이 맡을 수 있다. 조립자가 원고까지 직접 생산한 경우에도 원고 생산자 identity를 receipt에 명시한다. howlib 조회를 바닥으로 깔되 근거 있는 비틀기·빈 셀 발명은 허용한다.
 
 **정본 read-only 원칙:** 생산·운반 레인은 승인 원고 revision을 수정·포크하지 않는다. 미래 전략인 Living Spine·Anchor Rail은 owner 판단으로 계속 고칠 수 있다. Canon Note는 원고 내부 의미 충돌 또는 명시적 retcon에만 쓴다.
 
@@ -71,14 +71,28 @@ receipt_root: 20_model_runs/gemini/
 decision: ff_studio_v2/command_board/decisions/web-gemini-source-fed-session-precondition-20260611.md
 ```
 
-**Anchor refinement 루프:** 시작부터 엔딩까지 6~12개 tentpole을 희소하게 박고, 가장 가까운 두 앵커만 자세히 만든다. Rolling Corridor는 다음 1화 committed + 뒤 2화 provisional을 기본으로 하며 Anchor Rail을 소리 없이 바꾸지 않는다. 생산자 self-review는 범위 점검일 뿐 최종 승격이 아니다. exact raw는 `20_model_runs/`에 보존한다.
+**A-Rail / B-Rail refinement 루프:** A-Rail은 시작부터 엔딩까지 6~12개 Anchor를 희소하게 박고 가장 가까운 두 Anchor만 자세히 만든다. **Anchor는 장기 도착점이고 Arc가 아니다.** B-Rail은 엔딩까지 이어지는 순서형 Story Arc 경로다. 각 B는 중심 질문 하나를 승인 원고 기준 1~5화 안에 결산하며, 먼 B는 Anchor·서사 기능·보상 축·독자 부채·직전과의 차이만 가진다. Rolling Corridor는 B-Rail의 현재 B와 다음 B를 비추는 작업창이며 별도 이야기 정본이 아니다. 현재 B 안에서 다음 1화 committed + 최대 2화 provisional만 본다. 현재 B가 owner 승인 원고로 닫히면 Narrative State를 재생성하고 A-Rail을 재확인한 뒤, B-Rail의 먼 슬롯은 내구 필드를 재검증하고 구체 사건·인물·음식·화수는 무효화·재작성한다. 생산자 self-review는 범위 점검일 뿐 최종 승격이 아니다. exact raw는 `20_model_runs/`에 보존한다.
 
 ```yaml
 rule: anchor_rail_rolling_corridor
-applies_to: [Web_Gemini, Web_Gemini_Pro]
+applies_to: [Web_GPT_Pro, Web_Gemini, Web_Gemini_Pro, GPT_Codex, Claude]
 tentpoles_total: 6_to_12
 detailed_nearest_anchors: 2
-rolling_default: current_1_committed_plus_2_provisional
+anchor_is_arc: false
+arc_episode_cap: 5
+b_rail_route_to_ending: required
+b_rail_statuses: [closed, active, provisional, hypothesis, retired]
+b_rail_durable_fields: [target_anchor, narrative_function, payoff_axis, carried_reader_debt, contrast_requirement]
+b_rail_volatile_fields: [exact_episode_coordinates, guest_identity, food, scene_solution, exact_reward]
+rolling_corridor_role: working_projection_of_current_and_next_b
+episode_cursor_default: current_1_committed_plus_up_to_2_provisional_within_current_b
+arc_close_requires:
+  - owner_approved_arc_endpoint
+  - narrative_state_rebuilt
+  - arc_closeout_review
+  - anchor_impact_check
+  - downstream_b_rail_reflow
+later_b_fields_after_close: revalidate_durable_invalidate_volatile
 required_sequence:
   - raw_attempt1_saved
   - self_review_saved
@@ -92,22 +106,35 @@ pacing_gate:
   producer_self_review_can_pass: false
 ```
 
-**Production Flow — thin default:** 현재 제작 단계(`production_stage`)는 `pitch -> story -> episode_bet -> manuscript -> review`를 쓴다. 피치 전에는 출처가 보이는 Story Block을 조립표로 엮지만, 조립표는 `20_model_runs/`에 두는 build evidence이며 제작 단계가 아니다. owner가 채택한 Frozen Pitch부터 사람-facing 작품 표면이 시작된다. `story`는 작품 척추 + 장기 앵커 + 근접 3화의 Story Plan이다. 원고 후보는 BR0/BR1 뒤 owner 승인을 받아야 승인 원고가 된다. 상태 스냅샷은 승인 원고에서 재생성하는 투영이고 충돌 판정 메모는 선형 단계가 아니다. dispatch는 운반 기록, receipt는 증거다. 원고 후보 발주 전에는 현재 화별 약속, 직전 승인 원고, 가까운 장기 앵커/근접 3화, 필요한 JIT 재료가 있어야 한다. 예외 산출물은 `20_model_runs/...`의 model-run experiment로만 보존한다.
+**Production Flow — thin default:** 현재 제작 단계(`production_stage`)는 `pitch -> story -> episode_bet -> manuscript -> review`를 쓴다. 피치 전에는 출처가 보이는 Story Block을 조립표로 엮지만, 조립표는 `20_model_runs/`에 두는 build evidence이며 제작 단계가 아니다. owner가 채택한 Frozen Pitch부터 사람-facing 작품 표면이 시작된다. `story`는 작품 척추 + A-Rail + 엔딩까지의 B-Rail + 현재 B 작업창을 가진 Story Plan이다. 원고 후보는 BR0/BR1 뒤 owner 승인을 받아야 승인 원고가 된다. 상태 스냅샷은 승인 원고에서 재생성하는 투영이고 충돌 판정 메모는 선형 단계가 아니다. dispatch는 운반 기록, receipt는 증거다. 원고 후보 발주 전에는 현재 화별 약속, 직전 승인 원고, 가까운 A-Anchor/현재 B, 필요한 JIT 재료가 있어야 한다. 예외 산출물은 `20_model_runs/...`의 model-run experiment로만 보존한다.
 
-**Web Gemini 운반 원칙:** Web Gemini는 병렬로 돌리지 않는다. 탭/대화/생성은 항상 1개만 열고, 현재 chunk의 첨부 chip 확인 -> prompt 전송 -> 응답 완료 -> raw/receipt 저장까지 닫힌 뒤에만 다음 chunk를 시작한다. 병렬 탭은 첨부 누락과 전송 누락을 만든다.
+**웹 생산자 운반 원칙:** Web GPT Pro는 후보마다 독립 채팅을 쓰며 owner가
+병렬 운용을 지시하면 서로 다른 후보를 최대 2개까지 동시에 생성할 수
+있다. 한 채팅에는 한 후보의 첨부와 프롬프트만 두고, 각 채팅에서 첨부
+chip을 전송 전후로 확인한다. 세 번째 후보는 기존 두 슬롯 중 하나의
+응답 완료·raw 저장·receipt 저장이 끝난 뒤 연다. Web Gemini는 별도 owner
+지시가 없으면 기존처럼 1개씩 직렬 운반한다. 같은 후보를 여러 채팅에서
+동시에 생성하거나 한 채팅에 후보를 섞지 않는다. Web GPT Pro receipt에는
+채팅 URL 또는 응답 식별자, 후보명, 첨부 목록과 SHA-256을 남긴다.
 
 ```yaml
-rule: web_gemini_serial_only
-applies_to: [Web_Gemini, Web_Gemini_Pro]
-parallel_tabs: forbidden
-parallel_generations: forbidden
-advance_next_chunk_only_after:
+rule: web_producer_bounded_parallel
+applies_to: [Web_GPT_Pro, Web_Gemini, Web_Gemini_Pro]
+web_gpt_pro_parallel_candidate_max: 2
+web_gemini_parallel_candidate_max: 1
+distinct_chat_per_candidate: required
+same_candidate_parallel_generations: forbidden
+mixed_candidate_attachments_in_one_chat: forbidden
+each_chat_requires:
   - upload_chip_verified_before_prompt
   - upload_chip_verified_after_prompt
+  - candidate_identity_in_prompt
+slot_reuse_only_after:
   - response_generation_complete
   - raw_saved
   - receipt_saved
 answer_now_button:
+  applies_to: [Web_GPT_Pro, Web_Gemini, Web_Gemini_Pro]
   meaning: long_source_absorption_in_progress
   action: do_not_click
   wait_policy: wait_until_stop_button_disappears_and_response_text_is_visible
@@ -115,7 +142,7 @@ answer_now_button:
 
 **Subscription lane hygiene:** 큰 model-run은 receipt에 `subscription_lane`과 `context_budget`을 남긴다. 기본은 구독 UI/interactive surface를 쓰는 `thin` 레인이다. `thick` 컨텍스트는 새 source-feed, high-risk gate, canon reopen, owner explicit일 때만 연다. `ANTHROPIC_API_KEY`, `--bare`, cloud provider key, unknown billing surface는 자동 기본값이 아니며 auth preflight 후에만 쓴다. `claude -p`/headless는 금지가 아니라 **bounded headless** 후보지만, 인증·구독·agentic/API 레인을 receipt에 남긴다.
 
-**모델 프롬프트 위생:** 생산자와 감리자에게 겁을 주지 않는다. Web Gemini, Claude, Codex에게 보내는 창작·감리 문장은 긍정문으로 쓴다. 첨부는 닫힌 세계가 아니라 **문체·장르감·속도·돈의 물질감·고유 표면·반복쾌감 참고자료**다. 익숙한 장르 포맷은 결함이 아니라 상업적 자산으로 다룬다. 문체 참고를 명시하고, 필요한 분량은 하한만 둔다. 실행 기록과 감리 기록은 모델에게 작가 페르소나 대신 개발자 페르소나를 강제하지 않는다.
+**모델 프롬프트 위생:** 생산자와 감리자에게 겁을 주지 않는다. Web GPT Pro, Web Gemini, Claude, Codex에게 보내는 창작·감리 문장은 긍정문으로 쓴다. 첨부는 닫힌 세계가 아니라 **문체·장르감·속도·돈의 물질감·고유 표면·반복쾌감 참고자료**다. 익숙한 장르 포맷은 결함이 아니라 상업적 자산으로 다룬다. 문체 참고를 명시하고, 필요한 분량은 하한만 둔다. 실행 기록과 감리 기록은 모델에게 작가 페르소나 대신 개발자 페르소나를 강제하지 않는다.
 
 **사람-facing 표면 분리:** pitch/story/Episode Bet/manuscript처럼 사람이 읽는 창작 표면에는 `yaml`, status, self-check, gate 판정, receipt 링크 같은 운영 메타를 섞지 않는다. 생산 레인은 사람말 본문을 쓰고, 운반/감리 레인이 상태값·합격선·채택 여부를 별도 gate/receipt/Notion 속성에 남긴다.
 
@@ -136,6 +163,6 @@ owner 최종 권한은 불변. 레인 우열은 주장이 아니라 산출물 �
 - ESM/QRP/block style material
 - cross-model comparisons
 - working copies of source text (slices, scene cuts) used for mining — not the canonical original
-- project pitch, Living Spine, Anchor Rail, Rolling Corridor, Episode Bet, manuscript, review, Narrative State, and narrow Canon Notes
+- project pitch, Living Spine, A-Rail, B-Rail, Rolling Corridor, Episode Bet, manuscript, review, Narrative State, and narrow Canon Notes
 
 `ff_foundry` must not pretend a local Codex extraction is final authority merely because it is structured. Better human smell from a model can outrank a cleaner local ledger after owner or PD review.

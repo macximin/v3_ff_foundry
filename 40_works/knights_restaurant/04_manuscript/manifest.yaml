@@ -1,0 +1,11 @@
+schema_version: firefly_manuscript_manifest_v1
+work_slug: knights_restaurant
+authority_rule: exact_owner_approved_revision_is_history_truth
+published_field_semantics: episode_publication_fact_only_never_revision_identity
+revision_set_sha256: 68e646deef2eeae2d1075f7fc61e62f6372068d33fdae688491bd48f55d42975
+revision_set_recipe: "sha256(concat manifest-entry order as: <sha256><two spaces><foundry-relative-path><newline>)"
+entries:
+  - { episode: ep001, repo_snapshot: ep001_manuscript.md, sha256: 39abb22f6fa301781b87a5acbd719d953bd5725a9e63027075913b41e6b29a5f, authority: owner_approved, approved_at: "2026-07-25T17:53:33+09:00", owner_decision: owner-adopt-all-20260725-knights-restaurant-v1-rc4, published: false, producer: web_gpt_pro }
+  - { episode: ep002, repo_snapshot: ep002_manuscript.md, sha256: adeb995cc16ce7dbe2fe71e78c7a220681daf8428f46e0bfe90553781614f23d, authority: owner_approved, approved_at: "2026-07-25T17:53:33+09:00", owner_decision: owner-adopt-all-20260725-knights-restaurant-v1-rc4, published: false, producer: web_gpt_pro }
+  - { episode: ep003, repo_snapshot: ep003_manuscript.md, sha256: a4bc888a51b1597fc0a443fd5d06ae68c1a619cad7ccf6184e7d005206eef198, authority: owner_approved, approved_at: "2026-07-25T17:53:33+09:00", owner_decision: owner-adopt-all-20260725-knights-restaurant-v1-rc4, published: false, producer: web_gpt_pro }
+

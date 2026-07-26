@@ -1,0 +1,20 @@
+schema_version: firefly_narrative_state_v1
+work_slug: _template
+projection_of:
+  state_through: ep000
+  manuscript_manifest: ../04_manuscript/manifest.yaml
+  repo_revision_set_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+rebuildable: true
+facts: {}
+characters: {}
+assets: {}
+positions: []
+open_reader_debts: []
+open_foreshadow: []
+genre_state:
+  modern_fantasy:
+    last_csu_receipts: []
+    appraisal_history: []
+    external_pov_history: []
+    current_status_floor: null
+last_rebuilt_at: null

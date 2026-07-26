@@ -2,6 +2,8 @@
 
 상태: **ADOPTED · 2026-07-11**
 
+개정: **2026-07-25 · A-Rail/B-Rail 분리 + Story Arc 5화 하드 상한**
+
 활성 용어는 [Firefly Terminology](terminology.md)를 따른다. `ff_foundry`의 제작 흐름은 아래다.
 
 ```text
@@ -13,7 +15,7 @@ Frozen Pitch -> Protagonist Operating Identity -> PASS receipt
 [작품 제작 레인]
 Frozen Pitch -> Story Plan -> 화별 약속 -> 원고 후보 -> BR0/BR1 -> owner 승인 -> 승인 원고
                    |                                                   |
-                   +-- 작품 척추 + 장기 앵커 + 근접 3화                 +-> 상태 스냅샷 재생성
+                   +-- 작품 척추 + A-Rail + B-Rail + Rolling Corridor    +-> 상태 스냅샷 재생성
 
 [조건부 장르 계약 — stage/이야기 권위 아님]
 00_feedback_profile -> 선택 Genre Profile -> 생산 excerpt / 전체 감리
@@ -26,7 +28,7 @@ Frozen Pitch -> Story Plan -> 화별 약속 -> 원고 후보 -> BR0/BR1 -> owner
 1. **사람이 승인한 정확한 원고 revision**이 이미 일어난 이야기의 최고 권위다.
 2. **충돌 판정 메모(Canon Note)**는 원고 내부 충돌의 의미 판정 또는 owner retcon만 기록한다. 사실 장부나 미래 계획을 대신하지 않는다.
 3. **상태 스냅샷(Narrative State)**은 승인 원고의 해시와 좌표에서 다시 만들 수 있는 투영/cache다. 원고와 충돌하면 폐기하고 재생성한다.
-4. **Story Plan**은 작품 척추·장기 앵커·근접 3화의 묶음이며 수정 가능한 미래 전략이다. 이미 승인된 원고를 소급해서 지휘하지 않는다.
+4. **Story Plan**은 작품 척추·A-Rail·B-Rail·Rolling Corridor의 묶음이며 수정 가능한 미래 전략이다. 이미 승인된 원고를 소급해서 지휘하지 않는다.
 5. **Source Map / Story Block**은 성공작에서 작동 순서를 찾고 다시 호출하는 provenance 재료다. Story Block은 출처 좌표와 `entry -> sequence -> exit` 계약을 가진다. 실제 사건 좌표에서 가져온 블록은 같은 좌표에 보이는 무대·목격자, 물건, 주인공 행동, 타인의 반응, 관계 전환, 물질 보상, 끝 이미지를 `carrier_surfaces`에 함께 남긴다. 승인 원고나 작품의 미래 전략이 아니다.
 
 Genre Profile은 이 이야기 권위 순서에 끼지 않는다. 선택한 장르 가족의 정적 acceptance contract이며, 작품의 `00_feedback_profile.md`가 opt-in selector다. Story Plan은 아크 변수, 화별 약속은 이번 화 인스턴스, 상태 스냅샷은 승인 원고에서 실제 발생한 이력만 소유한다.
@@ -100,18 +102,61 @@ Living Spine은 supporting talent·아이템·산업보다 먼저 독자가 살 
 
 `받아야 했던 구체 보상`은 이름·직함·퍼센트만으로 닫지 않는다. 독자가 돈·현금흐름·통제권·관계·다음 선택 중 무엇이 생기는지 한 문장으로 설명할 수 있어야 한다. `대표 유능함 receipt`는 조연의 정답을 채택한 사실과 주인공만 내린 판단·감수한 비용·바꾼 판을 분리하고, 주인공을 삭제한 반사실에서도 결과가 달라져야 한다. `부당한 손실`은 주인공이 합리적인 방어를 했는데도 적대자가 준비된 자원과 비용으로 뚫은 사건이어야 한다.
 
-### 장기 앵커 (Braided Anchor Rail)
+### A-Rail — 장기 앵커 (Braided Anchor Rail)
 
 시작부터 엔딩까지 **6~12개의 희소한 tentpole**을 박는다. 각 앵커는 `사전 진입 -> 외부/내부 트리거 -> 비가역 환전 -> 1~3화 인간 후폭풍 -> 독자 부채 상환 -> 다음 압력`의 묶음이다. 현대 금융물에서는 숫자 상승만이 아니라 지위·관계·가문·시장에 남는 표면을 함께 박는다.
 
+- Anchor는 작품 전체의 장기 도착점이며 Story Arc와 동일한 단위가 아니다. 하나의 Anchor 예상 구간은 여러 Arc를 포함할 수 있다.
+- Anchor의 화수 범위는 예상 band일 뿐 고정 연표가 아니다. B close reflow 때 승인 원고의 실제 속도와 상태에 맞춰 이동할 수 있다.
 - 전체 rail은 처음부터 끝까지 희소하게 보인다.
 - 가장 가까운 두 앵커만 compound/detailed 상태다.
 - 먼 앵커는 방향과 독자 부채만 남긴다.
 - 변경은 허용하되 reason과 영향 범위를 남긴다.
 
-### 근접 3화 (Rolling Corridor)
+### B-Rail — 엔딩까지의 Arc Route
 
-현재 앵커에서 다음 앵커까지의 가변 구간이다. 보통 `현재 1화 committed + 다음 2화 provisional`만 보며, 화수는 목적이 아니라 압력에 맞춰 늘고 줄 수 있다. corridor가 anchor를 바꾸지는 않는다.
+B-Rail은 현재 B만 관리하는 보드가 아니라 **현재 엔딩 방향까지 이어지는 Story Arc 순서표**다. 각 슬롯의 `b_id`는 한번 발급하면 재사용하거나 재번호화하지 않고, 순서는 `route_order`로 바꾼다. 중간 삽입이 필요하면 새 `b_id`와 빈 `route_order`를 쓴다.
+
+- 모든 B는 하나의 Story Arc이며 승인 원고 기준 1~5화 안에 독립 결산한다.
+- `closed`는 승인 원고와 closeout receipt가 있는 B, `active`는 현재 원고 생산 단위, `provisional`은 다음 후보 하나, `hypothesis`는 그 뒤의 장기 경로, `retired`는 reflow에서 폐기됐으나 기록을 남기는 B다.
+- B-Rail은 현재 예상 엔딩까지 빈 구간 없이 이어져야 한다. 250화 상단을 가정하고 이미 3화짜리 B가 하나 닫혔다면 최소 51개 B 슬롯의 용량이 필요하지만, 이는 화수 확정이 아니라 최대 5화 상한에 대한 경로 용량 계산이다.
+- 먼 `hypothesis` B가 가져도 되는 내구 필드는 `target_anchor`, `narrative_function`, `payoff_axis`, `carried_reader_debt`, `contrast_requirement`뿐이다.
+- 먼 B에 정확한 화수 좌표, 손님 정체, 음식, 장면 해결책, 정확한 보상 수치를 박지 않는다. 이 값들은 현재 B가 닫힐 때마다 무효화·재작성할 변동 필드다.
+- B-Rail은 A-Rail의 도착점을 연결하지만 A-Rail을 몰래 바꾸지 않는다. Anchor 삭제·추가·엔딩 변경은 별도 이유와 owner fork를 남긴다.
+
+### Story Arc(B) — 1~5화 결산 단위
+
+Story Arc는 하나의 중심 질문·압력·선택이 **1~5화 안에 비가역 결산과 인간 잔여물**을 남기는 최소 중기 단위다.
+
+- `arc_episode_cap: 5`는 하드 상한이다. 승인 원고 기준으로 여섯 번째 화까지 같은 중심 질문의 결산을 미룰 수 없다.
+- B는 일찍 닫을 수 있다. 늘려야 한다면 5화 전에 현재 B의 독립 결산을 만들고, 남은 압력은 새 `b_id`와 새 진입 상태를 가진 다음 B로 다시 설계한다.
+- 이름만 바꿔 같은 미해결 중심 질문을 무결산으로 넘기는 것은 split이 아니다.
+- 현재 B의 close condition은 손님 퇴장, 계약 체결, 패배 비용 확정, 관계 단절·재합의처럼 원고에서 판독 가능한 행동과 상태 변화로 쓴다.
+- 먼 미래의 B 사건·손님·음식·화수는 정본 사실이 아니다. B-Rail에 방향과 기능만 가설로 둔다.
+
+### Rolling Corridor — 현재 작업창
+
+현재 A-Anchor를 향해 움직이는 B-Rail의 작업용 투영이다. Arc 식별자와 장기 순서는 B-Rail이 소유하고, Corridor는 현재 B의 제작 정보와 다음 B 참조만 비춘다.
+
+- `current_b_arc`: B-Rail의 `active` B 하나. 시작 화, 예상 종결 화, 하드 종결 화, 중심 질문, close condition을 가진다.
+- `next_b_arc`: B-Rail의 `provisional` B 하나를 참조한다. 기능과 진입 의존성만 작업창에 비춘다.
+- 먼 `hypothesis`는 Corridor에 복제하지 않고 B-Rail에서만 관리한다.
+- `episode_cursor`: 현재 B 안에서만 `현재 1화 committed + 최대 2화 provisional`을 둔다. B 경계를 넘어 미리 Episode Bet을 잠그지 않는다.
+
+Corridor가 A-Rail이나 B-Rail을 소리 없이 바꾸지는 않는다. 현재 B가 닫히면 아래 reflow를 의무적으로 거친다.
+
+### B close reflow
+
+현재 B의 마지막 회차가 owner 승인 원고가 되면 다음 화별 약속을 만들기 전에 순서대로 실행한다.
+
+1. 승인 manifest와 Narrative State를 Arc endpoint까지 갱신한다.
+2. `05_review/arc_<b_id>_closeout.md`에 시작 상태, 실제 결산, 미지급 독자 부채, 발생한 emergence, Anchor 기여를 기록한다.
+3. 현재 A-Anchor의 방향·예상 band·독자 부채를 유지할지 수정할지 판정한다.
+4. B-Rail의 기존 `provisional` B를 새 상태에서 재검증해 `active`로 승격하거나 `retired` 처리하고 새 B를 발급한다.
+5. 남은 모든 `hypothesis` B의 내구 필드를 `keep | revise | retire`로 재판정한다. 구체 사건·인물·음식·정확한 화수 가정은 무효화하고 현재 Narrative State에서 다시 쓴다.
+6. B-Rail과 Rolling Corridor의 current/next 참조를 맞춘 뒤 새 current B의 Episode Bet만 순차적으로 committed한다.
+
+보존되는 것은 승인 원고, 그 원고에서 재생성한 Narrative State, Frozen Pitch의 판매 약속, owner가 별도로 잠근 Living Spine/A-Rail 제약이다. B-Rail의 먼 방향은 재검증 대상이지 자동 폐기 대상도 확정 사실도 아니다. 자동 보존되지 않는 것은 미래 B의 구체 사건 순서, 손님 정체, 해결 음식, 예상 화수다.
 
 ### 화별 약속 (Episode Bet)
 
@@ -137,9 +182,9 @@ Living Spine은 supporting talent·아이템·산업보다 먼저 독자가 살 
 
 장면은 현재 압력·선택·환전/반응이 닫히거나 다음 장면으로 인계된 뒤 전환한다. 다음 장면은 새 정보·외부 평가·관계 후폭풍·적의 압박·규모 파급·다음 행동 중 하나를 새로 지급해야 하며, 시간·장소 이동이나 재설명만으로는 부족하다. same-POV 전환은 압축과 다음 행동에, 독립 타인 POV는 주인공이 볼 수 없는 값에 쓴다. 장면 수는 고정하지 않는다.
 
-첫 3화의 화별 약속은 시작 전에 committed로 둔다. 이후에는 다음 1화 committed, 뒤 2화 provisional이 기본이다.
+첫 3화의 화별 약속은 시작 전에 committed로 둔다. 이후에는 현재 B 안에서 다음 1화 committed, 뒤 최대 2화 provisional이 기본이다. B 종결 화 뒤의 Episode Bet은 closeout과 reflow가 끝나기 전 committed할 수 없다.
 
-여기서 두 `committed`는 층이 다르다. 첫 문장의 committed는 `ep001~003 Episode Bet 파일 각각의 상태`이고, Rolling Corridor control block의 `committed` 목록은 언제나 현재 제작 커서 1화만 둔다. 따라서 신작 시작점에도 Corridor는 `committed: [ep001] / provisional: [ep002, ep003]`이고, ep001~003 Episode Bet 파일 자체는 모두 `상태: committed`다.
+여기서 두 `committed`는 층이 다르다. 첫 문장의 committed는 `ep001~003 Episode Bet 파일 각각의 상태`이고, Rolling Corridor의 `episode_cursor.committed` 목록은 언제나 현재 제작 커서 1화만 둔다. 따라서 신작 시작점에도 Corridor는 `committed: [ep001] / provisional: [ep002, ep003]`이고, ep001~003 Episode Bet 파일 자체는 모두 `상태: committed`다. 첫 B는 최대 5화 안에서 닫혀야 한다.
 
 ## 역방향 재활용
 
@@ -156,7 +201,7 @@ Living Spine은 supporting talent·아이템·산업보다 먼저 독자가 살 
 리뷰는 항상 두 번 읽는다.
 
 - **BR0 blind readback:** 현재 원고 + 직전 승인 원고만 읽고 실제로 무슨 일이 일어났는지, 첫 기억 물건·행동·관계와 주인공의 승리가 행동 및 타인의 반응으로 어떻게 보였는지 복원한다.
-- **BR1 plan court + compare:** 그 뒤 Premise Transaction·Character Court를 먼저 열어 보상 실질가치·주인공 불가결성·합리적 방어·적대자 비용·행위자 선택을 재판정한다. 이 plan court가 실패하면 원고가 Episode Bet을 정확히 이행했어도 `pass`할 수 없다. 그 뒤 화별 약속, dispatch, Source/Story Block receipt, 근접 3화, 장기 앵커, 상태 스냅샷을 열어 약속과 실제를 비교한다. 유지·변형하기로 한 carrier 기능이 사라졌거나, 출처와 무관한 범용 대체물이 주된 기억·행동 축을 차지하면 surface drift다.
+- **BR1 plan court + compare:** 그 뒤 Premise Transaction·Character Court를 먼저 열어 보상 실질가치·주인공 불가결성·합리적 방어·적대자 비용·행위자 선택을 재판정한다. 이 plan court가 실패하면 원고가 Episode Bet을 정확히 이행했어도 `pass`할 수 없다. 그 뒤 화별 약속, dispatch, Source/Story Block receipt, 현재 B, 가까운 A-Anchor, 상태 스냅샷을 열어 약속과 실제를 비교한다. 유지·변형하기로 한 carrier 기능이 사라졌거나, 출처와 무관한 범용 대체물이 주된 기억·행동 축을 차지하면 surface drift다.
 
 BR0는 1화에서 추가로 네 값을 계획 없이 복원한다: 보상이 왜 탐나는지, 주인공이 정상적인 방어를 했는지, 적대자가 어떤 비용과 수단으로 이겼는지, 주인공을 삭제하면 같은 결과가 나는지. 복원되지 않으면 `FATAL_FLAW 없음`으로 닫지 않는다.
 

@@ -1,5 +1,5 @@
 param(
-    [ValidateSet("prepare", "blind-pack", "review-pack", "review", "review-capture", "review-headless", "route", "cache-smoke", "contract-smoke")]
+    [ValidateSet("prepare", "blind-pack", "review-pack", "review", "review-capture", "review-headless", "route", "cache-smoke", "contract-smoke", "arc-contract-smoke")]
     [string]$Step = "prepare",
 
     [Parameter(Mandatory = $true)]
@@ -13,14 +13,16 @@ param(
     [string]$WorkDir,
     [ValidatePattern('^\d{8}$')]
     [string]$RunDate = (Get-Date -Format "yyyyMMdd"),
-    [ValidateSet("gemini", "claude", "gpt")]
-    [string]$Producer = "gemini",
+    [ValidateSet("webgpt", "gemini", "claude", "gpt")]
+    [string]$Producer = "webgpt",
     [ValidateRange(1, 999)]
     [int]$Attempt = 1,
     [string]$ClaudeExe,
     [string]$Model = "claude-opus-4-8",
+    [string]$WebGptModel = "Web GPT Pro",
     [string]$GeminiModel = "Web Gemini Pro",
     [string]$GptModel = "GPT/Codex",
+    [string]$ReviewerLane = "codex-5.6-terra",
     [string]$TmuxSession,
     [string]$ClaudeSessionId,
     [decimal]$MaxBudgetUsd = 0,
@@ -104,6 +106,7 @@ function Get-AttemptFileName([string]$BaseName, [string]$Extension) {
 }
 
 function Get-ProducerLabel {
+    if ($Producer -eq 'webgpt') { return $WebGptModel }
     if ($Producer -eq 'claude') { return $Model }
     if ($Producer -eq 'gpt') { return $GptModel }
     return $GeminiModel
@@ -635,6 +638,165 @@ function Test-EpisodeBetCommitted([string]$Path) {
     return (Read-Text $Path) -match '(?m)^상태:\s*`?committed`?\s*$'
 }
 
+function Get-IndentedYamlBlock([string]$Text, [string]$Field) {
+    $lines = @($Text -split '\r?\n')
+    $capturing = $false
+    $body = [System.Collections.Generic.List[string]]::new()
+    foreach ($line in $lines) {
+        if (-not $capturing) {
+            if ($line -ceq "$Field`:") {
+                $capturing = $true
+            }
+            continue
+        }
+        if ($line.Length -gt 0 -and $line[0] -ne ' ' -and $line[0] -ne "`t") {
+            break
+        }
+        [void]$body.Add($line)
+    }
+    if (-not $capturing) { return $null }
+    return [string]::Join("`n", $body)
+}
+
+function Get-IndentedYamlScalar([string]$Block, [string]$Field) {
+    if (-not $Block) { return $null }
+    foreach ($line in @($Block -split '\r?\n')) {
+        if ($line -notmatch '^[ \t]+') { continue }
+        $trimmed = $line.Trim()
+        if (-not $trimmed.StartsWith("$Field`:", [System.StringComparison]::Ordinal)) { continue }
+        $value = $trimmed.Substring($Field.Length + 1).Trim()
+        if (-not $value) { return $null }
+        return $value.Trim('"', "'")
+    }
+    return $null
+}
+
+function Convert-EpisodeTagToNumber([string]$EpisodeTag, [string]$Label, [string]$Path) {
+    $match = [regex]::Match(([string]$EpisodeTag), '^ep(?<number>\d{3,6})$')
+    if (-not $match.Success) {
+        throw "Rolling Corridor needs $Label as epNNN: value=$EpisodeTag path=$Path"
+    }
+    return [int]$match.Groups['number'].Value
+}
+
+function Get-ArcRouteSlotBlock([string]$Text, [string]$BId) {
+    $match = [regex]::Match(
+        $Text,
+        "(?ms)^\s*-\s*b_id:\s*$([regex]::Escape($BId))\s*\r?\n(?<body>.*?)(?=^\s*-\s*b_id:|\z)"
+    )
+    if (-not $match.Success) { return $null }
+    return $match.Groups['body'].Value
+}
+
+function Assert-ArcRouteRailContract([string]$Path, [string]$ExpectedBId) {
+    $text = Read-Text $Path
+    if ($text -notmatch '(?m)^schema_version:\s*firefly_arc_route_rail_v1\s*$') {
+        throw "B-Rail schema missing or unsupported: $Path"
+    }
+    if ((Get-YamlScalar $Path 'route_to_ending') -ne 'required') {
+        throw "B-Rail must scaffold a route to the ending: $Path"
+    }
+    if ((Get-YamlScalar $Path 'hypothesis_detail_policy') -ne 'durable_only' -or
+        (Get-YamlScalar $Path 'reflow_policy') -ne 'revalidate_durable_invalidate_volatile') {
+        throw "B-Rail must separate durable route fields from volatile story specifics: $Path"
+    }
+    $capMatch = [regex]::Match($text, '(?m)^arc_episode_cap:\s*(?<cap>\d+)\s*$')
+    if (-not $capMatch.Success -or [int]$capMatch.Groups['cap'].Value -ne 5) {
+        throw "Every B-Rail Story Arc requires arc_episode_cap: 5: $Path"
+    }
+
+    $activeB = Get-YamlScalar $Path 'active_b_arc'
+    $nextB = Get-YamlScalar $Path 'next_b_arc'
+    if (-not $activeB -or $activeB -ne $ExpectedBId) {
+        throw "status.current_b_arc must equal B-Rail active_b_arc: status=$ExpectedBId b_rail=$activeB path=$Path"
+    }
+    if (-not $nextB) {
+        throw "B-Rail requires one next_b_arc pointer: $Path"
+    }
+
+    $activeBlock = Get-ArcRouteSlotBlock $text $activeB
+    if (-not $activeBlock -or (Get-IndentedYamlScalar $activeBlock 'status') -ne 'active') {
+        throw "B-Rail active pointer must resolve to an active slot: b_id=$activeB path=$Path"
+    }
+    $nextBlock = Get-ArcRouteSlotBlock $text $nextB
+    if (-not $nextBlock -or (Get-IndentedYamlScalar $nextBlock 'status') -ne 'provisional') {
+        throw "B-Rail next pointer must resolve to a provisional slot: b_id=$nextB path=$Path"
+    }
+    foreach ($required in @('target_anchor', 'narrative_function', 'payoff_axis', 'carried_reader_debt', 'contrast_requirement')) {
+        if (-not (Get-IndentedYamlScalar $activeBlock $required)) {
+            throw "B-Rail active slot missing durable field $required`: b_id=$activeB path=$Path"
+        }
+    }
+    return $nextB
+}
+
+function Assert-RollingArcContract([string]$Path, [string]$ArcRoutePath, [string]$ExpectedBId, [int]$EpisodeNumber) {
+    $text = Read-Text $Path
+    if ($text -notmatch '(?m)^schema_version:\s*firefly_rolling_corridor_v2\s*$') {
+        throw "Rolling Corridor schema missing or unsupported: $Path"
+    }
+
+    $capMatch = [regex]::Match($text, '(?m)^arc_episode_cap:\s*(?<cap>\d+)\s*$')
+    if (-not $capMatch.Success -or [int]$capMatch.Groups['cap'].Value -ne 5) {
+        throw "Every Story Arc requires arc_episode_cap: 5: $Path"
+    }
+    $cap = [int]$capMatch.Groups['cap'].Value
+
+    $expectedNextB = Assert-ArcRouteRailContract $ArcRoutePath $ExpectedBId
+
+    $currentBlock = Get-IndentedYamlBlock $text 'current_b_arc'
+    if (-not $currentBlock) {
+        throw "Rolling Corridor missing current_b_arc block: $Path"
+    }
+    $arcId = Get-IndentedYamlScalar $currentBlock 'b_id'
+    $status = Get-IndentedYamlScalar $currentBlock 'status'
+    if (-not $arcId -or $arcId -ne $ExpectedBId) {
+        throw "status.current_b_arc must equal rolling current_b_arc.b_id: status=$ExpectedBId corridor=$arcId path=$Path"
+    }
+    if ($status -ne 'active') {
+        throw "Rolling current_b_arc.status must be active: b_id=$arcId status=$status path=$Path"
+    }
+
+    $start = Convert-EpisodeTagToNumber (Get-IndentedYamlScalar $currentBlock 'start_episode') 'current_b_arc.start_episode' $Path
+    $plannedEnd = Convert-EpisodeTagToNumber (Get-IndentedYamlScalar $currentBlock 'planned_end_episode') 'current_b_arc.planned_end_episode' $Path
+    $hardEnd = Convert-EpisodeTagToNumber (Get-IndentedYamlScalar $currentBlock 'hard_end_episode') 'current_b_arc.hard_end_episode' $Path
+    if ($plannedEnd -lt $start -or $plannedEnd -gt $hardEnd) {
+        throw "Rolling current B planned end must be inside start..hard end: b_id=$arcId start=$start planned=$plannedEnd hard=$hardEnd path=$Path"
+    }
+    $hardSpan = $hardEnd - $start + 1
+    if ($hardSpan -lt 1 -or $hardSpan -gt $cap) {
+        throw "Story Arc hard span exceeds 5 episodes: arc=$arcId span=$hardSpan start=$start hard=$hardEnd path=$Path"
+    }
+    if ($EpisodeNumber -lt $start -or $EpisodeNumber -gt $hardEnd) {
+        throw "Requested episode is outside the active Story Arc: arc=$arcId episode=$EpisodeNumber start=$start hard=$hardEnd path=$Path"
+    }
+    foreach ($required in @('central_question', 'close_condition', 'anchor_contribution')) {
+        if (-not (Get-IndentedYamlScalar $currentBlock $required)) {
+            throw "Rolling current B missing $required`: b_id=$arcId path=$Path"
+        }
+    }
+
+    $nextBlock = Get-IndentedYamlBlock $text 'next_b_arc'
+    if (-not $nextBlock -or (Get-IndentedYamlScalar $nextBlock 'status') -ne 'provisional') {
+        throw "Rolling next_b_arc must exist with status=provisional: $Path"
+    }
+    $rollingNextB = Get-IndentedYamlScalar $nextBlock 'b_id'
+    if ($rollingNextB -ne $expectedNextB) {
+        throw "Rolling next_b_arc must equal B-Rail next_b_arc: rolling=$rollingNextB b_rail=$expectedNextB path=$Path"
+    }
+
+    $reflowBlock = Get-IndentedYamlBlock $text 'reflow_on_b_close'
+    if (-not $reflowBlock) {
+        throw "Rolling Corridor missing reflow_on_b_close: $Path"
+    }
+    if ((Get-IndentedYamlScalar $reflowBlock 'required') -ne 'true' -or
+        (Get-IndentedYamlScalar $reflowBlock 'trigger') -ne 'owner_approved_arc_close' -or
+        (Get-IndentedYamlScalar $reflowBlock 'b_rail_durable_fields') -ne 'revalidate' -or
+        (Get-IndentedYamlScalar $reflowBlock 'b_rail_volatile_fields') -ne 'invalidate_and_rebuild') {
+        throw "B close must revalidate durable route fields and invalidate volatile story specifics: $Path"
+    }
+}
+
 function Resolve-PreviousEndpoint([string]$ManifestPath, [string]$EpisodeTag, [bool]$RequireOwnerApproved) {
     [void](Get-RequiredFile $ManifestPath "manuscript manifest")
     $line = [regex]::Match(
@@ -703,11 +865,11 @@ function Get-RunPaths([string]$FoundryRoot, [string]$WorkDirectory, [string]$Slu
     $runDir = Get-RunDir $FoundryRoot $Slug $EpisodeNumber $DateText $Producer $Attempt
 
     $status = Get-RequiredFile (Join-Under $WorkDirectory @("00_status.md")) "work status"
-    if ((Get-YamlScalar $status "schema_version") -ne "firefly_work_status_v3") {
-        throw "Relay accepts firefly_work_status_v3 works only. Parked/archive legacy works must migrate before production: $status"
+    if ((Get-YamlScalar $status "schema_version") -ne "firefly_work_status_v4") {
+        throw "Relay accepts firefly_work_status_v4 works only. Parked/archive legacy works must migrate before production: $status"
     }
-    if ((Get-YamlScalar $status "workflow_schema") -ne "anchored_story_loop_v2") {
-        throw "Relay requires workflow_schema=anchored_story_loop_v2: $status"
+    if ((Get-YamlScalar $status "workflow_schema") -ne "anchored_story_loop_v3") {
+        throw "Relay requires workflow_schema=anchored_story_loop_v3: $status"
     }
     if ((Get-YamlScalar $status "work_slug") -ne $Slug) {
         throw "Work slug does not match status: requested=$Slug status=$(Get-YamlScalar $status 'work_slug')"
@@ -725,6 +887,14 @@ function Get-RunPaths([string]$FoundryRoot, [string]$WorkDirectory, [string]$Slu
     if ($layoutProfile -notmatch '^(native|imported_legacy_bridge)$') {
         throw "Relay requires layout_profile=native|imported_legacy_bridge: value=$layoutProfile path=$status"
     }
+
+    $arcRouteRail = Get-RequiredFile (Join-Under $WorkDirectory @("02_story", "arc_route_rail.md")) "B-Rail"
+    $rollingCorridor = Get-RequiredFile (Join-Under $WorkDirectory @("02_story", "rolling_corridor.md")) "Rolling Corridor"
+    $currentBId = Get-YamlScalar $status "current_b_arc"
+    if (-not $currentBId) {
+        throw "Work status requires current_b_arc: $status"
+    }
+    Assert-RollingArcContract $rollingCorridor $arcRouteRail $currentBId $EpisodeNumber
 
     $episodeBet = Get-RequiredFile (Join-Under $WorkDirectory @("03_episode_bet", "$episodeTag`_episode_bet.md")) "exact current Episode Bet"
     if (-not (Test-EpisodeBetCommitted $episodeBet)) {
@@ -765,7 +935,6 @@ function Get-RunPaths([string]$FoundryRoot, [string]$WorkDirectory, [string]$Slu
     }
     $sourceFeedReceipt = if ($Producer -eq 'gemini') { Resolve-SourceFeedReceipt $FoundryRoot $status } else { $null }
     $anchorRail = Join-Under $WorkDirectory @("02_story", "anchor_rail.md")
-    $rollingCorridor = Join-Under $WorkDirectory @("02_story", "rolling_corridor.md")
     $narrativeState = Join-Under $WorkDirectory @("08_state", "narrative_state.yaml")
     $dispatchTemplate = Get-RequiredFile (Join-Under $FoundryRoot @("40_works", "_template", "07_dispatch", "ep000_dispatch.md")) "dispatch template"
     $reviewTemplate = Get-RequiredFile (Join-Under $FoundryRoot @("40_works", "_template", "05_review", "ep000_review.md")) "review template"
@@ -790,6 +959,7 @@ function Get-RunPaths([string]$FoundryRoot, [string]$WorkDirectory, [string]$Slu
         PreviousManuscript = $previousManuscript
         LivingSpine = $livingSpine
         AnchorRail = if (Test-Path -LiteralPath $anchorRail -PathType Leaf) { (Resolve-Path -LiteralPath $anchorRail).Path } else { $null }
+        ArcRouteRail = if (Test-Path -LiteralPath $arcRouteRail -PathType Leaf) { (Resolve-Path -LiteralPath $arcRouteRail).Path } else { $null }
         RollingCorridor = if (Test-Path -LiteralPath $rollingCorridor -PathType Leaf) { (Resolve-Path -LiteralPath $rollingCorridor).Path } else { $null }
         NarrativeState = if (Test-Path -LiteralPath $narrativeState -PathType Leaf) { (Resolve-Path -LiteralPath $narrativeState).Path } else { $null }
         DispatchTemplate = $dispatchTemplate
@@ -827,6 +997,7 @@ function Invoke-Prepare([string]$FoundryRoot, [string]$WorkDirectory, [hashtable
         "- $episodeBetDisplay"
         "- $livingSpineDisplay"
         "- $(Get-RelativeDisplay $FoundryRoot $Paths.AnchorRail)"
+        "- $(Get-RelativeDisplay $FoundryRoot $Paths.ArcRouteRail)"
         "- $(Get-RelativeDisplay $FoundryRoot $Paths.RollingCorridor)"
         "- $(Get-RelativeDisplay $FoundryRoot $Paths.NarrativeState)"
         "- compiled render selection: $($Paths.RenderSelections.Count) entries (in dispatch cover order)"
@@ -844,7 +1015,7 @@ function Invoke-Prepare([string]$FoundryRoot, [string]$WorkDirectory, [hashtable
     }
 
     $producerLabel = Get-ProducerLabel
-    $receiptStatus = if ($Producer -eq 'gpt') { 'awaiting_repo_native_gpt_raw' } else { 'awaiting_manual_external_raw' }
+    $receiptStatus = if ($Producer -eq 'gpt') { 'awaiting_repo_native_gpt_raw' } elseif ($Producer -eq 'webgpt') { 'awaiting_webgpt_pro_raw' } else { 'awaiting_manual_external_raw' }
     $manualGate = if ($Producer -eq 'gpt') {
 @"
 1. GPT/Codex reads the compiled dispatch and repo-native attachments below.
@@ -852,6 +1023,14 @@ function Invoke-Prepare([string]$FoundryRoot, [string]$WorkDirectory, [hashtable
 3. Record the exact source/contract paths used in this receipt.
 4. Run blind-pack and seal blind_readback.md before review-pack.
 5. Run review-pack, then review with a non-producing lane.
+"@
+    } elseif ($Producer -eq 'webgpt') {
+@"
+1. Attach the compiled dispatch and listed production files to Web GPT Pro.
+2. Save only the clean manuscript candidate to raw.md in this run directory.
+3. Record the Web GPT chat URL or equivalent response identity and attached-file SHA-256 values in this receipt.
+4. Run blind-pack, then have $ReviewerLane seal blind_readback.md before review-pack.
+5. Run review-pack, then have $ReviewerLane complete BR1.
 "@
     } else {
 @"
@@ -864,6 +1043,8 @@ function Invoke-Prepare([string]$FoundryRoot, [string]$WorkDirectory, [hashtable
     }
     $sourcePrecondition = if ($Producer -eq 'gpt') {
         'Repo-native producer: receipt must name the selected canon/profile/source paths actually read.'
+    } elseif ($Producer -eq 'webgpt') {
+        'Web GPT Pro producer: receipt must identify the actual attached dispatch/source packet and response.'
     } else {
         'The external production chat must already satisfy its source-fed precondition.'
     }
@@ -984,6 +1165,9 @@ $episodeBetBlock
 === anchor_rail ===
 $(if ($Paths.AnchorRail) { Read-Text $Paths.AnchorRail } else { "ANCHOR_RAIL_MISSING_OR_LEGACY" })
 
+=== arc_route_rail_b_rail ===
+$(if ($Paths.ArcRouteRail) { Read-Text $Paths.ArcRouteRail } else { "ARC_ROUTE_RAIL_MISSING_OR_LEGACY" })
+
 === rolling_corridor ===
 $(if ($Paths.RollingCorridor) { Read-Text $Paths.RollingCorridor } else { "ROLLING_CORRIDOR_MISSING_OR_LEGACY" })
 
@@ -1083,21 +1267,22 @@ function New-ReviewPacketText([string]$FoundryRoot, [string]$WorkDirectory, [has
     }
 
     return @"
-# claude_visible_review_packet
+# review_packet
 
-status: ready_for_visible_claude_review
+status: ready_for_review
 work_slug: $WorkSlug
 episode: $episodeTag
 run_date: $RunDate
 attempt: $Attempt
 producer: $producerLabel
-model: $Model
+producer_lane: $Producer
+default_reviewer_lane: $ReviewerLane
 
 ## role
 
 You are the reviewer, not the prose producer.
-BR0 is already sealed. First judge the Premise Transaction and Character Court themselves. A manuscript cannot pass merely because it faithfully matches a weak plan. Then compare that readback with the Episode Bet, Living Spine, Anchor Rail, Rolling Corridor, Narrative State, and manuscript candidate.
-Do not edit files. Return only the review decision content in the Claude chat.
+BR0 is already sealed. First judge the Premise Transaction and Character Court themselves. A manuscript cannot pass merely because it faithfully matches a weak plan. Then compare that readback with the Episode Bet, Living Spine, Anchor Rail, Arc Route Rail, Rolling Corridor, Narrative State, and manuscript candidate.
+Do not edit the manuscript or plan files. Return only the review decision content.
 
 ## output contract
 
@@ -1112,6 +1297,7 @@ Inside the sentinels:
 
 - First non-empty line is exactly one of: pass, revise, restart.
 - Plain Markdown only.
+- Include `producer_lane: $Producer` and `reviewer_lane: $ReviewerLane` on separate lines.
 - For revise, include sections named: keepers, what_to_adjust, next_attempt_order, keep_stable, ready_when.
 - For restart, include sections named: keepers_if_any, why_restart, next_attempt_brief.
 - For pass, include sections named: minor_cleanup, canon_risk, promote_as_canonical, notes_for_codex.
@@ -1127,6 +1313,7 @@ Inside the sentinels:
 - Character Court: $characterCourtDisplay
 - Living Spine: $livingSpineDisplay
 - Anchor Rail: $(Get-RelativeDisplay $FoundryRoot $Paths.AnchorRail)
+- Arc Route Rail — B-Rail: $(Get-RelativeDisplay $FoundryRoot $Paths.ArcRouteRail)
 - Rolling Corridor: $(Get-RelativeDisplay $FoundryRoot $Paths.RollingCorridor)
 - Narrative State: $(Get-RelativeDisplay $FoundryRoot $Paths.NarrativeState)
 - previous manuscript endpoint: $previousManuscriptDisplay
@@ -1156,8 +1343,10 @@ function New-BlindReviewPacketText([string]$FoundryRoot, [hashtable]$Paths) {
 work_slug: $WorkSlug
 episode: $episodeTag
 attempt: $Attempt
+producer_lane: $Producer
+default_reviewer_lane: $ReviewerLane
 
-Read only the manuscript candidate and, when present, the previous manuscript endpoint. Do not open Living Spine, Anchor Rail, Rolling Corridor, Episode Bet, Narrative State, dispatch, or review plans.
+Read only the manuscript candidate and, when present, the previous manuscript endpoint. Do not open Living Spine, Anchor Rail, Arc Route Rail, Rolling Corridor, Episode Bet, Narrative State, dispatch, or review plans.
 
 ## allowed inputs
 
@@ -1168,6 +1357,7 @@ Read only the manuscript candidate and, when present, the previous manuscript en
 
 - living_spine
 - anchor_rail
+- arc_route_rail
 - rolling_corridor
 - episode_bet
 - narrative_state
@@ -1213,7 +1403,7 @@ function Invoke-BlindPack([string]$FoundryRoot, [hashtable]$Paths) {
 function Invoke-ReviewPack([string]$FoundryRoot, [string]$WorkDirectory, [hashtable]$Paths) {
     New-DirectoryIfNeeded $Paths.RunDir
     if (-not $DryRun -or (Test-Path -LiteralPath $Paths.Raw -PathType Leaf)) {
-        [void](Get-RequiredFile $Paths.Raw "Gemini raw")
+        [void](Get-RequiredFile $Paths.Raw "manuscript candidate")
     }
     if ($DryRun -and -not (Test-Path -LiteralPath $Paths.Raw -PathType Leaf)) {
         Write-Host "[dry-run] raw missing now, expected later: $($Paths.Raw)"
@@ -1227,7 +1417,7 @@ function Invoke-ReviewPack([string]$FoundryRoot, [string]$WorkDirectory, [hashta
     $packetText = New-ReviewPacketText $FoundryRoot $WorkDirectory $Paths
     Write-TextFile $Paths.ReviewPacket $packetText
     Write-Host "review packet: $($Paths.ReviewPacket)"
-    Write-Host "next: run -Step review to start visible Claude in tmux"
+    Write-Host "next: have $ReviewerLane complete BR1 from this packet; legacy Claude fallback remains available via -Step review"
 }
 
 function New-VisibleReviewPrompt([string]$FoundryRoot, [hashtable]$Paths) {
@@ -1243,7 +1433,7 @@ $(Get-RelativeDisplay $FoundryRoot $Paths.ReviewPacket)
 
 function Invoke-ReviewVisible([string]$FoundryRoot, [string]$WorkDirectory, [hashtable]$Paths) {
     if (-not $DryRun -or (Test-Path -LiteralPath $Paths.Raw -PathType Leaf)) {
-        [void](Get-RequiredFile $Paths.Raw "Gemini raw")
+        [void](Get-RequiredFile $Paths.Raw "manuscript candidate")
     }
     $claudePath = Resolve-ClaudeExe $ClaudeExe
     $sessionId = if ($ClaudeSessionId) { $ClaudeSessionId } else { New-ClaudeSessionId }
@@ -1326,7 +1516,7 @@ auth_preflight: Claude OAuth login verified; metered provider env not present
 
 function Invoke-ReviewHeadless([string]$FoundryRoot, [string]$WorkDirectory, [hashtable]$Paths) {
     if (-not $DryRun -or (Test-Path -LiteralPath $Paths.Raw -PathType Leaf)) {
-        [void](Get-RequiredFile $Paths.Raw "Gemini raw")
+        [void](Get-RequiredFile $Paths.Raw "manuscript candidate")
     }
     $claudePath = Resolve-ClaudeExe $ClaudeExe
 
@@ -1382,6 +1572,7 @@ function Get-ReviewDecisionMetadata([string]$ReviewDecisionPath, [string]$Field)
 
 function Get-LaneFamily([string]$Lane) {
     $value = ([string]$Lane).ToLowerInvariant()
+    if ($value -match 'web[ _-]?gpt') { return 'webgpt' }
     if ($value -match 'gemini') { return 'gemini' }
     if ($value -match 'gpt|codex') { return 'gpt' }
     if ($value -match 'claude') { return 'claude' }
@@ -1674,8 +1865,38 @@ function Invoke-ContractSmoke([hashtable]$Paths) {
     Write-Host "blank fixture issues: $($blankIssues.Count)"
 }
 
+function Invoke-ArcContractSmoke([string]$WorkDirectory, [string]$Slug) {
+    $status = Get-RequiredFile (Join-Under $WorkDirectory @("00_status.md")) "work status"
+    if ((Get-YamlScalar $status "schema_version") -ne "firefly_work_status_v4" -or
+        (Get-YamlScalar $status "workflow_schema") -ne "anchored_story_loop_v3") {
+        throw "Arc contract smoke requires firefly_work_status_v4 + anchored_story_loop_v3: $status"
+    }
+    if ((Get-YamlScalar $status "work_slug") -ne $Slug) {
+        throw "Work slug does not match status: requested=$Slug status=$(Get-YamlScalar $status 'work_slug')"
+    }
+    $episodeTag = Get-YamlScalar $status "current_episode"
+    $episodeNumber = Convert-EpisodeTagToNumber $episodeTag 'status.current_episode' $status
+    $currentBId = Get-YamlScalar $status "current_b_arc"
+    if (-not $currentBId) {
+        throw "Work status requires current_b_arc: $status"
+    }
+    $arcRouteRail = Get-RequiredFile (Join-Under $WorkDirectory @("02_story", "arc_route_rail.md")) "B-Rail"
+    $rollingCorridor = Get-RequiredFile (Join-Under $WorkDirectory @("02_story", "rolling_corridor.md")) "Rolling Corridor"
+    Assert-RollingArcContract $rollingCorridor $arcRouteRail $currentBId $episodeNumber
+    Write-Host "arc contract smoke: passed"
+    Write-Host "current B: $currentBId"
+    Write-Host "current episode: $episodeTag"
+    Write-Host "episode cap: 5"
+    Write-Host "B-Rail: $arcRouteRail"
+    Write-Host "corridor: $rollingCorridor"
+}
+
 $foundryRoot = Resolve-FoundryRoot
 $workDirectory = Resolve-WorkDirectory $foundryRoot $WorkSlug $WorkDir
+if ($Step -eq "arc-contract-smoke") {
+    Invoke-ArcContractSmoke $workDirectory $WorkSlug
+    exit 0
+}
 $paths = Get-RunPaths $foundryRoot $workDirectory $WorkSlug $Episode $RunDate
 
 switch ($Step) {

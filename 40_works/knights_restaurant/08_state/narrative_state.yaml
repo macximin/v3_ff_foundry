@@ -1,0 +1,205 @@
+schema_version: firefly_narrative_state_v1
+work_slug: knights_restaurant
+projection_of:
+  state_through: ep003
+  manuscript_manifest: ../04_manuscript/manifest.yaml
+  repo_revision_set_sha256: 68e646deef2eeae2d1075f7fc61e62f6372068d33fdae688491bd48f55d42975
+rebuildable: true
+facts:
+  story_time:
+    empire_collapse_remaining_last_explicit: "약 2년 9개월"
+    latest_event: "북부 계약 체결 닷새 뒤 황실 보고 도착"
+  world:
+    empire: 발렌티아 제국
+    collapse_foreknown_by_kyle: true
+    collapse_foreknown_horizon_from_ep001: 3_years
+  harven_rights:
+    owner: 카일 하르벤
+    included:
+      - 하르벤 마을 주택지
+      - 부속 농지
+      - 서쪽 임야
+      - 공동 우물
+      - 물길 사용권
+    historical_unpaid_tax: extinguished
+    imperial_land_ledger_registered: true
+    owner_holds_original_document: true
+  restaurant:
+    name: 기사식당
+    owner: 카일 하르벤
+    bowl_price_silver: 1
+    rules:
+      - 주방에서는 주인의 판단을 따른다
+      - 추가 배식은 불 앞에서 일한 사람부터 받는다
+characters:
+  kyle_harven:
+    name: 카일 하르벤
+    age: 18
+    status: "하르벤 영지권자, 기사식당 주인, 북부군 독립 급양 공급자"
+    viewpoint: "1인칭 주시점"
+    former_role: "제2황녀를 구한 평민 출신 기사"
+    mana_core: damaged
+    advantages:
+      - 21세기 기사식당 아들의 전생 기억
+      - 현생의 기사·전쟁·지휘 경험
+      - 제국 멸망을 아는 원작 기억
+    current_position: 하르벤 기사식당
+  isera_valentia:
+    name: 이세라 발렌티아
+    role: 제2황녀
+    relationship_to_kyle: "카일을 자기 검으로 여겼으며 하르벤의 독립 경영을 관찰 중"
+    current_action: "황실 사람도 같은 규칙을 적용받는지 볼 손님을 하르벤으로 보냄"
+    current_position: 황궁
+  adeline_rubiere:
+    name: 아델린 루비에르
+    role: 북부대공
+    condition: "빙룡의 피로 잃었던 온도 구별 감각이 음식 뒤 일부 회복되어 관찰 중"
+    relationship_to_kyle: "첫 손님이자 북부군 공급계약 상대"
+    current_action: "검증을 명목으로 하르벤 체류 예정"
+    current_position: 하르벤
+  hart:
+    name: 하르트
+    role: 북부 수석 의관
+    responsibility:
+      - 아델린 상태 관찰
+      - 군 급양 효과와 부작용 기록
+      - 취사병 교육의 안전 판별 검증
+    current_position: 하르벤
+  kern:
+    name: 케른
+    role: 북부 군수관
+    responsibility:
+      - 납품 인수
+      - 표본 검수
+      - 대금 정산
+      - 도로와 창고 공사 조정
+    current_position: 하르벤
+assets:
+  cash:
+    personal:
+      gold: 3
+      silver: 22
+    restricted_contract_advance:
+      gold: 200
+      free_use_gold: 0
+  last_explicit_personal_inventory_count:
+    counted_in: ep002
+    beans_sacks: 5
+    barley_sacks: 9
+    salt_tubs: 2
+    pork_supply: 2_days
+    eggs: 18
+    flamegrass_sack_fraction: "2/3"
+  northern_supply_contract:
+    authority: owner_approved_ep003
+    preparation_period_days: 30
+    supply_period_starts: actual_first_delivery
+    supply_period: 1_year
+    cadence_days: 15
+    deliveries: 24
+    servings_per_delivery: 1500
+    servings_total: 36000
+    bundle_servings: 50
+    bundles_per_delivery: 30
+    supply_total_gold: 360
+    training:
+      trainees: 10
+      gold_per_person: 4
+      total_gold: 40
+    contract_total_gold: 400
+    advance_gold: 200
+    advance_allocation:
+      training_gold_confirmed_on_completion: 40
+      supply_offset_gold: 160
+    remaining_gold_after_advance: 200
+    settlement:
+      delivery_value_gold: 15
+      advance_covers_first_ten_deliveries_gold: 150
+      eleventh_delivery_advance_offset_gold: 10
+      eleventh_delivery_cash_due_gold: 5
+      later_payment: "매달 말 실제 인수 물량만 정산"
+      no_acceptance_no_offset_or_payment: true
+    buyer_local_inputs:
+      - 물
+      - 신선한 달걀
+    acceptance_checks:
+      - 봉인 상태
+      - 중량
+      - 재료 상태
+      - 화염초 기름 농도
+    rejected_goods:
+      payment_due: false
+      replacement_cost_owner: supplier
+    early_termination:
+      repeated_supplier_fault: "즉시 해지, 미상계 공급 선금 반환"
+      no_meaningful_effect_during_first_three_months: "북부가 종료 가능, 교육비 확정분 제외 실제 인수분만 상계"
+  infrastructure:
+    road:
+      route: "북부 대로 갈림길부터 하르벤 우물 앞"
+      payer: northern_side
+      ownership_effect: public_access_improvement
+      refundable: false
+      deadline: "예정 첫 납품 닷새 전"
+      buyer_delay_effect: "늦어진 날만큼 첫 납품 연장"
+    warehouse:
+      location: "기사식당 뒤 카일 소유 토지"
+      bays: 3
+      owner_on_completion: 카일 하르벤
+      construction_payer: northern_side
+      amortization_months: 12
+      supplier_fault_early_end: "남은 미상각 공사비를 북부에 반환"
+      northern_fault_or_effect_failure_end: "공사비 반환 없음"
+      northern_use: "공급 기간 중 이미 구매한 완성품용 한 칸"
+      northern_lien: false
+      exclusivity: false
+  mass_meal_test:
+    completed_servings: 50
+    adeline_validation_serving: 0.5
+    initial_other_diners: 40
+    worker_extra_servings: 8
+    adeline_regular_serving: 1
+    kyle_staff_meal: 0.5
+    quantity_balanced: true
+positions:
+  - { entity: kyle_harven, location: 하르벤 기사식당 }
+  - { entity: adeline_rubiere, location: 하르벤 }
+  - { entity: hart, location: 하르벤 }
+  - { entity: kern, location: 하르벤 }
+  - { entity: isera_valentia, location: 황궁 }
+open_reader_debts:
+  - { id: first_supply, debt: "30일 안에 생산 준비·취사병 교육·도로·창고를 맞물려 첫 1,500그릇을 인수시킨다." }
+  - { id: production_team, debt: "작업자 8명과 반복 가능한 공정을 실제로 확보한다." }
+  - { id: supply_sources, debt: "콩·건조 고기·육수·소금·응고제·정제 기름의 안정 공급처를 확보한다." }
+  - { id: imperial_guest, debt: "이세라가 보낸 황실 손님의 정체와 식당 규칙 시험." }
+  - { id: contract_trial, debt: "첫 3개월 효과·부작용 기록이 계약 지속을 정당화하는가." }
+  - { id: adeline_stay, debt: "아델린의 하르벤 체류가 계약 검증과 관계에 남기는 비용." }
+open_foreshadow:
+  - { id: empire_collapse, seeded_in: ep001, promise: "약 3년 뒤 제국 멸망 전에 하르벤을 생존 가능한 생활권으로 만든다." }
+  - { id: imperial_guest, seeded_in: ep003, promise: "황실 사람에게도 북부대공과 같은 가격과 규칙을 적용한다." }
+  - { id: first_delivery, seeded_in: ep003, promise: "선금 200금화를 생산 조직과 첫 인수로 환전한다." }
+plan_only_not_projected_as_history:
+  - "로맨스 메인 축과 인물 연령"
+  - "아델린의 옆집 매입과 지방 귀족 굴복의 정확한 화수"
+  - "성녀·마탑주·대상단주 후보의 정확한 이름·음식·등장 순서"
+genre_state:
+  modern_fantasy:
+    last_csu_receipts:
+      - { episode: ep001, receipt: "하르벤 영지권 원본과 기사식당" }
+      - { episode: ep002, receipt: "아델린의 공개 판단권 인정과 첫 매출 은화 1닢" }
+      - { episode: ep003, receipt: "50그릇 재현, 군납·도로·창고 계약, 제한 선금 200금화" }
+    appraisal_history:
+      - { episode: ep001, evaluator: 이세라, signal: complete_land_grant }
+      - { episode: ep002, evaluator: 아델린, signal: restaurant_judgment_over_ducal_order }
+      - { episode: ep003, evaluator: 아델린_하르트_케른, signal: signed_supply_contract }
+    external_pov_history:
+      - { episode: ep001, count: 0 }
+      - { episode: ep002, count: 0 }
+      - { episode: ep003, count: 1, function: "황실이 카일의 독립 성장을 인지하고 손님을 보냄" }
+    current_status_floor:
+      approved_through: ep003
+      personal_cash: "금화 3닢, 은화 22닢"
+      restricted_advance_gold: 200
+      land_owner: true
+      supply_contracts: 1
+last_rebuilt_at: "2026-07-25T17:53:33+09:00"
+

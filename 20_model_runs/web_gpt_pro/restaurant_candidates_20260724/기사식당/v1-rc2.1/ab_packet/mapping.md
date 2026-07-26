@@ -1,0 +1,15 @@
+# 기사식당 blind A/B mapping
+
+- evaluator must not receive this file
+- A: `v1-rc1`
+- B: `v1-rc2.1`
+
+## SHA-256
+
+- A ep001: `6b5ae8344233a70aee449b5ea37eb4ecca52d54538606537bbb0e67147ffc5a2`
+- A ep002: `109a01d05de247bb6a80d31538bd77d7a30dbe90126831daac13895dad86a0e2`
+- A ep003: `3d7ae5d16cc53bd1f8827065bd720005cbe77a483ea64fe6634917173d28be01`
+- B ep001: `6b5ae8344233a70aee449b5ea37eb4ecca52d54538606537bbb0e67147ffc5a2`
+- B ep002: `fd350bee21e2117df54b05518681eadffc720b17ae400f7408af968dfd6db17b`
+- B ep003: `cbaff665d861ba62f190f659a2b23a832a618472e942381e486d3239b1c93705`
+

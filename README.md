@@ -20,12 +20,12 @@ It stores model-run receipts, promoted writing materials, work-level planning ar
 
 ## Principle
 
-Web Gemini Pro and GPT/Codex are co-equal prose producers. The producer is chosen per output; candidates are not averaged. A non-producing human, Gemini, Claude Code, or Codex reviews the result, and the owner alone decides what becomes authority. Web Gemini starts from a receipt-bound, role-routed source-fed session; GPT/Codex records the repo-native canon and source paths it actually used. See the Model Lanes in [AGENTS.md](AGENTS.md).
+Web GPT Pro is the default prose producer. Codex Desktop `gpt-5.6-terra` is the default BR0/BR1 reviewer and the repo/receipt operator. If Web GPT Pro is unavailable or misses the owner's quality bar, the owner may select a fallback producer; GPT/Codex-produced prose must be reviewed by a non-Codex lane. Candidates are never averaged, and the owner alone decides what becomes authority. See the Model Lanes in [AGENTS.md](AGENTS.md).
 
 ## Canonical writing loop
 
 ```text
-Living Spine -> Anchor Rail -> Rolling Corridor -> Episode Bet -> Manuscript -> Narrative State
+Living Spine -> A-Rail -> B-Rail -> Rolling Corridor -> Episode Bet -> Manuscript -> Narrative State
 ```
 
 See [Anchored Story Loop](00_charter/anchored_story_loop.md). Kanban remains the board/flow method, not story authority.
