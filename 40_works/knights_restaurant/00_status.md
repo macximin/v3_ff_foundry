@@ -4,6 +4,9 @@ workflow_schema: anchored_story_loop_v3
 layout_profile: native
 work_slug: knights_restaurant
 title: "기사식당"
+owner_id: wjjo
+ownership_scope: personal
+production_system: v3_firefly_studio
 portfolio_state: active
 production_stage: manuscript
 current_episode: ep004

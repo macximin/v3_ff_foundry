@@ -4,6 +4,9 @@ workflow_schema: anchored_story_loop_v3
 layout_profile: native
 work_slug: afterlife_restaurant
 title: "저승식당"
+owner_id: wjjo
+ownership_scope: personal
+production_system: v3_firefly_studio
 portfolio_state: active
 production_stage: episode_bet
 current_episode: ep004

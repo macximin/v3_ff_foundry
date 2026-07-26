@@ -4,6 +4,9 @@ workflow_schema: anchored_story_loop_v3
 layout_profile: native
 work_slug: _template
 title: ""
+owner_id: wjjo
+ownership_scope: personal
+production_system: v3_firefly_studio
 portfolio_state: template
 production_stage: none
 current_episode: ep000
@@ -27,6 +30,7 @@ updated_at: 2026-07-12
 YAML front matter가 작품 진행 상태의 유일한 기계 판독 정본이다. 본문은 사람용 설명만 둔다.
 
 - `layout_profile`: `native | imported_legacy_bridge`
+- `owner_id`, `ownership_scope`, `production_system`은 Storyyard 공개 여부와 별개인 작품 소유권·생산 provenance다.
 - `production_stage`: `none | pitch | story | episode_bet | manuscript | review`. 현재 작업 위치이며 이야기 권위 등급이 아니다.
 - `current_b_arc`: B-Rail의 `active_b_arc`, Rolling Corridor의 `current_b_arc.b_id`와 같아야 한다. 어떤 B도 승인 원고 기준 5화를 넘을 수 없다.
 - 선택 Genre Profile은 이 front matter가 아니라 `00_feedback_profile.md`의 `genre_profiles`가 소유한다.

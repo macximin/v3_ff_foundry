@@ -2,9 +2,9 @@
 
 > 운영 규칙 정본은 [AGENTS.md](AGENTS.md)다. 이 README는 사람용 입구다.
 
-`ff_foundry` is the model-led creative foundry for Firefly.
+`v3_ff_foundry` is the sole active model-led creative foundry for Firefly.
 
-It stores model-run receipts, promoted writing materials, work-level planning artifacts, manuscripts, and cross-model comparisons. Raw-source authority stays in `ff_sources`. Operational status stays in `ff_studio_v2`.
+It stores model-run receipts, promoted writing materials, work-level planning artifacts, manuscripts, and cross-model comparisons. Raw-source authority stays in `v3_ff_sources`. Portfolio strategy stays in `genai_hq`; work authority stays here.
 
 ## Shape
 

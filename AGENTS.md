@@ -10,4 +10,4 @@ ff_foundry 운영 규칙 정본은 **00_charter/ff_foundry_charter.md**다 (권�
 → [작품 양식](40_works/_template/)
 
 원천 채굴(QRP 등) 재료는 ff_foundry 소관. 원문 정본 권위는 ff_sources에 둔다. 작업 사본은 헌장 경계 안에서 허용한다.
-규칙 변경은 이 파일/헌장에서만(drift 방지). 작품 진행 상태 정본은 각 `40_works/<work_slug>/00_status.md`의 YAML front matter이며, 포트폴리오 초점·다음 행동 정본은 `ff_studio_v2/command_board/state/firefly.yaml`이다. Notion은 이 상태를 비추는 사람용 read model이다.
+규칙 변경은 이 파일/헌장에서만(drift 방지). 작품 진행 상태와 작품별 소유권 정본은 각 `40_works/<work_slug>/00_status.md`의 YAML front matter다. 포트폴리오 전략·승인·handoff는 `genai_hq`, 제작 정본은 이 repo, 공개 투영은 Storyyard가 맡는다. Storyyard에서 이 repo로 역방향 동기화하지 않는다.
