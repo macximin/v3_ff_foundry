@@ -21,6 +21,7 @@ blockers: []
 decision_ids:
   - owner-phase-b-go-20260726-tyrant-restaurant
   - owner-adopt-all-20260726-tyrant-restaurant-v2
+  - owner-confirm-tyrant-plan-consistency-20260726
 source_origin: 20_model_runs/web_gpt_pro/restaurant_revision_20260726/tyrant_restaurant
 source_feed_receipt: null
 notion_page: null
@@ -40,3 +41,7 @@ ep001–ep003은 owner-approved history다. ep004 이후는 Episode Bet → manu
 ## Immediate owner decision
 
 ep004의 사흘 식당 시험을 Episode Bet으로 먼저 설계한다.
+
+## Consistency closeout
+
+승인 원고와 Narrative State에 이미 존재하는 베르너를 Frozen Pitch 핵심 인물에 명시해 작품 개요·등장인물·플롯·원고 투영을 일치시켰다. 새 원고 사실은 추가하지 않았다.
