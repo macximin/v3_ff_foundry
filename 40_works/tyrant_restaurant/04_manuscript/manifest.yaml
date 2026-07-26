@@ -1,0 +1,10 @@
+schema_version: firefly_manuscript_manifest_v1
+work_slug: tyrant_restaurant
+authority_rule: exact_owner_approved_revision_is_history_truth
+published_field_semantics: episode_publication_fact_only_never_revision_identity
+revision_set_sha256: abab318a104088bfadcf2f1f9c161eaba1b544b5cc1248569bfe8fa01e8bbb0b
+revision_set_recipe: "sha256(concat manifest-entry order as: <sha256><two spaces><foundry-relative-path><newline>)"
+entries:
+  - { episode: ep001, repo_snapshot: ep001_manuscript.md, sha256: 127efdd4a70bdfbca0e313b05fe9a642ebcb9c40c5cfa4fb7384b87d11fd54ac, authority: owner_approved, approved_at: "2026-07-26T14:59:09+09:00", owner_decision: owner-adopt-all-20260726-tyrant-restaurant-v2, published: false, producer: web_gpt_pro }
+  - { episode: ep002, repo_snapshot: ep002_manuscript.md, sha256: a86b7fa75219f9356d0155594aa4b4d8c0ddeccdabe4cda388540e4b0393e60d, authority: owner_approved, approved_at: "2026-07-26T14:59:09+09:00", owner_decision: owner-adopt-all-20260726-tyrant-restaurant-v2, published: false, producer: web_gpt_pro }
+  - { episode: ep003, repo_snapshot: ep003_manuscript.md, sha256: 4968744ccb5ec55ac472efa48b9c2bfa07fe93da0c6bf21d27cc688ecb47a39d, authority: owner_approved, approved_at: "2026-07-26T14:59:09+09:00", owner_decision: owner-adopt-all-20260726-tyrant-restaurant-v2, published: false, producer: web_gpt_pro }

@@ -1,0 +1,99 @@
+schema_version: firefly_narrative_state_v1
+work_slug: tyrant_restaurant
+projection_of:
+  state_through: ep003
+  manuscript_manifest: ../04_manuscript/manifest.yaml
+  repo_revision_set_sha256: abab318a104088bfadcf2f1f9c161eaba1b544b5cc1248569bfe8fa01e8bbb0b
+rebuildable: true
+facts:
+  story_time:
+    latest_event: "라우렌츠와의 저녁 뒤, 사흘 식당 시험이 부과됨"
+  world:
+    empire: "이름 미공개 제국"
+    imperial_blood_trait: "카르디온 황실은 비정상적으로 예민한 미각과 후각을 지닌 용의 피로 알려짐"
+  restaurant:
+    current_workplace: 황실 주방
+    prospective_restaurant:
+      location: 수도 서문 밖
+      owner: 황실
+      history: "세 번 망함; 첫 운영자 횡령, 두 번째 운영자 독살, 세 번째 운영자 도주"
+      operating_right_condition: "사흘 안에 문을 열고 기사 120명 전원에게 정량을 배식해 잔반 없이 식사를 끝낼 것"
+      failure: 북부행
+      success: "운영권과 요리사 길드 자격"
+  contracts:
+    northern_snowroot_priority_supply:
+      product: "북부산 설원뿌리 원물의 수도 우선 납품권"
+      start_condition: "재료와 인력이 도착한 날부터 한 달 안의 개발 성공"
+      obligations: [품질, 납기]
+      failure_effect: "시험 계약 종료 및 우선 납품권 미발효"
+    non_marital_supply_alliance:
+      parties: [황실, 북부]
+      status: "라우렌츠와 엘레오노라의 혼약을 대체하는 방향으로 합의"
+characters:
+  kang_doyun:
+    name: 강도윤
+    status: "황궁 구금형 고용 요리사, 황실 소유 실패 식당의 조건부 운영자 후보"
+    former_role: "프랑스에서 세 번째 별을 받은 레스토랑의 총괄 셰프"
+    viewpoint: "1인칭 주시점"
+    core_goal: "자기 이름을 건 주방을 갖는 것"
+    current_position: 황궁
+  eleonora_cardion:
+    name: 엘레오노라 카르디온
+    role: 황녀
+    status: "강도윤과의 관계를 인정하고, 원치 않는 라우렌츠와의 혼약을 거절한 황실 계약 당사자"
+    current_position: 황궁
+  cassian:
+    name: 카시안
+    role: 황제
+    status: "강도윤을 살려 두되 황궁에 구금형 고용하고 사흘 시험을 건 폭군"
+    current_position: 황궁
+  berner:
+    name: 베르너
+    role: 황실 수석 요리장
+    status: "강도윤에게 텃세를 부리지만 주방 운영 정보와 실무를 우선하는 협력자 후보"
+    current_position: 황실 주방
+  laurentz_valder:
+    name: 라우렌츠 발데르
+    role: 북부 대공, 엘레오노라의 전 약혼자
+    status: "혼약 대신 비혼 보급 동맹을 택하고, 120명 기사단의 식사 시험을 제시함"
+    current_position: 수도
+assets:
+  tools:
+    - "베르너가 내준 휘어진 폐칼"
+  recipes:
+    - { episode: ep001, meal: "양파 수프·불뿔소 볼살·구운 배", recipient: 엘레오노라 }
+    - { episode: ep002, meal: 크로크 마담, recipient: 카시안 }
+    - { episode: ep003, meal: "설원뿌리 알리고와 빙각들소 앞다리 조림", recipient: 라우렌츠 }
+positions:
+  - { entity: kang_doyun, location: 황궁 }
+  - { entity: eleonora_cardion, location: 황궁 }
+  - { entity: cassian, location: 황궁 }
+  - { entity: berner, location: 황실 주방 }
+  - { entity: laurentz_valder, location: 수도 }
+open_reader_debts:
+  - { id: three_day_test, debt: "강도윤은 사흘 안에 재료와 직원을 구해 120명의 기사를 잔반 없이 먹일 수 있는가." }
+  - { id: northern_development, debt: "설원뿌리 개발을 재료·인력 도착 뒤 한 달 안에 성공시켜 우선 납품권을 발효시킬 수 있는가." }
+  - { id: imperial_confinement, debt: "황제의 고용과 근위병 감시 아래 강도윤은 어떻게 독립 식당을 확보할 것인가." }
+  - { id: eleonora_alliance_cost, debt: "엘레오노라가 혼약을 거절하고 서명한 보급 동맹의 정치적 비용은 무엇인가." }
+open_foreshadow:
+  - { id: empty_120_bowls, seeded_in: ep003, promise: "사흘 뒤 빈 그릇 120개로 운영권을 증명한다." }
+  - { id: own_name_kitchen, seeded_in: ep001, promise: "강도윤은 남의 간판이 아닌 자기 이름의 주방을 얻는다." }
+genre_state:
+  native:
+    last_csu_receipts:
+      - { episode: ep001, receipt: "황제의 한 시간 생존 시험" }
+      - { episode: ep002, receipt: "카시안의 첫 완식과 황궁 구금형 고용" }
+      - { episode: ep003, receipt: "조건부 운영권·길드 자격을 건 120인 사흘 시험" }
+    appraisal_history:
+      - { episode: ep001, evaluator: 엘레오노라, signal: "황제 앞에서 도윤의 생존을 요구" }
+      - { episode: ep002, evaluator: 카시안, signal: "첫 완식 뒤 고용" }
+      - { episode: ep003, evaluator: 라우렌츠_엘레오노라_카시안, signal: "비혼 보급 동맹과 조건부 식당 시험" }
+    external_pov_history:
+      - { episode: ep001, count: 0 }
+      - { episode: ep002, count: 0 }
+      - { episode: ep003, count: 0 }
+    current_status_floor:
+      approved_through: ep003
+      restaurant_right: conditional
+      northern_supply_right: conditional
+last_rebuilt_at: "2026-07-26T14:59:09+09:00"
