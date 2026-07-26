@@ -1,0 +1,95 @@
+schema_version: firefly_narrative_state_v1
+work_slug: cheongma_restaurant
+projection_of:
+  state_through: ep003
+  manuscript_manifest: ../04_manuscript/manifest.yaml
+  repo_revision_set_sha256: fe88f1f2672da3027998c4f99a8aa0272fb5fe32aff6003530f9023382a132e3
+rebuildable: true
+facts:
+  story_time:
+    latest_event: "첫 대량 영업을 마친 밤, 강인호가 검은 웍과 태윤의 손목 동작을 확인함"
+  protagonist:
+    current_body: "갈비뼈 세 대 손상, 왼쪽 어깨 탈구 후 회복 중"
+    ability: "천마신교 수석 주방장의 기억과 조리 감각"
+    inner_method: "염화심법은 통증을 잠시 미룰 뿐 치료하지 않음"
+  restaurant:
+    name: 천하반점 청량리 1호점
+    current_menu: [짜장면, 볶음밥, 해장짬뽕]
+    trial_days: 30
+    latest_service:
+      paid_customers: 43
+      complimentary_customers: 3
+      total_customers: 46
+      hangover_jjamppong_sold: 33
+      revenue_krw: 527000
+      prior_day_revenue_krw: 114000
+    baseline:
+      monthly_sales_krw: 23000000
+      monthly_food_cost_krw: 12000000
+      monthly_loss_krw: 20000000
+      estimated_monthly_break_even_sales_krw: 64800000
+      daily_average_target_krw: 2160000
+      approximate_paid_customers_needed_per_day: 176
+contracts:
+  thirty_day_turnaround:
+    judge: 강인호
+    success: "인수일부터 30일 누적 매장 손익 흑자와 청량리 1호점 영구 독립 운영권"
+    failure: "그룹 지분 2퍼센트 처분과 그룹 퇴출"
+    temporary_authority: [메뉴, 가격, 매입, 근무 편성]
+characters:
+  kang_taeyun:
+    name: 강태윤
+    role: "천하외식그룹 회장 막내아들, 천하반점 청량리 1호점 시험 운영자"
+    goal: "30일 흑자와 영구 독립 운영권"
+    current_position: 천하반점 청량리 1호점
+  park_chunsik:
+    name: 박춘식
+    role: "17년 경력 주방장"
+    status: "화구 차이를 읽고 마지막 추가 짬뽕과 무료 볶음밥을 완주함"
+    current_position: 천하반점 청량리 1호점
+  choi_mina:
+    name: 최민아
+    role: 홀 담당
+    status: "주문 시각·저염 손님·장부를 기록하고 한 달 시험에 잔류"
+    current_position: 천하반점 청량리 1호점
+  kim_seongho:
+    name: 김성호
+    role: 배달 직원
+    status: "잔반을 면·건더기·국물로 분리해 운영 기록에 편입"
+    current_position: 천하반점 청량리 1호점
+  kang_inho:
+    name: 강인호
+    role: 천하외식그룹 회장
+    status: "30일 계약 판정자; 과거 자신이 쓰던 검은 웍과 손목 동작을 알아봄"
+    current_position: 천하외식그룹 회장실
+  kang_taeseok:
+    name: 강태석
+    role: 강태윤의 큰형
+    status: "브랜드 관리와 본사 납품을 근거로 독립 운영을 견제"
+    current_position: 천하외식그룹 본사
+assets:
+  tools:
+    - "강인호가 창업 시절 사용했던 낡은 검은 철웍"
+  operational:
+    - "메뉴 48개를 3개로 축소"
+    - "웍당 3그릇, 두 화구 합계 6그릇의 품질 상한"
+    - "주문 시각·저염 손님·잔반 분리 기록"
+open_reader_debts:
+  - { id: thirty_day_profit, debt: "강태윤은 30일 누적 손익을 흑자로 만들 수 있는가." }
+  - { id: dawn_market_supply, debt: "본사 납품만으로 모자란 다음 영업 재료를 어떤 기준으로 확보할 것인가." }
+  - { id: black_wok_origin, debt: "누구에게도 가르치지 않은 강인호의 불 동작을 태윤이 어떻게 아는가." }
+  - { id: injury_limit, debt: "다친 몸으로 하루 176명 규모에 접근하려면 누구에게 무엇을 맡길 것인가." }
+open_foreshadow:
+  - { id: father_wok_recognition, seeded_in: ep003, promise: "강인호가 검은 웍과 태윤의 손목을 직접 확인한다." }
+  - { id: headquarters_supply_pressure, seeded_in: ep003, promise: "강태석의 납품·브랜드 통제가 현장 선택과 충돌한다." }
+genre_state:
+  native:
+    last_csu_receipts:
+      - { episode: ep001, receipt: "30일 계약과 첫 불" }
+      - { episode: ep002, receipt: "9천 원 결제와 택시 주문 행렬" }
+      - { episode: ep003, receipt: "33그릇·52만7천 원·팀 잔류·검은 웍 인식" }
+    current_status_floor:
+      approved_through: ep003
+      restaurant_right: temporary
+      publication: false
+last_rebuilt_at: "2026-07-26T19:28:59+09:00"

@@ -1,0 +1,10 @@
+schema_version: firefly_manuscript_manifest_v1
+work_slug: cheongma_restaurant
+authority_rule: exact_owner_approved_revision_is_history_truth
+published_field_semantics: episode_publication_fact_only_never_revision_identity
+revision_set_sha256: fe88f1f2672da3027998c4f99a8aa0272fb5fe32aff6003530f9023382a132e3
+revision_set_recipe: "sha256(concat manifest-entry order as: <sha256><two spaces><foundry-relative-path><newline>)"
+entries:
+  - { episode: ep001, repo_snapshot: ep001_manuscript.md, sha256: 4305abcf8dcb3d6573966c22e8e476f46c5aec5a308da98c5917dca55db1149b, authority: owner_approved, approved_at: "2026-07-26T19:28:59+09:00", owner_decision: owner-adopt-all-20260726-cheongma-restaurant-v3, published: false, producer: web_gpt_pro, reviewer: codex }
+  - { episode: ep002, repo_snapshot: ep002_manuscript.md, sha256: 41150f58031faeb615f3585da4cbac3e3eccdf7b4e299f6e02a029aba75661f1, authority: owner_approved, approved_at: "2026-07-26T19:28:59+09:00", owner_decision: owner-adopt-all-20260726-cheongma-restaurant-v3, published: false, producer: web_gpt_pro, reviewer: codex }
+  - { episode: ep003, repo_snapshot: ep003_manuscript.md, sha256: 34103c8c6f567278ae2b99463374181ead884b8268b935e754a4b910772e0de8, authority: owner_approved, approved_at: "2026-07-26T19:28:59+09:00", owner_decision: owner-adopt-all-20260726-cheongma-restaurant-v3, published: false, producer: web_gpt_pro, reviewer: codex, source_revision: ep003_v3 }
