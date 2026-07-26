@@ -11,15 +11,16 @@
 
 ## 현재 owner retcon hard stop
 
-- `owner-afterlife-threshold-engine-retcon-20260726`이 기존 딸·1,095일 적립 중심 전제를 대체한다.
-- 기존 승인 원고 ep001~003과 manifest는 승인 당시의 read-only history로만 보존한다.
-- 기존 Frozen Pitch, Story Plan, 화별 약속, Narrative State를 새 원고 dispatch 입력으로 사용하지 않는다.
-- 새 Frozen Pitch와 Story Plan이 owner 승인되고 새 ep001~003이 BR0/BR1과 owner 승인을 통과하기 전에는 원고 생산이나 Storyyard 투영으로 진행하지 않는다.
+- `owner-afterlife-three-year-return-contract-20260726`이 활성 계획에서 문턱 반응형 생환과 손님당 하루·1,095일 적립을 대체한다.
+- 기존 승인 원고 ep001~003과 manifest는 승인 당시의 read-only history로 보존한다.
+- 새 후보는 이전 1~3화의 사건과 호흡을 유지하고 삼 년 계약 관련 모순만 국소 수정한다.
+- 새 후보가 owner 승격되기 전에는 정식 manuscript manifest나 Storyyard로 투영하지 않는다.
 
 ## 현재 내부 캐논 기준
 
-- `06_canon_note/canon_note_002_opening_v3_baseline.md`가 retcon 뒤 오프닝 연속성의 입력 정본이다.
-- v3 후보는 캐논·계획 재정렬의 근거이며, 정식 `04_manuscript` 승격이나 Storyyard 투영 권한은 아니다.
+- `06_canon_note/canon_note_003_three_year_return_contract.md`가 오프닝 후보와 활성 Story Plan의 입력 기준이다.
+- 후보 원고는 `20_model_runs/internal/afterlife_restaurant_3year_candidate_20260726/`에 있다.
+- 저승의 세부 시간 계산과 우주론은 설계하지 않는다.
 
 ## 단계별 입력
 

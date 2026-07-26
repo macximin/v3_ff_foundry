@@ -1,0 +1,7 @@
+schema_version: firefly_manuscript_manifest_v1
+work_slug: isekai_restaurant
+authority_rule: exact_owner_approved_revision_is_history_truth
+published_field_semantics: episode_publication_fact_only_never_revision_identity
+revision_set_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+revision_set_recipe: "sha256(concat manifest-entry order as: <sha256><two spaces><foundry-relative-path><newline>)"
+entries: []

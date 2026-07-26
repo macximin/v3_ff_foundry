@@ -51,6 +51,56 @@ slots:
     contrast_requirement: "전생 설명보다 현재 행동과 물증 우선"
     start_episode: ""
     end_episode: ""
+  - b_id: B006
+    route_order: 6
+    status: hypothesis
+    target_anchor: A06
+    narrative_function: "B005 closeout에서 실제로 남은 감시·계승 비용을 받아, 1호점의 성공을 태윤 개인기와 다른 운영 단위에도 남는 최소 운영 기준으로 분리한다."
+    payoff_axis: "다른 책임자와 달라진 조건 아래에서도 결제·재주문·생산·장부로 확인되는 첫 복제 기준"
+    carried_reader_debt: "표준 악용, 형식적 준수, 품질 희석과 독립 운영 단위의 생존 여부"
+    contrast_requirement: "B003의 1호점 내부 위임을 반복하지 않고 사람·설비·조달 조건이 달라도 남는 최소 기준을 판정한다."
+    start_episode: ""
+    end_episode: ""
+  - b_id: B007
+    route_order: 7
+    status: hypothesis
+    target_anchor: A06
+    narrative_function: "B006의 최소 기준을 승인 원고에서 권한 근거가 확인된 원점포와 구별되는 운영 단위에 적용해, 독립 책임과 품질·손익 하한을 검증한다."
+    payoff_axis: "태윤의 몸과 원주방을 벗어난 첫 독립 운용 성과"
+    carried_reader_debt: "환경 편차, 교육 비용, 기준 버전 분화와 책임 충돌"
+    contrast_requirement: "외형 확장이 아니라 별도 책임자·별도 기록·원점포의 무구원 운용으로 판정한다."
+    start_episode: ""
+    end_episode: ""
+  - b_id: B008
+    route_order: 8
+    status: hypothesis
+    target_anchor: A06
+    narrative_function: "복제 과정의 품질 편차를 독립적으로 탐지하고 매출 압력 속에서도 중단·거절·수정 권한이 작동하는지 검증한다."
+    payoff_axis: "문제가 손님과 브랜드에 전가되기 전에 멈추는 감사와 품질 신뢰"
+    carried_reader_debt: "감사 비용, 현장 반발, 매출 손실과 중앙 통제 위험"
+    contrast_requirement: "태윤의 감각적 적발보다 타인이 실행하는 기록·감사·중단권을 전면화한다."
+    start_episode: ""
+    end_episode: ""
+  - b_id: B009
+    route_order: 9
+    status: hypothesis
+    target_anchor: A06
+    narrative_function: "기준과 감사를 지킨 사람이 손해만 보지 않도록 검증 성과·손실 책임·실제 보상을 하나의 구조로 묶는다."
+    payoff_axis: "직원의 돈·권한·지위 변화로 확인되는 공정한 성장"
+    carried_reader_debt: "보상 비용, 지표 왜곡, 내부 경쟁과 형평성 갈등"
+    contrast_requirement: "칭찬과 충성 선언이 아니라 장부에 찍히는 이익과 책임으로 결산한다."
+    start_episode: ""
+    end_episode: ""
+  - b_id: B010
+    route_order: 10
+    status: hypothesis
+    target_anchor: A06
+    narrative_function: "표준·독립 운용·감사·보상 체계를 복수 운영 단위의 동시 압력 아래 검증해 태윤이 현장 병목이 아닌 예외 판정자로 서게 한다."
+    payoff_axis: "태윤의 직접 조리 없이도 유지되는 첫 운영망과 A06 결산 가능성"
+    carried_reader_debt: "품질 희석 위험의 상시화와 계승·흡수·보호막 상실의 선택 압력"
+    contrast_requirement: "한 번의 대량 조리 반복이 아니라 복수 단위의 동시 운영과 분산 판정을 전면화한다."
+    start_episode: ""
+    end_episode: ""
 
 ## Route rule
 

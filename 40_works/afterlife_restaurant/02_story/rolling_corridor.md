@@ -1,23 +1,35 @@
 # 저승식당 Rolling Corridor
 
-상태: hold-for-next-episode-bet
+상태: active
 
 ```yaml
 schema_version: firefly_rolling_corridor_v3
-starts_from: v3_opening_baseline
-active_b_arc: null
-episode_cursor: ep004_unplanned
-hard_stop:
-  - no_episode_bet_until_v3_prose_review_and_manuscript_promotion_decision
-  - no_storyyard_projection
+starts_from: owner_approved_ep004
+active_b_arc: B002
+episode_cursor: ep005_episode_bet
+committed:
+  - ep004
+provisional:
+  - ep005
+  - ep006
+hard_stop: []
 ```
 
-## 다음 발주가 반드시 이어받을 것
+## 다음 발주가 이어받을 것
 
-- 다음 황천장 영업의 첫 종이 세 번 울리기 전, 예약 25건과 우선 손님 세 명을 어떻게 받을지.
-- 한명옥의 시식은 유료 열한 명 장부와 별개였다는 점.
-- ‘준비는 같이, 마지막 한 입은 각자’라는 운영 규칙.
-- 도윤은 생존을 원하지만, 손님을 그 목적의 수단으로 다시 다루면 안 된다는 공동 책임.
-- 문턱 반응은 순간적인 현상일 뿐 누적 보상·귀환 일수·성공 게이지가 아니라는 점.
+- 식당에는 황천장에서 사 온 기본 재료와 박명조 날개의 반복 공급 약속이 있다. 장보기 뒤 최종 현금은 확정하지 않는다.
+- 공주는 시식·계산·줄 관리·운반에 이어 목패 선택지로 손님의 의사를 받았다.
+- 혀 없는 손님은 감각을 되살린 시험 음식을 먹었지만 마지막 식사로는 거절했다.
+- 손님이 찾는 것은 혀를 잃은 뒤 누군가와 함께 먹은 뜨겁고 부드러운 음식이다. 그 사람은 매번 맛을 물었고, 손님은 끝내 대답하지 못했다.
+- 삼 년 계약은 실제 시간 경과이며 손님 수나 완식 수로 환산하지 않는다.
 
-다음 Episode Bet은 이 다섯 항목을 훼손하지 않는 한에서 새 손님과 음식, 실패 비용을 제안한다.
+정확한 음식, 그 사람의 정체, 혀를 잃은 이유는 ep005 Episode Bet 전까지 열어 둔다.
+
+## 가까운 경로
+
+- B002 `ep004~006`: 혀 없는 손님
+- B003 `ep007~009`: 식당다운 첫 영업
+- B004 `ep010~012`: 버려진 재료의 대가
+- B005 `ep013~015`: 공주는 식당에 남는다
+
+아크 기능과 종료 상태는 `early_five_arc_plan.md`를 따른다. 이 목록은 원고 발주가 아니라 가까운 Story Plan이다.

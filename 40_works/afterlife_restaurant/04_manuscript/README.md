@@ -9,3 +9,4 @@
 - review pass만으로 승인되지 않는다. owner approval이 있어야 `approved`다.
 - 파일이 다른 시스템이나 레거시 경로에 있으면 복사해 정본인 척하지 않고 manifest가 그 경로와 권위 수준을 가리킨다.
 - Narrative State는 manifest의 승인 해시를 기준으로 재생성한다.
+- `ep001_manuscript.md`~`ep003_manuscript.md`는 `2026-07-25` 승인 history다. 현재 정본은 manifest가 가리키는 `ep001_v2_manuscript.md`~`ep003_v2_manuscript.md`와 `ep004_manuscript.md`다.

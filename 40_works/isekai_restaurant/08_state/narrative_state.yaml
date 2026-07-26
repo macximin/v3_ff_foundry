@@ -1,0 +1,52 @@
+schema_version: firefly_narrative_state_v2
+work_slug: isekai_restaurant
+projection_of:
+  state_through: ep003_v1_candidate
+  canonical_baseline: ../06_canon_note/canon_note_001_opening_baseline.md
+  manuscript_manifest: ../04_manuscript/manifest.yaml
+authority: internal_canon_baseline_not_owner_approved_manuscript
+rebuildable: true
+facts:
+  restaurant:
+    name: 저녁상
+    seats: 12
+    operation_rule: "낮 인간 손님과 밤 이계 손님이 같은 정문·주방·12석·재고를 공유한다."
+    night_schedule: "화요일, 목요일, 토요일 22:30; 바깥 108분, 식당 안 약 4시간"
+    cost_rule: "야간에도 피로·가스·전기·설거지·재고는 실제로 남는다."
+  contract:
+    name: "야간 손님 소개 및 영업 지원 계약"
+    operator_rights: "메뉴·가격·입장 여부·중단권은 서정우에게 있다."
+    prohibited_collateral: [이름, 기억, 수명]
+characters:
+  seo_jeongwoo:
+    name: 서정우
+    role: "《저녁상》 주인 겸 요리사"
+    viewpoint: 1인칭 주시점
+    operating_strength: "손님의 진짜 식감·상태 조건을 묻고 실제 원가를 계산해 요리한다."
+  yeom_myeongju:
+    name: 염명주
+    role: "염라대왕의 막내딸; 《저녁상》 야간 홀 및 예약 담당"
+    status: "닭 달걀죽과 볶음밥으로 맛을 되찾기 시작함"
+  choi_mujin:
+    name: 최무진
+    role: "염라전 대외 업무 담당 저승사자"
+  bongdu:
+    name: 봉두
+    role: "도깨비 상인; 첫 야간 손님"
+    transaction: "불콩 공급 협의"
+assets:
+  inventory:
+    pork_belly_reserved_for_day_service: "18인분 중 3인분 부족"
+    fire_beans: "봉두가 준 시료 보유; 공급 협의 상태"
+  reservations:
+    night_reservation_tokens: 27
+    physical_seats: 12
+open_reader_debts:
+  - { id: myeongju_illness, debt: "명주가 맛을 잃고 앓았던 원인." }
+  - { id: day_shortage, debt: "다음 날 낮 예약 오겹살 3인분 부족을 정우가 어떻게 감당하는가." }
+  - { id: night_overbooking, debt: "27개 예약패와 열두 좌석의 충돌." }
+  - { id: fire_bean_supply, debt: "불콩의 품질·가격·안전한 거래 조건." }
+state_boundaries:
+  - "이 상태는 internal canon candidate의 투영이며 owner-approved manuscript projection이 아니다."
+  - "별도 이계 식당·두 번째 공간·헌터·사냥·토벌·전투·괴이관리청을 현재 설정으로 기록하지 않는다."
+last_rebuilt_at: "2026-07-26T00:00:00+09:00"

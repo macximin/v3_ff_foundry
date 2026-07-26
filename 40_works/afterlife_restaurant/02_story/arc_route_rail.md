@@ -1,24 +1,13 @@
-# 저승식당 Arc Route Rail — B-Rail
+# 저승식당 Arc Route Rail
 
-상태: internal-canon-baseline
+상태: active-owner-approved
 
-```yaml
-schema_version: firefly_arc_route_rail_v2
-route_status: reset_after_owner_retcon
-active_b_arc: null
-arc_episode_cap: 5
-immutable_rules:
-  - guest_or_relationship_omnibus_closes_with_a_real_choice
-  - threshold_response_is_not_a_score_or_accumulator
-  - shared_prep_never_replaces_an_individual_final_meal
-  - no_storyyard_projection_before_manuscript_promotion
-```
+| slot | 범위 | 상태 | 기능 | 종료 상태 |
+|---|---:|---|---|---|
+| B001 첫 손님과 첫 자본 | ep001~003 | closed | 김문성의 마지막 식사와 황천장 폐재료 상품화 | 장보기 재료, 반복 공급 약속, 혀 없는 손님 |
+| B002 혀 없는 손님 | ep004~006 | active — ep004 approved | 감각을 되살린 시험 음식의 거절에서 출발해, 혀를 잃은 뒤 누군가와 먹은 마지막 식사를 찾는다 | 공주의 의사소통 역할, 여러 손님 유입 |
+| B003 식당다운 첫 영업 | ep007~009 | provisional | 서로 다른 마지막 식사를 원하는 여러 테이블을 받으며 조리·홀·대기의 최소 운영을 만든다 | 반복 영업 방식, 재료 소진·편차 압력 |
+| B004 버려진 재료의 대가 | ep010~012 | hypothesis | 3화의 반복 공급 약속을 첫 납품·검수로 시험해 지속 가능한 조달 관계로 바꾼다 | 공급 기준, 장터 평판, 공주 신분 노출 압력 |
+| B005 공주는 식당에 남는다 | ep013~015 | hypothesis | 이미 현장 동료인 공주가 외부 압력 앞에서 식당을 다시 선택하고 독립 판단권을 증명한다 | 최소 팀 공인, 장기 손님·저승 문제 진입 |
 
-| slot | 상태 | 기능 | 닫힐 때 남길 것 |
-|---|---|---|---|
-| B001 오프닝 재정렬 | baseline | 박만석의 실패와 황천장 운영 규칙을 통해 문턱·공동 책임·개별 배웅을 증명 | 손님별 마지막 한 입, 시식/판매/예약 분리, 세 번 종의 마감선 |
-| B002 최소 운영 규칙 | pending | 25 예약과 세 우선 손님의 약속을 실제 영업에서 지킨다 | 대기·분업·재고의 비용, 손님을 잃지 않는 처리량 |
-| B003 동시 배웅의 시험 | hypothesis | 서로 다른 마지막 식사를 한 공간에서 충돌시킨다 | 공유 준비와 개인 완성의 경계 |
-| B004 문턱의 진실 | open | 이승 쪽 호출과 생환 가능성의 단서를 비용 있는 선택으로 드러낸다 | 생환을 보장하지 않는 규칙의 실체 |
-
-각 슬롯의 구체 손님·음식·회차는 독립 Episode Bet과 감리에서만 확정한다. 옛 B001~B051은 retcon 이전 history이며 새 production route가 아니다.
+세부 구조는 `early_five_arc_plan.md`를 따른다. 박만석·한명옥·예약 25건·우선 손님 세 명은 이 활성 경로의 사실이 아니다. ep003 후보는 판매 수량과 장보기 뒤 최종 현금을 확정하지 않는다.
