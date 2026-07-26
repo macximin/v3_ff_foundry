@@ -1,0 +1,10 @@
+schema_version: firefly_manuscript_manifest_v1
+work_slug: romance_fantasy_restaurant
+authority_rule: exact_owner_approved_revision_is_history_truth
+published_field_semantics: episode_publication_fact_only_never_revision_identity
+revision_set_sha256: 23d513fa4eef9796228b6b4d3822767ca21007957010338e8c3ab5d2b5f912b4
+revision_set_recipe: "sha256(concat manifest-entry order as: <sha256><two spaces><foundry-relative-path><newline>)"
+entries:
+  - { episode: ep001, repo_snapshot: ep001_manuscript.md, sha256: d9c9ac96f92fd88628fd6b73296c6786357d578cac3839cda7ca20c86484970e, authority: owner_approved, approved_at: "2026-07-26", owner_decision: owner-adopt-romance-fantasy-restaurant-ep001-ep003-v2-20260726, published: false, producer: web_gpt_pro, reviewer: codex }
+  - { episode: ep002, repo_snapshot: ep002_manuscript.md, sha256: 36dffade38e4828d6003901cc529aab8aad0c32c3ff95db78d00c23de3b3a38d, authority: owner_approved, approved_at: "2026-07-26", owner_decision: owner-adopt-romance-fantasy-restaurant-ep001-ep003-v2-20260726, published: false, producer: web_gpt_pro, reviewer: codex }
+  - { episode: ep003, repo_snapshot: ep003_manuscript.md, sha256: 22e4fab16e2ff172edff2fcc01d71f15761b12f130589595e9aa39367d2c9632, authority: owner_approved, approved_at: "2026-07-26", owner_decision: owner-adopt-romance-fantasy-restaurant-ep001-ep003-v2-20260726, published: false, producer: web_gpt_pro, reviewer: codex, source_revision: ep003_v2 }
