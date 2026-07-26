@@ -1,14 +1,14 @@
 # 저승식당 ep001~004 owner 직접 승인 기록
 
 ```yaml
-decision_id: owner-adopt-afterlife-restaurant-three-year-ep001-ep004-20260727
+decision_id: owner-adopt-afterlife-restaurant-three-year-ep001-ep004-20260727-r2
 decision: ADOPT
 decided_at: "2026-07-27"
 scope:
   exact_manuscript_revision:
     - ep001_v2_manuscript.md
     - ep002_v2_manuscript.md
-    - ep003_v2_manuscript.md
+    - ep003_v3_manuscript.md
     - ep004_manuscript.md
   canon_note: canon_note_003_three_year_return_contract.md
   story_plan: early_five_arc_plan.md
@@ -22,17 +22,18 @@ review_mode: owner_direct_adoption_after_transport_qa
 |---|---|---|---|
 | ep001 | `../04_manuscript/ep001_v2_manuscript.md` | `23a22f298b4ea37499b80ec55c0e86b3816604328255aee3529e7013a0712244` | owner-directed local revision |
 | ep002 | `../04_manuscript/ep002_v2_manuscript.md` | `01802d4862a5b607f42b335c7a3126c0418a3ac2a2a406199f090d046d45595a` | owner-directed local revision |
-| ep003 | `../04_manuscript/ep003_v2_manuscript.md` | `7bba444b4e437402ea7191c7e97e233a831030c1f8f2ef188c278bc6f63b88b3` | owner-directed local revision |
+| ep003 | `../04_manuscript/ep003_v3_manuscript.md` | `7138bace3e357d2e6369cdf27445c6c92e0a70bbf429632b88c7d4982ceb3f5a` | owner-directed scene-break revision |
 | ep004 | `../04_manuscript/ep004_manuscript.md` | `f5ec74b51a97e76d2accf20a1b39bf00dc57d525df917876f35eae9c04b40dcc` | Web GPT Pro |
 
-- revision-set SHA-256: `88dbe9194db3d9fb03a732528ee15e5a6262dd68c532f17672f387b71e1a344d`
+- revision-set SHA-256: `2fb3648e1c57ab5f5a1e55a86e61edc150e118bd37e774be5615a4bcd97b02a7`
 - 정본 entry order와 recipe는 `../04_manuscript/manifest.yaml`에 있다.
 - 이전 `ep001_manuscript.md`~`ep003_manuscript.md`와 당시 감리는 승인 history로 그대로 보존한다.
 
 ## 운송 QA
 
 - ep001과 ep004 정본은 보존 원문과 바이트 단위로 일치한다.
-- ep002~003은 후보 끝의 여분 빈 줄만 정규화했으며 본문 문자는 일치한다.
+- ep002는 후보 끝의 여분 빈 줄만 정규화했으며 본문 문자는 일치한다.
+- ep003 v3는 v2 본문을 한 글자도 바꾸지 않고 `식당→황천장`, `황천장→식당` 경계에 단독 `***` 두 개만 추가했다.
 - ep004 정본은 Web GPT Pro 응답 보존본과 바이트 단위로 일치한다.
 - ep004의 장면전환 `***`는 2개이며 `---`는 없다.
 - ep004에는 `1,095`, `1095`, `게이지`, `만족도`, `하루 적립`, 공주 본명 `연화`가 없다.

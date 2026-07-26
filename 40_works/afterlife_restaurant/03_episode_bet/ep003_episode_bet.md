@@ -1,7 +1,7 @@
 # 저승식당 ep003 화별 약속
 
 상태: committed retrospective readback
-승인 원고: `../04_manuscript/ep003_v2_manuscript.md`
+승인 원고: `../04_manuscript/ep003_v3_manuscript.md`
 
 ## 한 줄 베팅
 

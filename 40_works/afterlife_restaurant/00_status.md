@@ -27,6 +27,7 @@ decision_ids:
   - owner-afterlife-three-year-return-contract-20260726
   - owner-afterlife-early-five-arc-plan-20260727
   - owner-adopt-afterlife-restaurant-three-year-ep001-ep004-20260727
+  - owner-adopt-afterlife-restaurant-three-year-ep001-ep004-20260727-r2
 notion_page: null
 source_origin: 20_model_runs/web_gpt_pro/restaurant_candidates_20260724/저승식당/v1-rc3.2
 source_feed_receipt: null
