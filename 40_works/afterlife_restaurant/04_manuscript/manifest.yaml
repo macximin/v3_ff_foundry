@@ -2,10 +2,10 @@ schema_version: firefly_manuscript_manifest_v1
 work_slug: afterlife_restaurant
 authority_rule: exact_owner_approved_revision_is_history_truth
 published_field_semantics: episode_publication_fact_only_never_revision_identity
-revision_set_sha256: 7c9eae8e21cfea29eeacff4f81aefa2e7412b7163333cfe65b135474c55bfb63
+revision_set_sha256: 632cb40c1a5297bf9ca0ab628a5dc63d27625c7e4b199f45ea6c65168bc0432b
 revision_set_recipe: "sha256(concat manifest-entry order as: <sha256><two spaces><foundry-relative-path><newline>)"
 entries:
-  - { episode: ep001, repo_snapshot: ep001_v2_manuscript.md, sha256: 1217fa881b90d951de0c8169a2d07bdc185b7a17e8b96d8e6e985dd60ce05082, authority: owner_approved, approved_at: "2026-07-27", owner_decision: owner-afterlife-ep001-deceased-character-typo-20260727, published: false, producer: owner_directed_local_revision, reviewer: codex_transport_qc }
+  - { episode: ep001, repo_snapshot: ep001_v2_manuscript.md, sha256: 4b120a87ea493cb1e6c9241002c5da437bd6e03cf6001fdc65dd776f17f6478a, authority: owner_approved, approved_at: "2026-07-27", owner_decision: owner-afterlife-ep001-princess-banter-20260727, published: false, producer: owner_directed_local_revision, reviewer: codex_transport_qc }
   - { episode: ep002, repo_snapshot: ep002_v2_manuscript.md, sha256: 701bf3b86420d71a78adfc81f230d1bb7c13ac401efe16aeb834cd810aac744f, authority: owner_approved, approved_at: "2026-07-27", owner_decision: owner-afterlife-ep002-003-cooking-detail-touch-20260727, published: false, producer: owner_directed_local_revision, reviewer: codex_culinary_detail_audit }
   - { episode: ep003, repo_snapshot: ep003_v3_manuscript.md, sha256: 9d2d0f273269e04bf72f875972cdc8a60be1a0f300d016f6f849319c4d54d824, authority: owner_approved, approved_at: "2026-07-27", owner_decision: owner-afterlife-ep001-003-prose-tightening-20260727, published: false, producer: owner_directed_local_revision, reviewer: codex_transport_qc }
   - { episode: ep004, repo_snapshot: ep004_manuscript.md, sha256: 23285a3853e6be3a82961368fbb4e7e2aaec8b0079d9d88eb8af55cbf1fbc0fb, authority: owner_approved, approved_at: "2026-07-27", owner_decision: owner-afterlife-ep004-duplicate-removal-20260727, published: false, producer: web_gpt_pro_restored_candidate, reviewer: codex_transport_repair }
