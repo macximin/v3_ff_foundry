@@ -2,10 +2,10 @@ schema_version: firefly_manuscript_manifest_v1
 work_slug: afterlife_restaurant
 authority_rule: exact_owner_approved_revision_is_history_truth
 published_field_semantics: episode_publication_fact_only_never_revision_identity
-revision_set_sha256: 2fb3648e1c57ab5f5a1e55a86e61edc150e118bd37e774be5615a4bcd97b02a7
+revision_set_sha256: 6a471ce7f3ab629dd3dae55603ff17a71d0479c1ef2fcf71f90cd18777adfeb4
 revision_set_recipe: "sha256(concat manifest-entry order as: <sha256><two spaces><foundry-relative-path><newline>)"
 entries:
-  - { episode: ep001, repo_snapshot: ep001_v2_manuscript.md, sha256: 23a22f298b4ea37499b80ec55c0e86b3816604328255aee3529e7013a0712244, authority: owner_approved, approved_at: "2026-07-27", owner_decision: owner-adopt-afterlife-restaurant-three-year-ep001-ep004-20260727-r2, published: false, producer: owner_directed_local_revision, reviewer: codex_transport_qa }
+  - { episode: ep001, repo_snapshot: ep001_v2_manuscript.md, sha256: d8a017f4de5cea7f463983a22f84dcad4f298257df495a519362a6cd6d1f8a57, authority: owner_approved, approved_at: "2026-07-27", owner_decision: owner-adopt-afterlife-restaurant-three-year-ep001-ep004-20260727-r2, published: false, producer: owner_directed_local_revision, reviewer: codex_transport_qa }
   - { episode: ep002, repo_snapshot: ep002_v2_manuscript.md, sha256: 01802d4862a5b607f42b335c7a3126c0418a3ac2a2a406199f090d046d45595a, authority: owner_approved, approved_at: "2026-07-27", owner_decision: owner-adopt-afterlife-restaurant-three-year-ep001-ep004-20260727-r2, published: false, producer: owner_directed_local_revision, reviewer: codex_transport_qa }
   - { episode: ep003, repo_snapshot: ep003_v3_manuscript.md, sha256: 7138bace3e357d2e6369cdf27445c6c92e0a70bbf429632b88c7d4982ceb3f5a, authority: owner_approved, approved_at: "2026-07-27", owner_decision: owner-adopt-afterlife-restaurant-three-year-ep001-ep004-20260727-r2, published: false, producer: owner_directed_scene_break_revision, reviewer: codex_transport_qa }
   - { episode: ep004, repo_snapshot: ep004_manuscript.md, sha256: f5ec74b51a97e76d2accf20a1b39bf00dc57d525df917876f35eae9c04b40dcc, authority: owner_approved, approved_at: "2026-07-27", owner_decision: owner-adopt-afterlife-restaurant-three-year-ep001-ep004-20260727-r2, published: false, producer: web_gpt_pro, reviewer: codex_transport_qa }

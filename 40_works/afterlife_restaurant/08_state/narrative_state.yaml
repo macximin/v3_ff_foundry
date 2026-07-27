@@ -4,11 +4,11 @@ projection_of:
   state_through: ep004
   canonical_baseline: ../06_canon_note/canon_note_003_three_year_return_contract.md
   manuscript_manifest: ../04_manuscript/manifest.yaml
-  revision_set_sha256: 2fb3648e1c57ab5f5a1e55a86e61edc150e118bd37e774be5615a4bcd97b02a7
+  revision_set_sha256: 6a471ce7f3ab629dd3dae55603ff17a71d0479c1ef2fcf71f90cd18777adfeb4
 authority: owner_approved
 rebuildable: true
 source_manuscript_hashes:
-  ep001: 23a22f298b4ea37499b80ec55c0e86b3816604328255aee3529e7013a0712244
+  ep001: d8a017f4de5cea7f463983a22f84dcad4f298257df495a519362a6cd6d1f8a57
   ep002: 01802d4862a5b607f42b335c7a3126c0418a3ac2a2a406199f090d046d45595a
   ep003: 7138bace3e357d2e6369cdf27445c6c92e0a70bbf429632b88c7d4982ceb3f5a
   ep004: f5ec74b51a97e76d2accf20a1b39bf00dc57d525df917876f35eae9c04b40dcc
