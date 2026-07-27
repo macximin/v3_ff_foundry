@@ -4,14 +4,14 @@ projection_of:
   state_through: ep004
   canonical_baseline: ../06_canon_note/canon_note_003_three_year_return_contract.md
   manuscript_manifest: ../04_manuscript/manifest.yaml
-  revision_set_sha256: 23d336d3d3160267da6290ebc433f5e814b0d646e179453bac2b57be94315178
+  revision_set_sha256: 67b205e5d16835ada592568cd1922c4e85de362b2845b684ea309789454b934b
 authority: owner_approved
 rebuildable: true
 source_manuscript_hashes:
-  ep001: d8a017f4de5cea7f463983a22f84dcad4f298257df495a519362a6cd6d1f8a57
-  ep002: e0ada71ce768a01e14717f04f5615890d5c8a14777f096b5bc781c3f01ccb788
-  ep003: 2d95ad8ee5d577941b974643c23371996d20aaccc4cd99e3a04b32d838611bd7
-  ep004: beecf896db49348e40d18c298567b80d95bc944061fbedcc7d1fc2542c9e8966
+  ep001: 67a908d81ee5d1f4f012035c196ae01e4b6319090b27cbd257fcaf095a1969ff
+  ep002: 701bf3b86420d71a78adfc81f230d1bb7c13ac401efe16aeb834cd810aac744f
+  ep003: 174560ba4c80f38afdf77dd9bcccf23a1fd630f850f1a9c48f7c5e1a7b2f320a
+  ep004: 23285a3853e6be3a82961368fbb4e7e2aaec8b0079d9d88eb8af55cbf1fbc0fb
 facts:
   return_contract:
     term: "삼도식당에서 체감상 삼 년"
@@ -40,7 +40,7 @@ characters:
   princess:
     public_name_through_ep004: 공주
     hidden_name: 연화
-    role: "삼도식당 현장 동료"
+    role: "가출 뒤 굶고 앓다가 도윤에게 먹을 것과 잠자리를 받은 삼도식당 첫 식객이자 현장 동료"
     identity_boundary: "서하진과 별개 인물"
     demonstrated_functions:
       - 시식
@@ -49,7 +49,7 @@ characters:
       - 선택 목패를 통한 손님 의사 확인
   kim_munseong:
     name: 김문성
-    status: "귀항탕을 완식하고 떠난 첫 손님"
+    status: "귀항탕을 완식하고 떠난 첫 망자 손님"
   tongueless_guest:
     name: unknown
     status: "삼도식당에 머물며 마지막 식사를 찾는 중"
@@ -77,7 +77,7 @@ assets:
   recurring_supply_arrangement: "박명조 날개를 모아 두고 오늘 가격으로 넘기기로 한 구두 약속"
 open_reader_debts:
   - { id: tongueless_guest_meal, debt: "매일 맛을 물어 준 사람과 그 음식은 무엇이며, 손님은 어떻게 대답할 것인가." }
-  - { id: princess_identity, debt: "공주의 본명과 식당에 머무는 이유." }
+  - { id: princess_identity, debt: "공주의 본명과 왕궁을 가출한 깊은 이유." }
   - { id: seo_hajin_role, debt: "서하진이 도윤을 계약자로 고른 이유." }
 state_boundaries:
   - "손님당 하루, 1,095일, 수명 적립, 점수, 게이지를 현재 계약으로 사용하지 않는다."
