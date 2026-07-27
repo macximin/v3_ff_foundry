@@ -14,6 +14,7 @@ It stores model-run receipts, promoted writing materials, work-level planning ar
 20_model_runs/
 30_materials/
 40_works/
+45_screenworks/
 50_cross_model_ab/
 90_archive/
 ```
@@ -29,3 +30,13 @@ Living Spine -> A-Rail -> B-Rail -> Rolling Corridor -> Episode Bet -> Manuscrip
 ```
 
 See [Anchored Story Loop](00_charter/anchored_story_loop.md). Kanban remains the board/flow method, not story authority.
+
+## Screenplay loop
+
+```text
+Source Binding -> Screen Brief -> Format Bible -> Season Design
+-> Episode Promise -> Scene Cards -> Timed Script -> BR0/BR1
+-> owner approval -> Approved Script -> Planning State
+```
+
+영상 대본은 소설 레인과 분리된 `45_screenworks/`에 둔다. 장면의 source chronology와 screen order를 따로 기록하며, 원작과 영상 사이에는 자동 추종·자동 writeback을 하지 않는다. See [Screenplay Loop](00_charter/screenplay_loop.md).

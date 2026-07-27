@@ -1,0 +1,16 @@
+schema_version: firefly_scene_cards_v1
+screenwork_id: _template
+episode_id: ep000
+revision: v001
+status: template_placeholder
+scenes:
+  - scene_id: SCN-0001
+    status: active
+    source_chronology: 1
+    screen_order: 1
+    operation: none
+    parent_scene_ids: []
+    prerequisites: []
+    deferred_information: []
+    payoff_destination: null
+    purpose: replace_with_real_scene

@@ -1,0 +1,7 @@
+schema_version: firefly_screen_artifact_index_v1
+screenwork_id: _template
+freshness_states:
+  - fresh
+  - stale_review_required
+  - invalid
+artifacts: []

@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "firefly_script_scene_metadata_v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "screenwork_id",
+    "episode_id",
+    "script_revision",
+    "status",
+    "script_file",
+    "scenes"
+  ],
+  "properties": {
+    "schema_version": {"const": "firefly_script_scene_metadata_v1"},
+    "screenwork_id": {"type": "string", "minLength": 1},
+    "episode_id": {"type": "string", "pattern": "^ep[0-9]+$"},
+    "script_revision": {"type": "string", "pattern": "^v[0-9]+$"},
+    "status": {"enum": ["template_placeholder", "candidate", "approved", "retired"]},
+    "script_file": {"type": "string", "pattern": "\\.fountain$"},
+    "scenes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "scene_id",
+          "status",
+          "source_chronology",
+          "screen_order",
+          "operation",
+          "parent_scene_ids",
+          "estimated_seconds",
+          "prerequisites",
+          "deferred_information"
+        ],
+        "properties": {
+          "scene_id": {"type": "string", "pattern": "^[A-Z0-9][A-Z0-9_-]+$"},
+          "status": {"enum": ["active", "retired"]},
+          "source_chronology": {"type": "number", "minimum": 0},
+          "screen_order": {"type": "number", "minimum": 1},
+          "operation": {"enum": ["none", "move", "split", "merge", "intercut", "bridge", "omit"]},
+          "parent_scene_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+          "estimated_seconds": {
+            "type": "object",
+            "required": ["min", "max"],
+            "properties": {
+              "min": {"type": "number", "minimum": 0},
+              "max": {"type": "number", "minimum": 0}
+            },
+            "additionalProperties": false
+          },
+          "prerequisites": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+          "deferred_information": {"type": "array", "items": {"type": "string"}},
+          "payoff_destination": {"type": ["string", "null"]}
+        }
+      }
+    }
+  }
+}

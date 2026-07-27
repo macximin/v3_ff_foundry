@@ -1,6 +1,6 @@
 # ff_foundry Charter
 
-> **Current workflow authority:** [Anchored Story Loop](anchored_story_loop.md)가 작품 제작 흐름·권위·역방향 재활용·BR0/BR1 감리의 SSOT다. 활성 이름은 [Firefly Terminology](terminology.md)를 따른다. 이 문서 아래 남은 `north_star / blueprint / draft / Donor Chain / canonical_stage`는 레거시 작품과 과거 receipt를 설명할 때만 읽는다.
+> **Current workflow authority:** 소설은 [Anchored Story Loop](anchored_story_loop.md), 영상 대본은 [Screenplay Loop](screenplay_loop.md)가 각각 제작 흐름·권위·BR0/BR1 감리의 SSOT다. 활성 이름은 [Firefly Terminology](terminology.md)와 [Screenplay Terminology](screenplay_terminology.md)를 따른다. 이 문서 아래 남은 `north_star / blueprint / draft / Donor Chain / canonical_stage`는 레거시 작품과 과거 receipt를 설명할 때만 읽는다.
 
 `ff_foundry` is not a Codex harness factory.
 
@@ -21,17 +21,29 @@ source_truth: ff_sources
 model_run_truth: ff_foundry/20_model_runs
 promoted_material_truth: ff_foundry/30_materials
 work_surface_truth: ff_foundry/40_works
+screenwork_surface_truth: ff_foundry/45_screenworks
 approved_history_truth: exact_owner_approved_manuscript_revision
+approved_script_truth: exact_owner_approved_episode_script_revision
 story_strategy_truth: living_spine_a_rail_b_rail_and_rolling_corridor
 assembly_recipe_role: pre_pitch_build_evidence_without_story_authority
 narrative_state_role: rebuildable_projection_from_manuscript_hashes
 canon_note_role: manuscript_conflict_resolution_or_owner_retcon_only
 portfolio_status_truth: ff_studio_v2/command_board/state/firefly.yaml
 work_status_truth: ff_foundry/40_works/<work_slug>/00_status.md
+screenwork_status_truth: ff_foundry/45_screenworks/<family>/variants/<screenwork_id>/00_status.yaml
+source_writeback: forbidden
 notion_role: human_facing_read_model_and_owner_input_surface
 source_feed_prompt_template: ff_foundry/40_works/_template/00_source_feed_prompt.md
 owner_final_authority: human_owner
 ```
+
+## Screenplay Lane Boundary
+
+`45_screenworks/`는 소설 `40_works/`와 분리된 영상 대본 제작 표면이다. 원작 각색과 영상 오리지널을 모두 다루되, 원작 revision은 정확한 SHA-256으로 고정한다. 원작 변경을 자동 추종하지 않고 impact report 뒤 owner가 승인한 명시적 rebase만 허용한다.
+
+영상 변경은 소설에 자동 반영하지 않으며, 소설 변경도 영상에 자동 반영하지 않는다. 같은 IP의 가로형·세로형 등 format variant는 family core만 공유하고 각각 독립된 대본 권위와 상태를 가진다. 최종 승인 영상이 생기기 전에는 owner가 승인한 정확한 episode script revision이 영상 이야기 권위다. 최종 승인 영상 단계에서는 실제 반영된 변경을 conformed script와 change map에 먼저 되돌려 기록한 뒤, owner가 정확한 영상 파일을 승인해야 영상 사실 권위가 생긴다.
+
+대본 레인의 상세 stage, 장면 재배열, 승인·무효화, 자산·저장소·복구 규칙은 [Screenplay Loop](screenplay_loop.md)가 소유한다. 대본 도구는 `40_works/`, 기존 `production_stage`, `tools/draft_relay/`를 수정하거나 쓰기 대상으로 삼지 않는다.
 
 ## Model Lanes
 

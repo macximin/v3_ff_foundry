@@ -1,0 +1,13 @@
+schema_version: firefly_screen_planning_state_v1
+screenwork_id: _template
+projection_kind: provisional
+projection_of:
+  approved_through: ep000
+  approved_script_manifest: ../08_approved_scripts/manifest.yaml
+  approved_revision_set_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+rebuildable: true
+facts: {}
+characters: {}
+concept_assets: {}
+open_setups: []
+last_rebuilt_at: null

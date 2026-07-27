@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "firefly_screen_source_manifest_v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "screenwork_id",
+    "source_kind",
+    "binding_mode",
+    "bound_revisions",
+    "source_writeback",
+    "automatic_tracking",
+    "rebase_requires"
+  ],
+  "properties": {
+    "schema_version": {"const": "firefly_screen_source_manifest_v1"},
+    "screenwork_id": {"type": "string", "minLength": 1},
+    "source_kind": {"enum": ["novel_adaptation", "screen_original"]},
+    "binding_mode": {"enum": ["exact_revision", "no_external_source"]},
+    "bound_revisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source_id", "locator", "revision_sha256"],
+        "properties": {
+          "source_id": {"type": "string", "minLength": 1},
+          "locator": {"type": "string", "minLength": 1},
+          "revision_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "source_writeback": {"const": "forbidden"},
+    "automatic_tracking": {"const": "forbidden"},
+    "rebase_requires": {
+      "type": "array",
+      "allOf": [
+        {"contains": {"const": "impact_report"}},
+        {"contains": {"const": "owner_approval"}}
+      ]
+    },
+    "current_binding_sha256": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"},
+    "last_rebased_at": {"type": ["string", "null"]}
+  }
+}

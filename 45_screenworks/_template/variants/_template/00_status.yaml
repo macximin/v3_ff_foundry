@@ -1,0 +1,23 @@
+schema_version: firefly_screenwork_status_v1
+workflow_schema: firefly_screenplay_loop_v1
+template_origin_version: firefly_screenwork_template_v1
+family_id: _template
+screenwork_id: _template
+variant_id: _template
+title: ""
+owner_id: wjjo
+source_kind: screen_original
+format_profile: horizontal_animation
+screen_stage: none
+current_episode: ep000
+approved_through: ep000
+planning_state_through: ep000
+source_binding_sha256: null
+target_runtime_seconds:
+  min: 180
+  max: 300
+approval_authority: owner
+storage_backend: gdrive_personal_v0
+next_action: fill_source_binding
+blockers: []
+updated_at: null

@@ -1,0 +1,25 @@
+{
+  "schema_version": "firefly_script_scene_metadata_v1",
+  "screenwork_id": "_template",
+  "episode_id": "ep000",
+  "script_revision": "v001",
+  "status": "template_placeholder",
+  "script_file": "ep000_v001.fountain",
+  "scenes": [
+    {
+      "scene_id": "SCN-0001",
+      "status": "active",
+      "source_chronology": 1,
+      "screen_order": 1,
+      "operation": "none",
+      "parent_scene_ids": [],
+      "estimated_seconds": {
+        "min": 8,
+        "max": 12
+      },
+      "prerequisites": [],
+      "deferred_information": [],
+      "payoff_destination": null
+    }
+  ]
+}

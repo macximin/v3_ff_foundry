@@ -1,0 +1,16 @@
+schema_version: firefly_screen_family_v1
+family_id: _template
+title: ""
+owner_id: wjjo
+shared_core:
+  character_ids: []
+  place_ids: []
+  prop_ids: []
+  immutable_relationships: []
+  immutable_goals: []
+adaptation_range:
+  allowed: []
+  forbidden: []
+concept_assets: []
+variant_ids: []
+updated_at: null

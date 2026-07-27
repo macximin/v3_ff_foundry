@@ -1,0 +1,12 @@
+schema_version: firefly_screen_source_manifest_v1
+screenwork_id: _template
+source_kind: screen_original
+binding_mode: no_external_source
+bound_revisions: []
+source_writeback: forbidden
+automatic_tracking: forbidden
+rebase_requires:
+  - impact_report
+  - owner_approval
+current_binding_sha256: null
+last_rebased_at: null

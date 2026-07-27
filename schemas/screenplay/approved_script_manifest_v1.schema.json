@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "firefly_approved_script_manifest_v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "screenwork_id", "authority_rule", "entries"],
+  "properties": {
+    "schema_version": {"const": "firefly_approved_script_manifest_v1"},
+    "screenwork_id": {"type": "string", "minLength": 1},
+    "authority_rule": {"const": "exact_owner_approved_episode_script_revision"},
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "episode_id",
+          "revision",
+          "path",
+          "sha256",
+          "owner_approved",
+          "approved_at"
+        ],
+        "properties": {
+          "episode_id": {"type": "string", "pattern": "^ep[0-9]+$"},
+          "revision": {"type": "string", "pattern": "^v[0-9]+$"},
+          "path": {"type": "string", "minLength": 1},
+          "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "owner_approved": {"const": true},
+          "approved_at": {"type": "string", "minLength": 1},
+          "approval_receipt": {"type": ["string", "null"]}
+        }
+      }
+    }
+  }
+}

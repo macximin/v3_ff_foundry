@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "firefly_screen_family_v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "family_id",
+    "owner_id",
+    "shared_core",
+    "adaptation_range",
+    "concept_assets",
+    "variant_ids"
+  ],
+  "properties": {
+    "schema_version": {"const": "firefly_screen_family_v1"},
+    "family_id": {"type": "string", "minLength": 1},
+    "title": {"type": "string"},
+    "owner_id": {"type": "string", "minLength": 1},
+    "shared_core": {
+      "type": "object",
+      "required": ["character_ids", "place_ids", "prop_ids", "immutable_relationships", "immutable_goals"],
+      "properties": {
+        "character_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "place_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "prop_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "immutable_relationships": {"type": "array", "items": {"type": "string"}},
+        "immutable_goals": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "adaptation_range": {
+      "type": "object",
+      "required": ["allowed", "forbidden"],
+      "properties": {
+        "allowed": {"type": "array", "items": {"type": "string"}},
+        "forbidden": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "concept_assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["concept_asset_id", "kind", "label"],
+        "properties": {
+          "concept_asset_id": {"type": "string", "minLength": 1},
+          "kind": {"enum": ["character", "place", "prop"]},
+          "label": {"type": "string", "minLength": 1}
+        },
+        "additionalProperties": false
+      }
+    },
+    "variant_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "updated_at": {"type": ["string", "null"]}
+  }
+}

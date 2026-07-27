@@ -1,0 +1,4 @@
+schema_version: firefly_approved_script_manifest_v1
+screenwork_id: _template
+authority_rule: exact_owner_approved_episode_script_revision
+entries: []
