@@ -1,10 +1,10 @@
 schema_version: firefly_narrative_state_v2
 work_slug: isekai_restaurant
 projection_of:
-  state_through: ep003_v1_candidate
+  state_through: ep003
   canonical_baseline: ../06_canon_note/canon_note_001_opening_baseline.md
   manuscript_manifest: ../04_manuscript/manifest.yaml
-authority: internal_canon_baseline_not_owner_approved_manuscript
+authority: owner_approved_manuscript_projection
 rebuildable: true
 facts:
   restaurant:
@@ -47,6 +47,6 @@ open_reader_debts:
   - { id: night_overbooking, debt: "27개 예약패와 열두 좌석의 충돌." }
   - { id: fire_bean_supply, debt: "불콩의 품질·가격·안전한 거래 조건." }
 state_boundaries:
-  - "이 상태는 internal canon candidate의 투영이며 owner-approved manuscript projection이 아니다."
+  - "이 상태는 manifest의 owner-approved ep001~ep003에서 재생성한 투영이다."
   - "별도 이계 식당·두 번째 공간·헌터·사냥·토벌·전투·괴이관리청을 현재 설정으로 기록하지 않는다."
-last_rebuilt_at: "2026-07-26T00:00:00+09:00"
+last_rebuilt_at: "2026-07-27T09:14:12+09:00"

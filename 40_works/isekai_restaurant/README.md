@@ -8,4 +8,4 @@
 - 승인 원고 정본: 04_manuscript/manifest.yaml
 - 후보 원문·검증 기록: ../../20_model_runs/web_gpt_pro/isekai_restaurant_20260726/
 
-2026-07-26 owner 결정으로 1~3화 후보의 내부 캐논만 승격했다. 후보 원문은 아직 owner-approved manuscript가 아니며, Storyyard·공개 발행으로 투영하면 안 된다.
+2026-07-27 owner 승인으로 ep001_v3·ep002_v3·ep003_v1은 exact manuscript history가 됐다. 같은 날 Storyyard에 1~3화와 작업실 캐논 자료·플롯의 읽기 전용 공개본을 일방향 발행했다. Storyyard 편집은 Foundry로 역수입하지 않는다.
