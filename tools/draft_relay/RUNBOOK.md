@@ -49,6 +49,8 @@ receipt의 첨부 목록과 dispatch를 Web GPT Pro 세션에 보낸다. 결과 
 
 기본 생산은 `-Producer webgpt -WebGptModel "Web GPT Pro"`다. 컴파일된 dispatch와 production attachment를 Web GPT Pro에 전달하고, 채팅 URL 또는 응답 식별자와 첨부 SHA-256을 receipt에 남긴 뒤 `raw.md`에 원고 후보만 저장한다. 기본 BR0/BR1 감리자는 Codex Desktop `gpt-5.6-terra`다.
 
+컴파일된 원고 발주문은 Markdown 장면전환 기호로 앞뒤 빈 줄 1개의 단독 `◆ ◆ ◆`를 요구한다. 단독 `###`는 Markdown 제목 문법이므로 생산자에게 요구하지 않는다. 최종 TXT가 별도로 필요할 때만 운반·조판 레인이 검증된 장면전환 기호를 단독 `###`로 변환한다.
+
 GPT/Codex repo-native 생산을 owner가 예외 지정한 경우에는 `-Producer gpt -GptModel "GPT/Codex"`를 사용한다. 이때 Codex는 같은 산출물의 최종 감리자가 될 수 없으며 인간 / Gemini / Claude 등 다른 레인으로 넘긴다.
 
 ## 2. BR0 blind readback

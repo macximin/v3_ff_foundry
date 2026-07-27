@@ -1850,6 +1850,9 @@ function Invoke-ContractSmoke([hashtable]$Paths) {
     if ((Test-GenreProfileSelected $Paths.GenreProfiles "modern_fantasy") -and $compiledDispatch -notmatch '### modern_fantasy') {
         throw "Compiled dispatch is missing the modern_fantasy producer excerpt."
     }
+    if ($compiledDispatch -notmatch [regex]::Escape('◆ ◆ ◆')) {
+        throw "Compiled dispatch is missing the Markdown scene-transition marker contract."
+    }
 
     $reviewBlock = Get-GenreProfileReviewBlock $Paths.GenreProfiles $Paths.FeedbackProfile
     if ((Test-GenreProfileSelected $Paths.GenreProfiles "modern_fantasy") -and $reviewBlock -notmatch '## Static Contract') {

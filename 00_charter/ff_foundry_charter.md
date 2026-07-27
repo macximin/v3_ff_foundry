@@ -43,6 +43,8 @@ owner_final_authority: human_owner
 - **대체 생산 레인:** Web GPT Pro가 접근 불가이거나 owner 품질 기준을 충족하지 못한 경우에만 owner가 Web Gemini Pro / GPT·Codex / Claude를 지정한다. GPT·Codex가 직접 생산한 산출물은 Codex가 최종 감리할 수 없고, 인간 / Gemini / Claude 등 다른 레인으로 넘긴다.
 - **화별 약속 조립:** 기본 생산자 또는 Codex 관리 레인이 맡을 수 있다. 조립자가 원고까지 직접 생산한 경우에도 원고 생산자 identity를 receipt에 명시한다. howlib 조회를 바닥으로 깔되 근거 있는 비틀기·빈 셀 발명은 허용한다.
 
+**원고 Markdown 장면전환 계약 (2026-07-27 owner 결정):** Web GPT Pro에 원고 제작을 발주할 때는 실제 장면전환 위치를 앞뒤 빈 줄 1개를 둔 단독 `◆ ◆ ◆`로 쓰라고 발주문에 명시한다. 단독 `###`는 Markdown에서 3단계 제목 문법으로 해석되므로 모델이 반환하는 Markdown 원고와 원고 후보의 장면전환 기호로 쓰지 않는다. 별도의 최종 TXT 산출이 필요한 경우에만 운반·조판 레인이 검증된 `◆ ◆ ◆`를 단독 `###`로 변환할 수 있다. 생산자가 필요한 장면전환 기호를 누락하면 승인 원고를 소리 없이 고치지 않고, 운반·감리 레인이 실제 시간·장소·시점 경계를 판독해 별도 수정 후보로 제시한다.
+
 **정본 read-only 원칙:** 생산·운반 레인은 승인 원고 revision을 수정·포크하지 않는다. 미래 전략인 Living Spine·Anchor Rail은 owner 판단으로 계속 고칠 수 있다. Canon Note는 원고 내부 의미 충돌 또는 명시적 retcon에만 쓴다.
 
 **External gate anti-moralizing:** 감리자는 인간 / Gemini / Claude Code / Codex가 될 수 있다. 감리는 도덕 교정, 주인공 호구화, 헐리웃식 구원자화, 악역성 세탁을 하지 않는다. 감리 기준은 정합성, 상업성, 페이싱, Episode Bet 약속, payoff, 인간 후폭풍, 독자 보상, 다음화 압력이다.
