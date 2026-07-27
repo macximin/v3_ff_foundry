@@ -2,10 +2,10 @@ schema_version: firefly_manuscript_manifest_v1
 work_slug: afterlife_restaurant
 authority_rule: exact_owner_approved_revision_is_history_truth
 published_field_semantics: episode_publication_fact_only_never_revision_identity
-revision_set_sha256: 67b205e5d16835ada592568cd1922c4e85de362b2845b684ea309789454b934b
+revision_set_sha256: 3e10ea3cb109e7c2066b2f2589764d6bb0de470e9abb2448d1f7e665aa93be24
 revision_set_recipe: "sha256(concat manifest-entry order as: <sha256><two spaces><foundry-relative-path><newline>)"
 entries:
-  - { episode: ep001, repo_snapshot: ep001_v2_manuscript.md, sha256: 67a908d81ee5d1f4f012035c196ae01e4b6319090b27cbd257fcaf095a1969ff, authority: owner_approved, approved_at: "2026-07-27", owner_decision: owner-afterlife-ep001-003-continuity-touch-20260727, published: false, producer: owner_directed_local_revision, reviewer: codex_continuity_audit }
+  - { episode: ep001, repo_snapshot: ep001_v2_manuscript.md, sha256: c80913ca46c062e4f63e5b34433c02dea6197ee3cbe50fa52d42b8864a8957d9, authority: owner_approved, approved_at: "2026-07-27", owner_decision: owner-afterlife-ep001-003-prose-tightening-20260727, published: false, producer: owner_directed_local_revision, reviewer: codex_transport_qc }
   - { episode: ep002, repo_snapshot: ep002_v2_manuscript.md, sha256: 701bf3b86420d71a78adfc81f230d1bb7c13ac401efe16aeb834cd810aac744f, authority: owner_approved, approved_at: "2026-07-27", owner_decision: owner-afterlife-ep002-003-cooking-detail-touch-20260727, published: false, producer: owner_directed_local_revision, reviewer: codex_culinary_detail_audit }
-  - { episode: ep003, repo_snapshot: ep003_v3_manuscript.md, sha256: 174560ba4c80f38afdf77dd9bcccf23a1fd630f850f1a9c48f7c5e1a7b2f320a, authority: owner_approved, approved_at: "2026-07-27", owner_decision: owner-afterlife-ep002-003-cooking-detail-touch-20260727, published: false, producer: owner_directed_local_revision, reviewer: codex_culinary_detail_audit }
+  - { episode: ep003, repo_snapshot: ep003_v3_manuscript.md, sha256: 9d2d0f273269e04bf72f875972cdc8a60be1a0f300d016f6f849319c4d54d824, authority: owner_approved, approved_at: "2026-07-27", owner_decision: owner-afterlife-ep001-003-prose-tightening-20260727, published: false, producer: owner_directed_local_revision, reviewer: codex_transport_qc }
   - { episode: ep004, repo_snapshot: ep004_manuscript.md, sha256: 23285a3853e6be3a82961368fbb4e7e2aaec8b0079d9d88eb8af55cbf1fbc0fb, authority: owner_approved, approved_at: "2026-07-27", owner_decision: owner-afterlife-ep004-duplicate-removal-20260727, published: false, producer: web_gpt_pro_restored_candidate, reviewer: codex_transport_repair }
