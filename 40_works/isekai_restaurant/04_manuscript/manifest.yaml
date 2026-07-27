@@ -2,6 +2,9 @@ schema_version: firefly_manuscript_manifest_v1
 work_slug: isekai_restaurant
 authority_rule: exact_owner_approved_revision_is_history_truth
 published_field_semantics: episode_publication_fact_only_never_revision_identity
-revision_set_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+revision_set_sha256: 5118946b0745debd337e640725e8685c4ec3dc1bdd48617c8645e2a3b6f93dc5
 revision_set_recipe: "sha256(concat manifest-entry order as: <sha256><two spaces><foundry-relative-path><newline>)"
-entries: []
+entries:
+  - { episode: ep001, repo_snapshot: ep001_manuscript.md, sha256: d2d7b539b8d5e4a21ccc43e096c43720906b47a926fb2b62e6aec4f3b9728de7, authority: owner_approved, approved_at: "2026-07-27T09:14:12+09:00", owner_decision: owner-adopt-all-20260727-isekai-restaurant-v1, published: true, published_at: "2026-07-27T09:22:53+09:00", producer: web_gpt_pro }
+  - { episode: ep002, repo_snapshot: ep002_manuscript.md, sha256: ec1c15d80fffabaef4413a2ef5554271baa2af1c7ad0b63005f92f5376ce5685, authority: owner_approved, approved_at: "2026-07-27T09:14:12+09:00", owner_decision: owner-adopt-all-20260727-isekai-restaurant-v1, published: true, published_at: "2026-07-27T09:22:53+09:00", producer: web_gpt_pro }
+  - { episode: ep003, repo_snapshot: ep003_manuscript.md, sha256: 90cdbea57962f218061caf84bf2b8fd990cc738fc73f29fcdca0327aedeb2a64, authority: owner_approved, approved_at: "2026-07-27T09:14:12+09:00", owner_decision: owner-adopt-all-20260727-isekai-restaurant-v1, published: true, published_at: "2026-07-27T09:22:53+09:00", producer: web_gpt_pro }

@@ -1,6 +1,6 @@
 # 이계식당 Rolling Corridor
 
-상태: hold-for-formal-review
+상태: ready-for-ep004-episode-bet
 
 ~~~yaml
 schema_version: firefly_rolling_corridor_v3
@@ -8,8 +8,8 @@ starts_from: ep001_to_ep003_internal_canon_baseline
 active_b_arc: B001
 episode_cursor: ep004_unplanned
 hard_stop:
-  - formal_BR0_BR1_before_owner_manuscript_promotion
-  - no_storyyard_projection
+  - no_ep004_manuscript_before_episode_bet
+  - no_storyyard_projection_without_projection_receipt
 ~~~
 
 ## 다음 발주가 반드시 이어받을 것

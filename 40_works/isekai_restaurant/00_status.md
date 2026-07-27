@@ -8,28 +8,27 @@ owner_id: wjjo
 ownership_scope: personal
 production_system: v3_firefly_studio
 portfolio_state: active
-production_stage: story
+production_stage: episode_bet
 current_episode: ep004
 current_b_arc: B001
-published_through: ep000
-manuscript_through: ep000
-approved_through: ep000
-reviewed_through: ep000
-state_through: ep003_v1_candidate
-next_action: formal_BR0_BR1_then_owner_manuscript_promotion_decision_for_ep001_to_ep003
-blockers:
-  - ep001_to_ep003_are_internal_canon_candidates_not_owner_approved_manuscripts
-  - no_storyyard_projection_before_manuscript_promotion
+published_through: ep003
+manuscript_through: ep003
+approved_through: ep003
+reviewed_through: ep003
+state_through: ep003
+next_action: prepare_ep004_episode_bet_from_B001_open_reader_debts
+blockers: []
 decision_ids:
   - owner-isekai-opening-internal-canon-promotion-20260726
+  - owner-adopt-all-20260727-isekai-restaurant-v1
 notion_page: null
 source_origin: 20_model_runs/web_gpt_pro/isekai_restaurant_20260726/ep001-003_integrated_review_packet_v3.md
 source_feed_receipt: null
-updated_at: 2026-07-26
+updated_at: 2026-07-27
 ---
 
 # 이계식당
 
-- 1~3화 후보는 06_canon_note/canon_note_001_opening_baseline.md를 기준으로 Foundry 내부 연속성 정본이 됐다.
-- 원문 후보와 최종 자체 검증은 20_model_runs/web_gpt_pro/isekai_restaurant_20260726/에 보존한다. 이 작업면에는 원문을 복제하지 않는다.
-- 이는 설정과 후속 기획의 기준을 정한 조치다. 04_manuscript/manifest.yaml의 owner-approved 원고 이력, 공개 발행, Storyyard 반영은 아직 없다.
+- 1~3화의 exact owner-approved 원고는 04_manuscript/와 manifest에 있다. Web GPT Pro raw 후보와 최초 검증은 20_model_runs/web_gpt_pro/isekai_restaurant_20260726/에 보존한다.
+- 06_canon_note/canon_note_001_opening_baseline.md는 이후 기획의 연속성 기준이고, exact manuscript revision의 권위는 manifest가 가진다.
+- owner-approved ep001~003과 현재 Storyyard 작업실의 캐논 자료·플롯은 2026-07-27 Storyyard 읽기 전용 공개본으로 일방향 발행했다. Foundry 정본은 유지되며 역수입하지 않는다. 발행 receipt는 05_review/storyyard_publication_20260727.md다.
