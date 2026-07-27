@@ -2,9 +2,9 @@ schema_version: firefly_manuscript_manifest_v1
 work_slug: knights_restaurant
 authority_rule: exact_owner_approved_revision_is_history_truth
 published_field_semantics: episode_publication_fact_only_never_revision_identity
-revision_set_sha256: 12fe64579c23c6f78a567515c50a1634dfbbad5f4550d0060870557b6e96a596
+revision_set_sha256: f5bffad35f723ba3c8d7a325a09f76248867d3a93dca4a22d37249075acbf2f2
 revision_set_recipe: "sha256(concat manifest-entry order as: <sha256><two spaces><foundry-relative-path><newline>)"
 entries:
-  - { episode: ep001, repo_snapshot: ep001_manuscript.md, sha256: 667f7c1f671e17035df8061b5138ca8835e19f5deb3a1286eeaa6c72b66ba1c3, authority: owner_approved, approved_at: "2026-07-26T15:01:22+09:00", owner_decision: owner-adopt-all-20260726-knights-restaurant-v2, published: false, producer: web_gpt_pro }
-  - { episode: ep002, repo_snapshot: ep002_manuscript.md, sha256: adeb995cc16ce7dbe2fe71e78c7a220681daf8428f46e0bfe90553781614f23d, authority: owner_approved, approved_at: "2026-07-26T15:01:22+09:00", owner_decision: owner-adopt-all-20260726-knights-restaurant-v2, published: false, producer: web_gpt_pro }
-  - { episode: ep003, repo_snapshot: ep003_manuscript.md, sha256: b307ab921805bc5b1859d1ff007d846d1914f88d154ca19c238784392f27eb40, authority: owner_approved, approved_at: "2026-07-26T15:01:22+09:00", owner_decision: owner-adopt-all-20260726-knights-restaurant-v2, published: false, producer: web_gpt_pro }
+  - { episode: ep001, repo_snapshot: ep001_manuscript.md, sha256: 52e4cc4154f128c2d46d7294a4650df0c41391fdd06bf68485faca739445c013, authority: owner_approved, approved_at: "2026-07-26T15:01:22+09:00", owner_decision: owner-adopt-all-20260726-knights-restaurant-v2, published: false, producer: web_gpt_pro }
+  - { episode: ep002, repo_snapshot: ep002_manuscript.md, sha256: 96c56a2bf11ff0df8bbfc51ae4abf1e6fc91f77e187d45288e827975039c538d, authority: owner_approved, approved_at: "2026-07-26T15:01:22+09:00", owner_decision: owner-adopt-all-20260726-knights-restaurant-v2, published: false, producer: web_gpt_pro }
+  - { episode: ep003, repo_snapshot: ep003_manuscript.md, sha256: 59f74bbce52f30789a5821a6dc61c94e04c61fc58990427ac6931d52f22e7b11, authority: owner_approved, approved_at: "2026-07-26T15:01:22+09:00", owner_decision: owner-adopt-all-20260726-knights-restaurant-v2, published: false, producer: web_gpt_pro }
