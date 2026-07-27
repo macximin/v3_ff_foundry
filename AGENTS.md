@@ -6,6 +6,7 @@ ff_foundry 운영 규칙 정본은 **00_charter/ff_foundry_charter.md**다 (권�
 영상 대본 제작은 소설 루프와 분리된 [Screenplay Loop](00_charter/screenplay_loop.md), [Screenplay Terminology](00_charter/screenplay_terminology.md), `45_screenworks/_template/`을 따른다. 대본 도구는 `40_works/`에 쓰지 않는다.
 모델 레인 권한은 헌장의 **Model Lanes**를 따른다 (기본 생산자 = Web GPT Pro / 기본 BR0·BR1 감리자 = Codex Desktop `gpt-5.6-terra` / Codex 관리·운반; Web GPT Pro가 막히거나 품질 기준을 충족하지 못할 때만 owner가 대체 생산 레인을 고른다. 생산자 self-review는 최종 pass가 아니며, GPT/Codex가 직접 생산한 산출물은 다른 감리 레인으로 넘긴다. Episode Bet 조립은 생산자 또는 관리 레인이 맡을 수 있고 howlib는 JIT 조회 바닥이며 근거 있는 발명을 허용한다).
 모든 모델-facing 창작·감리 문장은 헌장의 **Core Philosophy — no fear harness**를 따른다.
+Hermes 작가 배정, 10-Batch 사람 승인 경계, Web GPT Pro 내부감리 및 Markdown 티켓 계약은 [Hermes Writer Operations](00_charter/hermes_writer_operations.md)이 정본이다. 이 계약은 Hermes 자동화 gate이며 인간 owner의 직접 작업·선변경을 제한하지 않는다. 배정 레지스트리에 owner decision이 없는 작품은 Hermes가 제작 티켓을 실행하지 않는다.
 
 → [헌장](00_charter/ff_foundry_charter.md)
 → [작품 양식](40_works/_template/)

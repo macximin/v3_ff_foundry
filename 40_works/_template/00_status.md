@@ -7,6 +7,11 @@ title: ""
 owner_id: wjjo
 ownership_scope: personal
 production_system: v3_firefly_studio
+target_episode: ep250
+assigned_writer: pending_owner_decision
+assignment_decision_id: null
+arc_batch: 1
+arc_batch_state: active
 portfolio_state: template
 production_stage: none
 current_episode: ep000
@@ -31,6 +36,9 @@ YAML front matter가 작품 진행 상태의 유일한 기계 판독 정본이�
 
 - `layout_profile`: `native | imported_legacy_bridge`
 - `owner_id`, `ownership_scope`, `production_system`은 Storyyard 공개 여부와 별개인 작품 소유권·생산 provenance다.
+- `target_episode`는 모든 활성 원고의 완결 목표다. 기본값은 `ep250`이며 변경은 owner decision으로만 가능하다.
+- 인간 owner는 이 상태 파일과 레지스트리를 나중에 맞춰도 된다. Hermes 재개 시점에는 `assigned_writer`와 `assignment_decision_id`가 `00_charter/hermes_writer_operations.json`의 기계 판독 배정과 일치해야 하며, `pending_owner_decision` 작품에는 Hermes 제작 티켓을 발주하지 않는다.
+- `arc_batch`는 10개 B-Arc 묶음 번호, `arc_batch_state`는 현재 묶음의 실행 가능 상태다. B011 등 다음 묶음은 owner가 새 batch decision을 기록하기 전까지 진행하지 않는다.
 - `production_stage`: `none | pitch | story | episode_bet | manuscript | review`. 현재 작업 위치이며 이야기 권위 등급이 아니다.
 - `current_b_arc`: B-Rail의 `active_b_arc`, Rolling Corridor의 `current_b_arc.b_id`와 같아야 한다. 어떤 B도 승인 원고 기준 5화를 넘을 수 없다.
 - 선택 Genre Profile은 이 front matter가 아니라 `00_feedback_profile.md`의 `genre_profiles`가 소유한다.

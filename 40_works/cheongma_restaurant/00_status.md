@@ -7,6 +7,11 @@ title: "천마식당"
 owner_id: wjjo
 ownership_scope: personal
 production_system: v3_firefly_studio
+target_episode: ep250
+assigned_writer: pending_owner_decision
+assignment_decision_id: null
+arc_batch: 1
+arc_batch_state: active
 portfolio_state: active
 production_stage: episode_bet
 current_episode: ep004
