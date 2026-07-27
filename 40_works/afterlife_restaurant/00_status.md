@@ -34,6 +34,7 @@ decision_ids:
   - owner-afterlife-ep002-003-cooking-detail-touch-20260727
   - owner-afterlife-ep004-duplicate-removal-20260727
   - owner-afterlife-ep001-003-prose-tightening-20260727
+  - owner-afterlife-ep001-deceased-character-typo-20260727
 notion_page: null
 source_origin: 20_model_runs/web_gpt_pro/restaurant_candidates_20260724/저승식당/v1-rc3.2
 source_feed_receipt: null
