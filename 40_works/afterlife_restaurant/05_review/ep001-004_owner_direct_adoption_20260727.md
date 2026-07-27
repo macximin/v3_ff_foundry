@@ -21,11 +21,11 @@ review_mode: owner_direct_adoption_after_transport_qa
 | episode | canonical snapshot | SHA-256 | producer |
 |---|---|---|---|
 | ep001 | `../04_manuscript/ep001_v2_manuscript.md` | `d8a017f4de5cea7f463983a22f84dcad4f298257df495a519362a6cd6d1f8a57` | owner-directed local revision |
-| ep002 | `../04_manuscript/ep002_v2_manuscript.md` | `01802d4862a5b607f42b335c7a3126c0418a3ac2a2a406199f090d046d45595a` | owner-directed local revision |
-| ep003 | `../04_manuscript/ep003_v3_manuscript.md` | `7138bace3e357d2e6369cdf27445c6c92e0a70bbf429632b88c7d4982ceb3f5a` | owner-directed scene-break revision |
-| ep004 | `../04_manuscript/ep004_manuscript.md` | `f5ec74b51a97e76d2accf20a1b39bf00dc57d525df917876f35eae9c04b40dcc` | Web GPT Pro |
+| ep002 | `../04_manuscript/ep002_v2_manuscript.md` | `e0ada71ce768a01e14717f04f5615890d5c8a14777f096b5bc781c3f01ccb788` | owner-directed local revision |
+| ep003 | `../04_manuscript/ep003_v3_manuscript.md` | `2d95ad8ee5d577941b974643c23371996d20aaccc4cd99e3a04b32d838611bd7` | owner-directed scene-break revision |
+| ep004 | `../04_manuscript/ep004_manuscript.md` | `beecf896db49348e40d18c298567b80d95bc944061fbedcc7d1fc2542c9e8966` | Web GPT Pro |
 
-- revision-set SHA-256: `6a471ce7f3ab629dd3dae55603ff17a71d0479c1ef2fcf71f90cd18777adfeb4`
+- revision-set SHA-256: `23d336d3d3160267da6290ebc433f5e814b0d646e179453bac2b57be94315178`
 - 정본 entry order와 recipe는 `../04_manuscript/manifest.yaml`에 있다.
 - 이전 `ep001_manuscript.md`~`ep003_manuscript.md`와 당시 감리는 승인 history로 그대로 보존한다.
 
