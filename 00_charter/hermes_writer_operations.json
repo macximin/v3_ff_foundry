@@ -4,7 +4,13 @@
   "targetEpisode": "ep250",
   "maxWorksPerWriter": 3,
   "writers": ["author_cheese", "author_grape", "author_yuja", "author_honeybread"],
-  "assignments": [],
+  "assignments": [
+    {
+      "workSlug": "afterlife_restaurant",
+      "writerProfile": "author_cheese",
+      "assignmentDecisionId": "owner-afterlife-author-cheese-assignment-20260728"
+    }
+  ],
   "batches": [
     { "workSlug": "afterlife_restaurant", "activeBatch": 1, "approvalDecisionId": "owner-initial-hermes-batch-20260728" },
     { "workSlug": "cheongma_restaurant", "activeBatch": 1, "approvalDecisionId": "owner-initial-hermes-batch-20260728" },

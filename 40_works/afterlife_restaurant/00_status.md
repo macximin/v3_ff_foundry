@@ -8,8 +8,8 @@ owner_id: wjjo
 ownership_scope: personal
 production_system: v3_firefly_studio
 target_episode: ep250
-assigned_writer: pending_owner_decision
-assignment_decision_id: null
+assigned_writer: author_cheese
+assignment_decision_id: owner-afterlife-author-cheese-assignment-20260728
 arc_batch: 1
 arc_batch_state: active
 portfolio_state: active
