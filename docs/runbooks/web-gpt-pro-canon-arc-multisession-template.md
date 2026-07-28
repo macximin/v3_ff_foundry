@@ -80,6 +80,10 @@ Web GPT Pro에 질문이나 발주를 보낼 때마다 즉시 5분 heartbeat를 
 - 시각, 상태, 오류, 로그인·첨부 상태를 receipt에 기록한다.
 - 응답 수집, 원문 보존, 제안 검토가 끝나기 전에는 세션 턴을 완료하지 않는다.
 
+Sentinel의 `wgp_wait`는 이 대기 기록을 보조할 수 있다. 단, 로컬에 저장될
+receipt의 존재와 해시·front matter만 확인하는 watch-only 작업이다. Web GPT Pro
+UI를 열거나 재촉·재발주하지 않으며, deadline 초과는 owner `Review`로 올린다.
+
 ### 총괄 세션
 
 총괄은 작품 세션 5개를 3분마다 한 번에 확인한다.

@@ -42,6 +42,22 @@
   `continuation_authorized: true`, source candidate SHA-256이 모두 있어야
   다음 화 gate 증거가 된다.
 
+### 응답 대기 Sentinel watch
+
+Web GPT Pro가 느릴 때 `Firefly operation=wgp_wait` 티켓은 **Sentinel의
+watch-only 대기**다. 이는 Web GPT Pro 발주나 브라우저 자동화가 아니며,
+기존 채팅을 열거나 클릭·재촉·중복 발주하지 않는다.
+
+- `WGP dispatch reference`, repo-relative receipt Markdown 경로,
+  `WGP response deadline`을 티켓에 기록한다.
+- Sentinel은 receipt 부재 동안 `Awaiting response` heartbeat만 갱신한다.
+- 도착한 receipt는 로컬 SHA-256과 front matter (`work_slug`, `episode`,
+  `producer`, `continuation_authorized`, source candidate SHA)를 검증한다.
+- 유효 receipt가 있어도 watch 티켓만 `Done`이 된다. 원고 작성, 캐논 승격,
+  Storyyard 동기화·publish, 다음 제작 티켓 생성은 하지 않는다.
+- 기한 초과는 `Review`, 잘못된 receipt는 `Blocked`다. 어느 경우에도 자동
+  재발주·재촉을 하지 않으며 다음 행동은 인간 owner가 결정한다.
+
 ## Hermes owner-selected alternate producer lane
 
 `author_cheese`, `author_grape`, `author_yuja`, `author_honeybread` 중 하나와
