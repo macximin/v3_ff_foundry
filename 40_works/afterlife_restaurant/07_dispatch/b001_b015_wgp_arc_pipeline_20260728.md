@@ -13,7 +13,7 @@ first_review_range: B011-B015
 max_design_arcs_per_step: 5
 wgp_chat_url: https://chatgpt.com/c/6a656f75-91d0-83ee-9fbb-0b5ffbb3488c
 source_packet_path: 40_works/afterlife_restaurant/07_dispatch/b001_b015_wgp_arc_pipeline_source_20260728.md
-source_packet_sha256: 2d053a380724a7006a679bd7a8bb1dd040296797811d3e7760d80a1479bb60d6
+source_packet_sha256: 247dad22cc32650afa8543f75391ebc28fde4b5406ecc60276676857ea753394
 output_root: 20_model_runs/web_gpt_pro/afterlife_restaurant_arc_pipeline_b001_b015_20260728
 ---
 
@@ -38,12 +38,13 @@ Phase 3가 끝나도 정본 A/B Rail을 수정하지 않고 `Review`로 멈춘�
 - 화면에서 채팅 제목 `저승식당 초반 목적성 논의`와 URL을 함께 확인한다.
 - 일반 Chrome은 열거나 포커스·종료·검사하지 않는다.
 - 새 채팅, 검색 결과, 유사 제목 대화, 다른 작품 채팅으로 이동하지 않는다.
-- 첫 요청에는 검증된 source packet 파일 칩이 같은 채팅에 실제로 보이는지
-  확인한다. 현재 supervisor가 exact source packet을 브라우저 file chooser
-  경로로 한 번 첨부했고
+- 첫 요청 또는 source SHA가 바뀐 재감리 요청에는 현재 SHA의 source packet
+  파일 칩이 같은 채팅 composer에 실제로 보이는지 확인한다. supervisor가
+  exact source packet을 브라우저 file chooser 경로로 미리 첨부했다면
   `20_model_runs/web_gpt_pro/afterlife_restaurant_arc_pipeline_b001_b015_20260728/supervisor_attachment_receipt.md`
-  에 증거를 남겼다. 정확한 파일명 칩이 하나 보이면 그대로 사용하고 중복
-  첨부하지 않는다.
+  의 SHA가 현재 source SHA와 일치해야 한다. 정확한 파일명 칩이 하나 보이면
+  그대로 사용하고 중복 첨부하지 않는다. 과거 메시지에 붙은 같은 파일명이나
+  이전 SHA receipt는 현재 첨부 증거가 아니다.
 - 칩이 사라졌을 때만 `파일 등 추가` 메뉴를 연 뒤 `컴퓨터에서 업로드하세요`
   항목을 새 스냅샷에서 찾고, 그 항목에 `mcp__chrome_beta__upload_file`로 정확한
   절대 경로를 전달한다. 바깥의 `파일 등 추가` 버튼 자체를 upload 대상으로
@@ -63,7 +64,7 @@ Phase 3가 끝나도 정본 A/B Rail을 수정하지 않고 `Review`로 멈춘�
 
 - `40_works/afterlife_restaurant/07_dispatch/b001_b015_wgp_arc_pipeline_source_20260728.md`
 - 기대값:
-  `2d053a380724a7006a679bd7a8bb1dd040296797811d3e7760d80a1479bb60d6`
+  `247dad22cc32650afa8543f75391ebc28fde4b5406ecc60276676857ea753394`
 
 불일치하면 외부 전송 전에 멈춘다. source packet은 원고 발주가 아니라
 owner-approved Story Plan 감리·설계 입력이다.

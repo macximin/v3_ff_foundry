@@ -1,0 +1,1 @@
+Phase 1 dispatch preflight: source SHA-256 verified; exact Chrome Beta chat URL/title and one visible source-packet chip verified before send.
