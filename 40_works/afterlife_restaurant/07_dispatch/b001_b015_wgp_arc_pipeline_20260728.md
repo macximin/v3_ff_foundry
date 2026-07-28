@@ -42,8 +42,10 @@ Phase 3가 끝나도 정본 A/B Rail을 수정하지 않고 `Review`로 멈춘�
   파일 칩이 같은 채팅 composer에 실제로 보이는지 확인한다. supervisor가
   exact source packet을 브라우저 file chooser 경로로 미리 첨부했다면
   `20_model_runs/web_gpt_pro/afterlife_restaurant_arc_pipeline_b001_b015_20260728/supervisor_attachment_receipt.md`
-  의 SHA가 현재 source SHA와 일치해야 한다. 정확한 파일명 칩이 하나 보이면
-  그대로 사용하고 중복 첨부하지 않는다. 과거 메시지에 붙은 같은 파일명이나
+  의 SHA가 현재 source SHA와 일치해야 한다. 정확한 basename 또는 ChatGPT가
+  동명 첨부 충돌 때문에 붙인 숫자 suffix `(1)` 표시의 composer group이 하나
+  보이면 그대로 사용하고 중복 첨부하지 않는다. suffix 허용은 receipt가 현재
+  source SHA와 정확히 일치할 때뿐이다. 과거 메시지에 붙은 같은 파일명이나
   이전 SHA receipt는 현재 첨부 증거가 아니다.
 - 칩이 사라졌을 때만 `파일 등 추가` 메뉴를 연 뒤 `컴퓨터에서 업로드하세요`
   항목을 새 스냅샷에서 찾고, 그 항목에 `mcp__chrome_beta__upload_file`로 정확한
