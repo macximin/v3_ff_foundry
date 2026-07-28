@@ -38,9 +38,16 @@ Phase 3가 끝나도 정본 A/B Rail을 수정하지 않고 `Review`로 멈춘�
 - 화면에서 채팅 제목 `저승식당 초반 목적성 논의`와 URL을 함께 확인한다.
 - 일반 Chrome은 열거나 포커스·종료·검사하지 않는다.
 - 새 채팅, 검색 결과, 유사 제목 대화, 다른 작품 채팅으로 이동하지 않는다.
-- 첫 요청에는 검증된 source packet을
-  `mcp__chrome_beta__upload_file`로 직접 첨부하고, 같은 채팅에 파일 칩이 실제로
-  보이는지 확인한다. 네이티브 파일 선택창이나 좌표 추측은 사용하지 않는다.
+- 첫 요청에는 검증된 source packet 파일 칩이 같은 채팅에 실제로 보이는지
+  확인한다. 현재 supervisor가 exact source packet을 브라우저 file chooser
+  경로로 한 번 첨부했고
+  `20_model_runs/web_gpt_pro/afterlife_restaurant_arc_pipeline_b001_b015_20260728/supervisor_attachment_receipt.md`
+  에 증거를 남겼다. 정확한 파일명 칩이 하나 보이면 그대로 사용하고 중복
+  첨부하지 않는다.
+- 칩이 사라졌을 때만 `파일 등 추가` 메뉴를 연 뒤 `컴퓨터에서 업로드하세요`
+  항목을 새 스냅샷에서 찾고, 그 항목에 `mcp__chrome_beta__upload_file`로 정확한
+  절대 경로를 전달한다. 바깥의 `파일 등 추가` 버튼 자체를 upload 대상으로
+  쓰지 않는다. 네이티브 파일 선택창이나 좌표 추측은 사용하지 않는다.
 - WGP가 첨부 본문을 읽었다는 증거로 작품명, 현재 승인 바닥, A01~A02,
   B001~B010 중 세 가지 이상의 구체 사실을 짧게 되읽게 한다. 파일명 반복만
   있으면 Phase 1 판정으로 받아들이지 않는다.
@@ -155,4 +162,3 @@ git diff --check
 - 정본 A/B Rail 자동 승격
 - commit·push
 - 사람 owner가 직접 바꾼 파일의 되돌림 또는 덮어쓰기
-
