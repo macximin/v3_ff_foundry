@@ -11,7 +11,7 @@ assignment_decision_id: <owner-decision-id>
 b_arc: B000
 arc_batch: 1
 episode: ep000
-operation: <arc_design|episode_bet|manuscript|b_closeout>
+operation: <arc_design|episode_bet|manuscript|b_closeout|wgp_arc_pipeline>
 execution_runtime: <Hermes|Codex>
 producer_lane: <web_gpt_pro|hermes_owner_selected_alternate>
 producer_decision_id: <owner-ticket-decision-id|not_applicable>

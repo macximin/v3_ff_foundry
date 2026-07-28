@@ -61,6 +61,25 @@ watch-only 대기**다. 이는 Web GPT Pro 발주나 브라우저 자동화가 �
 - 기한 초과는 `Review`, 잘못된 receipt는 `Blocked`다. 어느 경우에도 자동
   재발주·재촉을 하지 않으며 다음 행동은 인간 owner가 결정한다.
 
+### WGP 5-Arc gated pipeline
+
+`Firefly operation=wgp_arc_pipeline`은 owner가 정확한 작품·채팅·A/B 범위와
+출력 경계를 승인한 장거리 Story Plan 전용 Hermes 티켓이다. Sentinel의
+watch-only `wgp_wait`와 달리 이 티켓의 Hermes 세션이 Chrome Beta의 동일
+WGP 채팅을 끝까지 소유하고, 각 전송 뒤 5분마다 같은 URL을 확인한다.
+
+- 먼저 현재 owner-approved 10-Arc 범위를 감리한다. 명시적 PASS 전에는 다음
+  B 설계를 요청하지 않는다.
+- 다음 설계는 한 번에 최대 B 다섯 개다. 설계 응답을 보존한 뒤 같은 채팅에서
+  별도 감리를 받고, 그 PASS 전에는 다음 다섯 B를 요청하지 않는다.
+- 각 단계는 변경 없는 raw response, SHA-256, 채팅 URL, 판정을 receipt로 남긴다.
+- 설계 산출물은 durable A/B hypothesis다. 정확한 먼 화수·손님·음식·장면·
+  보상·금액·저승 우주론을 확정하지 않으며, B closeout 뒤 reflow한다.
+- 이 티켓은 원고·Episode Bet·Narrative State·Rolling Corridor·Storyyard
+  변경이나 B011 이후 production batch 개방 권한이 아니다.
+- 일반 Chrome, 새 채팅, 검색 결과, 재촉·중복 전송, 인증·잠금 화면 유도는
+  금지한다. URL·제목 불일치나 브라우저 권한 문제는 `Blocked`다.
+
 ## Hermes owner-selected alternate producer lane
 
 `author_cheese`, `author_grape`, `author_yuja`, `author_honeybread` 중 하나와
