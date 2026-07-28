@@ -1,11 +1,11 @@
 # 저승식당 Arc Route Rail
 
-상태: active-owner-approved · B006~B010 owner-directed hypotheses
+상태: active-owner-approved · B006~B015 owner-directed hypotheses
 
 ```yaml
 schema_version: firefly_arc_route_rail_v1
 route_to_ending: required
-route_status: first_ten_route_scaffold
+route_status: first_fifteen_route_scaffold
 arc_episode_cap: 5
 active_b_arc: B002
 next_b_arc: B003
@@ -28,7 +28,7 @@ slots:
     episode_span: 1_to_5
     default_rhythm: about_3
     actual_closed_span: ep001_to_ep003
-    open_values: [삼 년 계약의 이후 체감, 공주 정체의 공개 시점]
+    open_values: [삼 년 계약의 이후 체감, 공주 본명·가출 이유 및 공개 범위]
   - b_id: B002
     route_order: 200
     status: active
@@ -85,7 +85,7 @@ slots:
     payoff_axis: "guest_emotional_closeout: 한 사람의 선택·소개·관계 변화; operational_residue: 다시 선택되는 신뢰와 높아진 기대"
     carried_reader_debt: 식당이 누구를 어떻게 받아들일지의 기준
     contrast_requirement: 동일 망자의 귀환을 전제하지 않고 인기 숫자가 아닌 사람의 선택으로 반복 신뢰를 증명
-    cost_or_tradeoff: 높아진 기대와 수용 압력, 또는 쉽게 받을 부탁의 포기
+    cost_or_tradeoff: 높아진 기대와 수용 압력
     episode_span: 1_to_5
     default_rhythm: about_3
     open_values: [선택·소개 방식, 손님, 음식, 보상]
@@ -137,6 +137,66 @@ slots:
     episode_span: 1_to_5
     default_rhythm: about_3
     open_values: [손님과 사건, 음식, 외부 인물, 금액, 생환·잔류 결론]
+  - b_id: B011
+    route_order: 1100
+    status: hypothesis
+    target_anchor: A03
+    narrative_function: 도윤의 삼 년 생환 계약과 공주·하진의 자발적 참여를 분리하고 타인의 역할·약속이 자동 승계되지 않는 기준을 세운다
+    payoff_axis: "guest_emotional_closeout: 타인에게서 넘어온 의무 중 자신이 선택할 몫과 돌려놓을 몫을 구분; operational_residue: 역할과 약속을 개인별 동의로 맡기는 책임 귀속 기준"
+    carried_reader_debt: 도윤이 생환할 때 식당의 일과 관계 가운데 무엇이 다른 사람의 자발적 선택으로 남는가
+    contrast_requirement: B010의 공동 결정과 달리 도윤의 생환 계약과 타인의 자발적 역할·약속의 책임 귀속을 분리
+    cost_or_tradeoff: 자동 동의를 거부해 당연히 제공될 것으로 여긴 노동·권한·편의와 즉시 운영 이익 하나를 포기
+    episode_span: 1_to_5
+    default_rhythm: about_3
+    open_values: [손님과 의무의 발생 경위, 음식, 선택 표현, 역할 약속의 형식, 공주 본명·가출 이유, 생환 이후 관계]
+  - b_id: B012
+    route_order: 1200
+    status: hypothesis
+    target_anchor: A03
+    narrative_function: 핵심 담당자의 단기·국소적 부재 때 손님의 동의를 다시 받아 책임을 인계하는 첫 기준을 만든다
+    payoff_axis: "guest_emotional_closeout: 기다림·담당 변경·철회 중 자기 선택을 되찾음; operational_residue: 인계·중단·재개 때 의사를 재확인하는 운영 기준"
+    carried_reader_debt: 더 긴 부재와 도윤의 예정된 생환 앞에서도 같은 기준을 유지할 수 있는가
+    contrast_requirement: B003의 동시 영업 분업이 아니라 단기·국소적 부재의 인계만 결산하며 도윤 없는 식당의 독립 운영은 결산하지 않음
+    cost_or_tradeoff: 재확인과 인계 때문에 처리 속도·수용량·즉시 매출 중 하나와 관계 편의를 포기
+    episode_span: 1_to_5
+    default_rhythm: about_3
+    open_values: [부재 인물과 원인, 손님의 선택, 인계 업무, 음식, 중단·재개 방식, 손실 자원]
+  - b_id: B013
+    route_order: 1300
+    status: hypothesis
+    target_anchor: A03
+    narrative_function: 하진이 설명자나 사후 조정자를 넘어 자기 권한 안에서 선택하고 이후를 책임지는 당사자로 이동한다
+    payoff_axis: "guest_emotional_closeout: 하진의 권한과 한계를 안 뒤 도움을 받을지 직접 결정; operational_residue: 도윤·공주·하진의 책임 영역과 하진의 외부 책임선"
+    carried_reader_debt: 하진은 왜 도윤을 선택했고 직접 책임이 어떤 위험과 제한을 남기는가
+    contrast_requirement: B008의 사후 책임 구분과 달리 하진이 결과 발생 전에 자기 의지로 책임을 맡음
+    cost_or_tradeoff: 하진이 중립적 집행자의 위치나 절차 편의를 잃고 권한·평판·관계 중 하나가 원상 복구되지 않음
+    episode_span: 1_to_5
+    default_rhythm: about_3
+    open_values: [손님과 부탁, 하진의 선택 범위와 행동, 음식, 관계 손실, 하진의 선택 이유, 계약 전문, 저승 우주론]
+  - b_id: B014
+    route_order: 1400
+    status: hypothesis
+    target_anchor: A03_to_A04_bridge
+    narrative_function: 성실하게 주문을 받고 음식을 완성해도 한 끼로 해결되지 않는 손님과 미결 상태를 정직하게 인정한다
+    payoff_axis: "guest_emotional_closeout: 거짓 완결 없이 현재 가능한 다음 상태를 직접 선택; operational_residue: 미결 요청의 보류·재확인·외부 인계·수용 종료 기준"
+    carried_reader_debt: 해결되지 않은 손님과 남은 약속은 식당의 시간·자리·관계에 어떤 지속 비용을 만드는가
+    contrast_requirement: B007의 사전 거절이 아니라 이미 받아 최선을 다한 뒤에도 닫히지 않은 경우
+    cost_or_tradeoff: 미결 상태가 지속되며 자리·시간·약속이 묶이고 해결하지 못한 상태를 견딤
+    episode_span: 1_to_5
+    default_rhythm: about_3
+    open_values: [손님과 미해결 사유, 음식과 첫 해법, 다음 상태, 미결 처리, 비용 종류와 크기, 재접촉 여부, 저승 우주론]
+  - b_id: B015
+    route_order: 1500
+    status: hypothesis
+    target_anchor: A04
+    narrative_function: 선의·정당한 거절·성실한 실수가 남긴 실제 손실을 의도로 상쇄하지 않고 지속 운영 비용으로 환전한다
+    payoff_axis: "guest_emotional_closeout: 피해와 책임을 인정받고 수선·대안·거부 중 자기 선택을 보존; operational_residue: 책임 비용을 실제 자원과 수용 한도에 반영하는 운영 원칙"
+    carried_reader_debt: 식당은 자기 기준을 지키기 위해 어디까지 비용을 감당하고 다른 사람의 자리가 침해될 때 무엇을 선택하는가
+    contrast_requirement: B014의 미결 유지 비용이 아니라 책임 확정 뒤 피해자에게 지불하는 수선·보전 비용이며 B008의 책임 주체 확인이나 B007의 단기 이익 포기를 반복하지 않음
+    cost_or_tradeoff: 피해를 보전하려고 돈·재료·수용량·평판·관계 중 실제 자원을 자발적으로 이전하거나 포기하며 즉시 회복·상쇄되지 않음
+    episode_span: 1_to_5
+    default_rhythm: about_3
+    open_values: [영향받은 손님과 관계자, 최초 부탁·거절·실수, 음식, 책임 비용의 종류와 규모, 수선·대안, 운영 한도, 공주 본명, 하진의 선택 이유, 저승 우주론]
 ```
 
 | slot | 범위 | 상태 | 기능 | 종료 상태 |
@@ -151,5 +211,10 @@ slots:
 | B008 하진의 청구서 | ep022~024 예상 | hypothesis | 식당의 선택이 손님의 퇴장과 남은 이들에게 실제 책임을 남긴다는 사례를 통해 하진의 역할을 압박한다 | 계약의 세부 우주론을 고정하지 않고도 도움·실수·책임의 경계가 생김 |
 | B009 궁 밖에서 온 주문 | ep025~027 예상 | hypothesis | 공주의 왕실 배경이 식당 바깥의 부탁으로 되돌아올 때, 권한이 아닌 현장 판단으로 주문을 받을 수 있는지 시험한다 | 공주의 이름·가출 이유는 열어 둔 채 식당과 왕실의 거리를 재설정 |
 | B010 삼도식당의 공동 결정 | ep028~030 예상 | hypothesis | 도윤과 공주가 각자의 손님·거래·계약 부담을 한 식당의 결정으로 묶되, 서로의 선택을 대신하지 않는다 | A02로 가는 최소 팀이 역할 분담을 넘어 공동 책임을 가진 자리로 이동 |
+| B011 자동 승계 없는 책임 | 미정 · 1~5화 | hypothesis | 도윤의 생환 계약과 타인의 자발적 역할·약속을 분리한다 | 역할과 약속을 개인별 동의로 맡기는 책임 귀속 기준 |
+| B012 부재 중 인계 | 미정 · 1~5화 | hypothesis | 단기·국소적 부재에서 손님의 동의를 다시 받아 책임을 인계한다 | 인계·중단·재개 시 의사 재확인 기준 |
+| B013 하진의 직접 책임 | 미정 · 1~5화 | hypothesis | 하진이 결과 발생 전에 자기 의지로 책임을 맡는다 | 하진의 외부 책임선과 인물별 책임 영역 |
+| B014 한 끼로 닫히지 않는 손님 | 미정 · 1~5화 | hypothesis | 최선을 다했지만 해결되지 않은 상태를 거짓 완결 없이 인정한다 | 미결 요청의 보류·재확인·인계·수용 종료 기준 |
+| B015 책임 비용의 지불 | 미정 · 1~5화 | hypothesis | 확정된 책임을 실제 수선·보전 비용으로 지불한다 | 실제 자원과 수용 한도에 반영되는 운영 원칙 |
 
-세부 구조는 `early_five_arc_plan.md`와 [`first_ten_arc_route_extension.md`](first_ten_arc_route_extension.md)를 따른다. B006~B010은 정확한 손님·음식·장면·보상·화수를 잠그지 않는 내구 가설이다. 박만석·한명옥·예약 25건·우선 손님 세 명은 이 활성 경로의 사실이 아니다. ep003 후보는 판매 수량과 장보기 뒤 최종 현금을 확정하지 않는다.
+세부 구조는 `early_five_arc_plan.md`, [`first_ten_arc_route_extension.md`](first_ten_arc_route_extension.md), WGP Phase 2 proposal과 Phase 3 감리 영수증을 따른다. B006~B015는 정확한 손님·음식·장면·보상·화수를 잠그지 않는 내구 가설이다. 박만석·한명옥·예약 25건·우선 손님 세 명은 이 활성 경로의 사실이 아니다. ep003 후보는 판매 수량과 장보기 뒤 최종 현금을 확정하지 않는다.
