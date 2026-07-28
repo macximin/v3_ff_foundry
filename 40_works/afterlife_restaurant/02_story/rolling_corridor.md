@@ -1,20 +1,59 @@
 # 저승식당 Rolling Corridor
 
-상태: active
+상태: active · contract-compatible reflow window
 
 ```yaml
-schema_version: firefly_rolling_corridor_v3
-starts_from: owner_approved_ep004
-active_b_arc: B002
+schema_version: firefly_rolling_corridor_v2
+arc_route_rail_ref: arc_route_rail.md
+from_anchor: A01
+toward_anchor: A01
+starts_from_state_through: ep004
+arc_episode_cap: 5
 current_b_arc:
   b_id: B002
-episode_cursor: ep005_episode_bet
-committed:
-  - ep004
-provisional:
-  - ep005
-  - ep006
-hard_stop: []
+  status: active
+  start_episode: ep004
+  planned_end_episode: ep006
+  hard_end_episode: ep008
+  central_question: 혀가 없는 손님에게 맛있는 마지막 식사는 무엇인가
+  close_condition: 손님이 기억과 감각을 함께 받는 한 끼를 스스로 선택하고 다음 영업의 부담을 남긴다
+  anchor_contribution: A01
+next_b_arc:
+  b_id: B003
+  status: provisional
+  starts_after: B002_close
+  episode_span: 1_to_5
+  function: 여러 테이블을 받는 식당의 최소 운영을 만든다
+  entry_dependency: B002 closeout의 손님 결산과 남은 재고·평판
+episode_cursor:
+  current_episode: ep005
+  committed:
+    - ep004
+  provisional:
+    - ep005
+    - ep006
+reader_debt_due:
+  - tongueless_guest_meal
+current_status_floor: ep004_owner_approved
+receipt_axes:
+  - 감정 결산
+  - 운영 잔여물
+appraisal_axes:
+  - 감각과 기억의 연결
+  - 공주의 선택 보조
+default_external_pov_budget: 0_to_1
+reflow_on_b_close:
+  required: true
+  trigger: owner_approved_arc_close
+  b_rail_durable_fields: revalidate
+  b_rail_volatile_fields: invalidate_and_rebuild
+  required_outputs:
+    - narrative_state_refresh
+    - b_closeout_review
+    - anchor_impact_check
+    - rewritten_arc_route_rail
+    - rewritten_rolling_corridor
+last_replanned_at: "2026-07-28"
 ```
 
 ## 다음 발주가 이어받을 것
