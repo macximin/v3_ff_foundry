@@ -12,6 +12,9 @@ b_arc: B000
 arc_batch: 1
 episode: ep000
 operation: <arc_design|episode_bet|manuscript|b_closeout>
+execution_runtime: <Hermes|Codex>
+producer_lane: <web_gpt_pro|hermes_owner_selected_alternate>
+producer_decision_id: <owner-ticket-decision-id|not_applicable>
 instruction_version: 1
 ```
 
@@ -53,13 +56,37 @@ instruction_version: 1
   - 직전 승인 원고의 사실을 덮어쓰지 않았는가?
   - 다음 화로 갈 만큼 닫았고, 동시에 다음 압력을 남겼는가?
 - `continuation_authorized: true|false`가 있는 Markdown 영수증을 남긴다. false 또는 누락이면 다음 화는 열지 않는다.
+- production 영수증은
+  `40_works/_template/05_review/wgp_continuation_receipt.md`를 사용한다.
+  티켓 작품과 검토한 화가 일치하고 `producer: web_gpt_pro`,
+  `continuation_authorized: true`, source candidate SHA-256이 있어야 한다.
 - 이 PASS는 BR0/BR1과 owner 승인을 대체하지 않는다.
+
+## Hermes 대체 생산 레인
+
+`assigned_writer=author_*`, `execution_runtime=Hermes`,
+`operation=manuscript`인 티켓은 `producer_decision_id`로 owner가 이 티켓에
+직접 선택한 대체 생산 레인일 때만 연다. 이 선택은 다음 티켓으로 자동
+상속되지 않는다.
+
+- 산출물은 `20_model_runs/hermes/` 아래의 noncanonical candidate다.
+  `04_manuscript/`나 manifest에 직접 쓰지 않는다.
+- Hermes 실행 성공과 self-review는 WGP continuation review를 대체하지
+  않는다. Web GPT Pro가 정확한 후보 SHA-256을 검토한 positive receipt가
+  있어야 다음 화를 연다.
+- 그 뒤에도 독립 BR0/BR1, owner의 정확 revision 승인, manifest 등록,
+  Narrative State 재생성을 순서대로 거친다.
+- owner 승인과 별도 Storyyard gate 전에는 projection·publish하지 않는다.
+  Storyyard에서 Foundry로 역동기화하지 않는다.
+- 배정, A/B 용량, ep001~003, ep005 이후 WGP receipt, 10-Batch 사람 승인
+  차단은 그대로 적용한다.
 
 ## 멈춤과 보고
 
 - `<tests/structural checks>`
 - A-Rail/B-Rail 부재, 담당작 불일치, B 5화 초과 위험, 비활성 batch면 멈춘다.
 - ep001~ep003은 인간 전용이다.
+- Hermes 대체 생산 티켓에서 `producer_decision_id`가 없으면 멈춘다.
 - 멈췄다면 추측으로 이어 쓰지 말고 `확정 사실 / 막힌 이유 / owner가 고를 한 가지`를 적는다.
 
 ## 끝나고 남길 다섯 줄

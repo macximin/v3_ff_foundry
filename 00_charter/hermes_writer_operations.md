@@ -36,6 +36,31 @@
 - Web GPT Pro 내부감리 영수증은 다음 화로 넘어가기 위한 필수 선행 조건이다.
 - producer의 내부감리는 BR0/BR1 또는 owner 승인을 대체하지 않는다.
 - 다음 화 티켓은 직전 화의 WGP continuation receipt를 Markdown 경로와 SHA-256으로 가리킨다.
+- production WGP continuation receipt는
+  `40_works/_template/05_review/wgp_continuation_receipt.md` 계약을 따른다.
+  티켓 작품과 직전 화가 일치하고 `producer: web_gpt_pro`,
+  `continuation_authorized: true`, source candidate SHA-256이 모두 있어야
+  다음 화 gate 증거가 된다.
+
+## Hermes owner-selected alternate producer lane
+
+`author_cheese`, `author_grape`, `author_yuja`, `author_honeybread` 중 하나와
+`Execution runtime=Hermes`, `Firefly operation=manuscript`를 함께 지정한
+티켓은 owner가 **그 티켓 하나에만 선택한 대체 원고 생산 레인**이다.
+프로필이나 Sentinel이 기본 생산자를 영구 변경하거나 다음 티켓까지 선택을
+이어받지 않는다.
+
+- Hermes가 만든 결과는 `noncanonical candidate`다. owner-approved 원고,
+  manifest history, Narrative State 사실, Storyyard 공개본이 아니다.
+- Hermes 생산 후보도 Web GPT Pro continuation review를 통과해야 다음 화를
+  열 수 있다. WGP receipt는 후보 source SHA-256을 고정하며 생산자 self-review
+  또는 Hermes 실행 성공 영수증으로 대체할 수 없다.
+- 독립 BR0/BR1, owner의 정확 revision 승인, manuscript manifest 등록,
+  Narrative State 재생성 순서를 그대로 거친다.
+- owner 승인과 별도 Storyyard gate 전에는 projection·publish할 수 없고,
+  Storyyard에서 Foundry로 역동기화하지 않는다.
+- 이 대체 레인은 배정, A/B 용량, ep001~003, ep005 이후 WGP receipt,
+  10-Batch 사람 승인 gate를 우회하지 않는다.
 
 ## Notion 티켓과 Markdown 지시서
 
@@ -44,6 +69,7 @@
 - `Instruction MD path`, `Instruction MD SHA-256`
 - `Firefly work slug`, `Firefly B arc`, `Firefly arc batch`, `Firefly episode`, `Firefly operation`
 - `WGP continuation receipt` (ep005 이후 필수)
+- `WGP continuation receipt SHA-256` (ep005 이후 필수)
 
 지시서에는 최소한 현재 승인 원고 범위, Narrative State, A/B/Corridor 참조, 금지 사실, 이번 산출물, 검증 조건, 다음 화 진행 조건을 적는다. 경로가 없거나 해시가 다르면 Sentinel은 티켓을 실행하지 않는다. 인간의 직접 변경에는 이 티켓 계약을 적용하지 않으며, 다음 Hermes 티켓을 열기 전에만 정합성을 회복한다.
 
