@@ -13,6 +13,11 @@
 7. 1화의 대표 성과·보상·배신·몰락과 가까운 Anchor는 `premise_transaction_template.md`와 `character_court_template.md`를 `20_model_runs/`에서 먼저 실행한다. 둘 다 `pass`한 receipt 경로만 Living Spine으로 운반한다.
 8. Story Plan 네 표면을 채우고 `ep000` 화별 약속 양식을 실제 화수로 복사·개명한다. A-Rail은 장기 도착점, B-Rail은 엔딩까지의 1~5화 Arc 경로, Rolling Corridor는 현재/다음 B 작업창이다. 첫 3화의 화별 약속은 모두 채운 뒤 `committed`로 잠그고, 이후에는 현재 B 안에서만 현재 1화 committed + 뒤 최대 2화 provisional을 쓴다. `modern_fantasy`를 선택했다면 각 committed 화의 CSU·receipt·external value signal·논리 게이트 receipt·장면 지도 인스턴스를 채운다.
 9. 새 작품의 빈 manifest와 Narrative State는 동일한 empty revision-set hash를 유지한다. 첫 owner 승인 원고부터 manifest entry·aggregate·Narrative State를 함께 갱신한다. 현재 B 종결 뒤에는 `05_review/arc_closeout_template.md`로 실제 결과를 닫고, A-Rail을 재확인하고 남은 B-Rail의 내구 필드와 변동 필드를 구분해 reflow한 뒤 다음 B로 넘어간다.
+10. 다음 화 continuation gate는
+    `05_review/wgp_continuation_receipt.md`를 사용한다. production positive는
+    같은 작품의 직전 화, `producer: web_gpt_pro`,
+    `continuation_authorized: true`, 정확한 source candidate SHA-256을
+    모두 요구하며 BR0/BR1 또는 owner 승격을 대신하지 않는다.
 
 작품 focus를 바꾸기 위해 이 template이나 relay schema를 고치지 않는다. 작품 고유 내용은 복사된 work 폴더에만 둔다.
 

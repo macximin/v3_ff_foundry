@@ -64,6 +64,43 @@
 - 50 B 슬롯 미달 작품의 장기 가설 B-Rail 보강
 - 각 작품 첫 Hermes batch의 실제 시작 시점
 
+## 비운영 ticket-to-artifact canary
+
+실제 assignments와 작품을 열기 전에 아래 합성 fixture로 로컬 배선만
+검증한다.
+
+- fixture root:
+  `tests/fixtures/hermes_e2e/foundry`
+- synthetic work:
+  `sentinel_canary`
+- synthetic profile/batch:
+  `author_cheese`, `B001`, batch `1`, `ep004`
+- instruction:
+  `instructions/ep004_canary.md` + ticket fixture의 정확한 SHA-256
+- synthetic WGP gate receipt:
+  `receipts/ep004_wgp.md` + ticket fixture의 정확한 SHA-256
+- 허용 출력:
+  `.runtime/ep004_candidate.md` 한 파일
+- 검증기:
+  `tests/fixtures/hermes_e2e/verify_candidate.py`
+
+이 fixture의 레지스트리와 50개 B 슬롯은 실제
+`00_charter/hermes_writer_operations.json` 또는 `40_works/`에 복사하지
+않는다. `.runtime/`은 Git에서 제외되며, verifier는 canonical,
+owner-approved, production-eligible, Storyyard-publishable 표식을 거부한다.
+
+```sh
+cd /Users/a2501/Desktop/v3_firefly_studio/edge_repos/v3_ff_foundry
+python3 tests/fixtures/hermes_e2e/verify_candidate.py --fixture-only
+python3 -m unittest discover -s tests -p 'test_hermes_e2e_fixture.py' -v
+python3 tests/fixtures/hermes_e2e/verify_candidate.py \
+  --candidate tests/fixtures/hermes_e2e/foundry/.runtime/ep004_candidate.md
+```
+
+마지막 명령은 canary 실행자가 ignored 후보를 만든 뒤에만 실행한다.
+이 canary 성공은 production `Ready`, Web GPT Pro 발주, 원고 승격,
+Storyyard publish 승인이 아니다.
+
 ## 금지
 
 - 인간 owner의 직접 수정이나 직접 집필을 막거나 되돌리지 않는다.

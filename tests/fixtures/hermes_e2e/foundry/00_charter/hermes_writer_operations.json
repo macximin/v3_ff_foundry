@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "fixtureOnly": true,
+  "productionSystem": "v3_firefly_studio_test_fixture",
+  "targetEpisode": "ep250",
+  "maxWorksPerWriter": 3,
+  "writers": [
+    "author_cheese",
+    "author_grape",
+    "author_yuja",
+    "author_honeybread"
+  ],
+  "assignments": [
+    {
+      "workSlug": "sentinel_canary",
+      "writerProfile": "author_cheese",
+      "assignmentDecisionId": "fixture-only-owner-assignment-do-not-promote"
+    }
+  ],
+  "batches": [
+    {
+      "workSlug": "sentinel_canary",
+      "activeBatch": 1,
+      "approvalDecisionId": "fixture-only-batch-1-do-not-promote"
+    }
+  ]
+}

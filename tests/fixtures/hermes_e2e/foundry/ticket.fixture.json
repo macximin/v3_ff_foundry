@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "fixtureOnly": true,
+  "productionQueueEligible": false,
+  "workspacePathToken": "__V3_FF_FOUNDRY_ROOT__",
+  "expectedOutput": ".runtime/ep004_candidate.md",
+  "fixtureWgpReceipt": "tests/fixtures/hermes_e2e/foundry/receipts/ep004_wgp.md",
+  "fixtureWgpReceiptSha256": "87b9458dc5a612043c02decbb2ff295a0f5f87db24e6b8f2fdfb963f9f475d79",
+  "ticketProperties": {
+    "Ticket": "NON-PRODUCTION Firefly Hermes E2E canary",
+    "Lifecycle": "Triage",
+    "Automation mode": "Manual",
+    "Target host": "Mac mini",
+    "Target repo": "v3_ff_foundry",
+    "Workspace path": "__V3_FF_FOUNDRY_ROOT__",
+    "Work type": "Operations",
+    "Hermes profile": "author_cheese",
+    "Execution runtime": "Hermes",
+    "Hermes session ID": "",
+    "Firefly environment": "canary",
+    "Execution mode": "Manual",
+    "Resume policy": "New session",
+    "Approval status": "Not required",
+    "Human checkpoint": "Results only",
+    "Allowed actions": [
+      "edit",
+      "test"
+    ],
+    "File scope": "tests/fixtures/hermes_e2e/foundry/.runtime/ep004_candidate.md",
+    "Acceptance criteria": "Create the exact ignored synthetic candidate, then pass `python3 tests/fixtures/hermes_e2e/verify_candidate.py --fixture-root tests/fixtures/hermes_e2e/foundry --candidate tests/fixtures/hermes_e2e/foundry/.runtime/ep004_candidate.md` without touching production surfaces.",
+    "External action conditions": "No external transmission",
+    "Risk": "Fixture only; block if any real work, production queue, Web GPT Pro, Storyyard, Git, Notion write, browser, GUI, or secret access is attempted.",
+    "Instruction MD path": "tests/fixtures/hermes_e2e/foundry/instructions/ep004_canary.md",
+    "Instruction MD SHA-256": "b28825f15848214ad142850f4540301c87fdcb96b8355418c6b05abe3be19e48",
+    "Firefly work slug": "sentinel_canary",
+    "Firefly B arc": "B001",
+    "Firefly arc batch": 1,
+    "Firefly episode": "ep004",
+    "Firefly operation": "manuscript",
+    "WGP continuation receipt": "",
+    "WGP continuation receipt SHA-256": ""
+  }
+}
