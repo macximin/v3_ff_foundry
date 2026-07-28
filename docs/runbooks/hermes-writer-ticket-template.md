@@ -6,7 +6,7 @@ Notion 티켓은 이 파일의 repo-relative path와 SHA-256을 반드시 가진
 
 ```yaml
 work_slug: <slug>
-assigned_writer: <작가_치즈|작가_포도|작가_유자|작가_꿀빵>
+assigned_writer: <author_cheese|author_grape|author_yuja|author_honeybread>
 assignment_decision_id: <owner-decision-id>
 b_arc: B000
 arc_batch: 1

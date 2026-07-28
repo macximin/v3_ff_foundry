@@ -6,7 +6,7 @@
 
 ## 고정 원칙
 
-- 대상은 `작가_치즈`, `작가_포도`, `작가_유자`, `작가_꿀빵` 네 프로필뿐이다.
+- 대상은 `author_cheese`, `author_grape`, `author_yuja`, `author_honeybread` 네 프로필뿐이다.
 - 한 프로필은 최대 세 작품만 담당한다.
 - 인간 owner는 원고·A/B·배정·우선순위를 먼저 자유롭게 바꾸거나 직접 작업할 수 있다. 사전 티켓, 사전 decision ID, Sentinel 허가를 요구하지 않는다.
 - 작품 배정·해제·재배정의 **자동화 반영**은 owner decision ID가 있는 `hermes_writer_operations.json` 변경으로만 가능하다. 프로필·Sentinel·모델이 스스로 담당작을 바꾸지 않는다.
