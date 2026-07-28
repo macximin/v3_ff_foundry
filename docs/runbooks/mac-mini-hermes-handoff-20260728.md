@@ -8,7 +8,7 @@
 
 `hq_control`:
 
-- 작가 프로필: `작가_치즈`, `작가_포도`, `작가_유자`, `작가_꿀빵`
+- 작가 프로필: `author_cheese`, `author_grape`, `author_yuja`, `author_honeybread`
 - 네 프로필 모두 `v3_firefly_studio` / `v3_ff_*` 라우팅
 - `genai-reporter`는 별도 보고자이며 Telegram terminal notification은 비활성
 - Foundry 티켓은 Markdown 지시서 경로와 SHA-256, 작품/B-Arc/batch/화수/작업종류를 필수로 검증
@@ -38,13 +38,13 @@
 ## Mac mini에서 할 일
 
 1. `hq_control`과 `v3_ff_foundry`를 각각 최신 commit으로 pull한다. 둘은 독립 Git repo다.
-2. 실제 Sentinel config를 새 profile route로 마이그레이션한다. 기존 옛 이름 profile은 ticket 호환 alias로만 남고 새 실행 profile은 네 `작가_*` 이름을 쓴다.
+2. 실제 Sentinel config를 새 profile route로 마이그레이션한다. 기존 옛 이름 profile은 ticket 호환 alias로만 남고 새 실행 profile은 네 `author_*` 이름을 쓴다.
 3. 실제 Hermes home을 확인한다.
 
-   - `~/.hermes/profiles/작가_치즈`
-   - `~/.hermes/profiles/작가_포도`
-   - `~/.hermes/profiles/작가_유자`
-   - `~/.hermes/profiles/작가_꿀빵`
+   - `~/.hermes/profiles/author_cheese`
+   - `~/.hermes/profiles/author_grape`
+   - `~/.hermes/profiles/author_yuja`
+   - `~/.hermes/profiles/author_honeybread`
    - `~/.hermes/profiles/genai-reporter`
 
    기존 profile을 삭제하지 않는다. 새 profile을 안전하게 만들거나 연결한 뒤 각 profile의 Notion 연결과 Codex runtime만 점검한다.
@@ -60,7 +60,7 @@
 
 ## 인간 owner가 나중에 결정할 것
 
-- 6작품의 `work_slug -> 작가_*` 최초 고정 배정
+- 6작품의 `work_slug -> author_*` 최초 고정 배정
 - 50 B 슬롯 미달 작품의 장기 가설 B-Rail 보강
 - 각 작품 첫 Hermes batch의 실제 시작 시점
 

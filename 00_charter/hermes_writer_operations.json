@@ -3,7 +3,7 @@
   "productionSystem": "v3_firefly_studio",
   "targetEpisode": "ep250",
   "maxWorksPerWriter": 3,
-  "writers": ["작가_치즈", "작가_포도", "작가_유자", "작가_꿀빵"],
+  "writers": ["author_cheese", "author_grape", "author_yuja", "author_honeybread"],
   "assignments": [],
   "batches": [
     { "workSlug": "afterlife_restaurant", "activeBatch": 1, "approvalDecisionId": "owner-initial-hermes-batch-20260728" },
