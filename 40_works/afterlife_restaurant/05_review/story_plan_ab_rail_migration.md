@@ -32,7 +32,11 @@ narrative_state_changed: false
 - `B001`은 ep001~003 승인 원고와 closeout으로 닫혔다.
 - `B002`는 혀 없는 손님의 중심 질문을 다루며 ep004 시작, ep006 예상 종결, ep008 하드 종결이다.
 - A02 ep004~010 예상 band는 하나의 7화 Arc가 아니다. B002와 closeout 뒤 재계산될 B003으로 구성한다.
-- 현재 250화 상단에는 B001~B051의 경로 용량을 둔다. 먼 B는 기능·보상축·독자부채·차별점만 가진 가설이다.
+- 당시에는 250화 상단에 B001~B051의 경로 용량을 두는 방식으로 기록했다. 이
+  부분은 `owner-rolling-ten-arc-batch-correction-20260728`로 대체됐다.
+  `ep250`은 장기 완결 목표이고, 현재 owner-approved 10-Arc batch만 유지한 뒤
+  B010 closeout 전에 다음 batch를 reflow·사람 review로 연다. 먼 B는
+  기능·보상축·독자부채·차별점만 가진 가설이다.
 - `v1-rc3.2` 승인 원고 1~3화와 revision-set SHA-256은 변경하지 않았다.
 - `연화`, `곽진복`, 개인별 노잣돈은 미래 Story Plan으로 유지하되 승인 원고에 나오기 전 Narrative State로 소급하지 않는다.
 

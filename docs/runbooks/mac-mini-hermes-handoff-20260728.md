@@ -10,7 +10,7 @@
 
 - 작가 프로필: `author_cheese`, `author_grape`, `author_yuja`, `author_honeybread`
 - 네 프로필 모두 `v3_firefly_studio` / `v3_ff_*` 라우팅
-- `genai-reporter`는 별도 보고자이며 Telegram terminal notification은 비활성
+- `default` Hermes gateway가 Telegram `Done`/`Blocked` 영수증 보고를 담당하며, 작가 프로필은 외부 전달을 맡지 않음
 - Foundry 티켓은 Markdown 지시서 경로와 SHA-256, 작품/B-Arc/batch/화수/작업종류를 필수로 검증
 - `ep001~003` Hermes 차단, `ep005` 이후 WGP continuation receipt 없으면 차단
 
@@ -22,18 +22,12 @@
 - B 10개마다 사람 review 후 다음 batch decision이 있어야 진행
 - 인간 owner는 언제든 직접 먼저 수정할 수 있으며, 이 gate는 Hermes 자동화만 막음
 
-## 현재 의도된 차단 상태
+## 현재 활성 제어 상태
 
-1. `assignments`는 비어 있다. owner가 담당작과 decision ID를 기록하기 전에는 어떤 작가도 제작 티켓을 실행하면 안 된다.
-2. 다음 작품은 250화 경로 최소치인 B 슬롯 50개가 아직 없다.
-
-   - `afterlife_restaurant`: 5
-   - `cheongma_restaurant`: 10
-   - `isekai_restaurant`: 4
-   - `tyrant_restaurant`: 10
-
-   `knights_restaurant`, `romance_fantasy_restaurant`는 51개다.
-3. 따라서 이번 Mac mini 작업에서 production ticket, Web GPT Pro 발주, manuscript write, Storyyard publish를 실행하면 안 된다.
+1. `afterlife_restaurant -> author_cheese`만 owner decision ID로 고정됐다. 나머지 작품은 배정이 비어 있으므로 Hermes 제작 티켓을 실행하면 안 된다.
+2. `ep250`은 장기 완결 목표이며, 50개 B 슬롯 선작성 의무가 아니다. 현재 owner-approved 10-Arc batch가 정확히 있을 때만 해당 batch의 Hermes gate를 통과한다.
+3. B010 closeout 전 다음 batch(B011~B020)를 사람 review와 새 batch decision으로 보강한다.
+4. 이 인계서 자체는 production ticket, Web GPT Pro 발주, manuscript write, Storyyard publish 권한을 주지 않는다.
 
 ## Mac mini에서 할 일
 
@@ -48,7 +42,7 @@
    - `~/.hermes/profiles/genai-reporter`
 
    기존 profile을 삭제하지 않는다. 새 profile을 안전하게 만들거나 연결한 뒤 각 profile의 Notion 연결과 Codex runtime만 점검한다.
-4. Sentinel schema ensure를 실행해 Foundry ticket 속성을 Notion에 추가한다. Telegram 발송은 켜지 않는다.
+4. Sentinel schema ensure를 실행해 Foundry ticket 속성을 Notion에 추가한다. Telegram 완료/차단 보고는 `default` gateway만 맡는다.
 5. Foundry fixture 또는 dry-run ticket으로 아래를 확인한다.
 
    - Markdown 지시서 SHA 불일치 차단
@@ -60,8 +54,8 @@
 
 ## 인간 owner가 나중에 결정할 것
 
-- 6작품의 `work_slug -> author_*` 최초 고정 배정
-- 50 B 슬롯 미달 작품의 장기 가설 B-Rail 보강
+- 나머지 5작품의 `work_slug -> author_*` 최초 고정 배정
+- B010 closeout 전 다음 10-Arc batch의 장기 가설 B-Rail 보강
 - 각 작품 첫 Hermes batch의 실제 시작 시점
 
 ## 비운영 ticket-to-artifact canary
@@ -84,7 +78,7 @@
 - 검증기:
   `tests/fixtures/hermes_e2e/verify_candidate.py`
 
-이 fixture의 레지스트리와 50개 B 슬롯은 실제
+이 fixture의 레지스트리와 B 슬롯은 실제
 `00_charter/hermes_writer_operations.json` 또는 `40_works/`에 복사하지
 않는다. `.runtime/`은 Git에서 제외되며, verifier는 canonical,
 owner-approved, production-eligible, Storyyard-publishable 표식을 거부한다.

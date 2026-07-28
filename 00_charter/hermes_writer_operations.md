@@ -18,7 +18,10 @@
 
 - 인간은 A-Rail/B-Rail 없이도 먼저 생각·작성·수정할 수 있다. 다만 Hermes 제작 티켓은 둘 중 하나라도 없으면 `Blocked`다.
 - A-Rail은 시작부터 엔딩까지의 장기 Anchor이며, B-Rail은 Anchor로 가는 1~5화 결산 Arc다. 둘을 블라인드 A/B 비교나 같은 단위로 취급하지 않는다.
-- `ep250` 목표에서 B-Rail은 최소 50개 슬롯의 경로 용량을 가져야 한다. 먼 B는 기능·보상축·독자부채·차별점만 가설로 두며 구체 사건을 미리 확정하지 않는다.
+- `ep250`은 장기 완결 목표다. Hermes 제작은 현재 owner-approved 10-Arc batch가
+  모두 있는 B-Rail이면 열 수 있고, B010 closeout 전 다음 batch를 사람 review로
+  보강한다. 먼 B는 기능·보상축·독자부채·차별점만 가설로 두며 구체 사건을 미리
+  확정하지 않는다.
 - B가 닫힐 때마다 승인 원고와 Narrative State를 갱신하고, A 영향 확인·B closeout·남은 B reflow를 끝낸 뒤 다음 B의 Episode Bet을 연다.
 
 ## 10-Batch 사람 승인 경계

@@ -60,6 +60,12 @@ instruction_version: 1
   `40_works/_template/05_review/wgp_continuation_receipt.md`를 사용한다.
   티켓 작품과 검토한 화가 일치하고 `producer: web_gpt_pro`,
   `continuation_authorized: true`, source candidate SHA-256이 있어야 한다.
+- **같은 작업은 같은 정확한 Web GPT Pro 채팅 세션을 끝까지 사용한다.** 최초
+  dispatch 때 채팅 URL 또는 response ID를 `WGP dispatch reference`에 기록하고,
+  후보 생성·내부감리·continuation receipt까지 그 세션을 다시 정확히 타게팅한다.
+  비슷한 제목의 새 채팅, 검색 결과, 다른 작품 세션으로 갈아타지 않는다.
+- 정확한 세션 식별자를 다시 확인할 수 없으면 추측으로 이어가지 말고 `Review`로
+  멈춘다. 새 채팅을 여는 것은 owner가 새 dispatch로 승인할 때만 가능하다.
 - 이 PASS는 BR0/BR1과 owner 승인을 대체하지 않는다.
 
 ## Hermes 대체 생산 레인

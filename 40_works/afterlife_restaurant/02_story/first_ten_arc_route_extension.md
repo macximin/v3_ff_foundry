@@ -1,6 +1,7 @@
 # 저승식당 첫 10 B-Arc 경로 보강
 
 상태: owner-directed Story Plan hypothesis · 원고·캐논·Narrative State 변경 없음
+decision_id: owner-rolling-ten-arc-batch-correction-20260728
 
 범위: B001~B010. B001 closeout과 B002의 승인 ep004를 출발점으로, B006~B010의
 **내구 기능**만 추가한다. 이는 Hermes 또는 Web GPT Pro 발주가 아니며, 각 B의
