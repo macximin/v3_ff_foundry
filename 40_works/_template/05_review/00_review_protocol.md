@@ -68,7 +68,7 @@ BR0를 고정한 뒤 Premise Transaction과 Character Court를 먼저 열어 계
 
 현재 B의 마지막 회차가 owner 승인된 뒤 `arc_closeout_template.md`를 실제 `arc_<b_id>_closeout.md`로 복사해 작성한다.
 
-- 승인 원고 기준 B 길이가 1~5화인지 확인한다.
+- 승인 원고 기준 B 길이가 이 신작 profile의 1~3화인지 확인한다.
 - 시작 상태와 실제 endpoint를 비교한다.
 - 중심 질문이 행동·상태 변화로 결산됐는지 확인한다.
 - 지급·이동·폐기할 독자 부채와 유용한 emergence를 기록한다.

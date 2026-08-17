@@ -2,7 +2,7 @@
 
 상태: **ADOPTED · 2026-07-11**
 
-개정: **2026-07-25 · A-Rail/B-Rail 분리 + Story Arc 5화 하드 상한**
+개정: **2026-08-09 · 기획서/Arc/원고 표면 + 신작 1~3화 Arc profile**
 
 활성 용어는 [Firefly Terminology](terminology.md)를 따른다. `ff_foundry`의 제작 흐름은 아래다.
 
@@ -22,6 +22,8 @@ Frozen Pitch -> Story Plan -> 화별 약속 -> 원고 후보 -> BR0/BR1 -> owner
 
 충돌 또는 owner retcon이 있을 때만 -> 충돌 판정 메모
 ```
+
+사용자에게는 이 내부 흐름을 `기획서 -> Arc -> 원고` 세 단계로 보여준다. 기획서는 Frozen Pitch·작품 척추·A-Rail, Arc는 B-Rail의 active B·Rolling Corridor를 묶는다. 화별 약속(Episode Bet)·BR0/BR1·Narrative State는 세 표면에 붙는 sidecar/gate이며 별도 이야기 권위 계층이 아니다.
 
 ## 권위 순서
 
@@ -117,19 +119,19 @@ Living Spine은 supporting talent·아이템·산업보다 먼저 독자가 살 
 
 B-Rail은 현재 B만 관리하는 보드가 아니라 **현재 엔딩 방향까지 이어지는 Story Arc 순서표**다. 각 슬롯의 `b_id`는 한번 발급하면 재사용하거나 재번호화하지 않고, 순서는 `route_order`로 바꾼다. 중간 삽입이 필요하면 새 `b_id`와 빈 `route_order`를 쓴다.
 
-- 모든 B는 하나의 Story Arc이며 승인 원고 기준 1~5화 안에 독립 결산한다.
+- 모든 B는 하나의 Story Arc이며 `00_status.md` front matter의 `arc_pacing_profile`이 정한 상한 안에 독립 결산한다. `webnovel_1_to_3`은 1~3화, 값 없음 또는 `legacy_1_to_5`는 기존 작품 호환 1~5화다. 그 밖의 값은 hard-fail한다.
 - `closed`는 승인 원고와 closeout receipt가 있는 B, `active`는 현재 원고 생산 단위, `provisional`은 다음 후보 하나, `hypothesis`는 그 뒤의 장기 경로, `retired`는 reflow에서 폐기됐으나 기록을 남기는 B다.
-- B-Rail은 현재 예상 엔딩까지 빈 구간 없이 이어져야 한다. 250화 상단을 가정하고 이미 3화짜리 B가 하나 닫혔다면 최소 51개 B 슬롯의 용량이 필요하지만, 이는 화수 확정이 아니라 최대 5화 상한에 대한 경로 용량 계산이다.
+- B-Rail은 현재 예상 엔딩까지 빈 구간 없이 이어져야 한다. 신작 `webnovel_1_to_3`에서 250화를 수용하려면 최소 84개 B 슬롯이 필요하다(`ceil(250 / 3) = 84`). 첫 B가 3화로 닫힌 경우에도 닫힌 1개와 남은 247화를 위한 83개를 합쳐 84개다. 이는 화수 확정이 아니라 경로 용량 계산이다. 빈 template은 `route_status: scaffold_required`로 시작하며, `target_episode / arc_episode_cap`만큼의 고유 B 슬롯과 각 슬롯의 내구 필드를 채운 뒤에만 `route_status: route_to_ending_ready`로 바꿀 수 있다. Relay는 이 준비 상태와 용량을 신작 profile에서 hard gate로 검사한다.
 - 먼 `hypothesis` B가 가져도 되는 내구 필드는 `target_anchor`, `narrative_function`, `payoff_axis`, `carried_reader_debt`, `contrast_requirement`뿐이다.
 - 먼 B에 정확한 화수 좌표, 손님 정체, 음식, 장면 해결책, 정확한 보상 수치를 박지 않는다. 이 값들은 현재 B가 닫힐 때마다 무효화·재작성할 변동 필드다.
 - B-Rail은 A-Rail의 도착점을 연결하지만 A-Rail을 몰래 바꾸지 않는다. Anchor 삭제·추가·엔딩 변경은 별도 이유와 owner fork를 남긴다.
 
-### Story Arc(B) — 1~5화 결산 단위
+### Story Arc(B) — profile 상한 안의 결산 단위
 
-Story Arc는 하나의 중심 질문·압력·선택이 **1~5화 안에 비가역 결산과 인간 잔여물**을 남기는 최소 중기 단위다.
+Story Arc는 하나의 중심 질문·압력·선택이 profile 상한 안에 비가역 결산과 인간 잔여물을 남기는 최소 중기 단위다. 신작 `webnovel_1_to_3`은 1~3화 페이싱을 쓴다.
 
-- `arc_episode_cap: 5`는 하드 상한이다. 승인 원고 기준으로 여섯 번째 화까지 같은 중심 질문의 결산을 미룰 수 없다.
-- B는 일찍 닫을 수 있다. 늘려야 한다면 5화 전에 현재 B의 독립 결산을 만들고, 남은 압력은 새 `b_id`와 새 진입 상태를 가진 다음 B로 다시 설계한다.
+- `arc_episode_cap`은 `00_status.md`의 profile에서 파생해 B-Rail과 Corridor가 같은 값을 가져야 한다. 신작 template의 값은 3이다.
+- B는 일찍 닫을 수 있다. profile 상한 전에 현재 B의 독립 결산을 만들고, 남은 압력은 새 `b_id`와 새 진입 상태를 가진 다음 B로 다시 설계한다.
 - 이름만 바꿔 같은 미해결 중심 질문을 무결산으로 넘기는 것은 split이 아니다.
 - 현재 B의 close condition은 손님 퇴장, 계약 체결, 패배 비용 확정, 관계 단절·재합의처럼 원고에서 판독 가능한 행동과 상태 변화로 쓴다.
 - 먼 미래의 B 사건·손님·음식·화수는 정본 사실이 아니다. B-Rail에 방향과 기능만 가설로 둔다.
@@ -182,9 +184,7 @@ Corridor가 A-Rail이나 B-Rail을 소리 없이 바꾸지는 않는다. 현재 
 
 장면은 현재 압력·선택·환전/반응이 닫히거나 다음 장면으로 인계된 뒤 전환한다. 다음 장면은 새 정보·외부 평가·관계 후폭풍·적의 압박·규모 파급·다음 행동 중 하나를 새로 지급해야 하며, 시간·장소 이동이나 재설명만으로는 부족하다. same-POV 전환은 압축과 다음 행동에, 독립 타인 POV는 주인공이 볼 수 없는 값에 쓴다. 장면 수는 고정하지 않는다.
 
-첫 3화의 화별 약속은 시작 전에 committed로 둔다. 이후에는 현재 B 안에서 다음 1화 committed, 뒤 최대 2화 provisional이 기본이다. B 종결 화 뒤의 Episode Bet은 closeout과 reflow가 끝나기 전 committed할 수 없다.
-
-여기서 두 `committed`는 층이 다르다. 첫 문장의 committed는 `ep001~003 Episode Bet 파일 각각의 상태`이고, Rolling Corridor의 `episode_cursor.committed` 목록은 언제나 현재 제작 커서 1화만 둔다. 따라서 신작 시작점에도 Corridor는 `committed: [ep001] / provisional: [ep002, ep003]`이고, ep001~003 Episode Bet 파일 자체는 모두 `상태: committed`다. 첫 B는 최대 5화 안에서 닫혀야 한다.
+신작 시작점부터 현재 Arc의 첫 Episode Bet 하나만 `committed`, 같은 Arc 안의 뒤 최대 2개만 `provisional`로 둔다. `committed`는 Episode Bet 본문의 제작 상태이며 Git commit이나 승인 원고 승격을 뜻하지 않는다. `ep001~ep003` 파일을 모두 committed로 만드는 별도 예외는 없다. B 종결 화 뒤의 Episode Bet은 closeout과 reflow가 끝나기 전 committed할 수 없다.
 
 ## 역방향 재활용
 

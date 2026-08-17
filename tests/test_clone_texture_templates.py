@@ -70,7 +70,7 @@ class CloneTextureTemplateContractTests(unittest.TestCase):
         self.assertIn("route_to_ending: required", arc_route)
         self.assertIn("hypothesis_detail_policy: durable_only", arc_route)
         self.assertIn("reflow_policy: revalidate_durable_invalidate_volatile", arc_route)
-        self.assertIn("arc_episode_cap: 5", corridor)
+        self.assertIn("arc_episode_cap: 3", corridor)
         self.assertIn("current_b_arc:", corridor)
         self.assertIn("next_b_arc:", corridor)
         self.assertIn("status: provisional", corridor)
@@ -78,22 +78,25 @@ class CloneTextureTemplateContractTests(unittest.TestCase):
         self.assertIn("b_rail_volatile_fields: invalidate_and_rebuild", corridor)
         self.assertIn("A-Rail", terminology)
         self.assertIn("B-Rail", terminology)
-        self.assertIn("B는 절대 5화를 넘지 않는 결산 단위", terminology)
+        self.assertIn("arc_pacing_profile", terminology)
         self.assertIn("function Assert-ArcRouteRailContract", relay)
         self.assertIn("function Assert-RollingArcContract", relay)
-        self.assertIn("Story Arc hard span exceeds 5 episodes", relay)
+        self.assertIn("Story Arc hard span exceeds profile cap", relay)
         self.assertIn('"arc-contract-smoke"', relay)
         self.assertIn("function Invoke-ArcContractSmoke", relay)
 
-    def test_story_plan_has_four_unambiguous_surfaces(self) -> None:
+    def test_user_surface_has_three_levels_while_story_plan_keeps_four_internal_files(self) -> None:
         status = self.read_template("00_status.md")
         readme = self.read_template("README.md")
 
         self.assertIn("firefly_work_status_v4", status)
         self.assertIn("anchored_story_loop_v3", status)
+        self.assertIn("surface_profile: plan_arc_manuscript_v1", status)
+        self.assertIn("arc_pacing_profile: webnovel_1_to_3", status)
         self.assertIn("current_b_arc: B001", status)
         self.assertIn("arc_route_rail", status)
-        self.assertIn("Story Plan 네 표면", readme)
+        self.assertIn("기획서 -> Arc -> 원고", readme)
+        self.assertIn("내부 Story Plan 네 문서", readme)
         self.assertIn("A-Rail", readme)
         self.assertIn("B-Rail", readme)
 

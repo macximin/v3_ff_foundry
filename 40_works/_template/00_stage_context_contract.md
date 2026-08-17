@@ -4,10 +4,12 @@
 
 ## 권위
 
+사용자 표면은 `기획서 -> Arc -> 원고` 세 단계다. Episode Bet·BR0/BR1·Narrative State는 이 세 표면에 붙는 sidecar/gate이며 별도 권위 계층이나 네 번째 사용자 단계가 아니다.
+
 1. 승인 원고 revision은 read-only history다.
 2. 충돌 판정 메모(Canon Note)는 원고 내부 의미 충돌 또는 owner retcon만 다룬다.
 3. 상태 스냅샷(Narrative State)은 승인 원고와 적용된 충돌 판정 메모의 해시에서 재생성 가능한 투영이다.
-4. Story Plan(작품 척추·A-Rail·B-Rail·Rolling Corridor)은 미래 전략이며 고칠 수 있다. A는 장기 도착점, B는 최대 5화 Arc, Corridor는 현재 작업창이다.
+4. Story Plan(작품 척추·A-Rail·B-Rail·Rolling Corridor)은 미래 전략이며 고칠 수 있다. A는 장기 도착점, 이 신작 template의 B는 최대 3화 Arc, Corridor는 현재 작업창이다.
 
 ## 단계별 입력
 

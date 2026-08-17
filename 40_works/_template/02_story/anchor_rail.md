@@ -2,7 +2,7 @@
 
 상태: candidate
 
-전체 6~12개 tentpole을 희소하게 둔다. 가까운 두 앵커만 `compound`, 나머지는 `sparse`다. Anchor는 장기 도착점이며 Arc가 아니다. 하나의 Anchor 예상 구간에는 1~5화짜리 Arc가 여러 개 들어갈 수 있다.
+전체 6~12개 tentpole을 희소하게 둔다. 가까운 두 앵커만 `compound`, 나머지는 `sparse`다. Anchor는 장기 도착점이며 Arc가 아니다. 하나의 Anchor 예상 구간에는 1~3화짜리 Arc가 여러 개 들어갈 수 있다.
 
 | anchor | 상태 | 진입 | trigger | 비가역 환전 | 인간 후폭풍(1~3화) | 독자 부채/상환 | 다음 압력 |
 |---|---|---|---|---|---|---|---|

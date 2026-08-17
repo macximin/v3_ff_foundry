@@ -30,6 +30,7 @@ narrative_state_role: rebuildable_projection_from_manuscript_hashes
 canon_note_role: manuscript_conflict_resolution_or_owner_retcon_only
 portfolio_status_truth: ff_studio_v2/command_board/state/firefly.yaml
 work_status_truth: ff_foundry/40_works/<work_slug>/00_status.md
+work_surface_profile_truth: ff_foundry/40_works/<work_slug>/00_status.md#front_matter
 screenwork_status_truth: ff_foundry/45_screenworks/<family>/variants/<screenwork_id>/00_status.yaml
 source_writeback: forbidden
 notion_role: human_facing_read_model_and_owner_input_surface
@@ -85,7 +86,7 @@ receipt_root: 20_model_runs/gemini/
 decision: ff_studio_v2/command_board/decisions/web-gemini-source-fed-session-precondition-20260611.md
 ```
 
-**A-Rail / B-Rail refinement 루프:** A-Rail은 시작부터 엔딩까지 6~12개 Anchor를 희소하게 박고 가장 가까운 두 Anchor만 자세히 만든다. **Anchor는 장기 도착점이고 Arc가 아니다.** B-Rail은 엔딩까지 이어지는 순서형 Story Arc 경로다. 각 B는 중심 질문 하나를 승인 원고 기준 1~5화 안에 결산하며, 먼 B는 Anchor·서사 기능·보상 축·독자 부채·직전과의 차이만 가진다. Rolling Corridor는 B-Rail의 현재 B와 다음 B를 비추는 작업창이며 별도 이야기 정본이 아니다. 현재 B 안에서 다음 1화 committed + 최대 2화 provisional만 본다. 현재 B가 owner 승인 원고로 닫히면 Narrative State를 재생성하고 A-Rail을 재확인한 뒤, B-Rail의 먼 슬롯은 내구 필드를 재검증하고 구체 사건·인물·음식·화수는 무효화·재작성한다. 생산자 self-review는 범위 점검일 뿐 최종 승격이 아니다. exact raw는 `20_model_runs/`에 보존한다.
+**A-Rail / B-Rail refinement 루프:** A-Rail은 시작부터 엔딩까지 6~12개 Anchor를 희소하게 박고 가장 가까운 두 Anchor만 자세히 만든다. **Anchor는 장기 도착점이고 Arc가 아니다.** B-Rail은 엔딩까지 이어지는 순서형 Story Arc 경로다. 각 B는 중심 질문 하나를 `00_status.md` front matter의 `arc_pacing_profile`이 정한 상한 안에 결산한다. `webnovel_1_to_3`은 승인 원고 기준 1~3화, 값 없음 또는 `legacy_1_to_5`는 기존 작품 호환 1~5화이며 알 수 없는 값은 hard-fail한다. 신작 profile의 B-Rail은 `target_episode / episode cap`을 올림한 수만큼 고유한 내구 슬롯을 채우고 `route_status: route_to_ending_ready`가 되기 전에는 Relay 생산을 시작하지 않는다. 먼 B는 Anchor·서사 기능·보상 축·독자 부채·직전과의 차이만 가진다. Rolling Corridor는 B-Rail의 현재 B와 다음 B를 비추는 작업창이며 별도 이야기 정본이 아니다. 현재 B 안에서 첫 Episode Bet 하나를 committed하고 뒤 최대 2개만 provisional로 본다. 여기서 `committed`는 Episode Bet 본문 상태이며 Git commit이 아니다. 현재 B가 owner 승인 원고로 닫히면 Narrative State를 재생성하고 A-Rail을 재확인한 뒤, B-Rail의 먼 슬롯은 내구 필드를 재검증하고 구체 사건·인물·음식·화수는 무효화·재작성한다. 생산자 self-review는 범위 점검일 뿐 최종 승격이 아니다. exact raw는 `20_model_runs/`에 보존한다.
 
 ```yaml
 rule: anchor_rail_rolling_corridor
@@ -93,7 +94,10 @@ applies_to: [Web_GPT_Pro, Web_Gemini, Web_Gemini_Pro, GPT_Codex, Claude]
 tentpoles_total: 6_to_12
 detailed_nearest_anchors: 2
 anchor_is_arc: false
-arc_episode_cap: 5
+arc_episode_cap_by_profile:
+  webnovel_1_to_3: 3
+  legacy_1_to_5: 5
+  absent_legacy_fallback: 5
 b_rail_route_to_ending: required
 b_rail_statuses: [closed, active, provisional, hypothesis, retired]
 b_rail_durable_fields: [target_anchor, narrative_function, payoff_axis, carried_reader_debt, contrast_requirement]
@@ -120,7 +124,7 @@ pacing_gate:
   producer_self_review_can_pass: false
 ```
 
-**Production Flow — thin default:** 현재 제작 단계(`production_stage`)는 `pitch -> story -> episode_bet -> manuscript -> review`를 쓴다. 피치 전에는 출처가 보이는 Story Block을 조립표로 엮지만, 조립표는 `20_model_runs/`에 두는 build evidence이며 제작 단계가 아니다. owner가 채택한 Frozen Pitch부터 사람-facing 작품 표면이 시작된다. `story`는 작품 척추 + A-Rail + 엔딩까지의 B-Rail + 현재 B 작업창을 가진 Story Plan이다. 원고 후보는 BR0/BR1 뒤 owner 승인을 받아야 승인 원고가 된다. 상태 스냅샷은 승인 원고에서 재생성하는 투영이고 충돌 판정 메모는 선형 단계가 아니다. dispatch는 운반 기록, receipt는 증거다. 원고 후보 발주 전에는 현재 화별 약속, 직전 승인 원고, 가까운 A-Anchor/현재 B, 필요한 JIT 재료가 있어야 한다. 예외 산출물은 `20_model_runs/...`의 model-run experiment로만 보존한다.
+**Production Flow — thin default:** 내부 제작 cursor(`production_stage`)는 `pitch -> story -> episode_bet -> manuscript -> review`를 쓰지만 사용자 표면은 `surface_profile: plan_arc_manuscript_v1`에 따라 **기획서 -> Arc -> 원고** 세 단계다. 기획서는 Frozen Pitch·작품 척추·A-Rail, Arc는 B-Rail의 active B·Rolling Corridor를 한 흐름으로 보여준다. Episode Bet·BR0/BR1·Narrative State·dispatch·receipt는 sidecar/gate이지 별도 사용자 단계나 이야기 권위 계층이 아니다. 피치 전 조립표는 `20_model_runs/`의 build evidence다. 원고 후보는 BR0/BR1 뒤 owner 승인을 받아야 승인 원고가 되며, 상태 스냅샷은 승인 원고에서 재생성하는 투영이다. 원고 후보 발주 전에는 현재 Episode Bet, 직전 승인 원고, 가까운 A-Anchor/현재 B, 필요한 JIT 재료가 있어야 한다. 예외 산출물은 `20_model_runs/...`의 model-run experiment로만 보존한다.
 
 **웹 생산자 운반 원칙:** Web GPT Pro는 후보마다 독립 채팅을 쓰며 owner가
 병렬 운용을 지시하면 서로 다른 후보를 최대 2개까지 동시에 생성할 수
@@ -158,7 +162,7 @@ answer_now_button:
 
 **모델 프롬프트 위생:** 생산자와 감리자에게 겁을 주지 않는다. Web GPT Pro, Web Gemini, Claude, Codex에게 보내는 창작·감리 문장은 긍정문으로 쓴다. 첨부는 닫힌 세계가 아니라 **문체·장르감·속도·돈의 물질감·고유 표면·반복쾌감 참고자료**다. 익숙한 장르 포맷은 결함이 아니라 상업적 자산으로 다룬다. 문체 참고를 명시하고, 필요한 분량은 하한만 둔다. 실행 기록과 감리 기록은 모델에게 작가 페르소나 대신 개발자 페르소나를 강제하지 않는다.
 
-**사람-facing 표면 분리:** pitch/story/Episode Bet/manuscript처럼 사람이 읽는 창작 표면에는 `yaml`, status, self-check, gate 판정, receipt 링크 같은 운영 메타를 섞지 않는다. 생산 레인은 사람말 본문을 쓰고, 운반/감리 레인이 상태값·합격선·채택 여부를 별도 gate/receipt/Notion 속성에 남긴다.
+**사람-facing 표면 분리:** 사람-facing 창작 표면은 기획서/Arc/원고 세 단계다. 이 본문에는 `yaml`, status, self-check, gate 판정, receipt 링크 같은 운영 메타를 섞지 않는다. Episode Bet·review·Narrative State는 해당 표면에 붙는 sidecar/gate이며 새 권위 계층이 아니다. 생산 레인은 사람말 본문을 쓰고, 운반/감리 레인이 상태값·합격선·채택 여부를 별도 gate/receipt/Notion 속성에 남긴다.
 
 **Feedback harvest scope routing:** owner 피드백, gate 실패, model self-review 신호는 바로 `craft_doctrine.md`에 전역 승격하지 않는다. 먼저 `40_works/<work_slug>/00_feedback_profile.md`와 `30_materials/craft/genre_profiles/`를 통해 `attempt_only / stage_local / work_local / genre_family / universal_craft`로 분류한다. 모든 review/gate 산출물은 `feedback_harvest`를 남기며, 최종 승격 권한은 owner에게 있다.
 

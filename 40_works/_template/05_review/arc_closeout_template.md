@@ -8,7 +8,7 @@ anchor_contribution:
 start_episode:
 end_episode:
 episode_count:
-episode_cap: 5
+episode_cap: 3
 manifest_revision_set_sha256:
 state_through:
 verdict: pass | reflow_required

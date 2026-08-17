@@ -286,6 +286,90 @@ function Get-YamlScalar([string]$Path, [string]$Field) {
     return $match.Groups["value"].Value.Trim().Trim('"', "'")
 }
 
+function Get-MarkdownFrontMatter([string]$Path) {
+    $match = [regex]::Match(
+        (Read-Text $Path),
+        '(?s)\A(?:\uFEFF)?---[ \t]*\r?\n(?<body>.*?)\r?\n---[ \t]*(?:\r?\n|\z)'
+    )
+    if (-not $match.Success) {
+        throw "Work status requires YAML front matter: $Path"
+    }
+    return $match.Groups['body'].Value
+}
+
+function Get-FrontMatterScalar([string]$FrontMatter, [string]$Field) {
+    $pattern = "(?m)^$([regex]::Escape($Field)):\s*(?<value>[^#\r\n]+?)\s*$"
+    $match = [regex]::Match($FrontMatter, $pattern)
+    if (-not $match.Success) { return $null }
+    return $match.Groups['value'].Value.Trim().Trim('"', "'")
+}
+
+function Resolve-WorkSurfaceProfile([string]$StatusPath) {
+    $frontMatter = Get-MarkdownFrontMatter $StatusPath
+    $surfaceDeclarations = [regex]::Matches($frontMatter, '(?m)^surface_profile\s*:')
+    if ($surfaceDeclarations.Count -gt 1) {
+        throw "Duplicate surface_profile in status front matter: path=$StatusPath"
+    }
+    $surfaceProfile = Get-FrontMatterScalar $frontMatter 'surface_profile'
+    if ($surfaceDeclarations.Count -eq 1 -and -not $surfaceProfile) {
+        throw "Unknown surface_profile in status front matter: value=<blank> path=$StatusPath"
+    }
+    if ($surfaceProfile -and $surfaceProfile -ne 'plan_arc_manuscript_v1') {
+        throw "Unknown surface_profile in status front matter: value=$surfaceProfile path=$StatusPath"
+    }
+
+    $arcPacingDeclarations = [regex]::Matches($frontMatter, '(?m)^arc_pacing_profile\s*:')
+    if ($arcPacingDeclarations.Count -gt 1) {
+        throw "Duplicate arc_pacing_profile in status front matter: path=$StatusPath"
+    }
+    $arcPacingProfile = Get-FrontMatterScalar $frontMatter 'arc_pacing_profile'
+    if ($arcPacingDeclarations.Count -eq 1 -and -not $arcPacingProfile) {
+        throw "Unknown arc_pacing_profile in status front matter: value=<blank> path=$StatusPath"
+    }
+    if ($arcPacingDeclarations.Count -eq 0) {
+        $arcPacingProfile = 'legacy_1_to_5'
+    }
+
+    switch ($arcPacingProfile) {
+        'legacy_1_to_5' {
+            $episodeCap = 5
+            $episodeSpan = '1_to_5'
+        }
+        'webnovel_1_to_3' {
+            $episodeCap = 3
+            $episodeSpan = '1_to_3'
+        }
+        default {
+            throw "Unknown arc_pacing_profile in status front matter: value=$arcPacingProfile path=$StatusPath"
+        }
+    }
+
+    if ($arcPacingProfile -eq 'webnovel_1_to_3' -and $surfaceProfile -ne 'plan_arc_manuscript_v1') {
+        throw "webnovel_1_to_3 requires surface_profile=plan_arc_manuscript_v1 in status front matter: path=$StatusPath"
+    }
+    if ($surfaceProfile -eq 'plan_arc_manuscript_v1' -and $arcPacingProfile -ne 'webnovel_1_to_3') {
+        throw "surface_profile=plan_arc_manuscript_v1 requires arc_pacing_profile=webnovel_1_to_3 in status front matter: path=$StatusPath"
+    }
+
+    $minimumArcSlots = $null
+    if ($arcPacingProfile -eq 'webnovel_1_to_3') {
+        $targetEpisode = Get-FrontMatterScalar $frontMatter 'target_episode'
+        $targetMatch = [regex]::Match(([string]$targetEpisode), '^ep(?<number>\d{3,6})$')
+        if (-not $targetMatch.Success -or [int]$targetMatch.Groups['number'].Value -lt 1) {
+            throw "webnovel_1_to_3 requires target_episode=epNNN in status front matter: value=$targetEpisode path=$StatusPath"
+        }
+        $minimumArcSlots = [int][math]::Ceiling([int]$targetMatch.Groups['number'].Value / [double]$episodeCap)
+    }
+
+    return [pscustomobject]@{
+        SurfaceProfile = if ($surfaceProfile) { $surfaceProfile } else { 'legacy_surface_compat' }
+        ArcPacingProfile = $arcPacingProfile
+        EpisodeCap = $episodeCap
+        EpisodeSpan = $episodeSpan
+        MinimumArcSlots = $minimumArcSlots
+    }
+}
+
 function Get-YamlList([string]$Path, [string]$Field) {
     if (-not $Path -or -not (Test-Path -LiteralPath $Path -PathType Leaf)) {
         return @()
@@ -688,7 +772,7 @@ function Get-ArcRouteSlotBlock([string]$Text, [string]$BId) {
     return $match.Groups['body'].Value
 }
 
-function Assert-ArcRouteRailContract([string]$Path, [string]$ExpectedBId) {
+function Assert-ArcRouteRailContract([string]$Path, [string]$ExpectedBId, [object]$ProfileContract) {
     $text = Read-Text $Path
     if ($text -notmatch '(?m)^schema_version:\s*firefly_arc_route_rail_v1\s*$') {
         throw "B-Rail schema missing or unsupported: $Path"
@@ -701,8 +785,33 @@ function Assert-ArcRouteRailContract([string]$Path, [string]$ExpectedBId) {
         throw "B-Rail must separate durable route fields from volatile story specifics: $Path"
     }
     $capMatch = [regex]::Match($text, '(?m)^arc_episode_cap:\s*(?<cap>\d+)\s*$')
-    if (-not $capMatch.Success -or [int]$capMatch.Groups['cap'].Value -ne 5) {
-        throw "Every B-Rail Story Arc requires arc_episode_cap: 5: $Path"
+    $expectedCap = [int]$ProfileContract.EpisodeCap
+    if (-not $capMatch.Success -or [int]$capMatch.Groups['cap'].Value -ne $expectedCap) {
+        throw "B-Rail arc_episode_cap must match status arc_pacing_profile: profile=$($ProfileContract.ArcPacingProfile) expected=$expectedCap path=$Path"
+    }
+
+    if ($ProfileContract.ArcPacingProfile -eq 'webnovel_1_to_3') {
+        $routeStatus = Get-YamlScalar $Path 'route_status'
+        if ($routeStatus -ne 'route_to_ending_ready') {
+            throw "webnovel_1_to_3 B-Rail route_status must be route_to_ending_ready before production: value=$routeStatus path=$Path"
+        }
+        $slotMatches = [regex]::Matches($text, '(?ms)^\s*-\s*b_id:\s*(?<id>B\d{3,})\s*\r?\n(?<body>.*?)(?=^\s*-\s*b_id:|\z)')
+        $uniqueSlotIds = [System.Collections.Generic.HashSet[string]]::new([System.StringComparer]::Ordinal)
+        foreach ($slotMatch in $slotMatches) {
+            $slotId = $slotMatch.Groups['id'].Value
+            if (-not $uniqueSlotIds.Add($slotId)) {
+                throw "B-Rail repeats b_id in route capacity: b_id=$slotId path=$Path"
+            }
+            $slotBody = $slotMatch.Groups['body'].Value
+            foreach ($required in @('route_order', 'status', 'target_anchor', 'narrative_function', 'payoff_axis', 'carried_reader_debt', 'contrast_requirement')) {
+                if (-not (Get-IndentedYamlScalar $slotBody $required)) {
+                    throw "B-Rail capacity slot missing durable field $required`: b_id=$slotId path=$Path"
+                }
+            }
+        }
+        if ($uniqueSlotIds.Count -lt [int]$ProfileContract.MinimumArcSlots) {
+            throw "B-Rail route capacity is incomplete for target_episode: slots=$($uniqueSlotIds.Count) required=$($ProfileContract.MinimumArcSlots) path=$Path"
+        }
     }
 
     $activeB = Get-YamlScalar $Path 'active_b_arc'
@@ -730,19 +839,20 @@ function Assert-ArcRouteRailContract([string]$Path, [string]$ExpectedBId) {
     return $nextB
 }
 
-function Assert-RollingArcContract([string]$Path, [string]$ArcRoutePath, [string]$ExpectedBId, [int]$EpisodeNumber) {
+function Assert-RollingArcContract([string]$Path, [string]$ArcRoutePath, [string]$ExpectedBId, [int]$EpisodeNumber, [object]$ProfileContract) {
     $text = Read-Text $Path
     if ($text -notmatch '(?m)^schema_version:\s*firefly_rolling_corridor_v2\s*$') {
         throw "Rolling Corridor schema missing or unsupported: $Path"
     }
 
     $capMatch = [regex]::Match($text, '(?m)^arc_episode_cap:\s*(?<cap>\d+)\s*$')
-    if (-not $capMatch.Success -or [int]$capMatch.Groups['cap'].Value -ne 5) {
-        throw "Every Story Arc requires arc_episode_cap: 5: $Path"
+    $expectedCap = [int]$ProfileContract.EpisodeCap
+    if (-not $capMatch.Success -or [int]$capMatch.Groups['cap'].Value -ne $expectedCap) {
+        throw "Rolling Corridor arc_episode_cap must match status arc_pacing_profile: profile=$($ProfileContract.ArcPacingProfile) expected=$expectedCap path=$Path"
     }
     $cap = [int]$capMatch.Groups['cap'].Value
 
-    $expectedNextB = Assert-ArcRouteRailContract $ArcRoutePath $ExpectedBId
+    $expectedNextB = Assert-ArcRouteRailContract $ArcRoutePath $ExpectedBId $ProfileContract
 
     $currentBlock = Get-IndentedYamlBlock $text 'current_b_arc'
     if (-not $currentBlock) {
@@ -763,12 +873,16 @@ function Assert-RollingArcContract([string]$Path, [string]$ArcRoutePath, [string
     if ($plannedEnd -lt $start -or $plannedEnd -gt $hardEnd) {
         throw "Rolling current B planned end must be inside start..hard end: b_id=$arcId start=$start planned=$plannedEnd hard=$hardEnd path=$Path"
     }
+    $plannedSpan = $plannedEnd - $start + 1
+    if ($plannedSpan -lt 1 -or $plannedSpan -gt $cap) {
+        throw "Story Arc planned span exceeds profile cap: profile=$($ProfileContract.ArcPacingProfile) cap=$cap arc=$arcId span=$plannedSpan path=$Path"
+    }
     $hardSpan = $hardEnd - $start + 1
     if ($hardSpan -lt 1 -or $hardSpan -gt $cap) {
-        throw "Story Arc hard span exceeds 5 episodes: arc=$arcId span=$hardSpan start=$start hard=$hardEnd path=$Path"
+        throw "Story Arc hard span exceeds profile cap: profile=$($ProfileContract.ArcPacingProfile) cap=$cap arc=$arcId span=$hardSpan start=$start hard=$hardEnd path=$Path"
     }
     if ($EpisodeNumber -lt $start -or $EpisodeNumber -gt $hardEnd) {
-        throw "Requested episode is outside the active Story Arc: arc=$arcId episode=$EpisodeNumber start=$start hard=$hardEnd path=$Path"
+        throw "Requested episode is outside the active Story Arc: profile=$($ProfileContract.ArcPacingProfile) cap=$cap arc=$arcId episode=$EpisodeNumber start=$start hard=$hardEnd path=$Path"
     }
     foreach ($required in @('central_question', 'close_condition', 'anchor_contribution')) {
         if (-not (Get-IndentedYamlScalar $currentBlock $required)) {
@@ -784,12 +898,22 @@ function Assert-RollingArcContract([string]$Path, [string]$ArcRoutePath, [string
     if ($rollingNextB -ne $expectedNextB) {
         throw "Rolling next_b_arc must equal B-Rail next_b_arc: rolling=$rollingNextB b_rail=$expectedNextB path=$Path"
     }
+    $nextEpisodeSpan = Get-IndentedYamlScalar $nextBlock 'episode_span'
+    if ($nextEpisodeSpan -ne $ProfileContract.EpisodeSpan) {
+        throw "Rolling next_b_arc.episode_span must match status arc_pacing_profile: profile=$($ProfileContract.ArcPacingProfile) expected=$($ProfileContract.EpisodeSpan) actual=$nextEpisodeSpan path=$Path"
+    }
 
     $reflowBlock = Get-IndentedYamlBlock $text 'reflow_on_b_close'
     if (-not $reflowBlock) {
         throw "Rolling Corridor missing reflow_on_b_close: $Path"
     }
-    if ((Get-IndentedYamlScalar $reflowBlock 'required') -ne 'true' -or
+    $fixtureOnly = (Get-YamlScalar $Path 'fixture_only') -eq 'true'
+    if ($fixtureOnly) {
+        if ((Get-IndentedYamlScalar $reflowBlock 'required') -ne 'false' -or
+            (Get-IndentedYamlScalar $reflowBlock 'reason') -ne 'fixture_never_enters_production') {
+            throw "Fixture-only Corridor must declare its no-production reflow exemption: $Path"
+        }
+    } elseif ((Get-IndentedYamlScalar $reflowBlock 'required') -ne 'true' -or
         (Get-IndentedYamlScalar $reflowBlock 'trigger') -ne 'owner_approved_arc_close' -or
         (Get-IndentedYamlScalar $reflowBlock 'b_rail_durable_fields') -ne 'revalidate' -or
         (Get-IndentedYamlScalar $reflowBlock 'b_rail_volatile_fields') -ne 'invalidate_and_rebuild') {
@@ -874,6 +998,7 @@ function Get-RunPaths([string]$FoundryRoot, [string]$WorkDirectory, [string]$Slu
     if ((Get-YamlScalar $status "work_slug") -ne $Slug) {
         throw "Work slug does not match status: requested=$Slug status=$(Get-YamlScalar $status 'work_slug')"
     }
+    $profileContract = Resolve-WorkSurfaceProfile $status
     if ((Get-YamlScalar $status "portfolio_state") -ne "active") {
         throw "Relay accepts the active work only. Migrate and activate a parked work before production: $status"
     }
@@ -894,7 +1019,7 @@ function Get-RunPaths([string]$FoundryRoot, [string]$WorkDirectory, [string]$Slu
     if (-not $currentBId) {
         throw "Work status requires current_b_arc: $status"
     }
-    Assert-RollingArcContract $rollingCorridor $arcRouteRail $currentBId $EpisodeNumber
+    Assert-RollingArcContract $rollingCorridor $arcRouteRail $currentBId $EpisodeNumber $profileContract
 
     $episodeBet = Get-RequiredFile (Join-Under $WorkDirectory @("03_episode_bet", "$episodeTag`_episode_bet.md")) "exact current Episode Bet"
     if (-not (Test-EpisodeBetCommitted $episodeBet)) {
@@ -1868,7 +1993,7 @@ function Invoke-ContractSmoke([hashtable]$Paths) {
     Write-Host "blank fixture issues: $($blankIssues.Count)"
 }
 
-function Invoke-ArcContractSmoke([string]$WorkDirectory, [string]$Slug) {
+function Invoke-ArcContractSmoke([string]$WorkDirectory, [string]$Slug, [int]$RequestedEpisode) {
     $status = Get-RequiredFile (Join-Under $WorkDirectory @("00_status.md")) "work status"
     if ((Get-YamlScalar $status "schema_version") -ne "firefly_work_status_v4" -or
         (Get-YamlScalar $status "workflow_schema") -ne "anchored_story_loop_v3") {
@@ -1877,19 +2002,24 @@ function Invoke-ArcContractSmoke([string]$WorkDirectory, [string]$Slug) {
     if ((Get-YamlScalar $status "work_slug") -ne $Slug) {
         throw "Work slug does not match status: requested=$Slug status=$(Get-YamlScalar $status 'work_slug')"
     }
+    $profileContract = Resolve-WorkSurfaceProfile $status
     $episodeTag = Get-YamlScalar $status "current_episode"
-    $episodeNumber = Convert-EpisodeTagToNumber $episodeTag 'status.current_episode' $status
+    [void](Convert-EpisodeTagToNumber $episodeTag 'status.current_episode' $status)
     $currentBId = Get-YamlScalar $status "current_b_arc"
     if (-not $currentBId) {
         throw "Work status requires current_b_arc: $status"
     }
     $arcRouteRail = Get-RequiredFile (Join-Under $WorkDirectory @("02_story", "arc_route_rail.md")) "B-Rail"
     $rollingCorridor = Get-RequiredFile (Join-Under $WorkDirectory @("02_story", "rolling_corridor.md")) "Rolling Corridor"
-    Assert-RollingArcContract $rollingCorridor $arcRouteRail $currentBId $episodeNumber
+    Assert-RollingArcContract $rollingCorridor $arcRouteRail $currentBId $RequestedEpisode $profileContract
     Write-Host "arc contract smoke: passed"
     Write-Host "current B: $currentBId"
     Write-Host "current episode: $episodeTag"
-    Write-Host "episode cap: 5"
+    Write-Host "requested episode: $(Get-EpisodeTag $RequestedEpisode)"
+    Write-Host "surface profile: $($profileContract.SurfaceProfile)"
+    Write-Host "arc pacing profile: $($profileContract.ArcPacingProfile)"
+    Write-Host "episode cap: $($profileContract.EpisodeCap)"
+    Write-Host "episode span: $($profileContract.EpisodeSpan)"
     Write-Host "B-Rail: $arcRouteRail"
     Write-Host "corridor: $rollingCorridor"
 }
@@ -1897,7 +2027,7 @@ function Invoke-ArcContractSmoke([string]$WorkDirectory, [string]$Slug) {
 $foundryRoot = Resolve-FoundryRoot
 $workDirectory = Resolve-WorkDirectory $foundryRoot $WorkSlug $WorkDir
 if ($Step -eq "arc-contract-smoke") {
-    Invoke-ArcContractSmoke $workDirectory $WorkSlug
+    Invoke-ArcContractSmoke $workDirectory $WorkSlug $Episode
     exit 0
 }
 $paths = Get-RunPaths $foundryRoot $workDirectory $WorkSlug $Episode $RunDate

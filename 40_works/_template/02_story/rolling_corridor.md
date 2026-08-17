@@ -8,13 +8,13 @@ arc_route_rail_ref: arc_route_rail.md
 from_anchor: A00
 toward_anchor: A01
 starts_from_state_through: ep000
-arc_episode_cap: 5
+arc_episode_cap: 3
 current_b_arc:
   b_id: B001
   status: active
   start_episode: ep001
   planned_end_episode: ep003
-  hard_end_episode: ep005
+  hard_end_episode: ep003
   central_question:
   close_condition:
   anchor_contribution: A01
@@ -22,7 +22,7 @@ next_b_arc:
   b_id: B002
   status: provisional
   starts_after: B001_close
-  episode_span: 1_to_5
+  episode_span: 1_to_3
   function:
   entry_dependency:
 episode_cursor:
@@ -55,15 +55,15 @@ last_replanned_at: null
 
 - 중심 질문:
 - 현재 압력:
-- 이번 Arc가 1~5화 안에 환전할 것:
+- 이번 Arc가 1~3화 안에 환전할 것:
 - 사람 관계에 남길 후폭풍:
 - 조기 종결이 가능한 최소 조건:
-- 5화 하드 종결에서 반드시 닫을 것:
+- 3화 하드 종결에서 반드시 닫을 것:
 - 다음 Anchor가 당겨지는 조건:
 
 ## 현재 B 회차 가설
 
-Episode Bet이 committed되기 전까지 가설이다. 현재 B 경계를 넘어 다음 B의 화별 전개를 미리 잠그지 않는다.
+Episode Bet이 committed되기 전까지 가설이다. `committed`는 Episode Bet 본문의 상태이며 Git commit이 아니다. 현재 B 경계를 넘어 다음 B의 화별 전개를 미리 잠그지 않는다.
 
 - ep001:
 - ep002:

@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://firefly.local/schemas/webnovel_workbench_v1.schema.json",
+  "title": "Firefly Webnovel Workbench v1",
+  "description": "Clean-room contract for the plan, Arc, and manuscript user surface used by newly initialized webnovel works.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "surface_profile",
+    "arc_pacing_profile",
+    "surface",
+    "arc",
+    "startup",
+    "capacity"
+  ],
+  "properties": {
+    "surface_profile": {
+      "const": "plan_arc_manuscript_v1"
+    },
+    "arc_pacing_profile": {
+      "const": "webnovel_1_to_3"
+    },
+    "surface": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["levels", "sidecars_are_authority_tiers", "sidecars"],
+      "properties": {
+        "levels": {
+          "const": ["plan", "arc", "manuscript"]
+        },
+        "sidecars_are_authority_tiers": {
+          "const": false
+        },
+        "sidecars": {
+          "const": ["episode_bet", "review", "narrative_state"]
+        }
+      }
+    },
+    "arc": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["episode_cap", "episode_span", "planned_span_max", "hard_span_max"],
+      "properties": {
+        "episode_cap": {
+          "const": 3
+        },
+        "episode_span": {
+          "const": "1_to_3"
+        },
+        "planned_span_max": {
+          "const": 3
+        },
+        "hard_span_max": {
+          "const": 3
+        }
+      }
+    },
+    "startup": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "first_episode_bet_status",
+        "following_episode_bet_statuses",
+        "same_arc_only",
+        "committed_semantics"
+      ],
+      "properties": {
+        "first_episode_bet_status": {
+          "const": "committed"
+        },
+        "following_episode_bet_statuses": {
+          "type": "array",
+          "maxItems": 2,
+          "items": {
+            "const": "provisional"
+          }
+        },
+        "same_arc_only": {
+          "const": true
+        },
+        "committed_semantics": {
+          "const": "episode_bet_body_status"
+        }
+      }
+    },
+    "capacity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["target_episode_count", "minimum_arc_slots", "calculation"],
+      "properties": {
+        "target_episode_count": {
+          "const": 250
+        },
+        "minimum_arc_slots": {
+          "const": 84
+        },
+        "calculation": {
+          "const": "ceil(250/3)=84"
+        }
+      }
+    }
+  }
+}

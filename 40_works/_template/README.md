@@ -11,9 +11,10 @@
 5. title·portfolio state·stage·episode를 실제 착수 상태로 바꾼다. 빈 복사 직후에는 canonical dispatch를 열지 않는다.
 6. Frozen Pitch 뒤 `protagonist_operating_identity_template.md`를 실행해 기준 작동 원형 하나와 현실 직업·반복 경제행동·수익모델·축적물·최종 거물상을 `pass`로 닫고 receipt를 Living Spine에 연결한다.
 7. 1화의 대표 성과·보상·배신·몰락과 가까운 Anchor는 `premise_transaction_template.md`와 `character_court_template.md`를 `20_model_runs/`에서 먼저 실행한다. 둘 다 `pass`한 receipt 경로만 Living Spine으로 운반한다.
-8. Story Plan 네 표면을 채우고 `ep000` 화별 약속 양식을 실제 화수로 복사·개명한다. A-Rail은 장기 도착점, B-Rail은 엔딩까지의 1~5화 Arc 경로, Rolling Corridor는 현재/다음 B 작업창이다. 첫 3화의 화별 약속은 모두 채운 뒤 `committed`로 잠그고, 이후에는 현재 B 안에서만 현재 1화 committed + 뒤 최대 2화 provisional을 쓴다. `modern_fantasy`를 선택했다면 각 committed 화의 CSU·receipt·external value signal·논리 게이트 receipt·장면 지도 인스턴스를 채운다.
-9. 새 작품의 빈 manifest와 Narrative State는 동일한 empty revision-set hash를 유지한다. 첫 owner 승인 원고부터 manifest entry·aggregate·Narrative State를 함께 갱신한다. 현재 B 종결 뒤에는 `05_review/arc_closeout_template.md`로 실제 결과를 닫고, A-Rail을 재확인하고 남은 B-Rail의 내구 필드와 변동 필드를 구분해 reflow한 뒤 다음 B로 넘어간다.
-10. 다음 화 continuation gate는
+8. 사용자 표면은 `기획서 -> Arc -> 원고` 세 단계다. 내부 Story Plan 네 문서를 채우되, 기획서에는 Frozen Pitch·작품 척추·A-Rail을, Arc에는 B-Rail의 현재 슬롯과 Rolling Corridor를 합쳐 보여준다. Episode Bet·감리·Narrative State는 sidecar/gate이지 별도 권위 계층이 아니다. 이 template의 B-Rail은 엔딩까지의 1~3화 Arc 경로다. 복제 직후 `route_status: scaffold_required`는 생산 불가이며, `target_episode / 3`을 올림한 수만큼 고유한 내구 슬롯을 채운 뒤 `route_to_ending_ready`로 승격한다.
+9. `ep000` Episode Bet 양식을 현재 Arc의 첫 실제 화수로 복사·개명하고 그 파일 하나만 `상태: committed`로 둔다. 같은 Arc의 뒤 화는 최대 2개만 `provisional`로 준비한다. `committed`는 Episode Bet 본문의 제작 상태이며 Git commit을 뜻하지 않는다. `ep001~ep003`을 모두 committed로 잠그는 초기화 규칙은 없다. `modern_fantasy`를 선택했다면 실제 committed 화의 CSU·receipt·external value signal·논리 게이트 receipt·장면 지도 인스턴스를 채운다.
+10. 새 작품의 빈 manifest와 Narrative State는 동일한 empty revision-set hash를 유지한다. 첫 owner 승인 원고부터 manifest entry·aggregate·Narrative State를 함께 갱신한다. 현재 B 종결 뒤에는 `05_review/arc_closeout_template.md`로 실제 결과를 닫고, A-Rail을 재확인하고 남은 B-Rail의 내구 필드와 변동 필드를 구분해 reflow한 뒤 다음 B로 넘어간다.
+11. 다음 화 continuation gate는
     `05_review/wgp_continuation_receipt.md`를 사용한다. production positive는
     같은 작품의 직전 화, `producer: web_gpt_pro`,
     `continuation_authorized: true`, 정확한 source candidate SHA-256을

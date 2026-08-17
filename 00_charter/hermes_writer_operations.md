@@ -17,17 +17,21 @@
 ## A-Rail / B-Rail gate
 
 - 인간은 A-Rail/B-Rail 없이도 먼저 생각·작성·수정할 수 있다. 다만 Hermes 제작 티켓은 둘 중 하나라도 없으면 `Blocked`다.
-- A-Rail은 시작부터 엔딩까지의 장기 Anchor이며, B-Rail은 Anchor로 가는 1~5화 결산 Arc다. 둘을 블라인드 A/B 비교나 같은 단위로 취급하지 않는다.
-- `ep250`은 장기 완결 목표다. Hermes 제작은 현재 owner-approved 10-Arc batch가
-  모두 있는 B-Rail이면 열 수 있고, B010 closeout 전 다음 batch를 사람 review로
-  보강한다. 먼 B는 기능·보상축·독자부채·차별점만 가설로 두며 구체 사건을 미리
-  확정하지 않는다.
-- B가 닫힐 때마다 승인 원고와 Narrative State를 갱신하고, A 영향 확인·B closeout·남은 B reflow를 끝낸 뒤 다음 B의 Episode Bet을 연다.
+- A-Rail은 시작부터 엔딩까지의 장기 Anchor이며, B-Rail은 Anchor로 가는 결산 Arc다. 신작 `webnovel_1_to_3`은 1~3화, profile이 없거나 `legacy_1_to_5`인 기존 작품은 1~5화다. 둘을 블라인드 A/B 비교나 같은 단위로 취급하지 않는다.
+- `ep250`은 장기 완결 목표다. 신작 `webnovel_1_to_3`은 먼저 `target_episode / 3`을
+  올림한 전체 B-Rail 용량(기본 84개 고유 내구 슬롯)과
+  `route_status: route_to_ending_ready`를 갖춰야 한다. 그 위에서 현재
+  owner-approved 10-Arc batch가 열려 있어야 Hermes 제작을 시작할 수 있고,
+  B010 closeout 전 다음 batch를 사람 review로 보강한다. 전체 route capacity gate와
+  현재 batch 승인 gate는 서로 대체하지 않는다. 먼 B는 기능·보상축·독자부채·차별점만
+  가설로 두며 구체 사건을 미리 확정하지 않는다.
+- B가 닫힐 때마다 승인 원고와 Narrative State를 갱신하고, A 영향 확인·B closeout·남은 B reflow를 끝낸 뒤 다음 B의 Episode Bet을 연다. Episode Bet의 `committed`는 본문 제작 상태이며 Git commit이 아니다. 현재 Arc의 첫 화 하나만 committed하고 같은 Arc의 뒤 최대 2개만 provisional로 준비한다.
 
 ## 10-Batch 사람 승인 경계
 
 - B001~B010, B011~B020처럼 B 10개가 하나의 batch다.
-- batch 안의 각 B는 기존 1~5화 상한과 closeout/reflow 규칙을 그대로 따른다.
+- 10개 batch는 이미 준비된 전체 route에서 지금 제작할 범위를 여는 owner gate다. 10개만 채워 전체 엔딩 경로 용량 검사를 대신할 수 없다.
+- batch 안의 각 B는 작품 `00_status.md`의 `arc_pacing_profile` 상한과 closeout/reflow 규칙을 그대로 따른다. 알 수 없는 profile이면 Hermes 티켓은 `Blocked`다.
 - 10번째 B가 owner-approved로 닫히면 `10-Arc Human Review.md`를 만들고 상태를 `review_required`로 전환한다.
 - owner가 다음 batch의 decision ID를 기록해 `active`로 열기 전에는 다음 batch의 Episode Bet·원고 티켓을 만들거나 실행하지 않는다.
 - 이 gate는 먼 10개 B의 구체 사건을 선커밋하는 장치가 아니다. 각 B closeout 뒤 A/B 영향과 현재 Narrative State를 다시 읽는다.
