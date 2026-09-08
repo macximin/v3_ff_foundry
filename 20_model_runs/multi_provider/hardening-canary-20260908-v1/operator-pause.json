@@ -1,0 +1,7 @@
+{
+  "at": "2026-09-08T00:00:50.745603+00:00",
+  "requestedBy": "user",
+  "reason": "Pause at safe checkpoint and resume later",
+  "resumeRequiresUserMessage": true,
+  "schedulerWasLoaded": true
+}

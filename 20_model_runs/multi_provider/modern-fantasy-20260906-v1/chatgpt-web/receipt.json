@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "firefly-canary-run/v1",
+  "route": "chatgpt-web",
+  "modelRequested": "ChatGPT 6 Pro",
+  "modelObserved": "6\nPro",
+  "reasoningRequested": "Pro",
+  "inputSha256": "f5509d0d0757450a781f82c7766e1b71137b3cbd8a8f09e917ed4a5545e1c8d2",
+  "outputSha256": "289d273209e1cdbb44acf26adc7428647c4b4400427c71e283dfe0ad49c648bc",
+  "conversationUrl": "https://chatgpt.com/c/6a9d72c3-0d24-83e8-98ee-6f9121f711b9",
+  "finishedAt": "2026-09-06T14:29:31.551Z",
+  "status": "response_received",
+  "usage": null,
+  "elapsedSeconds": null,
+  "outputCharacters": 30807,
+  "completionEvidence": "코드 블록 길이가 두 번의 조회에서 같음; 응답 복사·Pro 피드백 표시; 답변 중지 없음",
+  "extraction": "Rendered pre code innerText; no creative edits"
+}

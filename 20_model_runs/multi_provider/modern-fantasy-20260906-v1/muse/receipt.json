@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "firefly-canary-run/v1",
+  "route": "muse",
+  "modelRequested": "muse-spark-1.3-contributor-free",
+  "reasoningRequested": "provider default",
+  "inputSha256": "f5509d0d0757450a781f82c7766e1b71137b3cbd8a8f09e917ed4a5545e1c8d2",
+  "outputSha256": "2ba2216ac2a6f2327f51b557695384f2da7ec689e6fc39dfbf0fb02a4a8dcfc1",
+  "startedAt": "2026-09-06T14:01:51.011614+00:00",
+  "finishedAt": "2026-09-06T14:04:17.362972+00:00",
+  "elapsedSeconds": 146.4,
+  "exitCode": 0,
+  "status": "response_received",
+  "error": null,
+  "usage": [
+    {
+      "id": "prt_07708c02a001S86SmbDoIdBcHa",
+      "reason": "stop",
+      "messageID": "msg_07706879800183BOEUy1gEwDao",
+      "sessionID": "ses_f88f97937ffeicZzUk5shgPCiD",
+      "type": "step-finish",
+      "tokens": {
+        "total": 38683,
+        "input": 25865,
+        "output": 9564,
+        "reasoning": 3254,
+        "cache": {
+          "write": 0,
+          "read": 0
+        }
+      },
+      "cost": 0
+    }
+  ],
+  "outputCharacters": 15874,
+  "invocation": "CLI child; manager receipt separate"
+}

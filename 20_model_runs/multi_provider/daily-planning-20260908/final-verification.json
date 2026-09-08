@@ -1,0 +1,13 @@
+{
+  "counts": {
+    "대상 수": 6,
+    "본문 완료": 5,
+    "형식 미완성": 1,
+    "응답 미회수": 0
+  },
+  "publicationsVerified": 6,
+  "notionUrl": "https://app.notion.com/p/3d4df078700581298ea2d414cc973359",
+  "verifiedAt": "2026-09-07T17:26:02.776822+00:00",
+  "operationalException": "grok-control-exception.json",
+  "astraRuntimeObservation": "astra/runtime-observation.json"
+}

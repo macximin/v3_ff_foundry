@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "firefly-canary-run/v1",
+  "route": "grok-cli",
+  "modelRequested": "grok-4.6",
+  "reasoningRequested": "high",
+  "inputSha256": "f5509d0d0757450a781f82c7766e1b71137b3cbd8a8f09e917ed4a5545e1c8d2",
+  "outputSha256": "3b3536f4397af5004578114efa1880fab11b1a057be624f11d457b8a4df91e0d",
+  "startedAt": "2026-09-06T13:55:21.756385+00:00",
+  "finishedAt": "2026-09-06T13:55:28.706575+00:00",
+  "elapsedSeconds": 7.0,
+  "exitCode": 1,
+  "status": "failed",
+  "error": "No complete response; inspect raw logs",
+  "usage": {
+    "input_tokens": 9291,
+    "cache_read_input_tokens": 11008,
+    "cache_creation_input_tokens": 0,
+    "output_tokens": 188,
+    "reasoning_tokens": 33,
+    "total_tokens": 20487
+  },
+  "outputCharacters": 53,
+  "invocation": "CLI child; manager receipt separate"
+}

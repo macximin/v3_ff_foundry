@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "firefly-canary-run/v1",
+  "route": "grok-web",
+  "modelRequested": "Grok 웹",
+  "modelObserved": "전문가",
+  "reasoningRequested": "전문가",
+  "inputSha256": "f5509d0d0757450a781f82c7766e1b71137b3cbd8a8f09e917ed4a5545e1c8d2",
+  "outputSha256": "aaaf09c21e8565bbd3412ea676a3ddec540c358b465af264cb3d790f8f04a0b5",
+  "conversationUrl": "https://grok.com/c/d1ec4a6f-4a6e-49ae-8ba1-c2615c10da74?rid=fa0005e8-c7d6-4e6e-b183-229d74876678",
+  "finishedAt": "2026-09-06T14:03:26.628Z",
+  "status": "response_received",
+  "usage": null,
+  "elapsedSeconds": null,
+  "outputCharacters": 15857,
+  "completionEvidence": "응답 복사와 Regenerate 버튼 표시; 생성 중지 없음",
+  "extraction": "Rendered pre code innerText; no creative edits"
+}

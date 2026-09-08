@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "firefly-planning-process/v1",
+  "route": "gemini-web",
+  "modelRequested": "web-observed",
+  "inputSha256": "f5509d0d0757450a781f82c7766e1b71137b3cbd8a8f09e917ed4a5545e1c8d2",
+  "timeoutSeconds": 3600,
+  "queuedAt": "2026-09-06T16:03:49.885624+00:00",
+  "status": "process_completed",
+  "startedAt": "2026-09-06T16:03:49.924631+00:00",
+  "workerPid": 8172,
+  "writerPid": 8176,
+  "exitCode": 0,
+  "finishedAt": "2026-09-06T16:11:27.639406+00:00",
+  "elapsedSeconds": 457.71,
+  "rawFiles": {
+    "stdout.raw": "081299a2af5d59c0deca927acc07f4d201ec278b39669c589973b8d5abac9132",
+    "stderr.raw": "febf476d41474d3336f29af858dd6ac1a070dd2c11da10bdffecaaf340bd946d"
+  },
+  "meaning": "Process completion only; response extraction, format, publication and HIL are separate."
+}

@@ -1,0 +1,44 @@
+{
+  "status": "complete",
+  "serviceUrl": "https://chatgpt.com/",
+  "conversationUrl": "https://chatgpt.com/c/6a9d8fae-93c4-83ee-87c6-b67f4a00f2ed",
+  "observedMode": "6 Pro",
+  "observedModeDetails": {
+    "menuLabel": "추론 수준",
+    "modelRadio": "최신",
+    "performanceSlider": "Pro, 5개 중 5번째 (value 4/4)",
+    "otherVisibleModels": [
+      "GPT-5.6 Sol",
+      "GPT-5.5"
+    ],
+    "composerButtonLabel": "6 Pro"
+  },
+  "taskSpaceId": 16,
+  "taskSpaceName": "sentinel-canary-chatgpt-web-20260907",
+  "submittedAt": "2026-09-06T16:07:08.370Z",
+  "finishedAt": "2026-09-06T16:29:17.953Z",
+  "inputSha256": "f5509d0d0757450a781f82c7766e1b71137b3cbd8a8f09e917ed4a5545e1c8d2",
+  "outputSha256": "98f282eb043eae3611088f8281644a25c7b433291bc28158a3b4a3b2d2166d7c",
+  "tokenUsage": "unknown",
+  "extractionMethod": "ego-browser js: final assistant [data-message-author-role=assistant] .markdown.prose HTML serialized to Markdown",
+  "processingLabel": "19m 50s 동안 처리함",
+  "outputChars": 27153,
+  "sectionsPresent": {
+    "has1": true,
+    "has2": true,
+    "has3": true,
+    "has4": true,
+    "has5": true,
+    "has6": true,
+    "has7": true,
+    "has8": true,
+    "has9": true
+  },
+  "promptSent": "첨부 자료를 그대로 따르세요. 지정된 육하원칙(WHO, WHAT, HOW, WHERE, WHEN, WHY)과 원작 우선·자기 이익 방향을 유지한 완전한 9절 웹소설 작품 기획서 한 편을 반환하세요. 추가 질문은 하지 마세요.",
+  "attachmentNameObserved": [
+    "input(1).md",
+    "input(1).md",
+    "파일 1 제거: input(1).md"
+  ],
+  "note": "Highest visible reasoning mode was 6 Pro. Response captured after stop control disappeared and length stayed stable."
+}

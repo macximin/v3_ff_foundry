@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "firefly-planning-process/v1",
+  "route": "grok-web",
+  "status": "complete",
+  "conversationUrl": "https://grok.com/c/21a091a3-c083-4ca2-bc47-2854eda35bcd?rid=89a52dec-09ee-409a-a5ea-cac27199290b",
+  "observedMode": "전문가",
+  "observedModeDetail": "전문가 · 깊게 생각 · Grok 4.6",
+  "availableModesObserved": [
+    "자동 — 빠른 모드 또는 전문가 모드 선택",
+    "빠른 — 빠른 응답 · Grok 4.6",
+    "전문가 — 깊게 생각 · Grok 4.6 (selected; highest available without paid upgrade)",
+    "Build Beta — Build apps and sites · Grok 4.6",
+    "헤비 — 전문가 팀 · Grok 4.6 (paywall: SuperGrok upgrade dialog; not purchased)"
+  ],
+  "submittedAt": "2026-09-06T16:06:55.236Z",
+  "taskSpaceId": 17,
+  "inputSha256": "f5509d0d0757450a781f82c7766e1b71137b3cbd8a8f09e917ed4a5545e1c8d2",
+  "serviceUrl": "https://grok.com/",
+  "pageTitle": "첨부 자료를 읽고 지시에 따라 완전한 9절 웹소설 작품 기획서 한 편을 작성하세요. 지정된 육하원칙과 원작 우선·자기 이익 방향을 유지하세요. 추가 질문은 하지 말고, 기획서 본문만 반환하세요. - Grok",
+  "note": "Heavy mode opened a SuperGrok upgrade dialog; current plan remained SuperGrok. Did not change paid plans. Submitted once with input.md attached.",
+  "finishedAt": "2026-09-06T16:14:24.097Z",
+  "outputSha256": "c8b0162d8913e351ec69124a22c11e56f0b2dc034317e0b53d47820173411139",
+  "extractionMethod": "ego-browser js DOM [data-testid=assistant-message] .response-content-markdown HTML-to-Markdown; no pre/code block; excluded thinking chip and follow-up suggestion chips",
+  "tokenUsage": "unknown; not displayed",
+  "thinkLabel": "1m 25s동안 작업함",
+  "markdownLen": 13967,
+  "headings": [
+    "Firefly 웹소설 작품 기획서 v1",
+    "1. 작품 정보와 독자 약속",
+    "2. 작품의 육하원칙",
+    "3. 장기·구간·회차의 목적 연결",
+    "4. 등장인물과 관계",
+    "5. 무대·시간·우위가 사건을 만드는 방식",
+    "6. 전체 줄거리와 장기 전개",
+    "7. 독자 보상과 연재 지속성",
+    "8. 참고 작품의 역설계·조합·변주",
+    "9. 기획 의도와 집필 계획"
+  ],
+  "stopButtonPresentAtCapture": false
+}

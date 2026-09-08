@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "firefly-canary-run/v1",
+  "route": "nemotron-lightning",
+  "modelRequested": "nemotron-3.5-lightning-free",
+  "reasoningRequested": "provider default",
+  "inputSha256": "f5509d0d0757450a781f82c7766e1b71137b3cbd8a8f09e917ed4a5545e1c8d2",
+  "outputSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "startedAt": "2026-09-06T14:00:23.063800+00:00",
+  "finishedAt": "2026-09-06T14:06:53.075529+00:00",
+  "elapsedSeconds": 390.0,
+  "exitCode": null,
+  "status": "failed",
+  "error": "Timeout after 390 seconds",
+  "usage": null,
+  "outputCharacters": 0,
+  "invocation": "CLI child; manager receipt separate"
+}

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "firefly-planning-process/v1",
+  "route": "grok-web",
+  "status": "complete",
+  "conversationUrl": "https://grok.com/c/0eb290f2-e3c3-483a-9296-d2aa2274cdc0?rid=9555aa4d-d0ca-4c82-b1ce-283e94fa3eff",
+  "observedMode": "전문가",
+  "observedModeDetail": "전문가 · 깊게 생각 · Grok 4.6",
+  "availableModesObserved": [
+    "자동 — 빠른 모드 또는 전문가 모드 선택",
+    "빠른 — 빠른 응답 · Grok 4.6",
+    "전문가 — 깊게 생각 · Grok 4.6 (selected; highest available without paid upgrade)",
+    "Build Beta — Build apps and sites · Grok 4.6",
+    "헤비 — 전문가 팀 · Grok 4.6 (paywall: SuperGrok Heavy upgrade dialog; not purchased)"
+  ],
+  "submittedAt": "2026-09-07T17:04:16.676Z",
+  "finishedAt": "2026-09-07T17:11:40.191Z",
+  "taskSpaceId": 3,
+  "inputSha256": "51315a8fc250c3001bb72958211d9e67add4eb1a44b2354fe6f75b75746a9151",
+  "outputSha256": "87ccfa1de49cd8bf4dd95fea681963c804f469d3ecd4a2dbfd38cf5eef3d4e62",
+  "serviceUrl": "https://grok.com/",
+  "pageTitle": "9절 웹소설 기획서 작성 - Grok",
+  "note": "Heavy mode opened SuperGrok upgrade dialog; current plan remained SuperGrok. Did not change paid plans. Submitted once with input.md attached. First copy attempt hit user-control; resumed same task space 3 without resubmitting.",
+  "extractionMethod": "ego-browser click css:button[aria-label=응답 복사] + planning-clipboard.py ego-copy+os-pbpaste; UI evidence 복사됨!; anchors 현대판타지 기획서 / 첫 입금 뒤 재민이 그 돈을 어디에 쓰는지가 다음 회를 당기는지.",
+  "helperReceiptPath": "/Users/a2501/Desktop/firefly_studio/edge_repos/v3_ff_foundry/20_model_runs/multi_provider/daily-planning-20260908/grok-web/plan.md.5652.receipt.json",
+  "copyLogPath": "/Users/a2501/Desktop/firefly_studio/edge_repos/v3_ff_foundry/20_model_runs/multi_provider/daily-planning-20260908/grok-web/plan.md.copy.log",
+  "tokenUsage": "unknown; not displayed",
+  "thinkLabel": "40s동안 작업함",
+  "markdownLen": 11613,
+  "headings": [
+    "현대판타지 기획서",
+    "1. 작품 정보와 독자 약속",
+    "2. 작품의 육하원칙",
+    "3. 장기·구간·회차의 목적 연결",
+    "4. 등장인물과 관계",
+    "5. 무대·시간·우위가 사건을 만드는 방식",
+    "6. 전체 줄거리와 장기 전개",
+    "7. 독자 보상과 연재 지속성",
+    "8. 참고 작품의 역설계·조합·변주",
+    "9. 기획 의도와 집필 계획"
+  ],
+  "stopButtonPresentAtCapture": false
+}

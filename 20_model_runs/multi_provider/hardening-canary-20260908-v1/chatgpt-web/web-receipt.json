@@ -1,0 +1,24 @@
+{
+  "status": "submitted",
+  "serviceUrl": "https://chatgpt.com/",
+  "conversationUrl": "https://chatgpt.com/c/6a9f4e24-dcb4-83ee-8db4-90003a80cc01",
+  "observedMode": "Pro",
+  "observedModeDetails": {
+    "menuLabel": "추론 수준",
+    "modelLabel": "최신",
+    "modelDescription": "composer pill showed 6 / Pro; selected radio 최신; alternatives GPT-5.6 Sol, GPT-5.5",
+    "sliderLabel": "Pro, 5개 중 5번째.",
+    "sliderValueNow": "4",
+    "sliderMin": "0",
+    "sliderMax": "4"
+  },
+  "taskSpaceId": 7,
+  "taskSpaceName": "hardening-canary-20260908-v1-chatgpt-web",
+  "submittedAt": "2026-09-07T23:52:41.246534+00:00",
+  "inputPath": "input.md",
+  "inputSha256": "072924b244fca1985ba5bd34e385d6c78950eba1f3c9bb2111c6542c1db399c2",
+  "route": "chatgpt-web",
+  "conversationUrlInitial": "https://chatgpt.com/c/WEB:297151b4-3260-4a4f-8a2f-680a3348d1fa",
+  "stopSelector": "[data-testid=\"stop-button\"]",
+  "responseSelector": "[data-message-author-role=\"assistant\"]"
+}

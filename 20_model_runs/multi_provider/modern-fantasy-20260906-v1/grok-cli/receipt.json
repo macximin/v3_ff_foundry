@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "firefly-canary-run/v1",
+  "route": "grok-cli",
+  "modelRequested": "grok-4.6",
+  "reasoningRequested": "high",
+  "inputSha256": "f5509d0d0757450a781f82c7766e1b71137b3cbd8a8f09e917ed4a5545e1c8d2",
+  "outputSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "finishedAt": "2026-09-06T14:14:03.601001+00:00",
+  "status": "failed",
+  "error": "Hermes terminal timeout at 420 seconds; child final response and receipt were not returned",
+  "elapsedSeconds": 420,
+  "elapsedSource": "Hermes manager report; exact child elapsed unknown",
+  "exitCode": null,
+  "usage": null,
+  "outputCharacters": 0,
+  "invocation": "Hermes terminal manager; --verbatim enabled",
+  "resultStatus": "unconfirmed after manager terminal timeout",
+  "serviceSessionId": "01a07709-7d42-7a82-a507-8841aab736ff",
+  "localSessionEvidence": "Native Grok chat history had no assistant message after terminal timeout; no recoverable completed response"
+}

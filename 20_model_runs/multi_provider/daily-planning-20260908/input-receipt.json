@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "firefly-canary-input/v1",
+  "batchId": "daily-planning-20260908",
+  "createdAt": "2026-09-07T17:01:30.481796+00:00",
+  "promptSha256": "51315a8fc250c3001bb72958211d9e67add4eb1a44b2354fe6f75b75746a9151",
+  "sources": [
+    {
+      "id": "trillion-salary-rookie",
+      "title": "연봉 1조 신입사원",
+      "source": "서오/연봉 1조 신입사원_서오_합본.txt",
+      "analysisSha256": "a9248e71f3bb1ce4c50d0d8ddf43a34117fdff60998ef739853b314bfb8aafed",
+      "sourceSha256": "72353f790d8ee488a7832ee08008bd96a1681af7438a21ba7811a790223bc7b7",
+      "excerptSha256": "e8f6cf78b58c2b2054356f30dc395e61622453c3932ed540f2771e4f6e91cb6d",
+      "excerptCharacters": 7000
+    },
+    {
+      "id": "goldspoon-life-manual",
+      "title": "금수저생활백서",
+      "source": "강동호/금수저생활백서_강동호_합본.txt",
+      "analysisSha256": "5fa742fc0fb586e5decec67001911d4619d1587c821f00180e2a63cc4ff473fe",
+      "sourceSha256": "0b3542d640338c504cf7fd7c26c559e753357244dfcd451ddd7d4c75a920f93f",
+      "excerptSha256": "a69b238e9899d4f4fb215327258e2c5ac7ba1bdea8c7cf5b8cc317974ec85a84",
+      "excerptCharacters": 7000
+    },
+    {
+      "id": "nouveau-riche-rascal",
+      "title": "졸부집 망나니(개정판)",
+      "source": "흑곰작가/졸부집 망나니(개정판)_흑곰작가_합본.txt",
+      "analysisSha256": "275cd2a6ac0aff9845a5a6483d39645aa12f2461c5c8b29f3b0bde9af72a15e9",
+      "sourceSha256": "67997af4a5922c21e2852545c958c3f71ec6b1a30a679271d0a7d41c87a947a8",
+      "excerptSha256": "b21dde2dc2f502139099cfdb3e1d363a94b891ec432629366c914780ea8509d9",
+      "excerptCharacters": 7000
+    }
+  ],
+  "templateFullSha256": "5adf86931024ac26cd2cd4190b0c7a07516df8b38f1ace7e2f3b0372c4a6e01c",
+  "hilReadAt": "2026-09-07T17:01:30.481991+00:00"
+}

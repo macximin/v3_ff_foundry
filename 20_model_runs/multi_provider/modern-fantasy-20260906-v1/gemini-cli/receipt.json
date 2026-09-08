@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "firefly-canary-run/v1",
+  "route": "gemini-cli",
+  "modelRequested": "gemini-3.1-pro-high",
+  "reasoningRequested": "high",
+  "inputSha256": "f5509d0d0757450a781f82c7766e1b71137b3cbd8a8f09e917ed4a5545e1c8d2",
+  "outputSha256": "2f61b25cd1407e7c6b0c50c1ed86e44bf8600c58a92f98c6012f23437a34cbe3",
+  "startedAt": "2026-09-06T13:55:21.756393+00:00",
+  "finishedAt": "2026-09-06T13:57:43.568822+00:00",
+  "elapsedSeconds": 141.8,
+  "exitCode": 0,
+  "status": "response_received",
+  "error": null,
+  "usage": {
+    "input_tokens": 33905,
+    "output_tokens": 13741,
+    "thinking_tokens": 7510,
+    "cache_read_tokens": 8158,
+    "total_tokens": 47646
+  },
+  "outputCharacters": 10195,
+  "invocation": "CLI child; manager receipt separate"
+}

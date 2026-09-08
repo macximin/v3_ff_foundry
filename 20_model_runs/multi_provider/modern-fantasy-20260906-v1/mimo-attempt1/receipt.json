@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "firefly-canary-run/v1",
+  "route": "mimo",
+  "modelRequested": "mimo-v2.5-free",
+  "reasoningRequested": "provider default",
+  "inputSha256": "f5509d0d0757450a781f82c7766e1b71137b3cbd8a8f09e917ed4a5545e1c8d2",
+  "outputSha256": "ff93640f0dca1965dbc539cd5419e662f3864f1dc049ab727e2cd398fd706813",
+  "startedAt": "2026-09-06T13:55:39.221191+00:00",
+  "finishedAt": "2026-09-06T13:56:17.416230+00:00",
+  "elapsedSeconds": 38.2,
+  "exitCode": 0,
+  "status": "response_received",
+  "error": null,
+  "usage": [
+    {
+      "id": "prt_077016d55001oY5y97o9zVx0mj",
+      "reason": "stop",
+      "messageID": "msg_07700dbbe002uHI5XAyf2Gq3UO",
+      "sessionID": "ses_f88ff2508ffep24o385g8uzP9K",
+      "type": "step-finish",
+      "tokens": {
+        "total": 42845,
+        "input": 39875,
+        "output": 1178,
+        "reasoning": 0,
+        "cache": {
+          "write": 0,
+          "read": 1792
+        }
+      },
+      "cost": 0
+    }
+  ],
+  "outputCharacters": 1318,
+  "invocation": "CLI child; manager receipt separate"
+}

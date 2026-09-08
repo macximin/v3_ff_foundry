@@ -1,0 +1,36 @@
+{
+  "status": "needs-human-control",
+  "error": "user is controlling this task space; ego-browser paused after copy-button click (likely clipboard permission or GUI takeover). Agent stopped per skill; no workaround space created; no resubmit.",
+  "conversationUrl": "https://gemini.google.com/app/cfe77123d9ab276b?hl=ko",
+  "observedMode": "Pro Extended",
+  "observedModeLabel": "Pro Extended / 확장된 사고 모델",
+  "taskSpaceId": 18,
+  "submittedAt": "2026-09-06T16:06:34.440Z",
+  "pausedAt": "2026-09-06T16:11:12Z",
+  "serviceUrl": "https://gemini.google.com/app?hl=ko",
+  "inputSha256": "f5509d0d0757450a781f82c7766e1b71137b3cbd8a8f09e917ed4a5545e1c8d2",
+  "extractionMethod": "paused-before-final-dom-save",
+  "generationObserved": {
+    "stopButtonGone": true,
+    "completionControls": [
+      "대답이 마음에 들어요",
+      "대답이 마음에 들지 않아요",
+      "다시 실행",
+      "복사"
+    ],
+    "responseHeadings": [
+      "1. 작품 정보와 독자 약속",
+      "2. 작품의 육하원칙",
+      "3. 장기·구간·회차의 목적 연결",
+      "4. 등장인물과 관계",
+      "5. 무대·시간·우위가 사건을 만드는 방식",
+      "6. 전체 줄거리와 장기 전개",
+      "7. 독자 보상과 연재 지속성",
+      "8. 참고 작품의 역설계·조합·변주",
+      "9. 기획 의도와 집필 계획"
+    ],
+    "messageContentId": "message-content-id-r_085cbda7fc24dbaf",
+    "innerTextLen": 8423,
+    "planMdSaved": false
+  }
+}

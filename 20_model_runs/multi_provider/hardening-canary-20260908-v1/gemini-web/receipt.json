@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "firefly-planning-process/v1",
+  "route": "gemini-web",
+  "modelRequested": "web-observed",
+  "inputSha256": "072924b244fca1985ba5bd34e385d6c78950eba1f3c9bb2111c6542c1db399c2",
+  "reasoningRequested": "highest-available",
+  "timeoutSeconds": 3600,
+  "queuedAt": "2026-09-07T23:49:28.320458+00:00",
+  "requestedWebMode": "highest-available",
+  "controllerModelRequested": "grok-4.6",
+  "controllerReasoningRequested": "high",
+  "status": "failed",
+  "startedAt": "2026-09-07T23:49:28.388641+00:00",
+  "workerPid": 175,
+  "writerPid": 184,
+  "error": "JobInterrupted: Process interrupted by signal 15",
+  "exitCode": -15,
+  "runtimeProvenance": {
+    "startManifest": "runtime-start.json",
+    "endManifest": "runtime-end.json",
+    "startSha256": "aca6024add0f74a1a32c9feee08aa60b524a6bcc4fe1b621638ee3d139ffb2ec",
+    "endSha256": "d9b6dae882dc944319d7951ccd3b90ad1d2ef7601509ad42075c160df93425c0",
+    "changedFiles": [],
+    "driftDetected": false,
+    "meaning": "File observations only; changed files flag a potentially mixed execution."
+  },
+  "finishedAt": "2026-09-08T00:01:27.551305+00:00",
+  "elapsedSeconds": 719.15,
+  "rawFiles": {
+    "stdout.raw": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr.raw": "844a458eca63874567c66118fcec49613fc5a86fb0a41e64cc0e39ca54bea428"
+  },
+  "meaning": "Process completion only; response extraction, format, publication and HIL are separate."
+}

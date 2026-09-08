@@ -1,0 +1,6 @@
+{
+  "requestedReasoning": "medium",
+  "effectiveReasoning": null,
+  "source": "CLI configured argv and exact Hermes session export",
+  "note": "Session model_config.reasoning_config is null; requested setting is not proof of effective reasoning."
+}

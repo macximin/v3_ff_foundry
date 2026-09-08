@@ -1,0 +1,126 @@
+{
+  "schemaVersion": "firefly-planning-canary/v1",
+  "id": "fcp-82824a82b897dacf36889e89",
+  "batchId": "sentinel-canary-20260907",
+  "title": "gemini-web · sentinel-canary-20260907",
+  "generatedAt": "2026-09-06T16:11:27.639406+00:00",
+  "state": "failed",
+  "markdown": "",
+  "inputSha256": "f5509d0d0757450a781f82c7766e1b71137b3cbd8a8f09e917ed4a5545e1c8d2",
+  "outputSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "author": {
+    "route": "gemini-web",
+    "model": "web-observed",
+    "reasoning": "웹 관측 정보 참조"
+  },
+  "issues": [
+    "합의한 1~9절 확인 필요",
+    "WHO 확인 필요",
+    "WHAT 확인 필요",
+    "HOW 확인 필요",
+    "WHERE 확인 필요",
+    "WHEN 확인 필요",
+    "WHY 확인 필요",
+    "user is controlling this task space; ego-browser paused after copy-button click (likely clipboard permission or GUI takeover). Agent stopped per skill; no workaround space created; no resubmit."
+  ],
+  "reviewNotes": [],
+  "receipt": {
+    "inputSha256": "f5509d0d0757450a781f82c7766e1b71137b3cbd8a8f09e917ed4a5545e1c8d2",
+    "outputSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "rawWriterOutputSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "input": {
+      "schemaVersion": "firefly-canary-input/v1",
+      "batchId": "sentinel-canary-20260907",
+      "createdAt": "2026-09-06T13:54:30.152472+00:00",
+      "templatePath": "docs/templates/webnovel-project-plan-v1.md",
+      "templateFullSha256": "5adf86931024ac26cd2cd4190b0c7a07516df8b38f1ace7e2f3b0372c4a6e01c",
+      "promptSha256": "f5509d0d0757450a781f82c7766e1b71137b3cbd8a8f09e917ed4a5545e1c8d2",
+      "promptBytes": 107597,
+      "sources": [
+        {
+          "work": "doksik-chaebol3",
+          "title": "독식하는 재벌 3세",
+          "sourceSha256": "66f3e7df3123343c14a7134108dc59940511f40372493a549cba8ae709df4b45",
+          "excerptCharacters": 7000,
+          "excerptSha256": "aa51a86143aa171c8feb7aea88df6303cbc0887613242e5c971f395e118bb05b",
+          "analysisSha256": "b63a07d2f03d47494694276418a56f95a3ff9876e0567afb210f7d930bd438bc"
+        },
+        {
+          "work": "goldspoon-investment-manual",
+          "title": "금수저 투자백서",
+          "sourceSha256": "1ac62315ac08181c712154e480d6cd6951fb61b8825ab6bb28af88d4fdb534af",
+          "excerptCharacters": 7000,
+          "excerptSha256": "e9b137a93bfa0cb9a486409c916ca49694ee682e3614288789c9ee1c3056ea60",
+          "analysisSha256": "87f8989b323510154b2267064a4bb2ab15b3b695963afe57ba1ff6e90ed007d8"
+        },
+        {
+          "work": "trillion-salary-rookie",
+          "title": "연봉 1조 신입사원",
+          "sourceSha256": "72353f790d8ee488a7832ee08008bd96a1681af7438a21ba7811a790223bc7b7",
+          "excerptCharacters": 7000,
+          "excerptSha256": "e8f6cf78b58c2b2054356f30dc395e61622453c3932ed540f2771e4f6e91cb6d",
+          "analysisSha256": "a9248e71f3bb1ce4c50d0d8ddf43a34117fdff60998ef739853b314bfb8aafed"
+        }
+      ],
+      "ownerScope": "Native sentinel migration canary, six routes, identical baseline input for transport comparison; no canon promotion"
+    },
+    "process": {
+      "schemaVersion": "firefly-planning-process/v1",
+      "route": "gemini-web",
+      "modelRequested": "web-observed",
+      "inputSha256": "f5509d0d0757450a781f82c7766e1b71137b3cbd8a8f09e917ed4a5545e1c8d2",
+      "timeoutSeconds": 3600,
+      "queuedAt": "2026-09-06T16:03:49.885624+00:00",
+      "status": "process_completed",
+      "startedAt": "2026-09-06T16:03:49.924631+00:00",
+      "workerPid": 8172,
+      "writerPid": 8176,
+      "exitCode": 0,
+      "finishedAt": "2026-09-06T16:11:27.639406+00:00",
+      "elapsedSeconds": 457.71,
+      "rawFiles": {
+        "stdout.raw": "081299a2af5d59c0deca927acc07f4d201ec278b39669c589973b8d5abac9132",
+        "stderr.raw": "febf476d41474d3336f29af858dd6ac1a070dd2c11da10bdffecaaf340bd946d"
+      },
+      "meaning": "Process completion only; response extraction, format, publication and HIL are separate."
+    },
+    "web": {
+      "status": "needs-human-control",
+      "error": "user is controlling this task space; ego-browser paused after copy-button click (likely clipboard permission or GUI takeover). Agent stopped per skill; no workaround space created; no resubmit.",
+      "conversationUrl": "https://gemini.google.com/app/cfe77123d9ab276b?hl=ko",
+      "observedMode": "Pro Extended",
+      "observedModeLabel": "Pro Extended / 확장된 사고 모델",
+      "taskSpaceId": 18,
+      "submittedAt": "2026-09-06T16:06:34.440Z",
+      "pausedAt": "2026-09-06T16:11:12Z",
+      "serviceUrl": "https://gemini.google.com/app?hl=ko",
+      "inputSha256": "f5509d0d0757450a781f82c7766e1b71137b3cbd8a8f09e917ed4a5545e1c8d2",
+      "extractionMethod": "paused-before-final-dom-save",
+      "generationObserved": {
+        "stopButtonGone": true,
+        "completionControls": [
+          "대답이 마음에 들어요",
+          "대답이 마음에 들지 않아요",
+          "다시 실행",
+          "복사"
+        ],
+        "responseHeadings": [
+          "1. 작품 정보와 독자 약속",
+          "2. 작품의 육하원칙",
+          "3. 장기·구간·회차의 목적 연결",
+          "4. 등장인물과 관계",
+          "5. 무대·시간·우위가 사건을 만드는 방식",
+          "6. 전체 줄거리와 장기 전개",
+          "7. 독자 보상과 연재 지속성",
+          "8. 참고 작품의 역설계·조합·변주",
+          "9. 기획 의도와 집필 계획"
+        ],
+        "messageContentId": "message-content-id-r_085cbda7fc24dbaf",
+        "innerTextLen": 8423,
+        "planMdSaved": false
+      }
+    },
+    "usage": null,
+    "qualityStatus": "형식 확인과 사람의 채택은 별개"
+  }
+}

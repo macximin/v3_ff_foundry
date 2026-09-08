@@ -1,0 +1,22 @@
+{
+  "status": "submitted",
+  "serviceUrl": "https://gemini.google.com/app?hl=ko",
+  "conversationUrl": "https://gemini.google.com/app/26eeadd042f22cf0?hl=ko",
+  "observedMode": "Pro Extended",
+  "observedModeDetails": {
+    "modelLabel": "3.1 Pro",
+    "modelDescription": "고급 추론",
+    "menuModeLabel": "확장된 사고 모델",
+    "menuModeDescription": "복잡한 문제 해결",
+    "buttonAriaLabel": "모드 선택 도구 열기, 현재 Pro Extended 모드 사용 중"
+  },
+  "taskSpaceId": 6,
+  "taskSpaceName": "gemini-web-hardening-canary-20260908-v1",
+  "submittedAt": "2026-09-07T23:51:49.388002+00:00",
+  "inputSha256": "072924b244fca1985ba5bd34e385d6c78950eba1f3c9bb2111c6542c1db399c2",
+  "inputBytes": 131337,
+  "stopSelectorObserved": "button[aria-label=\"대답 생성 중지\"]",
+  "notes": "Submitted once with input.md attached. Conversation URL may update after chat id assignment.",
+  "observedStopSelector": "button[aria-label=\"대답 생성 중지\"]",
+  "observedResponseSelector": "message-content"
+}

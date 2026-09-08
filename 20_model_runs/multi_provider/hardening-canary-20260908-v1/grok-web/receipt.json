@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "firefly-planning-process/v1",
+  "route": "grok-web",
+  "modelRequested": "web-observed",
+  "inputSha256": "072924b244fca1985ba5bd34e385d6c78950eba1f3c9bb2111c6542c1db399c2",
+  "reasoningRequested": "highest-available",
+  "timeoutSeconds": 3600,
+  "queuedAt": "2026-09-07T23:29:45.919184+00:00",
+  "requestedWebMode": "highest-available",
+  "controllerModelRequested": "grok-4.6",
+  "controllerReasoningRequested": "high",
+  "status": "process_completed",
+  "startedAt": "2026-09-07T23:29:45.959425+00:00",
+  "workerPid": 68977,
+  "writerPid": 68985,
+  "exitCode": 0,
+  "finishedAt": "2026-09-07T23:42:39.852486+00:00",
+  "elapsedSeconds": 771.83,
+  "rawFiles": {
+    "stdout.raw": "61c801540ce112ac399a735447bc66f18cd82f7fc6b4adcd24b94702a9761e96",
+    "stderr.raw": "488df5941d603728921b66d28a2db132784d3e678362720db4e778b49e6355d6"
+  },
+  "meaning": "Process completion only; response extraction, format, publication and HIL are separate."
+}

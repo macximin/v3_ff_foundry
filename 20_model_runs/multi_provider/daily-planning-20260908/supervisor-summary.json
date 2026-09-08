@@ -1,0 +1,60 @@
+{
+  "facts": {
+    "batchId": "daily-planning-20260908",
+    "counts": {
+      "대상 수": 6,
+      "본문 완료": 5,
+      "형식 미완성": 1,
+      "응답 미회수": 0
+    },
+    "items": [
+      {
+        "id": "fcp-083fa4dc3e9b43ade31afdf2",
+        "state": "incomplete",
+        "outputSha256": "eeeb886c97f9f5ea8d74e1f3488e0922e5854d05c6b5600015cdfedfb51c09a1",
+        "url": "https://storyyard-wjjo.macximin11123.chatgpt.site/review/canary/fcp-083fa4dc3e9b43ade31afdf2"
+      },
+      {
+        "id": "fcp-05be0e7f718a1cb90e3095c3",
+        "state": "complete",
+        "outputSha256": "f233828eaee72efaa985200b1555a27b7f4c8b1f360f8a07c36bb1ad276ab36e",
+        "url": "https://storyyard-wjjo.macximin11123.chatgpt.site/review/canary/fcp-05be0e7f718a1cb90e3095c3"
+      },
+      {
+        "id": "fcp-59d0bd60dfc70540f9b43fda",
+        "state": "complete",
+        "outputSha256": "1b9c6234bf549cee3d5700eea7b07abd70799e1929527929edabe289f4b88f5e",
+        "url": "https://storyyard-wjjo.macximin11123.chatgpt.site/review/canary/fcp-59d0bd60dfc70540f9b43fda"
+      },
+      {
+        "id": "fcp-cecd8cbb580fa29f5ad0b0a4",
+        "state": "complete",
+        "outputSha256": "d51067d9829f91536824cd36dab51e0ebed17fa7d5f51e8b3111edc450ddbae3",
+        "url": "https://storyyard-wjjo.macximin11123.chatgpt.site/review/canary/fcp-cecd8cbb580fa29f5ad0b0a4"
+      },
+      {
+        "id": "fcp-e00ad89e6640daa66a221010",
+        "state": "complete",
+        "outputSha256": "87ccfa1de49cd8bf4dd95fea681963c804f469d3ecd4a2dbfd38cf5eef3d4e62",
+        "url": "https://storyyard-wjjo.macximin11123.chatgpt.site/review/canary/fcp-e00ad89e6640daa66a221010"
+      },
+      {
+        "id": "fcp-81073b1080843a2e2ea27474",
+        "state": "complete",
+        "outputSha256": "42d69fc2cf0d40e3ece7afc14e9e6b7ffe068d7885709693e90822dc9852d2ba",
+        "url": "https://storyyard-wjjo.macximin11123.chatgpt.site/review/canary/fcp-81073b1080843a2e2ea27474"
+      }
+    ]
+  },
+  "grokCommentary": {
+    "summary": "배치 본문은 회수되었고, 한 건만 형식이 미완성이다.",
+    "nextAction": "미완성 항목의 형식을 맞춰 완료 상태로 닫는다.",
+    "counts": {
+      "대상 수": 6,
+      "본문 완료": 5,
+      "형식 미완성": 1,
+      "응답 미회수": 0
+    }
+  },
+  "authority": "Commentary only; canonical numbers come from counts and receipts."
+}

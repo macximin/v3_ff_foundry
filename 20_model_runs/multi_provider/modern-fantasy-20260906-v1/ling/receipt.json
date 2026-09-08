@@ -1,0 +1,144 @@
+{
+  "schemaVersion": "firefly-canary-run/v1",
+  "route": "ling",
+  "modelRequested": "ling-3.0-flash-fin-free",
+  "reasoningRequested": "provider default",
+  "inputSha256": "f5509d0d0757450a781f82c7766e1b71137b3cbd8a8f09e917ed4a5545e1c8d2",
+  "outputSha256": "df4791f507f72d6712aa735303ba4fb929c5e64514a3cd47d7bba5362fd9f2ce",
+  "startedAt": "2026-09-06T13:57:52.439549+00:00",
+  "finishedAt": "2026-09-06T14:00:10.023394+00:00",
+  "elapsedSeconds": 137.6,
+  "exitCode": 0,
+  "status": "response_received",
+  "error": null,
+  "usage": [
+    {
+      "id": "prt_077031c9e001eYpswKi1qe1Siy",
+      "reason": "tool-calls",
+      "messageID": "msg_07702e355002iGxIkmox02X40B",
+      "sessionID": "ses_f88fd1d79ffeg7W9JtE78FRfhC",
+      "type": "step-finish",
+      "tokens": {
+        "total": 44563,
+        "input": 38727,
+        "output": 0,
+        "reasoning": 4174,
+        "cache": {
+          "write": 0,
+          "read": 1920
+        }
+      },
+      "cost": 0
+    },
+    {
+      "id": "prt_0770368f5001IzkjrgjsnFHxru",
+      "reason": "tool-calls",
+      "messageID": "msg_077031ca60026dO9GEnSRxQKYv",
+      "sessionID": "ses_f88fd1d79ffeg7W9JtE78FRfhC",
+      "type": "step-finish",
+      "tokens": {
+        "total": 50335,
+        "input": 246,
+        "output": 0,
+        "reasoning": 6046,
+        "cache": {
+          "write": 0,
+          "read": 44544
+        }
+      },
+      "cost": 0
+    },
+    {
+      "id": "prt_077039b3c001yymrIz9nscIGH2",
+      "reason": "tool-calls",
+      "messageID": "msg_0770368fb002INqMU851fsB0Wa",
+      "sessionID": "ses_f88fd1d79ffeg7W9JtE78FRfhC",
+      "type": "step-finish",
+      "tokens": {
+        "total": 51791,
+        "input": 386,
+        "output": 85,
+        "reasoning": 1144,
+        "cache": {
+          "write": 0,
+          "read": 50176
+        }
+      },
+      "cost": 0
+    },
+    {
+      "id": "prt_0770433fb001aYFI5KyIdTL4uq",
+      "reason": "tool-calls",
+      "messageID": "msg_077039b48002PnDmj7chkryxIm",
+      "sessionID": "ses_f88fd1d79ffeg7W9JtE78FRfhC",
+      "type": "step-finish",
+      "tokens": {
+        "total": 51977,
+        "input": 139,
+        "output": 111,
+        "reasoning": 15,
+        "cache": {
+          "write": 0,
+          "read": 51712
+        }
+      },
+      "cost": 0
+    },
+    {
+      "id": "prt_077043b1f001BogK9ReDW4w004",
+      "reason": "tool-calls",
+      "messageID": "msg_077043404002R3SZH65JLIa8wd",
+      "sessionID": "ses_f88fd1d79ffeg7W9JtE78FRfhC",
+      "type": "step-finish",
+      "tokens": {
+        "total": 52194,
+        "input": 69,
+        "output": 105,
+        "reasoning": 52,
+        "cache": {
+          "write": 0,
+          "read": 51968
+        }
+      },
+      "cost": 0
+    },
+    {
+      "id": "prt_07704dde8001EKODOwh6OM4EXJ",
+      "reason": "tool-calls",
+      "messageID": "msg_077043b24002ZTUkKxqj5Z0gEQ",
+      "sessionID": "ses_f88fd1d79ffeg7W9JtE78FRfhC",
+      "type": "step-finish",
+      "tokens": {
+        "total": 62757,
+        "input": 222,
+        "output": 10444,
+        "reasoning": 59,
+        "cache": {
+          "write": 0,
+          "read": 52032
+        }
+      },
+      "cost": 0
+    },
+    {
+      "id": "prt_07704f9fc001zOpKJ4Nlb5dxgQ",
+      "reason": "stop",
+      "messageID": "msg_07704ddef0025Nf51NW5aAfPnt",
+      "sessionID": "ses_f88fd1d79ffeg7W9JtE78FRfhC",
+      "type": "step-finish",
+      "tokens": {
+        "total": 63386,
+        "input": 10592,
+        "output": 266,
+        "reasoning": 304,
+        "cache": {
+          "write": 0,
+          "read": 52224
+        }
+      },
+      "cost": 0
+    }
+  ],
+  "outputCharacters": 17133,
+  "invocation": "CLI child; manager receipt separate"
+}

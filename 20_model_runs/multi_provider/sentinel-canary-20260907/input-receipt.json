@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "firefly-canary-input/v1",
+  "batchId": "sentinel-canary-20260907",
+  "createdAt": "2026-09-06T13:54:30.152472+00:00",
+  "templatePath": "docs/templates/webnovel-project-plan-v1.md",
+  "templateFullSha256": "5adf86931024ac26cd2cd4190b0c7a07516df8b38f1ace7e2f3b0372c4a6e01c",
+  "promptSha256": "f5509d0d0757450a781f82c7766e1b71137b3cbd8a8f09e917ed4a5545e1c8d2",
+  "promptBytes": 107597,
+  "sources": [
+    {
+      "work": "doksik-chaebol3",
+      "title": "독식하는 재벌 3세",
+      "sourceSha256": "66f3e7df3123343c14a7134108dc59940511f40372493a549cba8ae709df4b45",
+      "excerptCharacters": 7000,
+      "excerptSha256": "aa51a86143aa171c8feb7aea88df6303cbc0887613242e5c971f395e118bb05b",
+      "analysisSha256": "b63a07d2f03d47494694276418a56f95a3ff9876e0567afb210f7d930bd438bc"
+    },
+    {
+      "work": "goldspoon-investment-manual",
+      "title": "금수저 투자백서",
+      "sourceSha256": "1ac62315ac08181c712154e480d6cd6951fb61b8825ab6bb28af88d4fdb534af",
+      "excerptCharacters": 7000,
+      "excerptSha256": "e9b137a93bfa0cb9a486409c916ca49694ee682e3614288789c9ee1c3056ea60",
+      "analysisSha256": "87f8989b323510154b2267064a4bb2ab15b3b695963afe57ba1ff6e90ed007d8"
+    },
+    {
+      "work": "trillion-salary-rookie",
+      "title": "연봉 1조 신입사원",
+      "sourceSha256": "72353f790d8ee488a7832ee08008bd96a1681af7438a21ba7811a790223bc7b7",
+      "excerptCharacters": 7000,
+      "excerptSha256": "e8f6cf78b58c2b2054356f30dc395e61622453c3932ed540f2771e4f6e91cb6d",
+      "analysisSha256": "a9248e71f3bb1ce4c50d0d8ddf43a34117fdff60998ef739853b314bfb8aafed"
+    }
+  ],
+  "ownerScope": "Native sentinel migration canary, six routes, identical baseline input for transport comparison; no canon promotion"
+}

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "firefly-canary-run/v1",
+  "route": "pickle",
+  "modelRequested": "big-pickle",
+  "reasoningRequested": "provider default",
+  "inputSha256": "f5509d0d0757450a781f82c7766e1b71137b3cbd8a8f09e917ed4a5545e1c8d2",
+  "outputSha256": "4d1a2fd4d5e22552dfc86638bde663bb9c4bc034d01863747fc7d64fdb7023d2",
+  "startedAt": "2026-09-06T14:03:19.918773+00:00",
+  "finishedAt": "2026-09-06T14:06:52.022556+00:00",
+  "elapsedSeconds": 212.1,
+  "exitCode": 0,
+  "status": "response_received",
+  "error": null,
+  "usage": [
+    {
+      "id": "prt_0770b1c48001qQlBZpZ4tQ6Vje",
+      "reason": "stop",
+      "messageID": "msg_07707e2b9001klX1N0rObMumj6",
+      "sessionID": "ses_f88f81e1effeO98wppIbDoWcvc",
+      "type": "step-finish",
+      "tokens": {
+        "total": 42079,
+        "input": 32706,
+        "output": 9373,
+        "reasoning": 0,
+        "cache": {
+          "write": 0,
+          "read": 0
+        }
+      },
+      "cost": 0
+    }
+  ],
+  "outputCharacters": 12103,
+  "invocation": "CLI child; manager receipt separate"
+}

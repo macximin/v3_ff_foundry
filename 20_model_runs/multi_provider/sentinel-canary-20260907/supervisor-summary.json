@@ -1,0 +1,54 @@
+{
+  "facts": {
+    "batchId": "sentinel-canary-20260907",
+    "counts": {
+      "대상 수": 6,
+      "본문 완료": 4,
+      "형식 미완성": 1,
+      "응답 미회수": 1
+    },
+    "items": [
+      {
+        "id": "fcp-04b08ac897b204fe3012a963",
+        "state": "incomplete",
+        "outputSha256": "69c5c2cf2ee3f1b7a2a24627585db3845ca3b32177a8324ed5b7226f428f6f79",
+        "url": "https://storyyard-wjjo.macximin11123.chatgpt.site/review/canary/fcp-04b08ac897b204fe3012a963"
+      },
+      {
+        "id": "fcp-3544ade679788b74e46acf97",
+        "state": "complete",
+        "outputSha256": "774d9ccb262c13d747a5a2a789e3ab9c571ed0a8e9d3b4f3c2684d1531c49d37",
+        "url": "https://storyyard-wjjo.macximin11123.chatgpt.site/review/canary/fcp-3544ade679788b74e46acf97"
+      },
+      {
+        "id": "fcp-2afbb6364ad86828c259c57e",
+        "state": "complete",
+        "outputSha256": "324752d2e719b87273d0b77e1924b0bcb6eccd05c5f299de0ebfe959d30bb1c0",
+        "url": "https://storyyard-wjjo.macximin11123.chatgpt.site/review/canary/fcp-2afbb6364ad86828c259c57e"
+      },
+      {
+        "id": "fcp-548367271cef3d51dd7d80bc",
+        "state": "complete",
+        "outputSha256": "98f282eb043eae3611088f8281644a25c7b433291bc28158a3b4a3b2d2166d7c",
+        "url": "https://storyyard-wjjo.macximin11123.chatgpt.site/review/canary/fcp-548367271cef3d51dd7d80bc"
+      },
+      {
+        "id": "fcp-742506e027b94c1ec9f3da02",
+        "state": "complete",
+        "outputSha256": "0952a2a392298e555529458b087dc54a7008ceffbffa514d418578ce0c844940",
+        "url": "https://storyyard-wjjo.macximin11123.chatgpt.site/review/canary/fcp-742506e027b94c1ec9f3da02"
+      },
+      {
+        "id": "fcp-82824a82b897dacf36889e89",
+        "state": "failed",
+        "outputSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "url": "https://storyyard-wjjo.macximin11123.chatgpt.site/review/canary/fcp-82824a82b897dacf36889e89"
+      }
+    ]
+  },
+  "grokCommentary": {
+    "summary": "배치 sentinel-canary-20260907은 대상 6건이다. 본문 완료 4건(fcp-3544ade679788b74e46acf97, fcp-2afbb6364ad86828c259c57e, fcp-548367271cef3d51dd7d80bc, fcp-742506e027b94c1ec9f3da02). 형식 미완성 1건(fcp-04b08ac897b204fe3012a963, state=incomplete). 응답 미회수 1건(fcp-82824a82b897dacf36889e89, state=failed, 빈 본문 해시 e3b0c442…).",
+    "nextAction": "미완성 1건의 형식 마감과 미회수 1건의 재요청/회수를 처리한다."
+  },
+  "authority": "Commentary only; canonical numbers come from counts and receipts."
+}

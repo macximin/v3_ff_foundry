@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "firefly-canary-run/v1",
+  "route": "pickle",
+  "modelRequested": "big-pickle",
+  "reasoningRequested": "provider default",
+  "inputSha256": "f5509d0d0757450a781f82c7766e1b71137b3cbd8a8f09e917ed4a5545e1c8d2",
+  "outputSha256": "00e99ab9a43b0a08455875633b311f637eb75fb9f8717f31edcacda03f42497a",
+  "startedAt": "2026-09-06T13:56:25.403726+00:00",
+  "finishedAt": "2026-09-06T13:58:49.479346+00:00",
+  "elapsedSeconds": 144.1,
+  "exitCode": 0,
+  "status": "response_received",
+  "error": null,
+  "usage": [
+    {
+      "id": "prt_07701d9100012uCDibHtojWphy",
+      "reason": "tool-calls",
+      "messageID": "msg_077018f600025LPREcYte0ZO6O",
+      "sessionID": "ses_f88fe7164ffeInF4zBdlutTin0",
+      "type": "step-finish",
+      "tokens": {
+        "total": 42104,
+        "input": 39864,
+        "output": 448,
+        "reasoning": 0,
+        "cache": {
+          "write": 0,
+          "read": 1792
+        }
+      },
+      "cost": 0
+    },
+    {
+      "id": "prt_07703bf49001qMVVvyTbpDrUCL",
+      "reason": "stop",
+      "messageID": "msg_07701d917002ODQnzw0V0AXOSp",
+      "sessionID": "ses_f88fe7164ffeInF4zBdlutTin0",
+      "type": "step-finish",
+      "tokens": {
+        "total": 48861,
+        "input": 581,
+        "output": 6680,
+        "reasoning": 0,
+        "cache": {
+          "write": 0,
+          "read": 41600
+        }
+      },
+      "cost": 0
+    }
+  ],
+  "outputCharacters": 3224,
+  "invocation": "CLI child; manager receipt separate"
+}
