@@ -1,0 +1,16 @@
+{
+  "date": "2026-09-08",
+  "batchId": "hardening-canary-20260908-v1",
+  "kind": "canary",
+  "genre": "현대판타지",
+  "routes": [
+    "astra",
+    "grok-cli",
+    "gemini-cli",
+    "chatgpt-web",
+    "grok-web",
+    "gemini-web"
+  ],
+  "startedAt": "2026-09-07T23:49:26.961173+00:00",
+  "controllerPid": 134
+}

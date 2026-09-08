@@ -1,0 +1,361 @@
+{
+  "scope": "planning",
+  "mode": "observe-only",
+  "findings": [],
+  "descriptiveStatistics": {
+    "lexical_diversity_ttr": 0.7114967462039046,
+    "by_passive_count": 0,
+    "double_particle_count": 0
+  },
+  "protectedRanges": [
+    {
+      "start": 0,
+      "end": 13,
+      "kind": "heading"
+    },
+    {
+      "start": 68,
+      "end": 87,
+      "kind": "heading"
+    },
+    {
+      "start": 88,
+      "end": 100,
+      "kind": "table"
+    },
+    {
+      "start": 100,
+      "end": 114,
+      "kind": "table"
+    },
+    {
+      "start": 114,
+      "end": 138,
+      "kind": "table"
+    },
+    {
+      "start": 138,
+      "end": 191,
+      "kind": "table"
+    },
+    {
+      "start": 191,
+      "end": 252,
+      "kind": "table"
+    },
+    {
+      "start": 252,
+      "end": 300,
+      "kind": "table"
+    },
+    {
+      "start": 300,
+      "end": 360,
+      "kind": "table"
+    },
+    {
+      "start": 360,
+      "end": 431,
+      "kind": "table"
+    },
+    {
+      "start": 431,
+      "end": 460,
+      "kind": "table"
+    },
+    {
+      "start": 955,
+      "end": 1279,
+      "kind": "reference-hil-receipt-field"
+    },
+    {
+      "start": 1568,
+      "end": 1583,
+      "kind": "heading"
+    },
+    {
+      "start": 1584,
+      "end": 1606,
+      "kind": "table"
+    },
+    {
+      "start": 1606,
+      "end": 1626,
+      "kind": "table"
+    },
+    {
+      "start": 1626,
+      "end": 2005,
+      "kind": "table"
+    },
+    {
+      "start": 2005,
+      "end": 2284,
+      "kind": "table"
+    },
+    {
+      "start": 2284,
+      "end": 2609,
+      "kind": "table"
+    },
+    {
+      "start": 2609,
+      "end": 2894,
+      "kind": "table"
+    },
+    {
+      "start": 2894,
+      "end": 3183,
+      "kind": "table"
+    },
+    {
+      "start": 3183,
+      "end": 3559,
+      "kind": "table"
+    },
+    {
+      "start": 3913,
+      "end": 3935,
+      "kind": "heading"
+    },
+    {
+      "start": 3936,
+      "end": 3995,
+      "kind": "table"
+    },
+    {
+      "start": 3995,
+      "end": 4027,
+      "kind": "table"
+    },
+    {
+      "start": 4027,
+      "end": 4248,
+      "kind": "table"
+    },
+    {
+      "start": 4248,
+      "end": 4492,
+      "kind": "table"
+    },
+    {
+      "start": 4492,
+      "end": 4713,
+      "kind": "table"
+    },
+    {
+      "start": 4714,
+      "end": 4729,
+      "kind": "heading"
+    },
+    {
+      "start": 4730,
+      "end": 4790,
+      "kind": "table"
+    },
+    {
+      "start": 4790,
+      "end": 4822,
+      "kind": "table"
+    },
+    {
+      "start": 4822,
+      "end": 4987,
+      "kind": "table"
+    },
+    {
+      "start": 4987,
+      "end": 5148,
+      "kind": "table"
+    },
+    {
+      "start": 5148,
+      "end": 5314,
+      "kind": "table"
+    },
+    {
+      "start": 5314,
+      "end": 5438,
+      "kind": "table"
+    },
+    {
+      "start": 5438,
+      "end": 5572,
+      "kind": "table"
+    },
+    {
+      "start": 5572,
+      "end": 5674,
+      "kind": "table"
+    },
+    {
+      "start": 6360,
+      "end": 6387,
+      "kind": "heading"
+    },
+    {
+      "start": 7294,
+      "end": 7345,
+      "kind": "table"
+    },
+    {
+      "start": 7345,
+      "end": 7371,
+      "kind": "table"
+    },
+    {
+      "start": 7371,
+      "end": 7476,
+      "kind": "table"
+    },
+    {
+      "start": 7476,
+      "end": 7563,
+      "kind": "table"
+    },
+    {
+      "start": 7563,
+      "end": 7653,
+      "kind": "table"
+    },
+    {
+      "start": 7653,
+      "end": 7748,
+      "kind": "table"
+    },
+    {
+      "start": 7911,
+      "end": 7931,
+      "kind": "heading"
+    },
+    {
+      "start": 9034,
+      "end": 9100,
+      "kind": "table"
+    },
+    {
+      "start": 9100,
+      "end": 9132,
+      "kind": "table"
+    },
+    {
+      "start": 9132,
+      "end": 9283,
+      "kind": "table"
+    },
+    {
+      "start": 9283,
+      "end": 9432,
+      "kind": "table"
+    },
+    {
+      "start": 9432,
+      "end": 9585,
+      "kind": "table"
+    },
+    {
+      "start": 9567,
+      "end": 9579,
+      "kind": "quote"
+    },
+    {
+      "start": 9585,
+      "end": 9722,
+      "kind": "table"
+    },
+    {
+      "start": 9722,
+      "end": 9864,
+      "kind": "table"
+    },
+    {
+      "start": 10218,
+      "end": 10238,
+      "kind": "heading"
+    },
+    {
+      "start": 10847,
+      "end": 10870,
+      "kind": "heading"
+    },
+    {
+      "start": 10847,
+      "end": 12500,
+      "kind": "reference-hil-receipt-section"
+    },
+    {
+      "start": 11118,
+      "end": 11198,
+      "kind": "table"
+    },
+    {
+      "start": 11198,
+      "end": 11230,
+      "kind": "table"
+    },
+    {
+      "start": 11230,
+      "end": 11576,
+      "kind": "table"
+    },
+    {
+      "start": 11576,
+      "end": 11916,
+      "kind": "table"
+    },
+    {
+      "start": 11916,
+      "end": 12274,
+      "kind": "table"
+    },
+    {
+      "start": 12500,
+      "end": 12519,
+      "kind": "heading"
+    },
+    {
+      "start": 12539,
+      "end": 12578,
+      "kind": "quote"
+    },
+    {
+      "start": 12720,
+      "end": 12727,
+      "kind": "quote"
+    },
+    {
+      "start": 12730,
+      "end": 12740,
+      "kind": "quote"
+    }
+  ],
+  "analyzedNonWhitespaceCharacters": 4229,
+  "baseline": {
+    "used": false,
+    "fallbackUsed": false,
+    "upstreamCalibrationDue": true,
+    "warning": "Upstream v2 baseline declares placeholder calibration. Statistics are not a quality or AI-authorship score."
+  },
+  "interpretation": "후보 위치와 기술통계만 기록. 짧은 문장·의도된 반복·자기 이득·보상·고유 표면의 품질을 판정하거나 수정하지 않음.",
+  "schemaVersion": "firefly-prose-observation/v1",
+  "createdAt": "2026-09-07T23:45:38.252512+00:00",
+  "input": {
+    "path": "/Users/a2501/Desktop/firefly_studio/edge_repos/v3_ff_foundry/20_model_runs/multi_provider/hardening-canary-20260908-v1/grok-web/plan.md",
+    "sha256": "692a682d41f3f1c08ac5781234182929cc813be14155809bf006375f800b0953",
+    "bytes": 30212,
+    "characters": 13219,
+    "offsetUnit": "Unicode code points; end exclusive"
+  },
+  "policySha256": "137ad711b8e52856ed332d0a0a5969d9c043629c316307d383bb86d213ac07ab",
+  "upstream": {
+    "repository": "https://github.com/epoko77-ai/im-not-ai",
+    "commit": "9747f036cdc28a1a8aea4dc71fef1f7846eb96f7",
+    "manifestSha256": "5e2d2ad7aa0ef91953bdbb6856d632e4632a28dabb7484b200b6c54cf9e01418",
+    "license": "MIT"
+  },
+  "writes": {
+    "inputModified": false,
+    "sidecarOnly": true,
+    "modelCalls": 0
+  }
+}

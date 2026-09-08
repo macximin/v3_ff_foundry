@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "firefly-operational-exception/v1",
+  "at": "2026-09-07T23:42:48.409545+00:00",
+  "route": "grok-web",
+  "status": "repaired-during-canary",
+  "reason": "Shell PATH reset initially bypassed scoped Ego wrapper; wait parser read stdout while Ego cliLog emitted on stderr. Fixed helper invocation and parsing during this transport. Later Copy ran through guarded process group and verified exact clipboard bytes. This is not an entirely unattended clean run.",
+  "originalSubmissionPreserved": true,
+  "resubmitted": false,
+  "generationConversationUrl": "https://grok.com/c/79ba3f47-3053-4be3-936c-296d79b5e707?rid=a2a5830e-7725-4e79-a0af-961dca4eeb20",
+  "evidence": [
+    "grok-web/web-receipt.json",
+    "grok-web/poll-debug.stderr.txt",
+    "grok-web/plan.md.86651.copy.log",
+    "grok-web/process-groups/86657.json"
+  ],
+  "limits": [
+    "The first transport used older instructions; remaining web routes use explicit guard paths.",
+    "Browser-controller tool policy was operational guidance, not an OS sandbox."
+  ]
+}

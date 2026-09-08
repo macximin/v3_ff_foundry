@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "requestedAt": 1788824437.3228438,
+  "pid": 86651,
+  "output": "/Users/a2501/Desktop/firefly_studio/edge_repos/v3_ff_foundry/20_model_runs/multi_provider/hardening-canary-20260908-v1/grok-web/plan.md",
+  "lockAcquiredAt": 1788824437.322975,
+  "copyProcessGroup": 86652,
+  "copyLogPath": "/Users/a2501/Desktop/firefly_studio/edge_repos/v3_ff_foundry/20_model_runs/multi_provider/hardening-canary-20260908-v1/grok-web/plan.md.86651.copy.log",
+  "copyExitCode": 0,
+  "sha256": "692a682d41f3f1c08ac5781234182929cc813be14155809bf006375f800b0953",
+  "bytes": 30212,
+  "characters": 13219,
+  "capturedAt": 1788824439.550064,
+  "method": "ego-copy+os-pbpaste",
+  "verified": true,
+  "finishedAt": 1788824439.5500941
+}

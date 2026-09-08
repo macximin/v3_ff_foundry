@@ -1,0 +1,14 @@
+{
+  "status": "complete",
+  "requestedAt": 1788801830.487196,
+  "pid": 10315,
+  "output": "/Users/a2501/Desktop/firefly_studio/edge_repos/v3_ff_foundry/20_model_runs/multi_provider/daily-planning-20260908/chatgpt-web/plan.md",
+  "lockAcquiredAt": 1788801830.487234,
+  "sha256": "d2adcbd640b243674c0cc31744a9b2d24e1b943c7ca0270ca38f0fdd6575d798",
+  "bytes": 61155,
+  "characters": 30216,
+  "capturedAt": 1788801832.791896,
+  "method": "ego-copy+os-pbpaste",
+  "verified": true,
+  "finishedAt": 1788801832.791926
+}

@@ -1,0 +1,14 @@
+{
+  "status": "complete",
+  "requestedAt": 1788801049.0381389,
+  "pid": 5652,
+  "output": "/Users/a2501/Desktop/firefly_studio/edge_repos/v3_ff_foundry/20_model_runs/multi_provider/daily-planning-20260908/grok-web/plan.md",
+  "lockAcquiredAt": 1788801049.0381818,
+  "sha256": "87ccfa1de49cd8bf4dd95fea681963c804f469d3ecd4a2dbfd38cf5eef3d4e62",
+  "bytes": 26461,
+  "characters": 11613,
+  "capturedAt": 1788801051.523965,
+  "method": "ego-copy+os-pbpaste",
+  "verified": true,
+  "finishedAt": 1788801051.523984
+}

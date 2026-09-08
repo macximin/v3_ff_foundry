@@ -1,0 +1,9 @@
+{
+  "status": "failed",
+  "requestedAt": 1788800962.320547,
+  "pid": 5090,
+  "output": "/Users/a2501/Desktop/firefly_studio/edge_repos/v3_ff_foundry/20_model_runs/multi_provider/daily-planning-20260908/grok-web/plan.md",
+  "lockAcquiredAt": 1788800962.320586,
+  "error": "Copy script failed or did not confirm the actual Copy action; inspect copy log",
+  "finishedAt": 1788800965.003934
+}

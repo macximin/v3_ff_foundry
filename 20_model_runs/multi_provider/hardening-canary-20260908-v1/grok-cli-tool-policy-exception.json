@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "firefly-operational-exception/v1",
+  "route": "grok-cli",
+  "status": "configuration-gap-confirmed",
+  "reason": "The installed Grok CLI does not interpret an empty --tools value as an empty tool set. Local API reproduction demonstrated tools remained available. The actual writing session was checked and had zero tool_result records.",
+  "actualWriterToolResults": 0,
+  "proof": "/Users/a2501/Desktop/firefly_studio/.firefly/planning-hardening-20260908/grok-tool-restriction-proof.json",
+  "correctedSetting": [
+    "--tools",
+    "read_file",
+    "--disallowed-tools",
+    "read_file,search_tool,use_tool"
+  ],
+  "correctionState": "The isolated prose diagnostic uses the verified empty-tool combination. Shared runtime correction is queued after active canary completion to preserve runtime evidence.",
+  "modelResubmitted": false
+}
