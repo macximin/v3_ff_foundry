@@ -1,0 +1,141 @@
+{
+  "batchId": "daily-planning-20260909",
+  "pageId": "3d5df078-7005-813d-b5b5-d2dd3429e40e",
+  "marker": "실행 기록 · daily-planning-20260909 · 완료",
+  "children": [
+    {
+      "object": "block",
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "실행 기록 · daily-planning-20260909 · 완료"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "object": "block",
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "실행 ID: daily-planning-20260909\n확정 결과: {\"대상 수\": 6, \"본문 완료\": 5, \"형식 미완성\": 0, \"응답 미회수\": 1}\n운영 예외: 1\nGrok 의견(채택 판정 아님): 요약 미회수. 검증된 결과 수와 링크를 확인하세요.\nStoryyard에서 기획서 확인\n로컬 영수증: /Users/a2501/Desktop/firefly_studio/edge_repos/v3_ff_foundry/20_model_runs/multi_provider/daily-planning-20260909/publication-receipt.json"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "object": "block",
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "fcp-a7fb8ee5b7dbba6f1d3a3fda · complete",
+              "link": {
+                "url": "https://storyyard-wjjo.macximin11123.chatgpt.site/review/canary/fcp-a7fb8ee5b7dbba6f1d3a3fda"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "object": "block",
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "fcp-f1d5a687e550e95e72812a11 · complete",
+              "link": {
+                "url": "https://storyyard-wjjo.macximin11123.chatgpt.site/review/canary/fcp-f1d5a687e550e95e72812a11"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "object": "block",
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "fcp-afd8add20f5763dbd58511bb · complete",
+              "link": {
+                "url": "https://storyyard-wjjo.macximin11123.chatgpt.site/review/canary/fcp-afd8add20f5763dbd58511bb"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "object": "block",
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "fcp-5d0fa0eea5a1a7bba2422d35 · failed",
+              "link": {
+                "url": "https://storyyard-wjjo.macximin11123.chatgpt.site/review/canary/fcp-5d0fa0eea5a1a7bba2422d35"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "object": "block",
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "fcp-911adc1e87e3f2a86a9df0e4 · complete",
+              "link": {
+                "url": "https://storyyard-wjjo.macximin11123.chatgpt.site/review/canary/fcp-911adc1e87e3f2a86a9df0e4"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "object": "block",
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "fcp-489880db13ad29f6db6b2e3d · complete",
+              "link": {
+                "url": "https://storyyard-wjjo.macximin11123.chatgpt.site/review/canary/fcp-489880db13ad29f6db6b2e3d"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "bodySha256": "3e09fdce3943e06fac2aab61540f14959c6002d66276d1d5198c0713dae3bc9e",
+  "state": "confirmed",
+  "startedAt": "2026-09-08T22:41:07.992148+00:00",
+  "verifiedAt": "2026-09-08T22:41:08.830311+00:00"
+}

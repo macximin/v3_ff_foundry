@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "firefly-planning-process/v1",
+  "route": "grok-cli",
+  "modelRequested": "grok-4.6",
+  "inputSha256": "072924b244fca1985ba5bd34e385d6c78950eba1f3c9bb2111c6542c1db399c2",
+  "reasoningRequested": "high",
+  "timeoutSeconds": 3600,
+  "queuedAt": "2026-09-07T23:49:28.107040+00:00",
+  "status": "process_completed",
+  "startedAt": "2026-09-07T23:49:28.142339+00:00",
+  "workerPid": 161,
+  "writerPid": 174,
+  "exitCode": 0,
+  "runtimeProvenance": {
+    "startManifest": "runtime-start.json",
+    "endManifest": "runtime-end.json",
+    "startSha256": "32d37a9ff0a68fdad754c6ec2a7b4e9b5990ef4f1a1387cee9510c2ce43a2dea",
+    "endSha256": "148c86476258f98f23577aaa360f0eae772f69b10c8be5e525f37f4aa039f71d",
+    "changedFiles": [],
+    "driftDetected": false,
+    "meaning": "File observations only; changed files flag a potentially mixed execution."
+  },
+  "finishedAt": "2026-09-07T23:55:48.799841+00:00",
+  "elapsedSeconds": 380.65,
+  "rawFiles": {
+    "stdout.raw": "2e5c6ef6f35ccef2629fa1f16c97e8b9a1746e94cb529b42099ad809b1322dfc",
+    "stderr.raw": "960a501d65e8d8d81de8d874cdf01ad389c59f8b1a7226019588268cd9562c56"
+  },
+  "meaning": "Process completion only; response extraction, format, publication and HIL are separate."
+}

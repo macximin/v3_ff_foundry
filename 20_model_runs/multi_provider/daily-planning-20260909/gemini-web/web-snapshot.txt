@@ -1,0 +1,53 @@
+{
+  "capturedAt": "2026-09-08T22:20:06Z",
+  "pageInfo": {
+    "url": "https://gemini.google.com/app/e12e31aa3e585585?hl=ko",
+    "title": "신입사원 웹소설 기획서 완성 - Google Gemini",
+    "w": 1920,
+    "h": 929
+  },
+  "stopVisible": false,
+  "copyAria": "복사",
+  "copyVisible": true,
+  "modeAria": "모드 선택 도구 열기, 현재 Pro Extended 모드 사용 중",
+  "modeText": "Pro Extended",
+  "messageChars": 9109,
+  "stopSelector": "button[aria-label=\"대답 생성 중지\"]",
+  "responseSelector": "message-content",
+  "copySelector": "button[aria-label=\"복사\"]",
+  "copySuccessSnackbar": "클립보드에 복사되었습니다. 대답 중 일부는 Gemini에서만 제공될 수 있습니다.",
+  "anchors": [
+    "Firefly 웹소설 작품 기획서 v1",
+    "주인공이 대리인들에게 지분을 분배할 때의 합리적이고 자기중심적인 매력이 충분히 발산되는가?"
+  ],
+  "uniqueButtons": [
+    "사이드바 열기",
+    "듣기",
+    "대화 작업 메뉴 열기",
+    "Spark 모드로 전환 (⇧⌘S)",
+    "노트북",
+    "최근 전환",
+    "설정",
+    "input.md",
+    "프롬프트 복사",
+    "수정",
+    "옵션 더보기",
+    "대답이 마음에 들어요",
+    "대답이 마음에 들지 않아요",
+    "다시 실행",
+    "복사",
+    "업로드 및 도구",
+    "모드 선택 도구 열기, 현재 Pro Extended 모드 사용 중",
+    "음성기록 (⌘⇧D)"
+  ],
+  "helper": {
+    "status": "complete",
+    "sha256": "864a0a2039839ee392cf23c4e5e5b7f9a75f317b5d41ae78dbedb2c800aa55e7",
+    "bytes": 21129,
+    "characters": 9332,
+    "method": "ego-copy+os-pbpaste",
+    "verified": true,
+    "copyLogPath": "/Users/a2501/Desktop/firefly_studio/edge_repos/v3_ff_foundry/20_model_runs/multi_provider/daily-planning-20260909/gemini-web/plan.md.43399.copy.log",
+    "receiptPath": "/Users/a2501/Desktop/firefly_studio/edge_repos/v3_ff_foundry/20_model_runs/multi_provider/daily-planning-20260909/gemini-web/plan.md.43399.receipt.json"
+  }
+}

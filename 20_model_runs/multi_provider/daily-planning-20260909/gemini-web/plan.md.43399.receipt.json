@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "requestedAt": 1788905964.854303,
+  "pid": 43399,
+  "output": "/Users/a2501/Desktop/firefly_studio/edge_repos/v3_ff_foundry/20_model_runs/multi_provider/daily-planning-20260909/gemini-web/plan.md",
+  "lockAcquiredAt": 1788905964.85436,
+  "copyProcessGroup": 43400,
+  "copyLogPath": "/Users/a2501/Desktop/firefly_studio/edge_repos/v3_ff_foundry/20_model_runs/multi_provider/daily-planning-20260909/gemini-web/plan.md.43399.copy.log",
+  "copyExitCode": 0,
+  "sha256": "864a0a2039839ee392cf23c4e5e5b7f9a75f317b5d41ae78dbedb2c800aa55e7",
+  "bytes": 21129,
+  "characters": 9332,
+  "capturedAt": 1788905968.5534232,
+  "method": "ego-copy+os-pbpaste",
+  "verified": true,
+  "finishedAt": 1788905968.553452
+}

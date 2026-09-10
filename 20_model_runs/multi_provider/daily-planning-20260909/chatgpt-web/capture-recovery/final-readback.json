@@ -1,0 +1,49 @@
+{
+  "at": "2026-09-08T22:52:21.447020+00:00",
+  "originalPackets": [
+    {
+      "id": "fcp-a7fb8ee5b7dbba6f1d3a3fda",
+      "state": "complete",
+      "verified": true
+    },
+    {
+      "id": "fcp-f1d5a687e550e95e72812a11",
+      "state": "complete",
+      "verified": true
+    },
+    {
+      "id": "fcp-afd8add20f5763dbd58511bb",
+      "state": "complete",
+      "verified": true
+    },
+    {
+      "id": "fcp-5d0fa0eea5a1a7bba2422d35",
+      "state": "failed",
+      "verified": true
+    },
+    {
+      "id": "fcp-911adc1e87e3f2a86a9df0e4",
+      "state": "complete",
+      "verified": true
+    },
+    {
+      "id": "fcp-489880db13ad29f6db6b2e3d",
+      "state": "complete",
+      "verified": true
+    }
+  ],
+  "supplementaryId": "fcp-dc1cd1e324e1afc89ba44ee2",
+  "uniqueRouteBodies": 6,
+  "preservedFailedPackets": 1,
+  "generationRequests": 6,
+  "operatorRecoveredRoutes": [
+    "grok-web",
+    "chatgpt-web"
+  ],
+  "notionCurrentCounts": {
+    "target": 6,
+    "complete": 6,
+    "unrecovered": 0
+  },
+  "originalCycleUnchanged": true
+}

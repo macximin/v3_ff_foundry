@@ -1,0 +1,7 @@
+reused task: 9
+copy snapshot lines: ["                button \"응답 복사\" [ref=8965, loc=css:button[aria-label=\"응답 복사\"]]"]
+clicking @8965
+rect: {"x":716,"y":755.5,"aria":"응답 복사"}
+after click aria: 응답 복사됨
+FIREFLY_COPY_CONFIRMED
+

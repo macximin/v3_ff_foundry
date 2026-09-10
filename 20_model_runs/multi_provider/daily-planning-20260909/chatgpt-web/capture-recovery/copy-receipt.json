@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "requestedAt": 1788907882.256497,
+  "pid": 55550,
+  "output": "/Users/a2501/Desktop/firefly_studio/.firefly/planning-audit-20260909/chatgpt-web-authorized-recovery/plan.md",
+  "lockAcquiredAt": 1788907882.256709,
+  "copyProcessGroup": 55551,
+  "copyLogPath": "/Users/a2501/Desktop/firefly_studio/.firefly/planning-audit-20260909/chatgpt-web-authorized-recovery/plan.md.55550.copy.log",
+  "copyExitCode": 0,
+  "sha256": "21bf40457e20f99c9a16476f77e6ebd46a016043ad2f6a9436b986f6b8b43e3f",
+  "bytes": 58277,
+  "characters": 28282,
+  "capturedAt": 1788907883.682858,
+  "method": "ego-copy+os-pbpaste",
+  "verified": true,
+  "finishedAt": 1788907883.682889
+}

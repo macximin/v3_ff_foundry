@@ -1,0 +1,5 @@
+task space id: 5
+before: {"found":true,"aria":"응답 복사","visible":true}
+after: {"toasts":[],"btnAria":"복사","btnTitle":null,"bodyHasCopied":["복사됨"],"alerts":[]}
+FIREFLY_COPY_CONFIRMED
+

@@ -1,0 +1,8 @@
+{
+  "schemaVersion": "firefly-planning-process/v1",
+  "route": "gemini-web",
+  "modelRequested": "web-observed",
+  "inputSha256": "f5509d0d0757450a781f82c7766e1b71137b3cbd8a8f09e917ed4a5545e1c8d2",
+  "timeoutSeconds": 3600,
+  "queuedAt": "2026-09-06T16:00:07.439336+00:00"
+}

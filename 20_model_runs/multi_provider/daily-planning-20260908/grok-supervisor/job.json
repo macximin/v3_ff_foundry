@@ -1,0 +1,8 @@
+{
+  "schemaVersion": "firefly-planning-process/v1",
+  "route": "grok-supervisor",
+  "modelRequested": "grok-4.6",
+  "inputSha256": "66b11cfe5d6d697802fa9dc40afc51b5797f133f9971770747ec1b32c4dea83f",
+  "timeoutSeconds": 300,
+  "queuedAt": "2026-09-07T17:25:04.504268+00:00"
+}

@@ -1,0 +1,53 @@
+task space id: 1
+copyLine:                 button "복사" [ref=1138, loc=css:button[aria-label="복사"]]
+copyEvidence: {
+  "overlayText": "대답 복사\n클립보드에 복사됨",
+  "lives": [
+    {
+      "tag": "DIV",
+      "className": "model-response-label-announcer",
+      "text": "Gemini의 응답"
+    },
+    {
+      "tag": "DIV",
+      "className": "markdown markdown-main-panel md-content enable-luminous-fast-follows enable-updated-hr-color stronger",
+      "text": "재벌가 이단아의 독식 설계 기획서 v1\n\n2026-09-08 작성 · 육하원칙 + 목적의 단계 + 독자 보상\n\n1. 작품 정보와 독자 약속\n항목\t기입\n작품명·가제\t독식하는 재벌가 막내아들\n장르·핵심 키워드\t현대판타지, 재벌, 기업 인수, 회귀, 미래 지식, 독식\n예상 독자\t주인공이 압도적인 자본과 지식 우위를 통해 타인이나 국가의 이익이 아닌 철저히 자신만의 이득과 소유권을 확보하는 통쾌한 성공물을 선호하는 독자\n연재 형태·예상 분량\t웹소설 플랫폼 주 5~7회 연재 / 최소 200화 이상 장편\n시점·문체\t1인칭 주인공 시점 / 감정"
+    },
+    {
+      "tag": "DIV",
+      "className": "cdk-live-announcer-element cdk-visually-hidden",
+      "text": "클립보드에 복사됨"
+    },
+    {
+      "tag": "DIV",
+      "className": "cdk-overlay-container",
+      "text": "대답 복사\n클립보드에 복사됨"
+    },
+    {
+      "tag": "MAT-SNACK-BAR-CONTAINER",
+      "className": "mdc-snackbar mat-mdc-snack-bar-container custom-snackbar lm-enabled mat-snack-bar-container-enter mat-snack-bar-containe",
+      "text": "클립보드에 복사됨"
+    },
+    {
+      "tag": "DIV",
+      "className": "mat-mdc-snack-bar-label",
+      "text": "클립보드에 복사됨"
+    },
+    {
+      "tag": "DIV",
+      "className": "",
+      "text": "클립보드에 복사됨"
+    },
+    {
+      "tag": "DIV",
+      "className": "mat-mdc-snack-bar-label mdc-snackbar__label label",
+      "text": "클립보드에 복사됨"
+    }
+  ],
+  "btnAria": "복사",
+  "btnHtml": "<button _ngcontent-ng-c1875133157=\"\" maticonbutton=\"\" matbadgeposition=\"after\" class=\"mdc-icon-button mat-mdc-icon-button mat-mdc-button-base mat-badge mat-unthemed mat-badge-overlap mat-badge-above mat-badge-after mat-badge-small mat-badge-hidden ng-star-inserted cdk-focused cdk-mouse-focused\" mat-ripple-loader-class-name=\"mat-mdc-button-ripple\" mat-ripple-loader-centered=\"\" aria-label=\"복사\" jslog=\"178035;track:generic_click,impression;BardVeMetadataKey:W1sicl8yOGExNDdlZGUyMDI5NzhjIiwiY182NWRkMWI0NzBlYTM4OWRkIixudWxsLCJyY182ZDBmM2U2OGVlMmM1Y2I0IixudWxsLG51bGwsImtvIixudWxsLDEsbnVsbCxudWxsLDEsMF1d;mutable:true\"><span class=\"mat-mdc-button-persistent-ripple mdc-icon-button__ripple\"></span><gem-icon _ngcontent-ng-c1875133157=\"\" _nghost-ng-c3480957065=\"\"><mat-icon _ngcontent-ng-c3480957065=\"\" r",
+  "iconName": "",
+  "bodyHasCopied": true
+}
+FIREFLY_COPY_CONFIRMED
+

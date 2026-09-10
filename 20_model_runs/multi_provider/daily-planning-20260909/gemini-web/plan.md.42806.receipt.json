@@ -1,0 +1,12 @@
+{
+  "status": "failed",
+  "requestedAt": 1788905878.802024,
+  "pid": 42806,
+  "output": "/Users/a2501/Desktop/firefly_studio/edge_repos/v3_ff_foundry/20_model_runs/multi_provider/daily-planning-20260909/gemini-web/plan.md",
+  "lockAcquiredAt": 1788905878.802482,
+  "copyProcessGroup": 42807,
+  "copyLogPath": "/Users/a2501/Desktop/firefly_studio/edge_repos/v3_ff_foundry/20_model_runs/multi_provider/daily-planning-20260909/gemini-web/plan.md.42806.copy.log",
+  "copyExitCode": 1,
+  "error": "Copy script failed or did not confirm the actual Copy action; inspect copy log",
+  "finishedAt": 1788905882.095071
+}

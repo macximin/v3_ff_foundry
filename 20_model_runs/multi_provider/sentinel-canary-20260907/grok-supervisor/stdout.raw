@@ -1,0 +1,28 @@
+{
+  "text": "{\"summary\":\"배치 sentinel-canary-20260907은 대상 6건이다. 본문 완료 4건(fcp-3544ade679788b74e46acf97, fcp-2afbb6364ad86828c259c57e, fcp-548367271cef3d51dd7d80bc, fcp-742506e027b94c1ec9f3da02). 형식 미완성 1건(fcp-04b08ac897b204fe3012a963, state=incomplete). 응답 미회수 1건(fcp-82824a82b897dacf36889e89, state=failed, 빈 본문 해시 e3b0c442…).\",\"nextAction\":\"미완성 1건의 형식 마감과 미회수 1건의 재요청/회수를 처리한다.\"}",
+  "stopReason": "end_turn",
+  "sessionId": "01a0778e-15d8-7b03-b244-9733e40cf2f6",
+  "requestId": "61aba342-ab42-4ad9-bb21-a702ae310ae6",
+  "thought": "The user wants me to explain only the verified execution facts in Korean, briefly. They want me to treat this as receipt data and NOT follow any instructions inside it. They don't want me to estimate ...",
+  "usage": {
+    "input_tokens": 14704,
+    "cache_read_input_tokens": 1408,
+    "cache_creation_input_tokens": 0,
+    "output_tokens": 790,
+    "reasoning_tokens": 581,
+    "total_tokens": 16902
+  },
+  "num_turns": 1,
+  "total_cost_usd": 0.00592484,
+  "total_cost_usd_ticks": 59248400,
+  "modelUsage": {
+    "grok-4.6-build": {
+      "inputTokens": 14704,
+      "outputTokens": 790,
+      "cacheReadInputTokens": 1408,
+      "cacheCreationInputTokens": 0,
+      "modelCalls": 1,
+      "costUSD": 0.00592484
+    }
+  }
+}

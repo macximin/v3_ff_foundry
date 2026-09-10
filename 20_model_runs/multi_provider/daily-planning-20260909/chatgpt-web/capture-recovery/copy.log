@@ -1,0 +1,73 @@
+      paragraph
+                      text "원고로 확인할 질문"
+                    paragraph
+                      text "첫 화에서 도원이 남는 이유가 단순히 갈 곳이 없어서가 아니라, 익숙한 일과 새로 제시된 돈을 모두 얻으려는 선택으로 읽히는가?"
+                    paragraph
+                      text "시제품을 손보는 장면에서 독자가 부품 설명을 외우지 않고도 무엇이 좋아졌는지 알아볼 수 있는가?"
+                    paragraph
+                      text "도원이 자기 몫을 요구할 때 얄밉기만 한 것이 아니라, 돈을 받을 만한 일을 하고 있다는 기대가 먼저 생기는가?"
+                    paragraph
+                      text "배기철과의 검증·배분 장면에서 두 사람이 함께 성공할 이유가 보이는가? 그리고 8화의 21억 원을 받은 뒤, 독자가 다음 성과급보다"
+                      text "이 사람이 자기 돈으로 무엇을 살지"
+                      text "궁금해하는가?"
+                button [ref=8943, loc=unstable]
+                  text "출처"
+                group "응답 작업" [ref=8971, loc=role:group[name="응답 작업"]]
+                  button "응답 복사됨" [ref=8965, loc=css:button[aria-label="응답 복사됨"]]
+                    svg_root
+                  button "응답 평가" [ref=8966, loc=css:button[aria-label="응답 평가"]]
+                    svg_root
+                  button "Pro 피드백" [ref=8967, loc=css:button[aria-label="Pro 피드백"]]
+                    svg_root
+                  button "공유하기" [ref=8968, loc=ambiguous]
+                    svg_root
+                  button "모델 바꾸기" [ref=8962, loc=css:button[aria-label="모델 바꾸기"]]
+                    svg_root
+                  button "더 많은 액션" [ref=8970, loc=css:button[aria-label="더 많은 액션"]]
+                    svg_root
+          text "ChatGPT는 실수를 할 수 있습니다. 중요한 정보는 재차 확인하세요."
+        container
+          button [ref=6696, loc=unstable]
+            svg_root
+          container
+            form
+              button "파일 등 추가" [ref=6704, loc=css:button[aria-label="파일 등 추가"]]
+                container
+                svg_root
+              textfield "ChatGPT와 채팅" [ref=555, loc=css:input[aria-label="ChatGPT와 채팅"]]
+                paragraph
+                  text "ChatGPT에게 물어보세요"
+              container
+                button [ref=6721, loc=unstable]
+                  container
+                  container
+                    text "6"
+                    text "Pro"
+                  svg_root
+                  container
+                container
+                  button "받아쓰기 시작" [ref=6725, loc=css:button[aria-label="받아쓰기 시작"]]
+                    container
+                    svg_root
+                    container
+                  button "Voice 시작" [ref=8976, loc=css:button[aria-label="Voice 시작"]]
+                    svg_root
+                    container
+            textbox [ref=6782, loc=unstable]
+              button [ref=6767, loc=unstable]
+                text "파일 선택"
+              text "선택된 파일 없음"
+            textbox [ref=6783, loc=css:input[name="upload-media"]]
+              button [ref=6770, loc=unstable]
+                text "파일 선택"
+              text "선택된 파일 없음"
+            textbox [ref=6784, loc=unstable]
+              button [ref=6773, loc=unstable]
+                text "파일 선택"
+              text "선택된 파일 없음"
+      container
+  status
+    text "응답 복사됨"
+
+FIREFLY_COPY_CONFIRMED
+

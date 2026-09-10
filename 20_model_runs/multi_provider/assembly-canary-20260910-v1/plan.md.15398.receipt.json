@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "requestedAt": 1788995955.539424,
+  "pid": 15398,
+  "output": "/Users/a2501/Desktop/firefly_studio/edge_repos/v3_ff_foundry/20_model_runs/multi_provider/assembly-canary-20260910-v1/plan.md",
+  "lockAcquiredAt": 1788995955.539681,
+  "copyProcessGroup": 15399,
+  "copyLogPath": "/Users/a2501/Desktop/firefly_studio/edge_repos/v3_ff_foundry/20_model_runs/multi_provider/assembly-canary-20260910-v1/plan.md.15398.copy.log",
+  "copyExitCode": 0,
+  "sha256": "79721fa42714fdc5c9e80ef00e59af30e3922be3f128c9e26c222d4a17a13523",
+  "bytes": 7529,
+  "characters": 3180,
+  "capturedAt": 1788995957.167307,
+  "method": "ego-copy+os-pbpaste",
+  "verified": true,
+  "finishedAt": 1788995957.1673448
+}

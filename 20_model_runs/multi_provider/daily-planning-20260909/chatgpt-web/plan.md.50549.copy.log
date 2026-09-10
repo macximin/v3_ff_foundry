@@ -1,0 +1,5 @@
+reused task: 9
+copy snapshot lines: ["                button \"응답 복사\" [ref=8965, loc=css:button[aria-label=\"응답 복사\"]]"]
+after click: {"aria":"응답 복사됨","html":"<span class=\"flex items-center justify-center touch:w-10 h-8 w-8\"><div class=\"[&amp;_svg]:h-full [&amp;_svg]:w-full icon icon\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" he"}
+FIREFLY_COPY_CONFIRMED
+

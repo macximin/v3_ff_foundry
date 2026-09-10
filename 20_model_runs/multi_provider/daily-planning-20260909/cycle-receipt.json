@@ -1,0 +1,14 @@
+{
+  "status": "finished",
+  "finishedAt": "2026-09-08T22:41:08.833033+00:00",
+  "counts": {
+    "대상 수": 6,
+    "본문 완료": 5,
+    "형식 미완성": 0,
+    "응답 미회수": 1
+  },
+  "operationalFailures": 0,
+  "operationalExceptionCount": 1,
+  "notionPageId": "3d5df078-7005-813d-b5b5-d2dd3429e40e",
+  "publicationCount": 6
+}

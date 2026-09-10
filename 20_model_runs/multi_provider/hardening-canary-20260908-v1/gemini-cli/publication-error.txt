@@ -1,0 +1,1 @@
+{"error":"Complete plan has empty required content","issues":["WHO 답변 확인 필요","WHAT 답변 확인 필요","HOW 답변 확인 필요","WHERE 답변 확인 필요","WHEN 답변 확인 필요","WHY 답변 확인 필요"]}

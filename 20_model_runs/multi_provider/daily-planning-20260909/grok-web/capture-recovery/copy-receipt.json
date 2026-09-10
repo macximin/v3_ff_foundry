@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "requestedAt": 1788906831.523804,
+  "pid": 48733,
+  "output": "/Users/a2501/Desktop/firefly_studio/.firefly/planning-audit-20260909/grok-web-recovery/plan.md",
+  "lockAcquiredAt": 1788906831.524043,
+  "copyProcessGroup": 48734,
+  "copyLogPath": "/Users/a2501/Desktop/firefly_studio/.firefly/planning-audit-20260909/grok-web-recovery/plan.md.48733.copy.log",
+  "copyExitCode": 0,
+  "sha256": "9891ee30e39a9774c4f1aeea10e1a66c7b98f3b24f914f018b17bf920a0ce274",
+  "bytes": 31999,
+  "characters": 14011,
+  "capturedAt": 1788906832.2943969,
+  "method": "ego-copy+os-pbpaste",
+  "verified": true,
+  "finishedAt": 1788906832.294433
+}

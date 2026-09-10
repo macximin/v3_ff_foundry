@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "firefly-planning-process/v1",
+  "route": "grok-cli",
+  "modelRequested": "grok-4.6",
+  "inputSha256": "51315a8fc250c3001bb72958211d9e67add4eb1a44b2354fe6f75b75746a9151",
+  "timeoutSeconds": 3600,
+  "queuedAt": "2026-09-07T17:01:31.517471+00:00",
+  "status": "process_completed",
+  "startedAt": "2026-09-07T17:01:31.551470+00:00",
+  "workerPid": 1316,
+  "writerPid": 1319,
+  "exitCode": 0,
+  "finishedAt": "2026-09-07T17:08:45.816794+00:00",
+  "elapsedSeconds": 434.26,
+  "rawFiles": {
+    "stdout.raw": "a20ce3338139e6b7ae2c2c0be3763b0ad345a6c9b2824c99dd30dfe2ad876138",
+    "stderr.raw": "4b053591f159117a653b9dd589eace7120de36199e4bdf4ecde612a0baa5fded"
+  },
+  "meaning": "Process completion only; response extraction, format, publication and HIL are separate."
+}

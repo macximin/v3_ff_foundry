@@ -1,0 +1,7 @@
+ReferenceError: window is not defined
+    at file:////[eval2]:67:5
+task space id: 8
+BEFORE {"rect":{"x":720,"y":759.5,"w":32,"h":32},"vw":1920,"vh":929,"inView":true,"topTag":"MAT-ICON","topAria":null,"fonticon":"copy"}
+COPY_EVIDENCE {"fonticon":"copy","iconText":"","aria":"복사","snack":["클립보드에 복사되었습니다. 대답 중 일부는 Gemini에서만 제공될 수 있습니다."],"watch":[{"t":0,"fonticon":"copy","text":"","aria":"복사"},{"t":24,"fonticon":"copy","text":"","aria":"복사"},{"t":56,"fonticon":"copy","text":"","aria":"복사"},{"t":56,"fonticon":"copy","text":"","aria":"복사"},{"t":1880,"fonticon":"copy","text":"","aria":"복사"}]}
+
+ego's nodejs process exited with code 1.

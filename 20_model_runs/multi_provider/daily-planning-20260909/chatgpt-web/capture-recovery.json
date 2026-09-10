@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "firefly-capture-recovery/v1",
+  "route": "chatgpt-web",
+  "inputSha256": "7e8e79b0a6207f4f05dec247a407115600f8490e1cdd3055248b481c2148832f",
+  "outputSha256": "21bf40457e20f99c9a16476f77e6ebd46a016043ad2f6a9436b986f6b8b43e3f",
+  "conversationUrl": "https://chatgpt.com/c/6aa088c2-fed8-83ee-a7e9-80d5284bc6e7",
+  "sourceProcessReceiptSha256": "5e37796b5aa8e5b2f25183c58c3fc2bce203c42c2867eabdd7e789fe84b8e913",
+  "sourceWebReceiptSha256": "d758247dd8d336f01b8058da85e0afbf0942e262b9575b44b8368fdf2231f2b3",
+  "capturedAt": 1788907883.682858,
+  "recordedAt": "2026-09-08T22:52:14.070877+00:00",
+  "automaticSuccess": false,
+  "reason": "User explicitly authorized resume after browser control stop. Same conversation captured; no generation. Original failed packet preserved.",
+  "previousCanaryId": "fcp-5d0fa0eea5a1a7bba2422d35",
+  "authorization": {
+    "userMessage": "ㄱ",
+    "scope": "Resume original ChatGPT task 9; capture existing response without generation",
+    "at": "2026-09-08T22:51:14.977568+00:00",
+    "previousBlockedAttempt": "../chatgpt-web-recovery/browser-blocked.json"
+  },
+  "previousBlockedAttempt": {
+    "blockedAt": 1788907302.0295649,
+    "reason": "Ego control handoff",
+    "scriptSha256": "4b81c22027aaea433965655a20c9362423b66df4b2b5d7d1961c34894288f8b5"
+  }
+}

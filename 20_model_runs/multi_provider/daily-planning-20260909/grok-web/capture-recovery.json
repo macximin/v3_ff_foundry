@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "firefly-capture-recovery/v1",
+  "route": "grok-web",
+  "inputSha256": "7e8e79b0a6207f4f05dec247a407115600f8490e1cdd3055248b481c2148832f",
+  "outputSha256": "9891ee30e39a9774c4f1aeea10e1a66c7b98f3b24f914f018b17bf920a0ce274",
+  "conversationUrl": "https://grok.com/c/342e62ce-1923-4d87-9eb8-bfaf69ebc043",
+  "sourceProcessReceiptSha256": "570e026feefc6900ff17b8c42edaa21271d184531e2f76bac5171616ae5fa1dc",
+  "sourceWebReceiptSha256": "81d0e4c1eba1aa77293589f564e0ce8e913706fe5c828eb1c503356d9ce6d313",
+  "capturedAt": "2026-09-08T22:33:52.294397+00:00",
+  "recordedAt": "2026-09-08T22:37:27.638724+00:00",
+  "reason": "Completed response missed by zero-match selector; operator verified Copy from original conversation. No new generation.",
+  "automaticSuccess": false
+}

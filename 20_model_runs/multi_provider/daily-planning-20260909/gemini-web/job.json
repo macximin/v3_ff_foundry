@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "firefly-planning-process/v1",
+  "route": "gemini-web",
+  "modelRequested": "web-observed",
+  "inputSha256": "7e8e79b0a6207f4f05dec247a407115600f8490e1cdd3055248b481c2148832f",
+  "reasoningRequested": "highest-available",
+  "timeoutSeconds": 3600,
+  "queuedAt": "2026-09-08T22:11:28.051787+00:00",
+  "requestedWebMode": "highest-available",
+  "controllerModelRequested": "grok-4.6",
+  "controllerReasoningRequested": "high"
+}

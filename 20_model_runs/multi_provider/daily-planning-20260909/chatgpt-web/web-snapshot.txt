@@ -1,0 +1,24 @@
+status: clipboard-helper-failed
+conversationUrl: https://chatgpt.com/c/6aa088c2-fed8-83ee-a7e9-80d5284bc6e7
+title: 웹소설 기획서 작성
+stopSelectorVisible: false
+responseSelector: [data-message-author-role="assistant"]
+assistantCharactersObserved: 21732
+copyButton: button[aria-label="응답 복사"]
+copyGroup: 응답 작업
+composerPill: 6 Pro
+observedMode: Pro
+modelLabel: 최신
+sendControls: 받아쓰기 시작, Voice 시작
+generationStable: true
+planMdWritten: false
+helperLastError: Clipboard does not match observed response anchors
+helperLastCopyExitCode: 0
+helperLastReceipt: plan.md.51133.receipt.json
+uiCopyEvidence: 응답 복사됨 on successful click attempts 2-4
+anchorsTried:
+  - 버린 도면으로 재벌이 됐다
+  - 독자가 다음 성과급보다 이 사람이 자기 돈으로 무엇을 살지 궁금해하는가?
+  - 1. 작품 정보와 독자 약속
+  - 무엇을 살지 궁금해하는가?
+doNotResubmit: true

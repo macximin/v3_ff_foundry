@@ -1,0 +1,9 @@
+{
+  "pid": 8043,
+  "pgid": 8043,
+  "birth": "Tue Sep  8 08:56:15 2026",
+  "role": "browser-poll",
+  "registeredAt": "2026-09-07T23:56:15.078745+00:00",
+  "status": "stopped",
+  "cleanedAt": "2026-09-07T23:56:15.265965+00:00"
+}

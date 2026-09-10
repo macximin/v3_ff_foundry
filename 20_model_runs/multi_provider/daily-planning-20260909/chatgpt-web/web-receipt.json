@@ -1,0 +1,49 @@
+{
+  "status": "failed",
+  "error": "Clipboard helper failed: UI Copy succeeded (응답 복사됨) but pbpaste did not contain observed response anchors. plan.md was not written. Do not reconstruct from DOM. Do not resubmit.",
+  "conversationUrl": "https://chatgpt.com/c/6aa088c2-fed8-83ee-a7e9-80d5284bc6e7",
+  "serviceUrl": "https://chatgpt.com/",
+  "observedMode": "Pro",
+  "observedModeDetails": {
+    "modelLabel": "최신",
+    "modelDescription": "모델 선택 메뉴에서 선택된 라디오: 최신. 작곡기 표시는 6 Pro. 사용 가능한 모델 라디오: 최신, GPT-5.6 Sol, GPT-5.5.",
+    "reasoningMenu": "추론 수준",
+    "reasoningSlider": "Pro, 5개 중 5번째",
+    "composerPill": "6 Pro",
+    "availableReasoningNote": "성능 슬라이더 최댓값(aria-valuenow=4 / max=4)이 Pro"
+  },
+  "taskSpaceId": 9,
+  "taskSpaceName": "daily-planning-20260909-chatgpt-web",
+  "submittedAt": "2026-09-08T22:14:43.897700+00:00",
+  "finishedAt": "2026-09-08T22:40:31.654906+00:00",
+  "inputSha256": "7e8e79b0a6207f4f05dec247a407115600f8490e1cdd3055248b481c2148832f",
+  "outputSha256": null,
+  "extractionMethod": "ego-copy+os-pbpaste",
+  "helperReceiptPath": "/Users/a2501/Desktop/firefly_studio/edge_repos/v3_ff_foundry/20_model_runs/multi_provider/daily-planning-20260909/chatgpt-web/plan.md.51133.receipt.json",
+  "helperReceipts": [
+    "/Users/a2501/Desktop/firefly_studio/edge_repos/v3_ff_foundry/20_model_runs/multi_provider/daily-planning-20260909/chatgpt-web/plan.md.49452.receipt.json",
+    "/Users/a2501/Desktop/firefly_studio/edge_repos/v3_ff_foundry/20_model_runs/multi_provider/daily-planning-20260909/chatgpt-web/plan.md.49816.receipt.json",
+    "/Users/a2501/Desktop/firefly_studio/edge_repos/v3_ff_foundry/20_model_runs/multi_provider/daily-planning-20260909/chatgpt-web/plan.md.50549.receipt.json",
+    "/Users/a2501/Desktop/firefly_studio/edge_repos/v3_ff_foundry/20_model_runs/multi_provider/daily-planning-20260909/chatgpt-web/plan.md.51133.receipt.json"
+  ],
+  "copyLogs": [
+    "/Users/a2501/Desktop/firefly_studio/edge_repos/v3_ff_foundry/20_model_runs/multi_provider/daily-planning-20260909/chatgpt-web/plan.md.49452.copy.log",
+    "/Users/a2501/Desktop/firefly_studio/edge_repos/v3_ff_foundry/20_model_runs/multi_provider/daily-planning-20260909/chatgpt-web/plan.md.49816.copy.log",
+    "/Users/a2501/Desktop/firefly_studio/edge_repos/v3_ff_foundry/20_model_runs/multi_provider/daily-planning-20260909/chatgpt-web/plan.md.50549.copy.log",
+    "/Users/a2501/Desktop/firefly_studio/edge_repos/v3_ff_foundry/20_model_runs/multi_provider/daily-planning-20260909/chatgpt-web/plan.md.51133.copy.log"
+  ],
+  "helperExitCode": 1,
+  "helperCopyExitCode": 0,
+  "helperError": "Clipboard does not match observed response anchors",
+  "stopSelector": "button[aria-label=\"답변 중지\"]",
+  "responseSelector": "[data-message-author-role=\"assistant\"]",
+  "copySelector": "button[aria-label=\"응답 복사\"]",
+  "generation": {
+    "waitStatus": "stable",
+    "characters": 21732,
+    "queueBusyPolls": 0
+  },
+  "tokenUsage": "unknown",
+  "planMdExists": false,
+  "doNotResubmit": true
+}

@@ -1,0 +1,6 @@
+Error: Copy success evidence not observed: {"labels":["메시지 복사","표 복사","표 복사","표 복사","표 복사","표 복사","표 복사","표 복사","표 복사","표 복사","표 복사","응답 복사"],"copiedText":false,"tooltip":["","","",""],"btnAria":"응답 복사","hasCheck":false,"btnHtml":"<span class=\"flex items-center justify-center touch:w-10 h-8 w-8\"><div class=\"[&amp;_svg]:h-full [&amp;_svg]:w-full icon icon\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" focusable=\"false\" aria-hidden=\"true\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M15.1006 1.78516C16.793 1.78556 18.165 3.15808 18.165 4.85059V10.8838C18.1649 12.5762 16.7929 13.9478 15"}
+    at file:////[eval2]:29:9
+reused task: 9
+copy evidence: {"labels":["메시지 복사","표 복사","표 복사","표 복사","표 복사","표 복사","표 복사","표 복사","표 복사","표 복사","표 복사","응답 복사"],"copiedText":false,"tooltip":["","","",""],"btnAria":"응답 복사","hasCheck":false,"btnHtml":"<span class=\"flex items-center justify-center touch:w-10 h-8 w-8\"><div class=\"[&amp;_svg]:h-full [&amp;_svg]:w-full icon icon\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" focusable=\"false\" aria-hidden=\"true\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M15.1006 1.78516C16.793 1.78556 18.165 3.15808 18.165 4.85059V10.8838C18.1649 12.5762 16.7929 13.9478 15"}
+
+ego's nodejs process exited with code 1.

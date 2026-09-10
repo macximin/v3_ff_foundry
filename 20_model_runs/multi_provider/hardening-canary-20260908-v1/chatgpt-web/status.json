@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "firefly-planning-process/v1",
+  "route": "chatgpt-web",
+  "modelRequested": "web-observed",
+  "inputSha256": "072924b244fca1985ba5bd34e385d6c78950eba1f3c9bb2111c6542c1db399c2",
+  "reasoningRequested": "highest-available",
+  "timeoutSeconds": 3600,
+  "queuedAt": "2026-09-07T23:49:28.238881+00:00",
+  "requestedWebMode": "highest-available",
+  "controllerModelRequested": "grok-4.6",
+  "controllerReasoningRequested": "high",
+  "status": "failed",
+  "startedAt": "2026-09-07T23:49:28.300562+00:00",
+  "workerPid": 170,
+  "writerPid": 178,
+  "error": "JobInterrupted: Process interrupted by signal 15",
+  "exitCode": -15,
+  "runtimeProvenance": {
+    "startManifest": "runtime-start.json",
+    "endManifest": "runtime-end.json",
+    "startSha256": "63654066899fa88c5b8c72d595edd42c55c270a4606c4efd53c82b290beea529",
+    "endSha256": "8455126c2cf0c22f29d868a092595778a9979191e5fe74bc5b2c4a14eca1ac9b",
+    "changedFiles": [],
+    "driftDetected": false,
+    "meaning": "File observations only; changed files flag a potentially mixed execution."
+  },
+  "finishedAt": "2026-09-08T00:01:27.478327+00:00",
+  "elapsedSeconds": 719.17,
+  "rawFiles": {
+    "stdout.raw": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr.raw": "b11584279ba752de73c2bcf2fcb191dd6416ef35fd19364b30a76c12cc5ea1aa"
+  },
+  "meaning": "Process completion only; response extraction, format, publication and HIL are separate."
+}

@@ -1,0 +1,28 @@
+{
+  "text": "```json\n{\n  \"summary\": \"배치 본문은 회수되었고, 한 건만 형식이 미완성이다.\",\n  \"nextAction\": \"미완성 항목의 형식을 맞춰 완료 상태로 닫는다.\",\n  \"counts\": {\"대상 수\": 6, \"본문 완료\": 5, \"형식 미완성\": 1, \"응답 미회수\": 0}\n}\n```",
+  "stopReason": "end_turn",
+  "sessionId": "01a07ce6-f151-7b31-b7cd-29e028cd3bf5",
+  "requestId": "7317ea72-202d-46f0-ad5a-6619d8e775d3",
+  "thought": "The user wants me to explain verified execution facts in Korean, briefly, without using tools. They want JSON keys: summary, nextAction, counts. The counts should be copied exactly from the provided v...",
+  "usage": {
+    "input_tokens": 14760,
+    "cache_read_input_tokens": 1408,
+    "cache_creation_input_tokens": 0,
+    "output_tokens": 522,
+    "reasoning_tokens": 419,
+    "total_tokens": 16690
+  },
+  "num_turns": 1,
+  "total_cost_usd": 0.00567052,
+  "total_cost_usd_ticks": 56705200,
+  "modelUsage": {
+    "grok-4.6-build": {
+      "inputTokens": 14760,
+      "outputTokens": 522,
+      "cacheReadInputTokens": 1408,
+      "cacheCreationInputTokens": 0,
+      "modelCalls": 1,
+      "costUSD": 0.00567052
+    }
+  }
+}

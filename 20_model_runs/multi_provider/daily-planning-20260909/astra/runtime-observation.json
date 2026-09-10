@@ -1,0 +1,36 @@
+{
+  "requestedModel": "gpt-6-astra",
+  "requestedReasoning": "medium",
+  "resolvedReasoning": {
+    "enabled": true,
+    "effort": "medium"
+  },
+  "requests": [
+    {
+      "model": "gpt-6-astra",
+      "reasoning": {
+        "effort": "medium",
+        "summary": "auto"
+      },
+      "reasoning_effort": null,
+      "preparedAt": "2026-09-08T22:11:30.138636+00:00"
+    }
+  ],
+  "effectiveReasoning": "medium",
+  "status": "completed",
+  "createdAt": "2026-09-08T22:11:27.898654+00:00",
+  "source": "Hermes ResponsesApiTransport.build_kwargs",
+  "reasoningEvidence": "constructed-request",
+  "runtime": {
+    "pythonVersion": "3.11.15",
+    "hermesCommit": "51c47b3738b17597253cebdf49de788a59a89319",
+    "hermesDependencySha256": {
+      "hermes_cli/runtime_provider.py": "580e21f563de7a43d26554947501901eb8d54c606765505afb151a8b4b3ad762",
+      "hermes_cli/oneshot.py": "eb679378ecd80e42ee58bfeba721ba0365cf9e2bbb3d5f1e4c2228a160fc19f7",
+      "run_agent.py": "9f789a3cd61821e8894882b6a035b6885d749a35ab045d9b16928bb4155b049c",
+      "agent/transports/codex.py": "56b0251fcdfbfc4b4c175175bb9e81c50a263ed6b3fba63ef450a44c790aa7e9"
+    },
+    "adapterSha256": "1497cd86b861815f4cc9af70ae4499800ce908c0068e1482cbea72d761476069"
+  },
+  "finishedAt": "2026-09-08T22:17:37.717402+00:00"
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "firefly-canary-run/v1",
+  "route": "chatgpt-web",
+  "modelRequested": "ChatGPT 6 Pro",
+  "modelObserved": "6 Pro",
+  "reasoningRequested": "Pro",
+  "inputSha256": "f5509d0d0757450a781f82c7766e1b71137b3cbd8a8f09e917ed4a5545e1c8d2",
+  "outputSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "conversationUrl": "https://chatgpt.com/c/6a9d72c3-0d24-83e8-98ee-6f9121f711b9",
+  "finishedAt": "2026-09-06T14:28:50.046692+00:00",
+  "finishedAtMeaning": "status observed at; generation not complete",
+  "status": "running",
+  "usage": null,
+  "elapsedSeconds": null,
+  "outputCharacters": 0,
+  "completionEvidence": "답변 중지 버튼과 Pro 생각 중 표시; 완료되지 않음"
+}

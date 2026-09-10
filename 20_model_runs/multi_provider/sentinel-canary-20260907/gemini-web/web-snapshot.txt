@@ -1,0 +1,20 @@
+Gemini web transport snapshot
+status: needs-human-control
+conversationUrl: https://gemini.google.com/app/cfe77123d9ab276b?hl=ko
+observedMode: Pro Extended / 확장된 사고 모델
+taskSpaceId: 18
+serviceUrl: https://gemini.google.com/app?hl=ko
+
+Timeline:
+- Opened https://gemini.google.com/app?hl=ko in ego-browser task space 18 (gemini-web-sentinel-canary-20260907).
+- Mode menu labels: 3.5 Flash-Lite, 3.8 Flash, 3.1 Pro (고급 추론), 확장된 사고 모델 (복잡한 문제 해결).
+- Selected 확장된 사고 모델; composer showed Pro Extended.
+- Uploaded input.md via hidden file input; attachment chip showed input.md.
+- Sent one Korean prompt asking for a complete 9-section plan; no extra questions; no resubmit.
+- Generation showed stop button and thinking labels including Developing the Concept then Interpreting the Data.
+- Conversation URL became https://gemini.google.com/app/cfe77123d9ab276b?hl=ko
+- Later polls: stop gone, bodyLen stable at 8828, completion controls present (thumbs, retry, copy).
+- Assistant markdown container had H1 plus sections 1-9, 6 tables, innerTextLen 8423, no code block.
+- Copy-button click then returned: user has taken control of this task space. Agent stopped. plan.md not written.
+
+plan.md: not saved (final DOM extract interrupted).

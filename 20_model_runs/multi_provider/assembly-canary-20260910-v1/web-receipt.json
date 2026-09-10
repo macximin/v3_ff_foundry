@@ -1,0 +1,23 @@
+{
+  "status": "complete",
+  "taskSpaceId": 11,
+  "conversationUrl": "https://chatgpt.com/c/6aa1e687-1dd8-83e8-a477-87db5e1a9d91",
+  "observedMode": "Pro",
+  "observedModeDetails": {
+    "modelLabel": "6",
+    "selection": "최신",
+    "performance": "Pro, 5개 중 5번째"
+  },
+  "inputSha256": "a0052b7000a8c9fc6a80ca3f889366d03be6b64a7c01318f1671c29c21a48aae",
+  "submittedAt": "2026-09-09T23:06:56.649233+00:00",
+  "generationRequests": 1,
+  "attachmentBeforeSend": "input.md",
+  "attachmentAfterSend": "input(5).md",
+  "finishedAt": "2026-09-09T23:19:17.167307+00:00",
+  "outputSha256": "79721fa42714fdc5c9e80ef00e59af30e3922be3f128c9e26c222d4a17a13523",
+  "characters": 3180,
+  "extractionMethod": "ego-copy+os-pbpaste",
+  "copyReceipt": "plan.md.15398.receipt.json",
+  "stableVisibleCharacters": 3162,
+  "elapsedFromRecordedSubmissionSeconds": 741
+}

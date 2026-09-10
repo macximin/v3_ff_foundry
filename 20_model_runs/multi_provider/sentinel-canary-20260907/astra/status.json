@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "firefly-planning-process/v1",
+  "route": "astra",
+  "modelRequested": "gpt-6-astra",
+  "inputSha256": "f5509d0d0757450a781f82c7766e1b71137b3cbd8a8f09e917ed4a5545e1c8d2",
+  "timeoutSeconds": 3600,
+  "queuedAt": "2026-09-06T16:00:07.272132+00:00",
+  "status": "process_completed",
+  "startedAt": "2026-09-06T16:00:07.303147+00:00",
+  "workerPid": 6228,
+  "writerPid": 6230,
+  "exitCode": 0,
+  "finishedAt": "2026-09-06T16:29:36.311717+00:00",
+  "elapsedSeconds": 1769.08,
+  "rawFiles": {
+    "stdout.raw": "15e1ab8825136b3b1814478fbf52cacf50c1c7a7f4102ad76fa0accbb155fdf0",
+    "stderr.raw": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "meaning": "Process completion only; response extraction, format, publication and HIL are separate."
+}

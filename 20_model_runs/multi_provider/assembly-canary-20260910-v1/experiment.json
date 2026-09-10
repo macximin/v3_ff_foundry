@@ -1,0 +1,85 @@
+{
+  "kind": "bounded-assembly-canary",
+  "date": "2026-09-10",
+  "route": "chatgpt-web",
+  "request": "카나리만 해 보자. 이 이론이 성립하는지",
+  "baselineBatch": "daily-planning-20260909",
+  "sources": [
+    {
+      "id": "trillion-salary-rookie",
+      "title": "연봉 1조 신입사원",
+      "source": "서오/연봉 1조 신입사원_서오_합본.txt",
+      "analysisSha256": "a9248e71f3bb1ce4c50d0d8ddf43a34117fdff60998ef739853b314bfb8aafed",
+      "sourceSha256": "72353f790d8ee488a7832ee08008bd96a1681af7438a21ba7811a790223bc7b7",
+      "excerptSha256": "e8f6cf78b58c2b2054356f30dc395e61622453c3932ed540f2771e4f6e91cb6d",
+      "excerptCharacters": 7000,
+      "sourceExcerptStartCharacter": 0,
+      "sourceExcerptEndCharacter": 7000,
+      "additionalAnalysis": {
+        "path": "analyses/trillion-salary-rookie/project_bible.md",
+        "startLine": 139,
+        "endLine": 168,
+        "fileSha256": "41b04f67e508f86f59ce4b702076fbeeec461c281d502dfb3d10b581387d32c4",
+        "excerptSha256": "997f5a6d4b3b0eee12c89e64dbc4cf59554abedc0aa6fe5e59a50584f5b26a3e",
+        "characters": 2341,
+        "scope": "derived-analysis-excerpt-not-original-prose"
+      }
+    },
+    {
+      "id": "nouveau-riche-rascal",
+      "title": "졸부집 망나니(개정판)",
+      "source": "흑곰작가/졸부집 망나니(개정판)_흑곰작가_합본.txt",
+      "analysisSha256": "275cd2a6ac0aff9845a5a6483d39645aa12f2461c5c8b29f3b0bde9af72a15e9",
+      "sourceSha256": "67997af4a5922c21e2852545c958c3f71ec6b1a30a679271d0a7d41c87a947a8",
+      "excerptSha256": "b21dde2dc2f502139099cfdb3e1d363a94b891ec432629366c914780ea8509d9",
+      "excerptCharacters": 7000,
+      "sourceExcerptStartCharacter": 0,
+      "sourceExcerptEndCharacter": 7000,
+      "additionalAnalysis": {
+        "path": "analyses/nouveau-riche-rascal/project_bible.md",
+        "startLine": 125,
+        "endLine": 132,
+        "fileSha256": "9ebc5c32a1ff1155cdee0141b3eaca46a503819e2978ec61c9ce2aaf031447d4",
+        "excerptSha256": "fb57155d7d9de88fc94e11c3c3fc3304eceea33330f6d73a308eace980215f3e",
+        "characters": 842,
+        "scope": "derived-analysis-excerpt-not-original-prose"
+      }
+    },
+    {
+      "id": "chaebol-youngest-genius",
+      "title": "재벌가 막둥이는 만능 천재(개정판)",
+      "source": "흑곰작가/재벌가 막둥이는 만능 천재(개정판)_흑곰작가_합본.txt",
+      "analysisSha256": "9d27494ead645d4f95c722791e9c55388e711a713aad3571c0095b3f4cdd3c96",
+      "sourceSha256": "e00881820810cd27f1efbe72a0a514aa4a0a9b1a08a77a747444766a84892c7f",
+      "excerptSha256": "9fac12478d88e6f7b7bc0335e96352d19923f7d421f14fa096b7ce67f1987bf1",
+      "excerptCharacters": 7000,
+      "sourceExcerptStartCharacter": 0,
+      "sourceExcerptEndCharacter": 7000,
+      "additionalAnalysis": null
+    }
+  ],
+  "inputSha256": "a0052b7000a8c9fc6a80ca3f889366d03be6b64a7c01318f1671c29c21a48aae",
+  "sourceMaterialSha256": "7d25611fb8934025b1cdc0485a1bb11fc72099d229318cad68cc42981ed1eaa8",
+  "scope": "One short output. Same reference material as baseline; prompt and output format changed. No daily runner, publication, canon, or schedule changes.",
+  "limitations": "Historical comparison, not randomized A/B. Tests instruction/assembly feasibility; does not test newly mined complete source scenes.",
+  "assessmentBeforeReading": {
+    "questions": [
+      "보조작의 구체 재료가 주인공의 선택과 상대 행동을 바꾸는가",
+      "새 설정체계의 설명보다 참고 재료가 중심인가",
+      "생산 효율·납품·인수 목록을 넘어 구경할 사건이 있는가",
+      "첫 지급 뒤에 다른 관심이 생기며 필요한 전제가 연결되는가"
+    ],
+    "notProof": [
+      "흥행",
+      "장기 연재 재미",
+      "모델 일반 우열",
+      "새 원작 구간 채굴의 효과"
+    ],
+    "comparisonChanges": [
+      "same exact source material",
+      "short four-part instruction replaces full nine-section template",
+      "current owner taste applied; old candidate-specific HIL block omitted",
+      "new conversation same observed Pro/latest setting; exact backend identity unknown"
+    ]
+  }
+}

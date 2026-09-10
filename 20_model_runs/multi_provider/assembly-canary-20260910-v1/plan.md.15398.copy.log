@@ -1,0 +1,64 @@
+    text "아이의 첫 보상은 더 큰 가족회사에 재투자하지 않는다. 따로 공간을 얻고 전문가의 몫을 마련했기 때문에, 두 번째 사건에서는 형의 매각 결정이 동생..."
+                    paragraph
+                      text "거래액과 기술의 완성 시점은 이번 조립의 가정이다. 원작 자료만으로 그 사업성을 입증한 것은 아니다. 준호와 윤경의 연애·결혼도 아직 성립시키지 ..."
+                button [ref=6886, loc=unstable]
+                  text "출처"
+                group "응답 작업" [ref=6914, loc=role:group[name="응답 작업"]]
+                  button "응답 복사됨" [ref=6908, loc=css:button[aria-label="응답 복사됨"]]
+                    svg_root
+                  button "응답 평가" [ref=6909, loc=css:button[aria-label="응답 평가"]]
+                    svg_root
+                  button "Pro 피드백" [ref=6910, loc=css:button[aria-label="Pro 피드백"]]
+                    svg_root
+                  button "공유하기" [ref=6911, loc=ambiguous]
+                    svg_root
+                  button "모델 바꾸기" [ref=6905, loc=css:button[aria-label="모델 바꾸기"]]
+                    svg_root
+                  button "더 많은 액션" [ref=6913, loc=css:button[aria-label="더 많은 액션"]]
+                    svg_root
+          text "ChatGPT는 실수를 할 수 있습니다. 중요한 정보는 재차 확인하세요."
+        container
+          button [ref=5176, loc=unstable]
+            svg_root
+          container
+            form
+              button "파일 등 추가" [ref=5184, loc=css:button[aria-label="파일 등 추가"]]
+                container
+                svg_root
+              textfield "ChatGPT와 채팅" [ref=556, loc=css:input[aria-label="ChatGPT와 채팅"]]
+                paragraph
+                  text "ChatGPT에게 물어보세요"
+              container
+                button [ref=5201, loc=unstable]
+                  container
+                  container
+                    text "6"
+                    text "Pro"
+                  svg_root
+                  container
+                container
+                  button "받아쓰기 시작" [ref=5205, loc=css:button[aria-label="받아쓰기 시작"]]
+                    container
+                    svg_root
+                    container
+                  button "Voice 시작" [ref=6919, loc=css:button[aria-label="Voice 시작"]]
+                    svg_root
+                    container
+            textbox [ref=5262, loc=unstable]
+              button [ref=5247, loc=unstable]
+                text "파일 선택"
+              text "선택된 파일 없음"
+            textbox [ref=5263, loc=css:input[name="upload-media"]]
+              button [ref=5250, loc=unstable]
+                text "파일 선택"
+              text "선택된 파일 없음"
+            textbox [ref=5264, loc=unstable]
+              button [ref=5253, loc=unstable]
+                text "파일 선택"
+              text "선택된 파일 없음"
+      container
+  status
+    text "응답 복사됨"
+
+FIREFLY_COPY_CONFIRMED
+

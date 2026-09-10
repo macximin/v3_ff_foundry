@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "firefly-planning-process/v1",
+  "route": "gemini-cli",
+  "modelRequested": "gemini-3.1-pro-high",
+  "inputSha256": "7e8e79b0a6207f4f05dec247a407115600f8490e1cdd3055248b481c2148832f",
+  "reasoningRequested": "high",
+  "timeoutSeconds": 3600,
+  "queuedAt": "2026-09-08T22:11:27.807323+00:00",
+  "status": "process_completed",
+  "startedAt": "2026-09-08T22:11:27.847597+00:00",
+  "workerPid": 39428,
+  "writerPid": 39441,
+  "exitCode": 0,
+  "runtimeProvenance": {
+    "startManifest": "runtime-start.json",
+    "endManifest": "runtime-end.json",
+    "startSha256": "4bca8203798bb5f723bb21e6a64a38662f7c6f3398496e34e543165f428b4f03",
+    "endSha256": "ae06cea554c1488d8d6fb1a0b31dba4b74d6a7e6ab508eb3bf46ec99209a5874",
+    "changedFiles": [],
+    "driftDetected": false,
+    "meaning": "File observations only; changed files flag a potentially mixed execution."
+  },
+  "finishedAt": "2026-09-08T22:13:27.417575+00:00",
+  "elapsedSeconds": 119.57,
+  "rawFiles": {
+    "stdout.raw": "2a6b92253944d40e5c302a59c307f27c09ec7f996394c8f51b304af40e0d9b24",
+    "stderr.raw": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "meaning": "Process completion only; response extraction, format, publication and HIL are separate."
+}

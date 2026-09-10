@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "firefly-planning-process/v1",
+  "route": "astra",
+  "modelRequested": "gpt-6-astra",
+  "inputSha256": "072924b244fca1985ba5bd34e385d6c78950eba1f3c9bb2111c6542c1db399c2",
+  "reasoningRequested": "medium",
+  "timeoutSeconds": 3600,
+  "queuedAt": "2026-09-07T23:49:28.064400+00:00",
+  "status": "process_completed",
+  "startedAt": "2026-09-07T23:49:28.101496+00:00",
+  "workerPid": 155,
+  "writerPid": 165,
+  "exitCode": 0,
+  "runtimeProvenance": {
+    "startManifest": "runtime-start.json",
+    "endManifest": "runtime-end.json",
+    "startSha256": "974c4d111fb23a11db61acd96942194462adfc3ddcc25622d6fde7f40b79b567",
+    "endSha256": "43bb418ec19083f82c7db7fb0b1909a8f586c70f291838232d9a66a0f7a63127",
+    "changedFiles": [],
+    "driftDetected": false,
+    "meaning": "File observations only; changed files flag a potentially mixed execution."
+  },
+  "finishedAt": "2026-09-07T23:56:43.047290+00:00",
+  "elapsedSeconds": 434.94,
+  "rawFiles": {
+    "stdout.raw": "fabbf22101be56b9ac6e730b1749c0c4a1d66d35399cec0fc65682a3757343b8",
+    "stderr.raw": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "meaning": "Process completion only; response extraction, format, publication and HIL are separate."
+}

@@ -1,0 +1,19 @@
+{
+  "conversationUrl": "https://chatgpt.com/c/6a9eee8e-672c-83e8-b4be-036f171a2f19",
+  "title": "웹소설 기획서 작성",
+  "observedMode": "6 Pro",
+  "runtimeIndicator": "17m 47s 동안 처리함",
+  "hasStop": false,
+  "copyButtonObserved": "응답 복사",
+  "copySuccessEvidence": "응답 복사됨",
+  "assistantDomChars": 22523,
+  "assistantHead": "1. 작품 정보와 독자 약속",
+  "assistantTail": "마지막에는 더 큰 사업이 남아서가 아니라, 이 사람이 원한 것을 실제로 누리게 됐기 때문에 장편이 끝나야 한다.",
+  "copyButtons": [
+    "메시지 복사",
+    "표 복사",
+    "응답 복사"
+  ],
+  "taskSpaceId": 2,
+  "note": "Completion DOM evidence only. Plan body captured via 응답 복사 + planning-clipboard.py, not reconstructed from DOM."
+}

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "firefly-planning-process/v1",
+  "route": "chatgpt-web",
+  "modelRequested": "web-observed",
+  "inputSha256": "f5509d0d0757450a781f82c7766e1b71137b3cbd8a8f09e917ed4a5545e1c8d2",
+  "timeoutSeconds": 3600,
+  "queuedAt": "2026-09-06T16:03:49.844320+00:00",
+  "status": "process_completed",
+  "startedAt": "2026-09-06T16:03:49.879926+00:00",
+  "workerPid": 8169,
+  "writerPid": 8171,
+  "exitCode": 0,
+  "finishedAt": "2026-09-06T16:29:36.867228+00:00",
+  "elapsedSeconds": 1547.06,
+  "rawFiles": {
+    "stdout.raw": "014d9feb92e5066bfb9efa66e91557303c77ca0ceff9e2c84186f11b7d622a8c",
+    "stderr.raw": "5350c29ce3308c04ec8111c7ad4be6d6cc4d450f8c05759c73e8209fb755d84a"
+  },
+  "meaning": "Process completion only; response extraction, format, publication and HIL are separate."
+}

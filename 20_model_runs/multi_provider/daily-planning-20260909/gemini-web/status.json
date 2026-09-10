@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "firefly-planning-process/v1",
+  "route": "gemini-web",
+  "modelRequested": "web-observed",
+  "inputSha256": "7e8e79b0a6207f4f05dec247a407115600f8490e1cdd3055248b481c2148832f",
+  "reasoningRequested": "highest-available",
+  "timeoutSeconds": 3600,
+  "queuedAt": "2026-09-08T22:11:28.051787+00:00",
+  "requestedWebMode": "highest-available",
+  "controllerModelRequested": "grok-4.6",
+  "controllerReasoningRequested": "high",
+  "status": "process_completed",
+  "startedAt": "2026-09-08T22:11:28.117946+00:00",
+  "workerPid": 39443,
+  "writerPid": 39455,
+  "exitCode": 0,
+  "runtimeProvenance": {
+    "startManifest": "runtime-start.json",
+    "endManifest": "runtime-end.json",
+    "startSha256": "00104c2b8fbb685af91e2346acce6ecefa07155a8510bf3a4dca2d1e3df36cf0",
+    "endSha256": "80a530cc20334d26c3f37fbb8e635868ce01ead3cb4c318a8fe82954b43642a9",
+    "changedFiles": [],
+    "driftDetected": false,
+    "meaning": "File observations only; changed files flag a potentially mixed execution."
+  },
+  "finishedAt": "2026-09-08T22:20:18.785111+00:00",
+  "elapsedSeconds": 530.65,
+  "rawFiles": {
+    "stdout.raw": "62b711b5b11e16db52d575fd24979ee107da76ef91917e0cc263099773f99be6",
+    "stderr.raw": "14f79b35ae1002343d8d276898a62142c13c5395ad0ecee5316ad5288171021e"
+  },
+  "meaning": "Process completion only; response extraction, format, publication and HIL are separate."
+}

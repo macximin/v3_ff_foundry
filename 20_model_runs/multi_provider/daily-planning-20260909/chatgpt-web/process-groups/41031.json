@@ -1,0 +1,9 @@
+{
+  "pid": 41031,
+  "pgid": 41031,
+  "birth": "Wed Sep  9 07:13:56 2026",
+  "role": "ego-browser",
+  "registeredAt": "2026-09-08T22:13:56.235189+00:00",
+  "status": "stopped",
+  "cleanedAt": "2026-09-08T22:14:00.471542+00:00"
+}

@@ -1,0 +1,10 @@
+{
+  "batchId": "hardening-canary-20260908-v1",
+  "date": "2026-09-08",
+  "kind": "canary",
+  "state": "confirmed",
+  "startedAt": "2026-09-07T23:49:27.319761+00:00",
+  "propertiesSha256": "726153bf2b3c544d84c8ff262d5763198f9359c76d2f2178a3c3ca38609552fa",
+  "pageId": "3d4df078-7005-8162-aa92-f9abf1cf079e",
+  "verifiedAt": "2026-09-08T00:02:09.975385+00:00"
+}

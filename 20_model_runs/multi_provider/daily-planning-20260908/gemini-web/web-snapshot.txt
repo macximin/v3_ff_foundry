@@ -1,0 +1,636 @@
+conversationUrl: https://gemini.google.com/app/65dd1b470ea389dd?hl=ko
+title: 독식하는 재벌가 막내아들 웹소설 기획서 - Google Gemini
+observedMode: Pro Extended
+taskSpaceId: 1
+hasStop: false
+copyButtons: ["프롬프트 복사","복사"]
+bodyLen: 9105
+---snapshotText---
+root
+  container
+  container
+    button "사이드바 열기" [ref=36, loc=css:button[aria-label="사이드바 열기"]]
+      image
+      container
+      container
+    container
+      container
+      container [ref=367, loc=unstable]
+        button "대화 작업 메뉴 열기" [ref=368, loc=css:button[aria-label="대화 작업 메뉴 열기"]]
+          image
+            text "more_vert"
+          container
+    container
+      navigation "측면 탐색 메뉴"
+        container [ref=60, loc=unstable]
+          button "Spark 모드로 전환 (⇧⌘S)" [ref=61, loc=css:button[aria-label="Spark 모드로 전환 (⇧⌘S)"]]
+            image
+              text "toggle_off"
+            container
+        container
+          navigation "기본 작업 메뉴"
+            container [ref=67, loc=unstable]
+              anchor "새 채팅" [ref=17, loc=css:a[aria-label="새 채팅"], url=https://gemini.google.com/app]
+                image
+                  text "gemini_chat"
+                container
+            container [ref=71, loc=unstable]
+              anchor "채팅 검색" [ref=22, loc=css:a[aria-label="채팅 검색"], url=https://gemini.google.com/search]
+                image
+                  text "search"
+                container
+          navigation "추가 작업 메뉴"
+            container [ref=78, loc=unstable]
+              anchor "이미지" [ref=79, loc=css:a[aria-label="이미지"], url=https://gemini.google.com/images]
+                image
+                  text "image_create"
+                container
+            container [ref=86, loc=unstable]
+              anchor "동영상" [ref=87, loc=css:a[aria-label="동영상"], url=https://gemini.google.com/videos]
+                image
+                  text "movie"
+                container
+            container [ref=94, loc=unstable]
+              anchor "라이브러리" [ref=95, loc=css:a[aria-label="라이브러리"], url=https://gemini.google.com/library]
+                image
+                  text "features"
+                container
+        group
+          anchor "Google 계정: Lock Caps(macximin11123@gmail.com)" [ref=112, loc=css:a[aria-label="Google 계정: Lock Caps(macximin11123@gmail.com)"], url=https://accounts.google.com/SignOutOptions?continue=https://gemini.google.com]
+            image
+          container [ref=116, loc=unstable]
+            button "설정" [ref=117, loc=css:button[aria-label="설정"]]
+              image
+                text "settings"
+              container
+      container
+        heading
+          text "Gemini와의 대화"
+        container [ref=130, loc=unstable]
+          container
+            button "input.md" [ref=382, loc=css:button[aria-label="input.md"]]
+              image
+              text "input"
+            container
+              heading
+                text "말씀하신 내용"
+                text "첨부한 input.md의 지시와 양식을 그대로 따르세요. 최신 양식의 1~9절과 WHO WHAT HOW WHERE WHEN WHY를 모두 채운 완전한 웹소설 기획서 한 편을 한국어…"
+              paragraph
+                text "첨부한 input.md의 지시와 양식을 그대로 따르세요. 최신 양식의 1~9절과 WHO WHAT HOW WHERE WHEN WHY를 모두 채운 완전한 웹소설 기획서 한 편을 한국어 Markdown �..."
+            container
+              container [ref=395, loc=unstable]
+                button "프롬프트 복사" [ref=396, loc=css:button[aria-label="프롬프트 복사"]]
+                  image
+                    text "copy"
+                  container
+              container [ref=615, loc=unstable]
+                button "수정" [ref=401, loc=css:button[aria-label="수정"]]
+                  image
+                    text "edit"
+                  container
+          container
+            container
+              heading
+                text "Gemini의 응답"
+              container
+                heading
+                  text "재벌가 이단아의 독식 설계 기획서 v1"
+                paragraph
+                  text "2026-09-08 작성 · 육하원칙 + 목적의 단계 + 독자 보상"
+                heading
+                  text "1. 작품 정보와 독자 약속"
+                container
+                  table
+                    table_row
+                      table_cell
+                        text "항목"
+                        container
+                      table_cell
+                        text "기입"
+                        container
+                    table_row
+                      table_cell
+                        text "작품명·가제"
+                        container
+                      table_cell
+                        text "독식하는 재벌가 막내아들"
+                        container
+                    table_row
+                      table_cell
+                        text "장르·핵심 키워드"
+                        container
+                      table_cell
+                        text "현대판타지, 재벌, 기업 인수, 회귀, 미래 지식, 독식"
+                        container
+                    table_row
+                      table_cell
+                        text "예상 독자"
+                        container
+                      table_cell
+                        text "주인공이 압도적인 자본과 지식 우위를 통해 타인이나 국가의 이익이 아닌 철저히 자신만의 이득과 소유권을 확보하는 통쾌한 성공물을 선호하는 독�..."
+                        container
+                    table_row
+                      table_cell
+                        text "연재 형태·예상 분량"
+                        container
+                      table_cell
+                        text "웹소설 플랫폼 주 5~7회 연재 / 최소 200화 이상 장편"
+                        container
+                    table_row
+                      table_cell
+                        text "시점·문체"
+                      table_cell
+                        text "1인칭 주인공 시점 / 감정적 헌신 없이 철저히 손익을 계산하는 냉소적이고 속도감 있는 문체"
+                    table_row
+                      table_cell
+                        text "이용 등급·표현 수위 (선택)"
+                      table_cell
+                        text "15세 이용가 (경제적 압박과 기업 사냥에 대한 묘사)"
+                    table_row
+                      table_cell
+                        text "작품 이력·현재 집필 분량 (선택)"
+                      table_cell
+                        text "신규 기획 단계"
+                  container [ref=693, loc=unstable]
+                    button "옵션 더보기" [ref=694, loc=ambiguous]
+                      image
+                        text "more_horiz"
+                paragraph
+                  text "로그라인:"
+                  text "오너 일가에게 성과를 빼앗기고 버려진 천재 기획자가 1996년 재벌가 최악의 망나니 막내로 깨어나, 미래 지식과 기술 결함을 꿰뚫는 감각으로 가문의 �..."
+                paragraph
+                  text "작품 소개:"
+                  text "평생 회사를 위해 헌신했지만 낙하산 상사에게 모든 기획과 공로를 빼앗긴 남자. 눈을 떠보니 1996년, 곧 들이닥칠 외환위기를 앞둔 굴지의 재벌가 막내..."
+                paragraph
+                  text "참고한 작품과 가져올 요소:"
+                unordered_list
+                  list_item
+                    paragraph
+                      text "《연봉 1조 신입사원》: 사물의 구조적 화음/불협화음을 읽는 감각과 기술 특허를 자본으로 바꾸는 능력"
+                  list_item
+                    paragraph
+                      text "《금수저생활백서》: 성과를 빼앗긴 실무자가 재벌가 막내로 깨어나 미래 지식을 활용하는 구조"
+                  list_item
+                    paragraph
+                      text "《졸부집 망나니(개정판)》: 1990년대 중반 회귀, 망나니라는 최저 평판, 외환위기(IMF) 선점 및 막대한 초기 자본(300억) 요구 방식 ※ 예정이 아닌 확정 �..."
+                paragraph
+                  text "반복해서 사고 싶은 재미:"
+                  text "주변의 멸시와 가문의 통제를 가볍게 무시하고, 적들의 자산과 위기 상황을 철저히 주인공 자신의 개인 계좌와 소유권으로 치환해 버리는 압도적인 자..."
+                paragraph
+                  text "대표 장면:"
+                  text "가문의 자금줄이 끊길 위기에서, 주인공이 아무도 거들떠보지 않던 계열사의 폐기된 도면을 가져와 완벽한 카메라폰 핵심 특허로 재설계한 뒤, 가족이..."
+                heading
+                  text "2. 작품의 육하원칙"
+                container
+                  table
+                    table_row
+                      table_cell
+                        text "질문"
+                      table_cell
+                        text "구체화할 내용"
+                      table_cell
+                        text "기입"
+                    table_row
+                      table_cell
+                        text "WHO — 누가"
+                      table_cell
+                        text "어떤 경험·능력·처지·태도를 가진 주인공인가? 누구와 손잡거나 겨루는가? 상대도 자기 목적에 따라 무엇을 하는가?"
+                      table_cell
+                        text "전생에 헌신하다 성과를 빼앗긴 상처 탓에 오직 ‘내 것’에만 집착하는 이기적 천재 기획자. 가문(아버지, 형제들)을 물주이자 사냥감으로 여기며, 실..."
+                    table_row
+                      table_cell
+                        text "WHAT — 무엇을"
+                      table_cell
+                        text "어떤 주인공이 무엇을 이루어 가는 이야기인가? 끝내 달성하려는 결과와 그 확인 장면은 무엇인가?"
+                      table_cell
+                        text "가족이나 국가를 위한 구제가 아닌, 철저히 주인공 개인의 이름으로 된 세계 최대의 지주회사를 세우는 이야기. 종국에는 가문의 본가마저 자신의 하�..."
+                    table_row
+                      table_cell
+                        text "HOW — 어떻게"
+                      table_cell
+                        text "남과 다른 정보·실력·능력·자원을 어떻게 얻었는가? 그 우위를 반복해서 어떻게 자기 이득으로 바꾸는가?"
+                      table_cell
+                        text "이전 생의 억울한 죽음과 함께 얻은 '기술/구조 결함 파악 감각' + '미래 IT/금융 역사 정보' + '재벌가의 무담보 초기 자본(300억)'. 이 3가지 우위를 결합�..."
+                    table_row
+                      table_cell
+                        text "WHERE — 어디서"
+                      table_cell
+                        text "어떤 생활 공간·현장·업종·사회에서 일이 벌어지는가? 그 장소의 사람·물건·환경이 선택에 어떤 영향을 주는가?"
+                      table_cell
+                        text "1996~1997년의 대한민국 여의도 금융가 및 재벌 그룹 본사. IMF라는 특수한 환경이 합법적인 알짜 기업 약탈과 외국 자본 끌어들이기를 가능하게 한다."
+                    table_row
+                      table_cell
+                        text "WHEN — 언제"
+                      table_cell
+                        text "어느 시대, 인생의 어느 시점인가? 어떤 사건·기회·변화 때문에 지금 움직이는가? 실제로 있는 기한이나 선후관계는 무엇인가?"
+                      table_cell
+                        text "1996년, 외환위기(IMF)가 터지기 직전. 국가적 부도가 예견된 이 시점이야말로 현금 확보와 공매도로 가장 쉽고 거대하게 부를 훔칠 수 있는 단 한 번의 �..."
+                    table_row
+                      table_cell
+                        text "WHY — 왜"
+                      table_cell
+                        text "주인공은 왜 이 결과를 원하는가? 얻으면 자신에게 무엇이 좋아지는가? 현재 행동까지 설명할 수 있는 이유인가?"
+                      table_cell
+                        text "이전 생에서 남 좋은 일만 하다가 모든 것을 빼앗긴 트라우마 때문. 타인의 평가나 가문의 후계 자리보다 '누구도 빼앗을 수 없는 완벽한 내 명의의 자�..."
+                  container [ref=776, loc=unstable]
+                    button "옵션 더보기" [ref=777, loc=ambiguous]
+                      image
+                        text "more_horiz"
+                paragraph
+                  text "목적을 행동으로 읽기:"
+                  text "주인공은 타인에게 통제받지 않는 완벽한 독립 자본을 얻기 위해, 1996년 한국 금융 시장에서, 300억 원의 가문 자본과 미래 정보·기술 감각을 무기로, IM..."
+                paragraph
+                  text "결과를 사람 표면으로 읽기:"
+                  text "주인공이 쓸어 담은 막대한 부와 기업 지분은 원래 가문을 지배하던 오너 형제들의 권력을 실시간으로 박탈하며, 주인공의 명령 하나에 대기업 회장인..."
+                heading
+                  text "3. 장기·구간·회차의 목적 연결"
+                container
+                  container [ref=613, loc=unstable]
+                    table
+                      table_row
+                        table_cell
+                          text "단계"
+                        table_cell
+                          text "얻으려는 결과"
+                        table_cell
+                          text "이번에 할 선택과 행동"
+                        table_cell
+                          text "결과를 확인하는 장면"
+                        table_cell
+                          text "상위 목적과의 관계"
+                      table_row
+                        table_cell
+                          text "Series WHAT"
+                        table_cell
+                          text "누구도 침범 불가능한 1인 소유 글로벌 지주사 완성"
+                        table_cell
+                          text "자본의 복리 증식과 경쟁 기업(가문 포함)의 철저한 파괴 및 흡수"
+                        table_cell
+                          text "세계 지도자와 가문 일원들이 주인공의 사유지에서 결재를 기다리는 마지막 장면"
+                        table_cell
+                          text "절대적 소유권 확보라는 개인적 욕망(WHY)을 궁극적으로 달성"
+                      table_row
+                        table_cell
+                          text "현재 기획 구간의 목적"
+                        table_cell
+                          text "가문의 통제에서 벗어날 초기 독립 자금 300억 확보 및 증식"
+                        table_cell
+                          text "망나니로 찍힌 상황을 역이용, 쓰레기 취급받는 부실 계열사 권한을 넘겨받아 알짜 기술 매각"
+                        table_cell
+                          text "가문 모르게 외국계 펀드와 수백억 대 비밀 매각 계약서에 서명하는 결산"
+                        table_cell
+                          text "장기 목적을 위한 종잣돈 마련과 정보 우위(HOW)의 완벽한 실증"
+                      table_row
+                        table_cell
+                          text "이번 Chapter want"
+                        table_cell
+                          text "아버지가 카드를 정지시키고 압박할 때 당황하지 않고 판을 뒤집는 것"
+                        table_cell
+                          text "강압적 결혼 대신 가문 소유의 버려진 연구소와 현금 300억을 요구하는 파격적 협상"
+                        table_cell
+                          text "아버지가 기막혀하면서도 결국 연구소 양도 서류에 도장을 찍는 지급 장면"
+                        table_cell
+                          text "초기 자금(300억) 획득을 위한 교두보 확보"
+                  container [ref=835, loc=unstable]
+                    button "옵션 더보기" [ref=836, loc=ambiguous]
+                      image
+                        text "more_horiz"
+                heading
+                  text "4. 등장인물과 관계"
+                container
+                  container [ref=614, loc=unstable]
+                    table
+                      table_row
+                        table_cell
+                          text "인물·현재 위치"
+                        table_cell
+                          text "본인의 욕망과 목적"
+                        table_cell
+                          text "주인공과 얽히는 이유"
+                        table_cell
+                          text "선택·행동"
+                        table_cell
+                          text "말투·행동의 특징"
+                      table_row
+                        table_cell
+                          text "백도현 (주인공)"
+                        table_cell
+                          text "완벽한 사유재산과 절대 권력 확보 (WHY·WHAT)"
+                        table_cell
+                          text "가문의 자본을 초기 종잣돈으로 뜯어내기 위해"
+                        table_cell
+                          text "위기를 기회로 삼아 타인의 부를 합법적으로 훔치고 실무진을 매수"
+                        table_cell
+                          text "예의를 갖추는 척하지만 핵심 이익 앞에서는 철저히 차갑고 직설적임"
+                      table_row
+                        table_cell
+                          text "백경수 (아버지/회장)"
+                        table_cell
+                          text "그룹의 생존과 후계 구도의 안정"
+                        table_cell
+                          text "주인공을 통제 가능한 수단이나 도구로 쓰려 함"
+                        table_cell
+                          text "카드를 정지하고 압박하다 주인공의 압도적 성과에 점차 주도권을 뺏김"
+                        table_cell
+                          text "가부장적이고 고압적이나, 철저한 계산이 깔린 협상가의 태도"
+                      table_row
+                        table_cell
+                          text "백도훈 (장남/적대자)"
+                        table_cell
+                          text "차기 회장직과 그룹 자산의 독식"
+                        table_cell
+                          text "자신의 몫을 위협하는 주인공을 짓밟으려 함"
+                        table_cell
+                          text "주인공의 성과를 가로채려다 주인공이 파놓은 풋옵션과 공매도 함정에 빠짐"
+                        table_cell
+                          text "겉으로는 점잖지만 뒤에서는 비열하고 여유를 가장한 오만함"
+                      table_row
+                        table_cell
+                          text "박태웅 (핵심 실무자)"
+                        table_cell
+                          text "정당한 보상과 자신의 능력 실현"
+                        table_cell
+                          text "헐값에 매각될 위기에서 주인공에게 구제되어 권한을 받음"
+                        table_cell
+                          text "처음엔 의심하나 주인공의 예측과 파격적 성과급에 충성을 바침"
+                        table_cell
+                          text "전문 경영인 특유의 깐깐함과 데이터 중심의 보고 방식"
+                  container [ref=899, loc=unstable]
+                    button "옵션 더보기" [ref=900, loc=ambiguous]
+                      image
+                        text "more_horiz"
+                paragraph
+                  text "핵심 관계의 전후:"
+                  text "아버지는 주인공을 버린 패나 통제 가능한 볼모로 대함 → 주인공이 가문의 자원을 빼돌려 독자적인 거대 펀드를 세우고 가문의 생명줄을 쥠 → 아버�..."
+                paragraph
+                  text "주인공을 계속 보고 싶은 이유:"
+                  text "억지스러운 도덕적 성장이나 가문 구제에 얽매이지 않고, 자신을 핍박하던 오너 일가와 기득권층을 철저하게 자본과 기술로 유린하는 냉혹함. 원작에�..."
+                paragraph
+                  text "정보 차이:"
+                  text "주인공은 곧 닥칠 IMF 위기와 기술의 미래(닷컴 버블)를 정확히 알고 있으나, 아버지와 적대자들은 주인공이 그저 운이 좋거나 무모한 도박을 한다고 착..."
+                heading
+                  text "5. 무대·시간·우위가 사건을 만드는 방식"
+                paragraph
+                  text "무대의 구체성:"
+                  text "1996년 여의도 증권가, 무너져가는 계열사의 먼지 쌓인 특허 연구소, 훗날 IT 혁명이 일어날 판교의 매입 부지."
+                paragraph
+                  text "시작 시점의 조건:"
+                  text "IMF 구제금융이 터지기 직전인 1996년 말. 기존 재벌들은 문어발식 확장으로 빚더미에 앉아 있고, 오직 주인공만이 달러 확보와 공매도 포지션을 취할 수..."
+                paragraph
+                  text "작품의 반복 동작:"
+                  text "버려진 기술/기업의 결함 발견 및 완벽한 재설계 → 외부 펀드를 가장한 투자 유치 및 헐값 인수 → 시장 위기 발발 시 막대한 자본 차익 실현 → 철저�..."
+                paragraph
+                  text "변주 가능성:"
+                  text "처음에는 가문 내 버려진 특허 하나를 훔쳐 자본을 만들지만, 점차 국내 굴지의 은행, 해외 IT 기업, 국가 단위의 항만/자원 채굴권 등으로 약탈의 규모�..."
+                paragraph
+                  text "일반적인 해결 방식과 주인공의 방식:"
+                  text "IMF 위기 시, 일반적인 재벌물 주인공이나 기득권층이 '금 모으기'나 국가 경제 살리기에 동참하여 명예를 얻는다면, 주인공은 철저히 외환을 매집하고 ..."
+                container
+                  container [ref=931, loc=unstable]
+                    table
+                      table_row
+                        table_cell
+                          text "세력·조직"
+                        table_cell
+                          text "추구하는 목적"
+                        table_cell
+                          text "가진 자원·영향력"
+                        table_cell
+                          text "주인공과의 이해관계·실제 행동"
+                      table_row
+                        table_cell
+                          text "제일그룹 (본가)"
+                        table_cell
+                          text "외환위기 속 생존과 자산 방어"
+                        table_cell
+                          text "거대한 기업망과 국내 정치력"
+                        table_cell
+                          text "주인공에게 초기 300억을 제공하나, 훗날 주인공에게 핵심 계열사들을 헐값에 먹히는 사냥감이 됨"
+                      table_row
+                        table_cell
+                          text "타이거 펀드 (해외)"
+                        table_cell
+                          text "한국 자산의 헐값 매수"
+                        table_cell
+                          text "막대한 달러 현금과 글로벌 네트워크"
+                        table_cell
+                          text "주인공의 특허를 비싸게 사주는 첫 거래처이자, 훗날 주인공이 역으로 지분을 장악해 손발로 쓰는 사모펀드"
+                  container [ref=960, loc=unstable]
+                    button "옵션 더보기" [ref=961, loc=ambiguous]
+                      image
+                        text "more_horiz"
+                paragraph
+                  text "시간과 공개 순서:"
+                  text "주인공이 미리 차명으로 달러를 매집하고 페이퍼 컴퍼니를 세운 사실을 독자와 주인공만 알며, 가문과 시장은 나중에 주인공이 인수합병(M&A)의 최종 �..."
+                heading
+                  text "6. 전체 줄거리와 장기 전개"
+                container
+                  container [ref=971, loc=unstable]
+                    table
+                      table_row
+                        table_cell
+                          text "큰 구간"
+                        table_cell
+                          text "사람·무대·시점의 변화"
+                        table_cell
+                          text "주인공 목적과 주요 선택"
+                        table_cell
+                          text "핵심 사건의 인과"
+                        table_cell
+                          text "지급·후과와 끝 상태"
+                      table_row
+                        table_cell
+                          text "시작"
+                        table_cell
+                          text "1996년, 병실에서 깨어난 직후 / 그룹 본사"
+                        table_cell
+                          text "가문의 통제를 벗어날 초기 자본 300억 강탈"
+                        table_cell
+                          text "망나니 취급을 역이용, 결혼 압박에 대한 대가로 부실 연구소와 300억을 요구함. 이후 연구소의 도면을 고쳐 해외에 팔아 치움"
+                        table_cell
+                          text "300억이 단숨에 수천억의 차명 달러 자산으로 변모. 가문의 감시망에서 완전 독립"
+                      table_row
+                        table_cell
+                          text "이후 구간"
+                        table_cell
+                          text "1997년 말 외환위기 / 여의도 및 월스트리트"
+                        table_cell
+                          text "위기 상황을 이용한 자산 약탈과 지주사 설립"
+                        table_cell
+                          text "IMF가 터지자 형제들의 핵심 계열사가 부도 위기에 처함. 주인공은 차명 펀드로 이를 헐값에 인수하고, 박태웅을 내세워 완벽한 사유 그룹을 만듦"
+                        table_cell
+                          text "가문의 힘이 꺾이고, 주인공이 그룹 전체를 위협하는 거대한 독립 세력의 오너로 부상"
+                      table_row
+                        table_cell
+                          text "최종 결산"
+                        table_cell
+                          text "2010년대 / 글로벌 금융 위기 이후의 세계"
+                        table_cell
+                          text "국가와 가문을 넘어선 단일 자본 제국의 군림"
+                        table_cell
+                          text "금융위기 때 세계 자본을 공매도로 털어먹은 뒤, 핵심 인프라(식량, 통신) 지분을 싹쓸이. 가족마저 주인공의 처분을 기다려야 함"
+                        table_cell
+                          text "그 누구도 빼앗을 수 없는 완벽한 부와 소유권을 입증하며 1인 제국의 완성 선언"
+                  container [ref=1017, loc=unstable]
+                    button "옵션 더보기" [ref=1018, loc=ambiguous]
+                      image
+                        text "more_horiz"
+                paragraph
+                  text "얻은 것과 다음 전개의 연결:"
+                  text "1구간에서 얻은 '차명 달러 자산'은 2구간에서 '형제들의 알짜 계열사를 합법적으로 빼앗는 무기'로 쓰이고, 여기서 얻은 '독립 지주사'는 최종 구간에�..."
+                paragraph
+                  text "완결 시 주인공의 삶:"
+                  text "전생에 성과를 뺏겼던 억울함을 완벽히 보상받듯, 어떠한 세력(가족, 국가, 경쟁사)도 그에게 명령할 수 없는 위치에서, 철저히 자신의 명령에만 복종�..."
+                heading
+                  text "7. 독자 보상과 연재 지속성"
+                paragraph
+                  text "첫 만족:"
+                  text "가문에서 내친 쓰레기 취급받던 연구소 도면을 주인공이 며칠 만에 결함을 뜯어고쳐 수백억 규모의 외국 펀드 매각 계약을 체결하고, 아버지가 그 사�..."
+                paragraph
+                  text "반복될 만족:"
+                  text "경제 위기나 형제들의 모략이 발생할 때마다, 주인공은 이를 구제하거나 방어하는 대신 '구조적 맹점'을 찌르는 숏(공매도) 포지션과 차명 인수로 그들..."
+                paragraph
+                  text "보상의 변주:"
+                  text "초기에는 단순히 통장 잔고(달러)의 증가로 만족을 주지만, 점차 형제가 아끼던 알짜 기업 명패가 주인공의 이름으로 바뀌고, 훗날에는 국가 정책마저 ..."
+                paragraph
+                  text "지급 뒤의 삶:"
+                  text "주인공을 버리려 했던 아버지와 형제들이 역으로 파산 위기에서 주인공의 집무실 밖에서 결재를 기다리며 굴욕을 겪는 일상적 장면이 반복적으로 등�..."
+                paragraph
+                  text "다음 구간의 기대:"
+                  text "가문의 자산을 다 집어삼킨 뒤에는, 월스트리트의 거대 자본과 전 세계 기술 기업들을 어떻게 합법적으로 훔쳐내 자신의 제국에 귀속시킬지에 대한 스..."
+                heading
+                  text "8. 참고 작품의 역설계·조합·변주"
+                paragraph
+                  text "이번 작업에서 유지하려는 것:"
+                  text "세 작품이 가진 장점(기술적 통찰력, 미래 빙의, 외환위기 선점)을 조합하되, 목적성을 '가족 구제나 국가 경영'이 아닌 '철저한 개인 이기주의와 자본 �..."
+                container
+                  container [ref=1051, loc=unstable]
+                    table
+                      table_row
+                        table_cell
+                          text "참고 작품·확인한 자료와 범위"
+                        table_cell
+                          text "가져올 요소"
+                        table_cell
+                          text "이 작품에 쓰려는 이유"
+                        table_cell
+                          text "반영할 인물·장면·구간"
+                        table_cell
+                          text "유지·조정할 내용과 필요한 인과"
+                      table_row
+                        table_cell
+                          text "《연봉 1조 신입사원》 (제공된 피치 및 발췌본 확인)"
+                        table_cell
+                          text "기계/구조의 화음·불협화음을 읽는 감각과 기술 수익화"
+                        table_cell
+                          text "미래 지식만으로는 채울 수 없는 주인공 본연의 실무적 능력과 정보 우위를 설명하기 위해"
+                        table_cell
+                          text "초반부 부실 연구소 특허 획득 구간"
+                        table_cell
+                          text "원작의 시계 수리로 악인을 판별하는 사건은 배제. 대신 가문이 버린 PDA/카메라 도면의 결함을 고쳐 해외 펀드에 매각, 자기 이득(300억)을 증명하는 사�..."
+                      table_row
+                        table_cell
+                          text "《금수저생활백서》 (제공된 피치 및 발췌본 확인)"
+                        table_cell
+                          text "오너 일가에게 성과를 뺏긴 기획자가 재벌가 막내로 깨어나는 배경"
+                        table_cell
+                          text "처절한 전생의 결핍을 바탕으로 철저히 이기적이고 소유에 집착하는 행동(WHY)의 동기로 쓰기 위해"
+                        table_cell
+                          text "1화 진입부 및 실무자(박태웅 등) 포섭 구간"
+                        table_cell
+                          text "원작의 '아버지 신뢰 회복 퀘스트' 등 가족 인정 요소는 삭제. 오직 가문을 자본의 젖줄이자 사냥감으로만 취급하도록 인과 조정"
+                      table_row
+                        table_cell
+                          text "《졸부집 망나니(개정판)》 (제공된 피치 및 발췌본 확인)"
+                        table_cell
+                          text "1996년 회귀, 망나니라는 평판, 300억 원의 시작 자본 확보와 IMF 선점"
+                        table_cell
+                          text "막대한 자본과 극단적 위기가 만났을 때 생기는 레버리지(기업 인수) 재미를 주기 위해"
+                        table_cell
+                          text "1구간(시작)의 자본 획득 및 2구간 IMF 헐값 쇼핑"
+                        table_cell
+                          text "원작의 장모 치료, 재심 등 이타적/가족 구제 행위와 정치인/대통령 결말 배제. 오직 자기 소유의 지주사 완성과 자본 독식 행위로만 목적 조정"
+                  container [ref=1097, loc=unstable]
+                    button "옵션 더보기" [ref=1098, loc=ambiguous]
+                      image
+                        text "more_horiz"
+                paragraph
+                  text "조합 시 맞춰야 할 선행 상태:"
+                  text "이전 생의 기획 경험과 미래 지식(졸부집/금수저) 위에 사물의 구조 결함을 보는 이능(연봉 1조)이 결합된 상태로 시작한다. 세 요소가 겹치면서 주인공..."
+                heading
+                  text "9. 기획 의도와 집필 계획"
+                paragraph
+                  text "작가의 기획 의도:"
+                  text "주인공이 대의나 도덕적 부채감에 휘둘리지 않고, 철저히 자신의 손익계산과 절대적 소유권을 위해 이기적으로 자본을 증식해 나가는 '극도의 사이다�..."
+                paragraph
+                  text "이 작품에서 특히 지킬 맛:"
+                unordered_list
+                  list_item
+                    paragraph
+                      text "주인공은 절대 먼저 감정을 드러내거나 화를 내지 않는다. 타인의 분노나 애원 앞에서 오직 계산된 계약서와 지분율로만 대답하는 냉혹함."
+                  list_item
+                    paragraph
+                      text "이타적 동기나 도덕적 성장을 핑계로 주인공의 자산을 남에게 퍼주지 않는다. 보상은 철저히 자신에게 종속된 수족(대리인)에게만 지급하여 충성심을 ..."
+                paragraph
+                  text "다음 집필 범위:"
+                  text "1~5화 분량의 ArcPacket 작성. 주인공이 깨어나 아버지를 상대로 결혼 압박을 회피하며 300억과 부실 연구소를 뜯어내고, 첫 특허 재설계에 돌입하는 과정 �..."
+                paragraph
+                  text "미정 사항:"
+                  text "중반부 이후 삼켜버릴 해외 거대 IT 공룡 기업(구글, 애플 등)의 이름을 현실명으로 쓸지 대용어로 쓸지에 대한 법적/플랫폼 가이드 확인."
+                paragraph
+                  text "원고로 확인할 질문:"
+                  text "주인공의 속물적이지만 유능한 태도와 도면을 꿰뚫어 보는 감각적 묘사가 어떻게 독자에게 이기적 쾌감으로 다가갈지 3화의 첫 거래 성사 장면 원고를..."
+            container [ref=1127, loc=unstable]
+              button "대답이 마음에 들어요" [ref=1128, loc=css:button[aria-label="대답이 마음에 들어요"]]
+                image
+                  text "thumb_up"
+            container [ref=1131, loc=unstable]
+              button "대답이 마음에 들지 않아요" [ref=1132, loc=css:button[aria-label="대답이 마음에 들지 않아요"]]
+                image
+                  text "thumb_down"
+            container [ref=1134, loc=unstable]
+              button "다시 실행" [ref=1135, loc=css:button[aria-label="다시 실행"]]
+                image
+                  text "refresh"
+            container [ref=1137, loc=unstable]
+              button "복사" [ref=1138, loc=css:button[aria-label="복사"]]
+                image
+                  text "copy"
+            container [ref=1140, loc=unstable]
+              button "옵션 더보기" [ref=1141, loc=ambiguous]
+                image
+                  text "more_horiz"
+        container
+          group [ref=143, loc=unstable]
+            container
+              textfield "Gemini 프롬프트 입력" [ref=152, loc=css:input[aria-label="Gemini 프롬프트 입력"]]
+                text "Gemini에게 물어보기"
+                paragraph
+                  text
+              container [ref=154, loc=unstable]
+            container [ref=159, loc=unstable]
+              button "업로드 및 도구" [ref=160, loc=css:button[aria-label="업로드 및 도구"]]
+                image
+                  text "plus"
+                container
+            container
+              group
+                button "모드 선택 도구 열기, 현재 Pro Extended 모드 사용 중" [ref=169, loc=css:button[aria-label="모드 선택 도구 열기, 현재 Pro Extended 모드 사용 중"]]
+                  container
+                    text "Pro"
+                    text "Extended"
+                    image
+                      text "keyboard_arrow_down"
+                  container
+                  container
+              container [ref=183, loc=unstable]
+                button "음성기록 (⌘⇧D)" [ref=184, loc=css:button[aria-label="음성기록 (⌘⇧D)"]]
+                  image
+                    text "mic"
+                  container
+          paragraph
+            text "Gemini는 AI이며 인물 등에 관한 정보 제공 시 실수를 할 수 있습니다."
+            anchor [ref=353, loc=href:https://support.google.com/gemini?p=privacy_notice, url=https://support.google.com/gemini?p=privacy_notice]
+              text "개인 정보 보호 및 Gemini"
+              text "새 창에서 열기"
+  text "Integrating Korean Concepts"

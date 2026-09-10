@@ -1,0 +1,70 @@
+{
+  "status": "complete",
+  "conversationUrl": "https://gemini.google.com/app/e12e31aa3e585585?hl=ko",
+  "observedServiceUrl": "https://gemini.google.com/app?hl=ko",
+  "observedMode": "Pro Extended",
+  "observedModeDetails": {
+    "buttonLabel": "Pro Extended",
+    "buttonAriaLabel": "모드 선택 도구 열기, 현재 Pro Extended 모드 사용 중",
+    "menuLabel": "확장된 사고 모델",
+    "menuDescription": "복잡한 문제 해결",
+    "menuOptionsObserved": [
+      {
+        "label": "3.5 Flash-Lite",
+        "description": "가장 빠른 답변 제공"
+      },
+      {
+        "label": "3.8 Flash",
+        "description": "무엇이든 도움을 받으세요",
+        "badge": "신규"
+      },
+      {
+        "label": "3.1 Pro",
+        "description": "고급 추론"
+      },
+      {
+        "label": "확장된 사고 모델",
+        "description": "복잡한 문제 해결"
+      }
+    ]
+  },
+  "taskSpaceId": 8,
+  "taskSpaceName": "gemini-web-daily-planning-20260909",
+  "submittedAt": "2026-09-08T22:14:03Z",
+  "finishedAt": "2026-09-08T22:20:06Z",
+  "inputSha256": "7e8e79b0a6207f4f05dec247a407115600f8490e1cdd3055248b481c2148832f",
+  "inputBytes": 121235,
+  "outputSha256": "864a0a2039839ee392cf23c4e5e5b7f9a75f317b5d41ae78dbedb2c800aa55e7",
+  "outputBytes": 21129,
+  "outputCharacters": 9332,
+  "extractionMethod": "ego-copy+os-pbpaste",
+  "helperReceiptPath": "/Users/a2501/Desktop/firefly_studio/edge_repos/v3_ff_foundry/20_model_runs/multi_provider/daily-planning-20260909/gemini-web/plan.md.43399.receipt.json",
+  "copyLogPath": "/Users/a2501/Desktop/firefly_studio/edge_repos/v3_ff_foundry/20_model_runs/multi_provider/daily-planning-20260909/gemini-web/plan.md.43399.copy.log",
+  "webSnapshotPath": "/Users/a2501/Desktop/firefly_studio/edge_repos/v3_ff_foundry/20_model_runs/multi_provider/daily-planning-20260909/gemini-web/web-snapshot.txt",
+  "planPath": "/Users/a2501/Desktop/firefly_studio/edge_repos/v3_ff_foundry/20_model_runs/multi_provider/daily-planning-20260909/gemini-web/plan.md",
+  "route": "gemini-web",
+  "attachment": "input.md",
+  "tokenUsage": "unknown",
+  "copyAnchors": [
+    "Firefly 웹소설 작품 기획서 v1",
+    "주인공이 대리인들에게 지분을 분배할 때의 합리적이고 자기중심적인 매력이 충분히 발산되는가?"
+  ],
+  "copySuccessEvidence": "클립보드에 복사되었습니다. 대답 중 일부는 Gemini에서만 제공될 수 있습니다.",
+  "waitHelper": {
+    "status": "stable",
+    "characters": 9109,
+    "queueBusyPolls": 0
+  },
+  "priorCopyAttempts": [
+    {
+      "pid": 42806,
+      "exitCode": 1,
+      "error": "Copy success evidence not observed"
+    },
+    {
+      "pid": 43193,
+      "exitCode": 1,
+      "error": "ReferenceError: window is not defined after snackbar evidence"
+    }
+  ]
+}

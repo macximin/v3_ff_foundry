@@ -1,0 +1,12 @@
+{
+  "status": "failed",
+  "requestedAt": 1788907012.732308,
+  "pid": 49816,
+  "output": "/Users/a2501/Desktop/firefly_studio/edge_repos/v3_ff_foundry/20_model_runs/multi_provider/daily-planning-20260909/chatgpt-web/plan.md",
+  "lockAcquiredAt": 1788907012.7323499,
+  "copyProcessGroup": 49817,
+  "copyLogPath": "/Users/a2501/Desktop/firefly_studio/edge_repos/v3_ff_foundry/20_model_runs/multi_provider/daily-planning-20260909/chatgpt-web/plan.md.49816.copy.log",
+  "copyExitCode": 0,
+  "error": "Clipboard does not match observed response anchors",
+  "finishedAt": 1788907014.241432
+}

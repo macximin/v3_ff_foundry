@@ -1,0 +1,774 @@
+pageInfo: {"url":"https://grok.com/c/79ba3f47-3053-4be3-936c-296d79b5e707?rid=a2a5830e-7725-4e79-a0af-961dca4eeb20","title":"Web Novel Plan: 9-Chapter Outline - Grok","w":1920,"h":929,"sx":0,"sy":0,"pw":1920,"ph":929}
+root
+  anchor [ref=4, loc=unstable, url=https://grok.com/c/79ba3f47-3053-4be3-936c-296d79b5e707?rid=a2a5830e-7725-4e79-a0af-961dca4eeb20#grok-content-area]
+    text "주요 콘텐츠로 건너뛰기"
+  container
+    container
+      container
+        container
+          anchor "홈페이지" [ref=47, loc=css:a[aria-label="홈페이지"], url=https://grok.com/]
+            svg_root
+          container
+            button "검색" [ref=49, loc=css:button[aria-label="검색"]]
+              svg_root
+            button [ref=51, loc=unstable]
+              svg_root
+              text "사이드바 전환"
+        unordered_list
+          list_item
+            anchor [ref=56, loc=unstable, url=https://grok.com/]
+              svg_root
+              text "채팅"
+            text "⌘J"
+          list_item
+            anchor [ref=61, loc=href:/imagine, url=https://grok.com/imagine]
+              svg_root
+              text "Imagine"
+          list_item
+            anchor [ref=65, loc=href:/library, url=https://grok.com/library]
+              svg_root
+              text "라이브러리"
+          list_item
+            anchor [ref=69, loc=href:/automations, url=https://grok.com/automations]
+              svg_root
+              text "자동화"
+          list_item
+            anchor [ref=73, loc=href:/skills-and-connectors, url=https://grok.com/skills-and-connectors]
+              svg_root
+              text "스킬 및 커넥터"
+        container
+        container [ref=76, loc=unstable]
+          container
+            container
+              button "프로젝트" [ref=77, loc=css:button[aria-label="프로젝트"]]
+                text "프로젝트"
+                svg_root
+              button "모든 프로젝트" [ref=80, loc=css:button[aria-label="모든 프로젝트"]]
+                svg_root
+            unordered_list
+              list_item
+                button [ref=281, loc=unstable]
+                  svg_root
+                  text "프로젝트 추가"
+          container
+            button "채팅" [ref=86, loc=css:button[aria-label="채팅"]]
+              text "채팅"
+              svg_root
+            unordered_list
+              list_item
+                anchor [ref=939, loc=href:/c/79ba3f47-3053-4be3-936c-296d79b5e707, url=https://grok.com/c/79ba3f47-3053-4be3-936c-296d79b5e707]
+                  text "Web Novel Plan: 9-Chapter Outline"
+              list_item
+                anchor [ref=89, loc=href:/c/0eb290f2-e3c3-483a-9296-d2aa2274cdc0, url=https://grok.com/c/0eb290f2-e3c3-483a-9296-d2aa2274cdc0]
+                  text "9절 웹소설 기획서 작성"
+              list_item
+                anchor [ref=91, loc=href:/c/21a091a3-c083-4ca2-bc47-2854eda35bcd, url=https://grok.com/c/21a091a3-c083-4ca2-bc47-2854eda35bcd]
+                  text "9절 웹소설 기획서"
+              list_item
+                anchor [ref=93, loc=href:/c/d1ec4a6f-4a6e-49ae-8ba1-c2615c10da74, url=https://grok.com/c/d1ec4a6f-4a6e-49ae-8ba1-c2615c10da74]
+                  text "작품 기획서 완성"
+              list_item
+                anchor [ref=95, loc=href:/c/12cea09b-c8f1-4e54-ae04-a3fe587c6ecd, url=https://grok.com/c/12cea09b-c8f1-4e54-ae04-a3fe587c6ecd]
+                  text "Ping Confirmation OK"
+              list_item
+                anchor [ref=97, loc=href:/c/5f5e7c96-3fd9-4c40-a90a-0b355b7bbc9d, url=https://grok.com/c/5f5e7c96-3fd9-4c40-a90a-0b355b7bbc9d]
+                  text "Cute Grok Bot GitHub PFP"
+              list_item
+                anchor [ref=99, loc=href:/c/24800612-eaf8-4e96-9a89-cfefc0f4bd2c, url=https://grok.com/c/24800612-eaf8-4e96-9a89-cfefc0f4bd2c]
+                  text "모바일 원격 접속 기능 제한"
+              list_item
+                anchor [ref=101, loc=href:/c/55119663-2d79-43f2-96de-2866c92980b4, url=https://grok.com/c/55119663-2d79-43f2-96de-2866c92980b4]
+                  text "Grok 설정 안 되는 문제 해결"
+              list_item
+                anchor [ref=103, loc=href:/c/1035a059-790a-45da-91c3-edf2e0e4f81f, url=https://grok.com/c/1035a059-790a-45da-91c3-edf2e0e4f81f]
+                  text "Shorts Script Reverse Engineering"
+              list_item
+                anchor [ref=105, loc=href:/c/f5f8ffcd-2d7c-4983-8963-3063ba8fb2a6, url=https://grok.com/c/f5f8ffcd-2d7c-4983-8963-3063ba8fb2a6]
+                  text "Bridal Closet Locked With Ex's Voice"
+              list_item
+                anchor [ref=107, loc=href:/c/c2200520-12eb-49f0-aeef-a97b80d89329, url=https://grok.com/c/c2200520-12eb-49f0-aeef-a97b80d89329]
+                  text "Mock Ad Gate Automation with Playwright"
+              list_item
+                anchor [ref=109, loc=href:/c/c3763e40-8809-4597-adeb-de03ae4adce1, url=https://grok.com/c/c3763e40-8809-4597-adeb-de03ae4adce1]
+                  text "Web Novel Evaluation: Strong World and Food Focus"
+              list_item
+                anchor [ref=111, loc=href:/c/b782199c-4693-4e4e-bad2-626ede4759a5, url=https://grok.com/c/b782199c-4693-4e4e-bad2-626ede4759a5]
+                  text "삼도식당 4화: 한이 담긴 맛"
+              list_item
+                anchor [ref=113, loc=href:/c/4d0fb157-e1d1-40ce-b85b-7a2c9d4c5c1a, url=https://grok.com/c/4d0fb157-e1d1-40ce-b85b-7a2c9d4c5c1a]
+                  text "First Episode Review: Great Status"
+              list_item
+                anchor [ref=115, loc=href:/c/a46a332a-7b07-4dfb-84d1-74cc1e5d1c4d, url=https://grok.com/c/a46a332a-7b07-4dfb-84d1-74cc1e5d1c4d]
+                  text "Isle Princess Night Surprise"
+              list_item
+                anchor [ref=118, loc=href:/c/7b910b67-b512-42c9-b2aa-0844868feedd, url=https://grok.com/c/7b910b67-b512-42c9-b2aa-0844868feedd]
+                  text "Deathbed Deal: Chef's Grim Bargain"
+              list_item
+                anchor [ref=121, loc=href:/c/61fee8ad-3855-4ce5-af45-288c92a8d0f8, url=https://grok.com/c/61fee8ad-3855-4ce5-af45-288c92a8d0f8]
+                  text "Missing manuscript candidate"
+              list_item
+                anchor [ref=124, loc=href:/c/4f60643b-0ed6-43a1-8feb-48212b8c7b7e, url=https://grok.com/c/4f60643b-0ed6-43a1-8feb-48212b8c7b7e]
+                  text "WINNER: Y X TIE ORIENTATION: Y 창업주 손자·다섯째 아들 외아들로 식탁 끝 자리, 큰아버지·사촌 vs 아버지 인재개발원 대비가 첫 문단에서 즉시 각인됨. X는 �..."
+              list_item
+                anchor [ref=127, loc=href:/c/1823036f-a3cd-4c76-835f-8be482995d3c, url=https://grok.com/c/1823036f-a3cd-4c76-835f-8be482995d3c]
+                  text "WINNER: Y Y TIE CONTEXT: TIE 전생 실패·누명·회귀 목적을 더 빠르고 명확하게 이해시킨 후보와 이유 PACING: TIE 능력 시연과 첫 보상까지 더 잘 끌고 간 후보와..."
+              list_item
+                anchor [ref=130, loc=href:/c/910ff176-92ae-4b77-a9b3-25550a8cf400, url=https://grok.com/c/910ff176-92ae-4b77-a9b3-25550a8cf400]
+                  text "Korean Audit Verdict Adopts"
+              list_item
+                anchor [ref=133, loc=href:/c/493dbf76-b59b-48d6-a49f-b16af11d8739, url=https://grok.com/c/493dbf76-b59b-48d6-a49f-b16af11d8739]
+                  text "Korean Web Novel Audit Rules"
+              list_item
+                anchor [ref=136, loc=href:/c/25fe22be-a01b-4058-a3cd-dd9d810218d6, url=https://grok.com/c/25fe22be-a01b-4058-a3cd-dd9d810218d6]
+                  text "Minimal Revision Audit Passes"
+              list_item
+                anchor [ref=139, loc=href:/c/f96b5845-312f-40d6-bb48-d135a23a5ea5, url=https://grok.com/c/f96b5845-312f-40d6-bb48-d135a23a5ea5]
+                  text "Conversation Reviewer: Minimal Fixes for Web Novel"
+              list_item
+                anchor [ref=142, loc=href:/c/ae976705-f9e5-469c-9b20-ea36ba678a57, url=https://grok.com/c/ae976705-f9e5-469c-9b20-ea36ba678a57]
+                  text "재벌 3세, 천재 먼저 산다"
+              list_item
+                anchor [ref=145, loc=href:/c/fb418501-cffa-4a5b-b530-9f6ea708fd34, url=https://grok.com/c/fb418501-cffa-4a5b-b530-9f6ea708fd34]
+                  text "Proton VPN for Korea censorship"
+              list_item
+                button [ref=151, loc=unstable]
+                  text "모두 보기"
+        container
+        container
+        button [ref=153, loc=unstable]
+          image
+          container
+            text "lock Caps"
+            text "macximin11123@gmail.com"
+      container
+    container [ref=156, loc=unstable]
+      container
+        button "더 보기" [ref=942, loc=css:button[aria-label="더 보기"]]
+          svg_root
+        button "공유 링크 만들기" [ref=1125, loc=ambiguous]
+          svg_root
+        button "오른쪽 패널 토글" [ref=949, loc=css:button[aria-label="오른쪽 패널 토글"]]
+          svg_root
+      container
+        container [ref=931, loc=unstable]
+          button "첨부파일 열기" [ref=961, loc=css:button[aria-label="첨부파일 열기"]]
+            svg_root
+            text "input.md"
+          article "당신"
+            paragraph
+              text "첨부 파일을 따라 완전한 9절 웹소설 작품 기획서 한 편을 반환하세요. 지정된 육하원칙(WHO, WHAT, HOW, WHERE, WHEN, WHY)과 원작 우선·자기 이득 방향을 유지�..."
+            container
+          button "Edit" [ref=1752, loc=ambiguous]
+            svg_root
+          button "Edit" [ref=975, loc=ambiguous]
+            svg_root
+          button "복사" [ref=980, loc=ambiguous]
+            svg_root
+          container
+            article "Grok"
+              button [ref=1130, loc=unstable]
+                text "1m 30s동안 작업함"
+                svg_root
+              container
+                heading
+                  text "버려진 미래를 산다"
+                paragraph
+                  text "2026-09-08 작성 · 현대판타지 기획서 v1 · 육하원칙 + 목적의 단계 + 독자 보상"
+                heading
+                  text "1. 작품 정보와 독자 약속"
+                table
+                  table_row
+                    table_cell
+                      text "항목"
+                    table_cell
+                      text "기입"
+                  table_row
+                    table_cell
+                      text "작품명·가제"
+                    table_cell
+                      text "버려진 미래를 산다"
+                  table_row
+                    table_cell
+                      text "장르·핵심 키워드"
+                    table_cell
+                      text "현대판타지, 빙의, 금융 투자, 기업 인수, 가족 인정, 독립자본"
+                  table_row
+                    table_cell
+                      text "예상 독자"
+                    table_cell
+                      text "위기 자산이 현금·지분·직책으로 바뀌는 과정을 숫자와 사람 반응으로 확인하고 싶은 독자"
+                  table_row
+                    table_cell
+                      text "연재 형태·예상 분량"
+                    table_cell
+                      text "웹소설 연재 · 예상 600~750화급 / 확정 아님"
+                  table_row
+                    table_cell
+                      text "시점·문체"
+                    table_cell
+                      text "1인칭 과거시제. 장부는 짧게, 사람 반응은 행동으로. 독백으로 교훈을 설명하지 않음"
+                  table_row
+                    table_cell
+                      text "이용 등급·표현 수위 (선택)"
+                    table_cell
+                      text "15세 이상 예상. 경영·협상·가족 갈등 중심. 과도한 고어·선정 없음 / 미정 가능"
+                  table_row
+                    table_cell
+                      text "작품 이력·현재 집필 분량 (선택)"
+                    table_cell
+                      text "없음"
+                container
+                button "복사" [ref=1204, loc=ambiguous]
+                  svg_root
+                button "표 저장" [ref=1210, loc=ambiguous]
+                  svg_root
+                paragraph
+                  text "로그라인:"
+                  text "여의도 구둣방에서 돈의 흐름을 배운 남자가 1992년 총상 입은 재벌 차남의 몸에서 깨어나, 사람의 소속과 능력을 읽는 눈과 앞으로 버릴 시장의 기억을..."
+                paragraph
+                  text "작품 소개:"
+                  text "강태섭은 손님의 잡담으로 시장을 읽어 수백억을 모은 구둣방 주인이었다. 신호를 무시하고 달려오는 차 앞에서 모녀를 밀쳐 구하고 죽는다. 다시 눈�..."
+                paragraph
+                  text "참고한 작품과 가져올 요소:"
+                  text "《독식하는 재벌 3세》(제공 1~10화·52~53화 국소 원문과 기존 751화 분석 피치), 《금수저 투자백서》(제공 원문 앞부분과 686화 제공분 분석 피치), 《금�..."
+                paragraph
+                  text "반복해서 사고 싶은 재미:"
+                  text "주인공이 남보다 먼저 위기와 사람을 알아보고, 계약서·입금·지분·보너스로 자기 몫을 확정한 뒤, 그 몫으로 다음 판을 여는 장면."
+                paragraph
+                  text "대표 장면:"
+                  text "검은 수요일이 지나고 한시우가 호텔 방에서 수익 확인서를 접어 주머니에 넣는다. 귀국 비행기에서 최호민에게 운용 한도와 성과급 비율을 먼저 적어..."
+                heading
+                  text "2. 작품의 육하원칙"
+                table
+                  table_row
+                    table_cell
+                      text "질문"
+                    table_cell
+                      text "구체화할 내용"
+                    table_cell
+                      text "기입"
+                  table_row
+                    table_cell
+                      text "WHO — 누가"
+                    table_cell
+                      text "어떤 경험·능력·처지·태도를 가진 주인공인가? 누구와 손잡거나 겨루는가? 상대도 자기 목적에 따라 무엇을 하는가?"
+                    table_cell
+                      text "전생 강태섭. 여의도 너구리 굴 구둣방에서 30년 넘게 증권맨의 말을 들으며 시세와 탐욕을 배운 자산가. 재건축을 앞둔 옛집에 살며 죽은 아내·딸을 �..."
+                  table_row
+                    table_cell
+                      text "WHAT — 무엇을"
+                    table_cell
+                      text "어떤 주인공이 무엇을 이루어 가는 이야기인가? 끝내 달성하려는 결과와 그 확인 장면은 무엇인가?"
+                    table_cell
+                      text "바닥에서 돈의 흐름을 익힌 남자가 빌린 금수저 신분으로, 앞으로 값이 뒤집힐 돈·회사·사람과 거래망을 자기 장부에 담아 새 가족의 생존권과 자기 �..."
+                  table_row
+                    table_cell
+                      text "HOW — 어떻게"
+                    table_cell
+                      text "남과 다른 정보·실력·능력·자원을 어떻게 얻었는가? 그 우위를 반복해서 어떻게 자기 이득으로 바꾸는가?"
+                    table_cell
+                      text "빙의와 함께 전생의 시장 감각과 앞으로 반복될 금융·산업 충격의 방향이 남는다. 동시에 사람의 소속·업무 능력·특이사항이 장부처럼 보인다. 우위�..."
+                  table_row
+                    table_cell
+                      text "WHERE — 어디서"
+                    table_cell
+                      text "어떤 생활 공간·현장·업종·사회에서 일이 벌어지는가? 그 장소의 사람·물건·환경이 선택에 어떤 영향을 주는가?"
+                    table_cell
+                      text "여의도 골목과 구둣방의 기억, 1992년 미국 호텔·복권 판매점·외환 데스크, 한성 본가와 계열사 회의실, 펀드 운용실, 부실 은행 창구, 공장·조선소·통..."
+                  table_row
+                    table_cell
+                      text "WHEN — 언제"
+                    table_cell
+                      text "어느 시대, 인생의 어느 시점인가? 어떤 사건·기회·변화 때문에 지금 움직이는가? 실제로 있는 기한이나 선후관계는 무엇인가?"
+                    table_cell
+                      text "1992년 총상 직후가 시작이다. 파워볼 추첨과 영국 파운드 붕괴가 첫 현금 창구이고, 금융실명제·채권 충격·멕시코·일본 시장·아시아 외환위기·IMF가 ..."
+                  table_row
+                    table_cell
+                      text "WHY — 왜"
+                    table_cell
+                      text "주인공은 왜 이 결과를 원하는가? 얻으면 자신에게 무엇이 좋아지는가? 현재 행동까지 설명할 수 있는 이유인가?"
+                    table_cell
+                      text "전생의 돈은 pal을 채웠어도 이름과 사람을 남기지 못했다. 구해 준 모녀는 살았고 자신은 죽었다. 새 몸에서 그는 자기 몫이 장부에 남는 삶을 원한다. ..."
+                container
+                button "복사" [ref=1285, loc=ambiguous]
+                  svg_root
+                button "표 저장" [ref=1287, loc=ambiguous]
+                  svg_root
+                paragraph
+                  text "목적을 행동으로 읽기:"
+                  text "한시우는 자기 몫이 남는 삶과 새 가족의 생존권을 원해서, 1992년의 호텔과 여의도·본가 사이에서, 사람 장부와 미래 방향과 익명 자금을 써서, 위기 �..."
+                paragraph
+                  text "결과를 사람 표면으로 읽기:"
+                  text "통장 숫자가 늘면 시우는 라면과 골목 짜장면 대신 호텔식과 본가 아침을 그냥 먹는다. 최호민은 지시만 받는 직원에서 성과급과 운용 한도를 가진 파�..."
+                heading
+                  text "3. 장기·구간·회차의 목적 연결"
+                table
+                  table_row
+                    table_cell
+                      text "단계"
+                    table_cell
+                      text "얻으려는 결과"
+                    table_cell
+                      text "이번에 할 선택과 행동"
+                    table_cell
+                      text "결과를 확인하는 장면"
+                    table_cell
+                      text "상위 목적과의 관계"
+                  table_row
+                    table_cell
+                      text "Series WHAT"
+                    table_cell
+                      text "한시우 명의의 독립 장부가 한성 생존권과 세계 자산의 선택권을 함께 쥐고, 아버지와 실행 팀이 그 식탁에 남아 있는 상태"
+                    table_cell
+                      text "버릴 위기와 버릴 사람을 먼저 사고, 계약·지분·보너스로 고정한 뒤 다음 산업으로 옮긴다"
+                    table_cell
+                      text "보유 목록 공개, 한태홍의 잔류, 시우가 귀환 제안 대신 다음 매수를 고름"
+                    table_cell
+                      text "빼앗기지 않는 몫과 끊기지 않는 가족이 같은 장부에 남는다"
+                  table_row
+                    table_cell
+                      text "현재 기획 구간의 목적"
+                    table_cell
+                      text "총상 직후 몸을 확인하고, 복권·파운드로 독립 종잣돈을 만들며, 최호민을 붙이고 한태홍에게 첫 숫자 보고를 통과시키는 일"
+                    table_cell
+                      text "사람 장부를 시험하고, 당첨금을 법인 뒤로 숨기며, 파운드 포지션을 걸고, 귀국 후 사고뭉치 이미지를 실적으로 덮는다"
+                    table_cell
+                      text "입금 확인, 운용 약정 서명, 아버지가 내부 전화를 끊고 장부를 가운데로 당기는 식탁"
+                    table_cell
+                      text "장기 소유의 첫 현금과 첫 실행 손, 첫 가족 한도를 연다"
+                  table_row
+                    table_cell
+                      text "이번 Chapter want"
+                    table_cell
+                      text "깨어난 몸이 한시우인지 확인하고, 당장 쓸 수 있는 돈줄과 들키지 않을 행동 순서를 정한다"
+                    table_cell
+                      text "거울과 뉴스와 사람 장부를 대조하고, 병원·호텔 직원의 소속과 입단속을 읽은 뒤 복권 구매 동선을 짠다"
+                    table_cell
+                      text "총상 흉터와 여권 이름, 떠오른 신상 장부, 추첨일정이 적힌 전단지"
+                    table_cell
+                      text "종잣돈 구간의 입구. 이 확인이 없으면 이후 매수는 남의 계좌 도박이 된다"
+                container
+                button "복사" [ref=1345, loc=ambiguous]
+                  svg_root
+                button "표 저장" [ref=1347, loc=ambiguous]
+                  svg_root
+                heading
+                  text "4. 등장인물과 관계"
+                table
+                  table_row
+                    table_cell
+                      text "인물·현재 위치"
+                    table_cell
+                      text "본인의 욕망과 목적"
+                    table_cell
+                      text "주인공과 얽히는 이유"
+                    table_cell
+                      text "선택·행동"
+                    table_cell
+                      text "말투·행동의 특징"
+                  table_row
+                    table_cell
+                      text "한시우 / 강태섭. 1992년 한성 차남"
+                    table_cell
+                      text "자기 명의로 남는 돈과 사람, 무너지지 않는 새 가족"
+                    table_cell
+                      text "이야기 전체의 실행자"
+                    table_cell
+                      text "위기와 인재를 먼저 사고 계약으로 고정한다. 기여자 몫을 먼저 적는다"
+                    table_cell
+                      text "짧게 묻고 숫자로 답한다. 걱정하는 사람에게는 설명을 늘리기보다 결과를 먼저 보여 준다"
+                  table_row
+                    table_cell
+                      text "한태홍. 한성그룹 총수, 아버지"
+                    table_cell
+                      text "그룹 생존과 문제아 아들의 목숨"
+                    table_cell
+                      text "몸의 보호막이자 국내 실행 한도의 열쇠"
+                    table_cell
+                      text "처음엔 병원과 유학 사고를 막으려 하고, 숫자가 반복되면 한도와 사람을 넘긴다"
+                    table_cell
+                      text "호통이 먼저 나오고 질문은 나중에 나온다. 인정할 때는 칭찬 대신 서류를 밀어 준다"
+                  table_row
+                    table_cell
+                      text "최호민. 월가·국내를 오가는 운용 실무"
+                    table_cell
+                      text "자기 판단이 반영되는 펀드와 정당한 성과급"
+                    table_cell
+                      text "시우의 포지션을 시장 주문으로 바꾸는 손"
+                    table_cell
+                      text "한도가 명확하면 밤을 새워 체결하고, 비율이 애매하면 움직이지 않는다"
+                    table_cell
+                      text "감정 없이 만기와 증거금을 말한다. 보너스 숫자가 찍히면 처음으로 어깨가 내려간다"
+                  table_row
+                    table_cell
+                      text "한시준. 한성 장남"
+                    table_cell
+                      text "후계 자리와 계열사 지배"
+                    table_cell
+                      text "차남의 자금과 평판이 자신의 지분을 위협한다"
+                    table_cell
+                      text "이사회와 임원 라인을 묶어 시우의 한도를 줄이려 한다"
+                    table_cell
+                      text "공개 석상에서는 동생을 걱정하고, 뒤로 지분 계산을 한다"
+                  table_row
+                    table_cell
+                      text "서하린. 기술·데이터 쪽 연구자"
+                    table_cell
+                      text "빼앗기지 않는 연구 환경과 실제 제품"
+                    table_cell
+                      text "시우가 보호와 연구비·지분을 대는 대상. 후반 핵심 기술동맹"
+                    table_cell
+                      text "조건이 맞으면 남고, 가로채기가 보이면 자료를 잠근다"
+                    table_cell
+                      text "말수가 적고 실험 기록으로 답한다"
+                  table_row
+                    table_cell
+                      text "문강표. 국내 경쟁 그룹 쪽 경영권 분쟁의 상대"
+                    table_cell
+                      text "자기 그룹의 지배권"
+                    table_cell
+                      text "후반 국내 지분전의 반대편"
+                    table_cell
+                      text "해외 펀드를 끌어들여 지분을 지킨다"
+                    table_cell
+                      text "악수와 공시를 같은 날에 한다"
+                container
+                button "복사" [ref=1432, loc=ambiguous]
+                  svg_root
+                button "표 저장" [ref=1434, loc=ambiguous]
+                  svg_root
+                paragraph
+                  text "핵심 관계의 전후:"
+                  text "한태홍은 총상 아들을 골칫거리로 보다가, 복권·파운드·국내 위기 대응이 반복되면 보고 순서를 바꾼다. 최호민은 수상한 도련님의 주문을 받다가 약..."
+                paragraph
+                  text "주인공을 계속 보고 싶은 이유:"
+                  text "바닥에서 배운 눈과 금수저 명의를 같이 쓰되, 이득을 혼자 삼키는 연출로 끝내지 않는다. 사람 장부를 보고도 약점을 즉시 폭로하기보다 거래에 넣고,..."
+                paragraph
+                  text "자기 인식과 외부 평가 (해당 시):"
+                  text "시우는 자신을 빌린 몸을 쓰는 장사꾼으로 본다. 바깥은 그를 총 맞은 재벌 도련님, 운 좋은 투기꾼, 나중에는 위기마다 나타나는 현금 창구로 본다. 평..."
+                paragraph
+                  text "정보 차이:"
+                  text "전생과 미래 방향, 사람 장부는 시우만 안다. 한태홍은 아들의 수익률만 본다. 최호민은 주문과 한도만 안다. 장남과 임원은 차남의 운을 오해한다. 독�..."
+                heading
+                  text "5. 무대·시간·우위가 사건을 만드는 방식"
+                paragraph
+                  text "무대의 구체성:"
+                  text "구둣방 앞 담배 연기 골목, 미국 호텔 객실과 복권 판매점, 런던 외환 창구, 한성 본가 식당과 금고, 태성증권 딜링룸, 부실 은행 금고, 창원·조선소·물..."
+                paragraph
+                  text "시작 시점의 조건:"
+                  text "전생의 수백억은 이 몸에 없다. 대신 한시우의 여권과 가족 신용, 총상 직후 감시가 느슨한 미국 체류, 다가오는 파워볼과 파운드 만기가 있다. 사람 장..."
+                paragraph
+                  text "작품의 반복 동작:"
+                  text "징후를 확인하고, 사람 장부로 손을 고르고, 자금 경로를 만들며, 포지션을 넣고, 입금·서명·지분·보너스를 확인한 뒤 다음 버릴 자산을 고른다."
+                paragraph
+                  text "변주 가능성:"
+                  text "같은 우위를 환율, 부실 채권, 공장, 브랜드, 은행, 광산, 방산, 물류, 연구자에 적용한다. 상대가 바뀌면 보상 표면이 통장에서 직책, 가족 식탁, 공시 �..."
+                paragraph
+                  text "설정의 작동 규칙:"
+                  text "사람 장부는 현재 소속·능력·특이사항을 보여 주되 미래 행동을 강제하지 않는다. 미래 기억은 방향이지 호가 전체가 아니다. 시우가 개입한 구간은 �..."
+                paragraph
+                  text "일반적인 해결 방식과 주인공의 방식 (해당 시):"
+                  text "같은 위기에서 보통 투자자는 뉴스 뒤 따라 들어가고, 그룹 임원은 총수 눈치를 보며 부실을 숨긴다. 시우는 만기 전에 포지션을 만들고, 사람 장부로 �..."
+                table
+                  table_row
+                    table_cell
+                      text "세력·조직"
+                    table_cell
+                      text "추구하는 목적"
+                    table_cell
+                      text "가진 자원·영향력"
+                    table_cell
+                      text "주인공과의 이해관계·실제 행동"
+                  table_row
+                    table_cell
+                      text "한성그룹"
+                    table_cell
+                      text "국내 계열사 유지와 총수 일가 생존"
+                    table_cell
+                      text "제조·건설·유통·일부 금융, 정치권 접점"
+                    table_cell
+                      text "시우의 현금이 필요하지만 차남 한도를 제한한다. 위기가 커지면 아들에게 창구를 연다"
+                  table_row
+                    table_cell
+                      text "시우의 독립 펀드(가칭 북극성)"
+                    table_cell
+                      text "위기 수익을 실물 권리로 전환"
+                    table_cell
+                      text "해외 법인, 달러, 운용 팀"
+                    table_cell
+                      text "한성과 거래하되 지분은 시우 쪽 장부에 남긴다"
+                  table_row
+                    table_cell
+                      text "국내 경쟁 그룹·해외 펀드"
+                    table_cell
+                      text "헐값 한국 자산과 경영권"
+                    table_cell
+                      text "공매도 자금, 지분 매집, 언론"
+                    table_cell
+                      text "시우와 때로 같은 창구에서 사고, 경영권 구간에서는 맞선다"
+                  table_row
+                    table_cell
+                      text "정부·감독·외환 창구"
+                    table_cell
+                      text "외화 유동성과 체제 유지"
+                    table_cell
+                      text "인허가, 구제금융, 공시"
+                    table_cell
+                      text "달러를 실제로 내놓는 창구를 찾고, 시우는 그 대가로 은행·보험·운영권을 받는다"
+                container
+                button "복사" [ref=1517, loc=ambiguous]
+                  svg_root
+                button "표 저장" [ref=1519, loc=ambiguous]
+                  svg_root
+                paragraph
+                  text "시간과 공개 순서:"
+                  text "독자는 전생 사망과 사람 장부를 1화에서 본다. 가족은 사고 후 성격이 달라진 차남만 본다. 복권 당첨 경로는 늦게 드러나고, 파운드 수익은 법인 뒤로..."
+                heading
+                  text "6. 전체 줄거리와 장기 전개"
+                paragraph
+                  text "전체 시놉시스:"
+                  text "여의도 구둣방의 강태섭은 증권가 소문으로 돈을 불린 노인이었다. 재건축을 앞둔 옛집과 죽은 가족의 거리를 지키다, 신호를 어긴 차량 앞에서 모녀�..."
+                paragraph
+                  text "귀국한 시우는 한태홍의 불신 앞에서 수익률만 내민다. 최호민을 중심으로 북극성 펀드를 세우고, 금융실명제와 채권 충격, 멕시코 페소, 고베와 엔화,..."
+                paragraph
+                  text "아시아 외환위기와 IMF가 열리면 시우는 달러를 공급하고 부실 은행·보험·조선·통신 권리를 사들인다. 한성을 살리는 거래와 한국 자산의 헐값 유출�..."
+                paragraph
+                  text "2000년대 전후 버블과 회계 스캔들, 전쟁과 원자재, 희토류와 유전은 펀드를 산업 소유권으로 바꾼다. 시우는 버려질 공장의 비리 장부를 먼저 읽고 현�..."
+                paragraph
+                  text "국내 경영권 분쟁이 열리면 해외 펀드와 경쟁 총수가 한 판에 들어온다. 시우는 이미 가진 은행·물류·현금으로 지분 10퍼센트가 아니라 운영권 쪽을 �..."
+                table
+                  table_row
+                    table_cell
+                      text "큰 구간"
+                    table_cell
+                      text "사람·무대·시점의 변화"
+                    table_cell
+                      text "주인공 목적과 주요 선택"
+                    table_cell
+                      text "핵심 사건의 인과"
+                    table_cell
+                      text "지급·후과와 끝 상태"
+                  table_row
+                    table_cell
+                      text "시작 · 종잣돈"
+                    table_cell
+                      text "1992 미국~귀국. 총상 차남, 걱정하는 아버지, 첫 실무자"
+                    table_cell
+                      text "들키지 않는 큰돈과 첫 손"
+                    table_cell
+                      text "빙의 → 사람 장부 확인 → 파워볼 → 파운드 포지션 → 귀국 보고"
+                    table_cell
+                      text "1억 9천만 달러급 종잣돈, 파운드 수익, 최호민 약정, 한태홍의 첫 한도"
+                  table_row
+                    table_cell
+                      text "국내 안착 · 위기 대기"
+                    table_cell
+                      text "여의도·본가·해외 시장. 장남 견제 시작"
+                    table_cell
+                      text "현금을 팀과 기술 권리로 바꾸며 IMF를 기다림"
+                    table_cell
+                      text "실명제·채권·페소·엔화·베어링스를 통과하며 통신·브랜드 입구에 섬"
+                    table_cell
+                      text "북극성 신용, 일부 특허·브랜드 협상권, 아버지 보고 순서 변경"
+                  table_row
+                    table_cell
+                      text "외환위기 · 실물 전환"
+                    table_cell
+                      text "한국 부실 창구, 은행·조선·보험, 러시아·홍콩"
+                    table_cell
+                      text "한성 생존과 헐값 자산의 소유권을 한 거래로 묶음"
+                    table_cell
+                      text "달러 공급 → 부실 인수 → 기여자 보상 → 장남과 지분 조정"
+                    table_cell
+                      text "은행·보험·생산설비의 경영 실권, 국내 “현금을 내놓는 창구” 평판"
+                  table_row
+                    table_cell
+                      text "산업망 · 세계 충격"
+                    table_cell
+                      text "자원·방산·물류·연구실, 금융위기와 팬데믹"
+                    table_cell
+                      text "위기마다 방벽을 자기 라인으로 남김"
+                    table_cell
+                      text "회계·전쟁·원자재·전염 징후를 선매수하고 실행자에게 지분을 줌"
+                    table_cell
+                      text "공급망과 기술 라인, 서하린 동맹, 한성·북극성의 이중 장부"
+                  table_row
+                    table_cell
+                      text "최종 결산"
+                    table_cell
+                      text "국내 경영권전과 공개 장부"
+                    table_cell
+                      text "빌린 이름이 아니라 자기 몫으로 식탁을 지킴"
+                    table_cell
+                      text "지분전에서 운영권을 집고 보유를 공개함. 귀환 제안이 오면 거절"
+                    table_cell
+                      text "최대주주·운영권자로서의 목록, 한태홍 잔류, 현재 팀과 다음 매수. 혼인·자녀는 미정"
+                container
+                button "복사" [ref=1607, loc=ambiguous]
+                  svg_root
+                button "표 저장" [ref=1609, loc=ambiguous]
+                  svg_root
+                paragraph
+                  text "얻은 것과 다음 전개의 연결:"
+                  text "복권·외환 현금은 펀드 설립 자금이 된다. 사람 장부로 고른 손은 인수의 현장 경영이 된다. 은행과 물류는 다음 위기에서 결제와 이동 경로가 된다. �..."
+                paragraph
+                  text "완결 시 주인공의 삶:"
+                  text "처음 원하던 빼앗기지 않는 장부와 무너지지 않는 식탁은 달성한다. 전생의 골목으로 돌아가 거액만 받는 선택은 하지 않는다. 마지막에 그는 본가 또�..."
+                heading
+                  text "7. 독자 보상과 연재 지속성"
+                paragraph
+                  text "첫 만족:"
+                  text "1~3화 안에서 몸과 사람 장부를 확인하고, 파워볼 당첨금이 실제 입금으로 떨어지며, 시우가 그 돈으로 다음 외환 창구를 연다. 독자는 전생의 짜장면 �..."
+                paragraph
+                  text "반복될 만족:"
+                  text "남보다 빠른 포지션, 입금과 서명, 사람 장부로 고른 팀의 성과, 기여자 보너스, 아버지의 보고 순서 변경, 버려진 공장·은행·광산이 자기 명의로 바뀌..."
+                paragraph
+                  text "보상의 변주:"
+                  text "같은 수익률 발표를 반복하지 않는다. 어떤 구간은 체불 임금 청산, 어떤 구간은 브랜드 본사 열쇠, 어떤 구간은 이사회 호칭, 어떤 구간은 연구실 지분..."
+                paragraph
+                  text "지급 뒤의 삶:"
+                  text "시우가 번 돈으로 혼자 고급 시계를 자랑하는 장면보다, 최호민이 약정 비율이 찍힌 통장을 확인하고 창구를 더 일찍 여는 장면, 한태홍이 아들에게 환..."
+                paragraph
+                  text "다음 구간의 기대:"
+                  text "개막 구간이 닫히면 독자가 기다리는 것은 그 종잣돈이 한성 내부 한도와 국내 부실 창구를 어떻게 여는지다. 장남의 견제와 IMF 달러 부족이 다음 구매..."
+                heading
+                  text "8. 참고 작품의 역설계·조합·변주"
+                paragraph
+                  text "이번 작업에서 유지하려는 것:"
+                  text "세 작품의 확인된 입구·보상·인과를 한 사람의 장부로 연결한다. 새 능력 체계나 새 장르를 만들기보다, 빙의 입구와 첫 현금은 《금수저 투자백서》�..."
+                container
+                  container
+                    table
+                      table_row
+                        table_cell
+                          text "참고 작품·확인한 자료와 범위"
+                        table_cell
+                          text "가져올 요소"
+                        table_cell
+                          text "이 작품에 쓰려는 이유"
+                        table_cell
+                          text "반영할 인물·장면·구간"
+                        table_cell
+                          text "유지·조정할 내용과 필요한 인과"
+                      table_row
+                        table_cell
+                          text "《독식하는 재벌 3세》 · 제공 원문 1~10화·52~53화 국소 대조와 기존 751화 분석 피치. 전편 원문을 이번에 다시 읽었다고 보지 않음"
+                        table_cell
+                          text "사람 소속·능력을 읽는 장부, 버려진 자산·인재의 선점, 독립자본이 그룹 생존과 지분 요구로 이어지는 인과, 계약·입금·직책의 반복 영수증, 가족 �..."
+                        table_cell
+                          text "주인공 HOW와 장기 WHAT의 환전 방식"
+                        table_cell
+                          text "한시우의 사람 장부, 북극성의 확장, 공장 비리 장부·은행·산업망, 한태홍 잔류"
+                        table_cell
+                          text "열일곱 회귀·고시원 사망·태우·SAVE·스위스 입학 선물 100만 달러·연회 시계 판별은 채택하지 않음. 사람 장부는 빙의 직후 획득으로 옮김. 지분 요구�..."
+                      table_row
+                        table_cell
+                          text "《금수저 투자백서》 · 제공 원문 앞부분 발췌와 686화 제공분 분석 피치. 분석은 strict 재검증 탈락 상태. 결말은 미결"
+                        table_cell
+                          text "구두닦이 전생, 모녀 구출 사망, 1992 총상 차남 빙의, 파워볼 1억 9천만 달러, 검은 수요일, 아버지의 숫자 인정, 펀드 팀, 현금의 산업 권리화, ST급 경영�..."
+                        table_cell
+                          text "출발 조건과 첫 대형 지급, 아버지-아들 인정 레일"
+                        table_cell
+                          text "강태섭→한시우 입구, 한태홍, 최호민, 1구간 종잣돈, 후반 국내 지분전"
+                        table_cell
+                          text "대흥·엘도라도·박석원 고유 명칭은 한성·북극성·한시우로 조정. 제공분이 멈추는 경영권전은 이 작품에서 운영권 결산까지 이어 가되 원작 결말을 �..."
+                      table_row
+                        table_cell
+                          text "《금수저생활백서》 · 제공 원문 앞부분 발췌와 703화 제공분 분석 피치. 통합 Arc 산출물 없음"
+                        table_cell
+                          text "성과 가로채기에 대한 거부, 기여자 보너스·지분·주거 보상, 실무진이 가정까지 안정되는 중간 영수증, 시스템 귀환·거액 제안 대신 현재 가족·동료�..."
+                        table_cell
+                          text "자기 이득을 냉소가 아니라 몫의 분배로 보이게 하는 사람 표면"
+                        table_cell
+                          text "팀 약정 장면, 인수 후 임금·성과급, 후반 귀환 제안 거절"
+                        table_cell
+                          text "뉴라이프 게임 화면·신뢰도 숫자 50·2006 제일그룹 막내·화성 셀레네 고유 표면은 강제하지 않음. 신뢰 시험은 한태홍의 한도·보고 순서로 바꿈. 귀환 ..."
+                    container
+                  container
+                    button "복사" [ref=1687, loc=ambiguous]
+                      svg_root
+                    button "표 저장" [ref=1689, loc=ambiguous]
+                      svg_root
+                paragraph
+                  text "조합 시 맞춰야 할 선행 상태:"
+                  text "시우는 회귀한 한성 혈족이 아니라 1992년에 들어온 빙의자다. 입학 선물 220억 원 패키지는 시작 자금이 아니다. 첫 돈은 복권과 외환이다. 사람 장부는 ..."
+                heading
+                  text "9. 기획 의도와 집필 계획"
+                paragraph
+                  text "작가의 기획 의도:"
+                  text "독자가 “이 사람이 지금 무엇을 사고, 그 대가가 누구의 생활에서 확인되는가”를 회차마다 읽게 한다. 주제 문장을 주인공 대사로 대신하지 않는다. ..."
+                paragraph
+                  text "이 작품에서 특히 지킬 맛:"
+                  text "짧은 숫자, 짧은 약정, 식탁과 창구의 반응. 예: 시우가 “살겠습니다”보다 “만기 언제입니까”를 먼저 묻고, 이긴 뒤 자기 축하보다 상대 통장과 아�..."
+                paragraph
+                  text "다음 집필 범위:"
+                  text "개막 1~3화. 1화 사망·빙의·사람 장부 확인, 2화 복권 동선과 당첨 입금, 3화 파운드 포지션 준비와 귀국 전 최호민 접촉. 이 구간의 ArcPacket과 회차 메모�..."
+                paragraph
+                  text "미정 사항:"
+                  text "독립 펀드의 확정 상호, 서하린과의 혼인 여부, 공개 보유 목록의 최종 구성, 귀환 유혹을 실제 사건으로 쓸지 여부, 연재 플랫폼과 확정 회차 수."
+                paragraph
+                  text "원고로 확인할 질문:"
+                  text "1화에서 전생 골목과 호텔 몸의 간격이 욕망으로 읽히는가. 사람 장부가 설명 문단이 아니라 직원 선발과 입단속으로 쓰이는가. 당첨 직후 시우가 자랑..."
+                container
+                paragraph
+                  text "한시우는 빌린 이름으로 자기 장부를 채우려 한다. 1992년의 호텔 방과 여의도의 기억 사이에서, 그는 버릴 미래부터 산다."
+              container
+            container
+            container
+              button "응답 복사" [ref=1713, loc=css:button[aria-label="응답 복사"]]
+                svg_root
+              button "공유 링크 만들기" [ref=1715, loc=ambiguous]
+                svg_root
+              button "Like" [ref=1717, loc=css:button[aria-label="Like"]]
+                svg_root
+              button "Dislike" [ref=1719, loc=css:button[aria-label="Dislike"]]
+                svg_root
+              button "Regenerate" [ref=1721, loc=css:button[aria-label="Regenerate"]]
+                svg_root
+              button "More actions" [ref=1723, loc=css:button[aria-label="More actions"]]
+                svg_root
+            container
+              button [ref=1725, loc=unstable]
+                svg_root
+                text "Explore The Gold Spoon Investment Manual's"
+              button [ref=1728, loc=unstable]
+                svg_root
+                text "Analyze The Reborn Chaebol Third Generation's"
+              button [ref=1731, loc=unstable]
+                svg_root
+                text "Apply the human surface review feedback"
+          container
+        form
+          textfield "Ask Grok anything" [ref=929, loc=css:input[aria-label="Ask Grok anything"]]
+            paragraph
+              text "무엇이든 물어보세요"
+              text
+          container
+            button "첨부" [ref=1028, loc=css:button[aria-label="첨부"]]
+              svg_root
+            container
+              button "모델 선택" [ref=1035, loc=css:button[aria-label="모델 선택"]]
+                text "전문가"
+                svg_root
+              button "받아쓰기 (⌃D)" [ref=1740, loc=css:button[aria-label="받아쓰기 (⌃D)"]]
+                svg_root
+              button "음성 모드 시작 (⌘⇧O)" [ref=1743, loc=css:button[aria-label="음성 모드 시작 (⌘⇧O)"]]
+                container
+                container
+                container
+                container
+                container
+                container
+                container
+  container "Notifications alt+T" [ref=179, loc=unstable]
+  container
+  container
+    paragraph
+      text "응답 복사"
+    paragraph
+      text "응답 복사"
+  container
+  alert
+    text "첨부 파일을 따라 완전한 9절 웹소설 작품 기획서 한 편을 반환하세요. 지정된 육하원칙(WHO, WHAT, HOW, WHERE, WHEN, WHY)과 원작 우선·자기 이득 방향을 유지�..."
+
+

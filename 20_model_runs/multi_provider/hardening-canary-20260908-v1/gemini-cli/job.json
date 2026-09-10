@@ -1,0 +1,9 @@
+{
+  "schemaVersion": "firefly-planning-process/v1",
+  "route": "gemini-cli",
+  "modelRequested": "gemini-3.1-pro-high",
+  "inputSha256": "072924b244fca1985ba5bd34e385d6c78950eba1f3c9bb2111c6542c1db399c2",
+  "reasoningRequested": "high",
+  "timeoutSeconds": 3600,
+  "queuedAt": "2026-09-07T23:49:28.148468+00:00"
+}

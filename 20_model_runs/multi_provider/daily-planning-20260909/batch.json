@@ -1,0 +1,16 @@
+{
+  "date": "2026-09-09",
+  "batchId": "daily-planning-20260909",
+  "kind": "daily",
+  "genre": "현대판타지",
+  "routes": [
+    "astra",
+    "grok-cli",
+    "gemini-cli",
+    "chatgpt-web",
+    "grok-web",
+    "gemini-web"
+  ],
+  "startedAt": "2026-09-08T22:11:23.620699+00:00",
+  "controllerPid": 39405
+}

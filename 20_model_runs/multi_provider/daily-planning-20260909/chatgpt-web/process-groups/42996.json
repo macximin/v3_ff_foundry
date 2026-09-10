@@ -1,0 +1,9 @@
+{
+  "pid": 42996,
+  "pgid": 42996,
+  "birth": "Wed Sep  9 07:18:28 2026",
+  "role": "browser-poll",
+  "registeredAt": "2026-09-08T22:18:28.556589+00:00",
+  "status": "stopped",
+  "cleanedAt": "2026-09-08T22:18:29.556918+00:00"
+}

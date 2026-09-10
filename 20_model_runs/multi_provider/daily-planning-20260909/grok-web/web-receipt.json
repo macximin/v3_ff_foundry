@@ -1,0 +1,25 @@
+{
+  "status": "submitted",
+  "serviceUrl": "https://grok.com/",
+  "conversationUrl": "https://grok.com/c/342e62ce-1923-4d87-9eb8-bfaf69ebc043",
+  "observedMode": "전문가",
+  "observedModeDetails": {
+    "availableModes": [
+      "자동",
+      "빠른",
+      "전문가",
+      "Build",
+      "헤비"
+    ],
+    "selectedMode": "전문가",
+    "note": "헤비 selection opened SuperGrok Heavy upgrade paywall; current plan is SuperGrok. Highest available reasoning mode without changing paid plans is 전문가."
+  },
+  "taskSpaceId": 10,
+  "taskSpaceName": "ff-plan-20260909-grok-web",
+  "submittedAt": "2026-09-08T22:14:10.872Z",
+  "inputSha256": "7e8e79b0a6207f4f05dec247a407115600f8490e1cdd3055248b481c2148832f",
+  "inputPath": "/Users/a2501/Desktop/firefly_studio/edge_repos/v3_ff_foundry/20_model_runs/multi_provider/daily-planning-20260909/grok-web/input.md",
+  "stopSelector": "button[aria-label=\"모델 응답 중지\"]",
+  "responseSelector": "article[aria-label=\"Grok\"]",
+  "requestId": "b9dabd61-3e99-4dfe-8569-59c696d000ad"
+}

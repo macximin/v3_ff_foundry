@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "firefly-runtime-file-observation/v1",
+  "observedAt": "2026-09-08T22:36:01.452291+00:00",
+  "files": {
+    "scripts/planning-process.py": "123c3484cc07eae6d1adf8fd76eef175860615d094f09db10820d7282259aa96",
+    "scripts/planning-astra.py": "1497cd86b861815f4cc9af70ae4499800ce908c0068e1482cbea72d761476069",
+    "scripts/planning-browser-guard.py": "1f09cc62baa05964c48cf03dd326e6ecc369f2b564649a646cf80485845f0695",
+    "scripts/planning-browser-wait.py": "bb9b6d5fecadb8c3fdf50d84d8464f9dde5c6b1393963da4c61692940eefa704",
+    "scripts/planning-clipboard.py": "e47dfbcdf60633c2d2a15fba530b994759580bd0027826cc011358a4d1311f34",
+    "scripts/browser-guard-bin/ego-browser": "44dc786878e26327cc4c8849410c9c19dd97a2feb990e76cc7890c32c95352da",
+    "docs/web-planning-worker.md": "7f4047c22840ecea871bde081337d8198328b4ec2076e643beff72b67461926b",
+    "docs/templates/webnovel-project-plan-v1.md": "5adf86931024ac26cd2cd4190b0c7a07516df8b38f1ace7e2f3b0372c4a6e01c",
+    "config/planning-provider-policy.json": "936992c6836c63aca9c4200e9c140bfaaae8af3e8cac6cd47bc4e667f3303b45",
+    "config/daily-planning.json": "0cd6a43876b915c3ac843f8992775f9454cece5f36060cff640170cb99095b01"
+  },
+  "executable": {
+    "path": "/Users/a2501/.grok/downloads/grok-1.0.13-macos-aarch64",
+    "sha256": "8669e0fdadceec25b8c159c355f427ffbd82583525d774b6ab1522197ea83b80"
+  },
+  "argvSha256": "29f106aa6a9b3ddd2c847787a1992f0c50205ec2572968d7432550b147408ee8",
+  "meaning": "Files observed at process start/end; not an immutable runtime copy."
+}

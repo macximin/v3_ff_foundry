@@ -1,0 +1,9 @@
+{
+  "schemaVersion": "firefly-planning-process/v1",
+  "route": "astra",
+  "modelRequested": "gpt-6-astra",
+  "inputSha256": "7e8e79b0a6207f4f05dec247a407115600f8490e1cdd3055248b481c2148832f",
+  "reasoningRequested": "medium",
+  "timeoutSeconds": 3600,
+  "queuedAt": "2026-09-08T22:11:27.722259+00:00"
+}
